@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		7B65725325B183E100940F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65725225B183E100940F65 /* AppDelegate.swift */; };
 		7B65725525B183E100940F65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65725425B183E100940F65 /* SceneDelegate.swift */; };
-		7B65725725B183E100940F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65725625B183E100940F65 /* ViewController.swift */; };
+		7B65725725B183E100940F65 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65725625B183E100940F65 /* ProfilViewController.swift */; };
 		7B65725A25B183E100940F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725825B183E100940F65 /* Main.storyboard */; };
 		7B65725C25B183E100940F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725B25B183E100940F65 /* Assets.xcassets */; };
 		7B65725F25B183E100940F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725D25B183E100940F65 /* LaunchScreen.storyboard */; };
 		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
+		7B922C4B25B2B02000A5C35D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C4A25B2B02000A5C35D /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		7B65724F25B183E100940F65 /* Walk For Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk For Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65725225B183E100940F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B65725425B183E100940F65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B65725625B183E100940F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B65725625B183E100940F65 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		7B65725925B183E100940F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B65725B25B183E100940F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B65725E25B183E100940F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		7B65727025B183E200940F65 /* Walk For MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walk For MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
 		7B65727625B183E200940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B922C4A25B2B02000A5C35D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,12 @@
 		7B65725125B183E100940F65 /* Walk For Me */ = {
 			isa = PBXGroup;
 			children = (
-				7B65725225B183E100940F65 /* AppDelegate.swift */,
 				7B65725425B183E100940F65 /* SceneDelegate.swift */,
-				7B65725625B183E100940F65 /* ViewController.swift */,
-				7B65725825B183E100940F65 /* Main.storyboard */,
-				7B65725B25B183E100940F65 /* Assets.xcassets */,
-				7B65725D25B183E100940F65 /* LaunchScreen.storyboard */,
-				7B65726025B183E100940F65 /* Info.plist */,
+				7B65725225B183E100940F65 /* AppDelegate.swift */,
+				7B922C4925B2B00F00A5C35D /* Model */,
+				7B65728525B1AB7100940F65 /* Sources */,
+				7B65728625B1AB7800940F65 /* Ressources */,
+				7B65728725B1AB9800940F65 /* Supported Files */,
 			);
 			path = "Walk For Me";
 			sourceTree = "<group>";
@@ -126,6 +127,40 @@
 				7B65727625B183E200940F65 /* Info.plist */,
 			);
 			path = "Walk For MeUITests";
+			sourceTree = "<group>";
+		};
+		7B65728525B1AB7100940F65 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7B65725625B183E100940F65 /* ProfilViewController.swift */,
+				7B65725825B183E100940F65 /* Main.storyboard */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7B65728625B1AB7800940F65 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				7B65725B25B183E100940F65 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		7B65728725B1AB9800940F65 /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B65725D25B183E100940F65 /* LaunchScreen.storyboard */,
+				7B65726025B183E100940F65 /* Info.plist */,
+			);
+			path = "Supported Files";
+			sourceTree = "<group>";
+		};
+		7B922C4925B2B00F00A5C35D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B922C4A25B2B02000A5C35D /* Users.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B65725725B183E100940F65 /* ViewController.swift in Sources */,
+				7B922C4B25B2B02000A5C35D /* Users.swift in Sources */,
+				7B65725725B183E100940F65 /* ProfilViewController.swift in Sources */,
 				7B65725325B183E100940F65 /* AppDelegate.swift in Sources */,
 				7B65725525B183E100940F65 /* SceneDelegate.swift in Sources */,
 			);
@@ -366,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56PJN96NRT;
-				INFOPLIST_FILE = "Walk For Me/Info.plist";
+				INFOPLIST_FILE = "Walk For Me/Supported Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanGaffe.Walk-For-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,7 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56PJN96NRT;
-				INFOPLIST_FILE = "Walk For Me/Info.plist";
+				INFOPLIST_FILE = "Walk For Me/Supported Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanGaffe.Walk-For-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
