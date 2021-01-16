@@ -9,7 +9,7 @@ import UIKit
 
 class ProfilViewController: UITableViewController {
     
- 
+    @IBOutlet weak var followSteps: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
