@@ -8,8 +8,6 @@
 import UIKit
 
 class ProfilViewController: UITableViewController {
-
-    var profilArguments = ["Modifier le profil, Suivi des pas, une autre rubrique, un autre"]
     
  
     
