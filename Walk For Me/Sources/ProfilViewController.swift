@@ -13,8 +13,6 @@ class ProfilViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigationItem.title = "Accueil"
         tableView.delegate = self
         tableView.tableFooterView = UIView()
          
