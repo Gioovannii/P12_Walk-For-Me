@@ -8,5 +8,10 @@
 import UIKit
 
 class UpdateProfil: UITableViewController {
-  
+    
+     // MARK: - Outlets
+
+     @IBOutlet weak var sexChoiceButton: UIButton!
+     
+     
 }
