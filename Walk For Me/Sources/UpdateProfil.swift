@@ -18,4 +18,14 @@ class UpdateProfil: UITableViewController {
     var pickerView = UIPickerView()
     var typeValue = ""
    
+    
+    // MARK: - Life cycles
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        for i in 40...130 {
+            weightChoice.append("\(i)")
+        }
+    }
 }
