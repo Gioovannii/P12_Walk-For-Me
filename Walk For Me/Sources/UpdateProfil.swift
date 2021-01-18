@@ -12,6 +12,10 @@ class UpdateProfil: UITableViewController {
      // MARK: - Outlets
 
      @IBOutlet weak var sexChoiceButton: UIButton!
-     
-     
+ 
+    var sexChoice = ["Homme", "Femme"]
+    var weightChoice = [String]()
+    var pickerView = UIPickerView()
+    var typeValue = ""
+   
 }
