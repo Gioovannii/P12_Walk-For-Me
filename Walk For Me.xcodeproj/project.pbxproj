@@ -16,6 +16,7 @@
 		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
 		7B922C4B25B2B02000A5C35D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C4A25B2B02000A5C35D /* Users.swift */; };
+		7B922C5325B2DF3000A5C35D /* UpdateProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C5225B2DF3000A5C35D /* UpdateProfil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
 		7B65727625B183E200940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B922C4A25B2B02000A5C35D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		7B922C5225B2DF3000A5C35D /* UpdateProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +134,9 @@
 		7B65728525B1AB7100940F65 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7B65725625B183E100940F65 /* ProfilViewController.swift */,
 				7B65725825B183E100940F65 /* Main.storyboard */,
+				7B65725625B183E100940F65 /* ProfilViewController.swift */,
+				7B922C5225B2DF3000A5C35D /* UpdateProfil.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B922C5325B2DF3000A5C35D /* UpdateProfil.swift in Sources */,
 				7B922C4B25B2B02000A5C35D /* Users.swift in Sources */,
 				7B65725725B183E100940F65 /* ProfilViewController.swift in Sources */,
 				7B65725325B183E100940F65 /* AppDelegate.swift in Sources */,
