@@ -17,8 +17,16 @@ class ProfilViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+    func FollowSteps(sender: UISwitch) {
+        switch sender.isOn {
+        case true:
+            print("Activate follow Steps")
+            return
+        case false:
+            print("Activate follow Steps")
+            return
+            
+        }
     }
 }
 
