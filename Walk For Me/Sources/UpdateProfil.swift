@@ -28,4 +28,12 @@ class UpdateProfil: UITableViewController {
             weightChoice.append("\(i)")
         }
     }
+    
+    // MARK: - Actions
+
+    @IBAction func changeSexPressed(_ sender: Any) {
+        
+    }
+    
+  
 }
