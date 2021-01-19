@@ -204,6 +204,7 @@
                     <navigationItem key="navigationItem" title="Modifier le Profil" largeTitleDisplayMode="never" id="ZGY-I5-Q3M"/>
                     <connections>
                         <outlet property="sexChoiceButton" destination="4A5-WY-6bB" id="SzA-3v-OCp"/>
+                        <outlet property="weightChoiceButton" destination="FET-ax-vQe" id="xfj-fc-AEt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwE-xz-NTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
