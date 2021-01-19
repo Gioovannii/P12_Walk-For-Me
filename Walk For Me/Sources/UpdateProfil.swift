@@ -45,6 +45,16 @@ class UpdateProfil: UITableViewController {
         alert.view.addSubview(pickerFrame)
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
-    
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            print("You select " + self.typeValue)
+            self.sexChoiceButton.titleLabel?.text = self.typeValue
+        }))
+        
+        present(alert, animated: true)
+        }
     }
-}
+
+
