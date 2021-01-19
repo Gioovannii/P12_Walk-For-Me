@@ -12,11 +12,12 @@ class UpdateProfil: UITableViewController {
      // MARK: - Outlets
 
      @IBOutlet weak var sexChoiceButton: UIButton!
- 
-    var sexChoice = ["Homme", "Femme"]
-    var weightChoice = [String]()
-    var pickerView = UIPickerView()
-    var typeValue = ""
+    @IBOutlet weak var weightChoiceButton: UIButton!
+    
+    private var sexChoice = ["Homme", "Femme"]
+    private var weightChoice = [String]()
+    private var pickerView = UIPickerView()
+    private var typeValue = ""
    
     
     // MARK: - Life cycles
@@ -91,6 +92,5 @@ extension UpdateProfil: UIPickerViewDelegate, UIPickerViewDataSource {
         } else if row == 7 {
             typeValue = "47"
         }
-
     }
 }
