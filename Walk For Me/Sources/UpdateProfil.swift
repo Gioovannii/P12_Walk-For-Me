@@ -74,5 +74,23 @@ extension UpdateProfil: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row == 0 {
+            typeValue = "40"
+        } else if row == 1 {
+            typeValue = "41"
+        } else if row == 2 {
+            typeValue = "42"
+        } else if row == 3 {
+            typeValue = "43"
+        } else if row == 4 {
+            typeValue = "44"
+        } else if row == 5 {
+            typeValue = "45"
+        } else if row == 6 {
+            typeValue = "46"
+        } else if row == 7 {
+            typeValue = "47"
+        }
+
     }
 }
