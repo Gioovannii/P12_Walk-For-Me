@@ -8,5 +8,11 @@
 import UIKit
 
 class TrackHistory: UITableViewController {
+    var history = ["historique 1", "historique 2", "historique 3"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
 
 }
