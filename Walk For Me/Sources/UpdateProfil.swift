@@ -83,7 +83,12 @@ extension UpdateProfil: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return weightChoice.count
+        if pickerView.tag == 1 {
+        return sexChoice.count
+        } else if pickerView.tag == 2 {
+            return weightChoice.count
+        }
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
