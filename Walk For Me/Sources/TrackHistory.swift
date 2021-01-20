@@ -15,4 +15,16 @@ class TrackHistory: UITableViewController {
     }
 }
 
+extension TrackHistory {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        history.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Walk Cell", for: indexPath)
+        cell.textLabel?.text = history[indexPath.row]
+        return cell
+    }
+    
+    
 }
