@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UMq-ew-F5D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1zb-be-Nom">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -97,7 +97,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="mZK-KV-Dcw" secondAttribute="trailing" id="W2o-Ue-e1p"/>
                                                 <constraint firstItem="otE-yX-yPd" firstAttribute="top" secondItem="nNc-Bc-rfi" secondAttribute="topMargin" id="arx-XC-z51"/>
                                                 <constraint firstItem="mZK-KV-Dcw" firstAttribute="bottom" secondItem="otE-yX-yPd" secondAttribute="bottom" id="dKh-F8-AWz"/>
-                                                <constraint firstItem="otE-yX-yPd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nNc-Bc-rfi" secondAttribute="leadingMargin" id="k1c-Zz-jMT"/>
+                                                <constraint firstItem="otE-yX-yPd" firstAttribute="leading" secondItem="nNc-Bc-rfi" secondAttribute="leadingMargin" constant="10" id="k1c-Zz-jMT"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="otE-yX-yPd" secondAttribute="bottom" id="nwd-Mv-ewo"/>
                                                 <constraint firstItem="mZK-KV-Dcw" firstAttribute="centerY" secondItem="otE-yX-yPd" secondAttribute="centerY" id="wMf-Gg-Wwr"/>
                                             </constraints>
@@ -118,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPW-4S-XKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614.49275362318849" y="-364.28571428571428"/>
+            <point key="canvasLocation" x="1524.6376811594205" y="-364.28571428571428"/>
         </scene>
         <!--Modifier le Profil-->
         <scene sceneID="jVx-9T-if2">
@@ -209,12 +209,42 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwE-xz-NTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1366.6666666666667" y="-364.28571428571428"/>
+            <point key="canvasLocation" x="2276.8115942028985" y="-364.28571428571428"/>
+        </scene>
+        <!--Track History-->
+        <scene sceneID="D8T-ea-ghx">
+            <objects>
+                <tableViewController id="Z5n-34-arc" customClass="TrackHistory" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g8c-OT-qMO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Walk Cell" id="3aG-Ib-Qh1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3aG-Ib-Qh1" id="BGR-bj-F4L">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Z5n-34-arc" id="G2p-Vr-dlc"/>
+                            <outlet property="delegate" destination="Z5n-34-arc" id="0tI-Na-n8V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1Wp-NM-cNw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keG-05-vQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="-1039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bHN-o6-zFj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UMq-ew-F5D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="settings" id="Giv-w2-Ak6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jcE-Ue-VZs">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -227,10 +257,53 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bws-PC-Pvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="790" y="-364"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KpA-Nh-2j4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p90-js-obK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="human-footprints" id="cpq-Lo-eoe"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="frf-Ih-fF7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M0b-Dv-qG6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z5n-34-arc" kind="relationship" relationship="rootViewController" id="eN8-xL-TII"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnj-Zf-kfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-1039"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UZd-Ak-hZd">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1zb-be-Nom" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yrL-li-xH8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UMq-ew-F5D" kind="relationship" relationship="viewControllers" id="XDn-yp-l5k"/>
+                        <segue destination="p90-js-obK" kind="relationship" relationship="viewControllers" id="nTB-ys-mJV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y29-5b-7Tu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-120.28985507246378" y="-364.28571428571428"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
     <resources>
+        <image name="human-footprints" width="31" height="44"/>
+        <image name="settings" width="38" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
