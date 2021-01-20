@@ -15,6 +15,7 @@
 		7B65725F25B183E100940F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725D25B183E100940F65 /* LaunchScreen.storyboard */; };
 		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
+		7B90106A25B6CF09004DF3BF /* TrackHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90106925B6CF09004DF3BF /* TrackHistory.swift */; };
 		7B922C4B25B2B02000A5C35D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C4A25B2B02000A5C35D /* Users.swift */; };
 		7B922C5325B2DF3000A5C35D /* UpdateProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C5225B2DF3000A5C35D /* UpdateProfil.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		7B65727025B183E200940F65 /* Walk For MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walk For MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
 		7B65727625B183E200940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B90106925B6CF09004DF3BF /* TrackHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHistory.swift; sourceTree = "<group>"; };
 		7B922C4A25B2B02000A5C35D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		7B922C5225B2DF3000A5C35D /* UpdateProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,8 +105,9 @@
 		7B65725125B183E100940F65 /* Walk For Me */ = {
 			isa = PBXGroup;
 			children = (
-				7B65725425B183E100940F65 /* SceneDelegate.swift */,
 				7B65725225B183E100940F65 /* AppDelegate.swift */,
+				7B65725425B183E100940F65 /* SceneDelegate.swift */,
+				7B65725825B183E100940F65 /* Main.storyboard */,
 				7B922C4925B2B00F00A5C35D /* Model */,
 				7B65728525B1AB7100940F65 /* Sources */,
 				7B65728625B1AB7800940F65 /* Ressources */,
@@ -134,9 +137,9 @@
 		7B65728525B1AB7100940F65 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7B65725825B183E100940F65 /* Main.storyboard */,
 				7B65725625B183E100940F65 /* ProfilViewController.swift */,
 				7B922C5225B2DF3000A5C35D /* UpdateProfil.swift */,
+				7B90106925B6CF09004DF3BF /* TrackHistory.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				7B922C5325B2DF3000A5C35D /* UpdateProfil.swift in Sources */,
 				7B922C4B25B2B02000A5C35D /* Users.swift in Sources */,
+				7B90106A25B6CF09004DF3BF /* TrackHistory.swift in Sources */,
 				7B65725725B183E100940F65 /* ProfilViewController.swift in Sources */,
 				7B65725325B183E100940F65 /* AppDelegate.swift in Sources */,
 				7B65725525B183E100940F65 /* SceneDelegate.swift in Sources */,
