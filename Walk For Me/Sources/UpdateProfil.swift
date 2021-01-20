@@ -11,12 +11,11 @@ class UpdateProfil: UITableViewController {
     
      // MARK: - Outlets
 
-     @IBOutlet weak var sexChoiceButton: UIButton!
+    @IBOutlet weak var sexChoiceButton: UIButton!
     @IBOutlet weak var weightChoiceButton: UIButton!
     
     private var sexChoice = ["Homme", "Femme"]
     private var weightChoice = [String]()
-    private var pickerView = UIPickerView()
     private var typeValue = ""
    
     
@@ -32,12 +31,7 @@ class UpdateProfil: UITableViewController {
     
     // MARK: - Actions
 
-    @IBAction func changeSexPressed(_ sender: Any) {
-        
-    }
-    
-    @IBAction func weightButtonPressed(_ sender: Any) {
-        
+    @IBAction private func changeSexPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Choisissez votre poids", message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         
 
