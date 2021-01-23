@@ -12,6 +12,8 @@ import UserNotifications
 @main
 @available(iOS 13.0, *)
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let center = UNUserNotificationCenter.current()
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
