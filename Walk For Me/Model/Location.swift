@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct User {
+class Location {
     
 }
