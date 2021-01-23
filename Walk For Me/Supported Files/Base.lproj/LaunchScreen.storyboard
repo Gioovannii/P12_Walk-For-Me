@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +14,86 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVX-KE-a1f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk for me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-b7-Zp9">
+                                        <rect key="frame" x="91" y="389" width="232" height="118"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
+                                        <color key="textColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grandFatherImage" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-to-dYP">
+                                        <rect key="frame" x="47" y="100" width="204" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="204" id="LP2-iv-KI4"/>
+                                            <constraint firstAttribute="height" constant="148" id="XNW-87-l5n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walking-the-dog" translatesAutoresizingMaskIntoConstraints="NO" id="Vgn-gv-dDw">
+                                        <rect key="frame" x="191" y="277" width="183" height="103"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="103" id="bLY-Tt-yhj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walking-to-school" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-BW-32a">
+                                        <rect key="frame" x="47" y="515" width="204" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="GBn-fS-BG3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="lHH-AQ-0Ac">
+                                        <rect key="frame" x="191" y="666" width="183" height="160"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72156862745098038" green="0.9137254901960784" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pfz-b7-Zp9" firstAttribute="leading" secondItem="DVX-KE-a1f" secondAttribute="leading" constant="91" id="0bD-Y9-SL2"/>
+                                    <constraint firstItem="lHH-AQ-0Ac" firstAttribute="leading" secondItem="Vgn-gv-dDw" secondAttribute="leading" id="Ahc-N6-Nod"/>
+                                    <constraint firstItem="qE9-to-dYP" firstAttribute="leading" secondItem="DVX-KE-a1f" secondAttribute="leading" constant="47" id="CHe-aN-Gq5"/>
+                                    <constraint firstItem="lHH-AQ-0Ac" firstAttribute="centerX" secondItem="Vgn-gv-dDw" secondAttribute="centerX" id="GKB-NI-pCa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vgn-gv-dDw" secondAttribute="trailing" constant="40" id="KC2-XC-V57"/>
+                                    <constraint firstItem="3aa-BW-32a" firstAttribute="trailing" secondItem="qE9-to-dYP" secondAttribute="trailing" id="QRM-Bz-dWa"/>
+                                    <constraint firstItem="3aa-BW-32a" firstAttribute="leading" secondItem="qE9-to-dYP" secondAttribute="leading" id="TFC-zv-XQJ"/>
+                                    <constraint firstItem="qE9-to-dYP" firstAttribute="leading" secondItem="3aa-BW-32a" secondAttribute="leading" id="TNU-nL-NAe"/>
+                                    <constraint firstItem="qE9-to-dYP" firstAttribute="top" secondItem="DVX-KE-a1f" secondAttribute="top" constant="100" id="X5B-Ml-1XK"/>
+                                    <constraint firstItem="pfz-b7-Zp9" firstAttribute="centerY" secondItem="DVX-KE-a1f" secondAttribute="centerY" id="bCu-xS-zA5"/>
+                                    <constraint firstItem="pfz-b7-Zp9" firstAttribute="top" secondItem="Vgn-gv-dDw" secondAttribute="bottom" constant="9" id="bx5-4H-2pI"/>
+                                    <constraint firstAttribute="trailing" secondItem="lHH-AQ-0Ac" secondAttribute="trailing" constant="40" id="dbR-GD-Qht"/>
+                                    <constraint firstItem="lHH-AQ-0Ac" firstAttribute="top" secondItem="3aa-BW-32a" secondAttribute="bottom" constant="11" id="eOe-Gb-FlK"/>
+                                    <constraint firstItem="lHH-AQ-0Ac" firstAttribute="trailing" secondItem="Vgn-gv-dDw" secondAttribute="trailing" id="eqQ-RI-TgR"/>
+                                    <constraint firstItem="pfz-b7-Zp9" firstAttribute="centerX" secondItem="DVX-KE-a1f" secondAttribute="centerX" id="kT2-sc-EzK"/>
+                                    <constraint firstItem="Vgn-gv-dDw" firstAttribute="top" secondItem="qE9-to-dYP" secondAttribute="bottom" constant="29" id="naH-ff-2Kx"/>
+                                    <constraint firstItem="3aa-BW-32a" firstAttribute="top" secondItem="pfz-b7-Zp9" secondAttribute="bottom" constant="8" symbolic="YES" id="v0g-rg-zJf"/>
+                                    <constraint firstAttribute="bottom" secondItem="lHH-AQ-0Ac" secondAttribute="bottom" constant="70" id="weM-up-ZDa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DVX-KE-a1f" secondAttribute="bottom" id="ETX-e1-Yc2"/>
+                            <constraint firstItem="DVX-KE-a1f" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Mf6-Wy-bhn"/>
+                            <constraint firstItem="DVX-KE-a1f" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="hAd-eH-jmm"/>
+                            <constraint firstAttribute="trailing" secondItem="DVX-KE-a1f" secondAttribute="trailing" id="nJC-8X-hKN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grandFatherImage" width="173" height="173"/>
+        <image name="walking-the-dog" width="183" height="161"/>
+        <image name="walking-to-school" width="167" height="183"/>
+        <image name="woman" width="144" height="160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
