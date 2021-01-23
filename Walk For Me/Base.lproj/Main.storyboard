@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="1525" y="-1039"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="mTA-f9-o8v">
             <objects>
-                <viewController id="xv8-ib-guO" sceneMemberID="viewController">
+                <viewController id="xv8-ib-guO" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="292-pv-pI3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,6 +268,10 @@
                     <navigationItem key="navigationItem" id="k4Y-pT-Uqv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cpQ-qb-a3N"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addPlacesButton" destination="cpQ-qb-a3N" id="xGl-lS-ksd"/>
+                        <outlet property="mapView" destination="hKT-1A-hNH" id="Qhp-EC-Vbw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKX-vz-YYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
