@@ -25,6 +25,4 @@ extension TrackHistory {
         cell.textLabel?.text = history[indexPath.row]
         return cell
     }
-    
-    
 }
