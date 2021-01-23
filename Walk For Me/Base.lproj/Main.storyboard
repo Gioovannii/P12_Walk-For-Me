@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="2276.8115942028985" y="-364.28571428571428"/>
         </scene>
-        <!--Track History-->
+        <!--Place Table View Controller-->
         <scene sceneID="D8T-ea-ghx">
             <objects>
-                <tableViewController id="Z5n-34-arc" customClass="TrackHistory" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Z5n-34-arc" customClass="PlaceTableViewController" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g8c-OT-qMO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,10 +266,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k4Y-pT-Uqv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cpQ-qb-a3N"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cpQ-qb-a3N">
+                            <connections>
+                                <action selector="addItemPRessed:" destination="xv8-ib-guO" id="cCo-jq-DVa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPlacesButton" destination="cpQ-qb-a3N" id="xGl-lS-ksd"/>
                         <outlet property="mapView" destination="hKT-1A-hNH" id="Qhp-EC-Vbw"/>
                     </connections>
                 </viewController>
