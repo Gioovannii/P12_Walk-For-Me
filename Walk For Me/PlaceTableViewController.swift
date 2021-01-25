@@ -9,7 +9,11 @@ import UIKit
 import CoreLocation
 
 class PlaceTableViewController: UITableViewController {
-    var history = ["historique 1", "historique 2", "historique 3"]
+    
+    var paceTitle = [String]()
+    var paceNumber = ["12", "45", "64", "92", "54"]
+    var locationManager: CLLocationManager?
+    var previousLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
