@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PlaceTableViewController: UITableViewController {
     var history = ["historique 1", "historique 2", "historique 3"]
