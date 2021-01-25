@@ -31,5 +31,8 @@ extension PlaceTableViewController {
         cell.detailTextLabel?.text = paceNumber[indexPath.row]
         return cell
     }
+}
+
+extension PlaceTableViewController: CLLocationManagerDelegate {
     
 }
