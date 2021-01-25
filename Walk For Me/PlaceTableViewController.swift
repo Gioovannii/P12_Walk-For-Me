@@ -17,7 +17,22 @@ class PlaceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for i in 1...5 {
+            paceTitle.append("Nombre de pas " + "\(i)")
+        }
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
+    
+    @IBAction func localisationPressed(_ sender: Any) {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
+            activateLocationServices()
+        }
+    }
+    
 }
 
 extension PlaceTableViewController {
