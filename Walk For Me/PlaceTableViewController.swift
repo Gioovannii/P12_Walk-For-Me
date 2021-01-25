@@ -23,6 +23,8 @@ extension PlaceTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Walk Cell", for: indexPath)
+        cell.textLabel?.text = paceTitle[indexPath.row]
+        cell.detailTextLabel?.text = paceNumber[indexPath.row]
         return cell
     }
     
