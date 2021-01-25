@@ -11,6 +11,12 @@ import MapKit
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mapView.userTrackingMode = .follow
+    }
     
-    @IBOutlet weak var addPlacesButton: UIBarButtonItem!
+    @IBAction func addItemPRessed(_ sender: Any) {
+        
+    }
 }
