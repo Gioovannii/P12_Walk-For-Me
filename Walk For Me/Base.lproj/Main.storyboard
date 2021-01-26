@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="2276.8115942028985" y="-364.28571428571428"/>
         </scene>
-        <!--Place Table View Controller-->
+        <!--Track History-->
         <scene sceneID="D8T-ea-ghx">
             <objects>
-                <tableViewController id="Z5n-34-arc" customClass="PlaceTableViewController" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Z5n-34-arc" customClass="TrackHistory" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g8c-OT-qMO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,7 +245,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xv8-ib-guO" kind="show" id="uMg-Vk-n6k"/>
+                                    <segue destination="xv8-ib-guO" kind="show" identifier="MapSegue" id="uMg-Vk-n6k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -254,18 +254,7 @@
                             <outlet property="delegate" destination="Z5n-34-arc" id="0tI-Na-n8V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1Wp-NM-cNw">
-                        <barButtonItem key="leftBarButtonItem" title="localisation" image="map" id="37v-tV-Gse">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Utz-Ka-tlc">
-                                <rect key="frame" x="20" y="9.5" width="79" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="map"/>
-                                <connections>
-                                    <action selector="localisationPressed:" destination="Z5n-34-arc" eventType="touchUpInside" id="bca-Mr-2zr"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="1Wp-NM-cNw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keG-05-vQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,12 +263,12 @@
         <!--Map View Controller-->
         <scene sceneID="mTA-f9-o8v">
             <objects>
-                <viewController id="xv8-ib-guO" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="xv8-ib-guO" customClass="MapViewController" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="292-pv-pI3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-1A-hNH">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-1A-hNH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                         </subviews>
@@ -293,12 +282,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k4Y-pT-Uqv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cpQ-qb-a3N">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ml2-s4-Ui1">
+                            <rect key="frame" x="96.5" y="5.5" width="221" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Standard" width="110"/>
+                                <segment title="Satellite" width="110"/>
+                            </segments>
                             <connections>
-                                <action selector="addItemPressed:" destination="xv8-ib-guO" id="cCo-jq-DVa"/>
+                                <action selector="changeMapType:" destination="xv8-ib-guO" eventType="valueChanged" id="CZg-ZO-fsl"/>
                             </connections>
-                        </barButtonItem>
+                        </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="hKT-1A-hNH" id="bzb-GR-qMf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKX-vz-YYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,7 +366,6 @@
     <color key="tintColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
     <resources>
         <image name="human-footprints" width="31" height="44"/>
-        <image name="map" width="25" height="25"/>
         <image name="settings" width="38" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
