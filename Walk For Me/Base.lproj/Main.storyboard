@@ -124,7 +124,7 @@
         <!--Modifier le Profil-->
         <scene sceneID="jVx-9T-if2">
             <objects>
-                <tableViewController id="q9V-G8-p0U" customClass="UpdateProfil" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="q9V-G8-p0U" customClass="UpdateProfilController" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rdH-vW-iXj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="2276.8115942028985" y="-364.28571428571428"/>
         </scene>
-        <!--Track History-->
+        <!--Historique-->
         <scene sceneID="D8T-ea-ghx">
             <objects>
                 <tableViewController id="Z5n-34-arc" customClass="TrackHistory" customModule="Walk_For_Me" customModuleProvider="target" sceneMemberID="viewController">
@@ -245,7 +245,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xv8-ib-guO" kind="show" identifier="MapSegue" id="uMg-Vk-n6k"/>
+                                    <segue destination="xv8-ib-guO" kind="show" identifier="CellToMap" id="uMg-Vk-n6k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -254,7 +254,7 @@
                             <outlet property="delegate" destination="Z5n-34-arc" id="0tI-Na-n8V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1Wp-NM-cNw"/>
+                    <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keG-05-vQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,8 +281,7 @@
                             <constraint firstItem="5UB-JD-iAH" firstAttribute="bottom" secondItem="hKT-1A-hNH" secondAttribute="bottom" id="ntc-la-naG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="k4Y-pT-Uqv">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="k4Y-pT-Uqv">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ml2-s4-Ui1">
                             <rect key="frame" x="96.5" y="5.5" width="221" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -328,9 +327,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p90-js-obK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="human-footprints" id="cpq-Lo-eoe"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="frf-Ih-fF7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M0b-Dv-qG6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="M0b-Dv-qG6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
