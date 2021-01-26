@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager = CLLocationManager()
 
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways {
-            print("authorized")
             trackHistory.activateLocationServices()
         } else {
             locationManager?.requestAlwaysAuthorization()
