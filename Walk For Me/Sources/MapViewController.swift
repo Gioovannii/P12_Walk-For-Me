@@ -29,5 +29,18 @@ class MapViewController: UIViewController {
         produceOverlay()
     }
     
+    // MARK: - Actions
+    
+    @IBAction func changeMapType(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        default:
+            return
+        }
+    }
+    
  
 }
