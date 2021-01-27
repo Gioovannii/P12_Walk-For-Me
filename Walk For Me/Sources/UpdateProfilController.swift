@@ -53,14 +53,12 @@ class UpdateProfilController: UITableViewController {
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+            information(self.typeValue)
+        })
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            print("You select " + self.typeValue)
-            self.weightChoiceButton.titleLabel?.text = self.typeValue + " kg"
-        }))
-        
-        present(alert, animated: true)
+        present(alertController, animated: true)
     }
 }
 
