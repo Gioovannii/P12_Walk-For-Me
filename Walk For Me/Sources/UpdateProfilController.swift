@@ -36,26 +36,6 @@ class UpdateProfilController: UITableViewController {
         displayAlert(tag: 1) { information in
             self.sexChoiceButton.setTitle(information, for: .normal)
         }
-            
-            
-            //        let alert = UIAlertController(title: "Choisissez votre sexe", message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
-//
-//
-//        let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
-//
-//        pickerFrame.tag = 1
-//        alert.view.addSubview(pickerFrame)
-//        pickerFrame.dataSource = self
-//        pickerFrame.delegate = self
-//
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-//            print("You select " + self.typeValue)
-//            self.sexChoiceButton.titleLabel?.text = self.typeValue
-//        }))
-//
-//        present(alert, animated: true)
     }
     
     @IBAction private func weightButtonPressed(_ sender: Any) {
