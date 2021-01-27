@@ -65,7 +65,7 @@ class UpdateProfilController: UITableViewController {
 
 // MARK: - PickerView Delegate / DataSource
 
-extension UpdateProfil: UIPickerViewDelegate, UIPickerViewDataSource {
+extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
