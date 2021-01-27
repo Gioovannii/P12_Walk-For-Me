@@ -39,9 +39,13 @@ class UpdateProfilController: UITableViewController {
     }
     
     @IBAction private func weightButtonPressed(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "Choisissez votre poids", message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
-        
+        displayAlert(tag: 2) { information  in
+            self.weightChoiceButton.setTitle(information! + " kg", for: .normal)
+        }
+    }
+    
+    func displayAlert(tag: Int, information: @escaping (String?) -> Void) {
+        let alertController = UIAlertController(title: "Choisissez votre sexe" , message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
         pickerFrame.tag = 2
