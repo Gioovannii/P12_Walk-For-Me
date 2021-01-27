@@ -21,9 +21,13 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loadLocation = CLLocation(latitude: self.latitude, longitude: self.longitude)
+        let regionRadius: CLLocationDistance = 1000.0
+        let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(region, animated: true)
+        mapView.delegate = self
+        produceOverlay()
     }
     
-    @IBAction func addItemPressed(_ sender: Any) {
-        
-    }
+ 
 }
