@@ -33,8 +33,8 @@ class UpdateProfilController: UITableViewController {
     
     @IBAction private func changeSexPressed(_ sender: Any) {
         
-        displayAlert(tag: 1) { title in
-            self.sexChoiceButton.titleLabel?.text = self.typeValue + " kg"
+        displayAlert(tag: 1) { information in
+            self.sexChoiceButton.setTitle(information, for: .normal)
         }
             
             
