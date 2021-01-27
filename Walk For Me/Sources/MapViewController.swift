@@ -42,5 +42,17 @@ class MapViewController: UIViewController {
         }
     }
     
- 
+    private func produceOverlay() {
+        var points: [CLLocationCoordinate2D] = []
+        points.append(CLLocationCoordinate2DMake(25.029835, 121.529526))
+        points.append(CLLocationCoordinate2DMake(25.029900, 121.529570))
+        points.append(CLLocationCoordinate2DMake(25.030450, 121.529890))
+        points.append(CLLocationCoordinate2DMake(25.030500, 121.532000))
+
+        let polygon = MKPolygon(coordinates: &points, count: points.count)
+        mapView.addOverlay(polygon)
+
+    }
+}
+
 }
