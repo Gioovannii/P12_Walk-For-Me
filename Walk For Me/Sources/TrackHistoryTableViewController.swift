@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-final class TrackHistory: UITableViewController {
+final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
     
@@ -41,7 +41,9 @@ final class TrackHistory: UITableViewController {
     }
 }
 
-extension PlaceTableViewController {
+// MARK: - TableView DataSource
+
+extension TrackHistoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paceTitle.count
     }
@@ -56,7 +58,7 @@ extension PlaceTableViewController {
 
 // MARK: - Location Manager Delegate
 
-extension TrackHistory: CLLocationManagerDelegate {
+extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
