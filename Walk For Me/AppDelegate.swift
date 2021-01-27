@@ -12,7 +12,7 @@ import CoreLocation
 @available(iOS 13.0, *)
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
-    let trackHistory = TrackHistory()
+    let trackHistory = TrackHistoryTableViewController()
     var locationManager: CLLocationManager?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
