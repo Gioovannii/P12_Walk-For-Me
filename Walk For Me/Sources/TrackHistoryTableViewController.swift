@@ -66,6 +66,10 @@ extension TrackHistoryTableViewController {
         cell.detailTextLabel?.text = paceNumber[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - Location Manager Delegate
@@ -85,17 +89,23 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         // MARK: - Check current location
-        currentLocation = locations.first
-        print(currentLocation as Any)
+//                currentLocation = locations.first
+//                print(currentLocation as Any)
         
-//        if previousLocation == nil {
-//            previousLocation = locations.first
-//        } else {
-//            guard let latest = locations.first else { return }
-//            let distanceInMeters = previousLocation?.distance(from: latest) ?? 0
-//            paceNumber.append("\(distanceInMeters)")
-//            print("Distance in meters: \(distanceInMeters)")
-//            previousLocation = latest
-//        }
+        if previousLocation == nil {
+            previousLocation = locations.first
+        } else {
+            guard let latest = locations.first else { return }
+            let distanceInMeters = previousLocation?.distance(from: latest) ?? 0
+            var distanceRounded = distanceInMeters.rounded()
+            print("Distance in meters: \(distanceRounded)")
+            let unwrappedPaceNumber = paceNumber[0]
+            distanceRounded += Double(unwrappedPaceNumber)!
+            paceNumber[0] = "\(distanceRounded)"
+            print(paceNumber[0])
+            tableView.reloadData()
+
+            previousLocation = latest
+        }
     }
 }
