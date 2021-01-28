@@ -67,4 +67,7 @@ extension MapViewController: MKMapViewDelegate {
         return polyRenderer
     }
 
+    func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
+        print("Rendering ...")
+    }
 }
