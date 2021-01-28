@@ -16,8 +16,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     var paceNumber = ["1", "20", "59", "78", "71", "82", "56"]
 
     var locationManager: CLLocationManager?
-    var previousLocation : CLLocation?
-    var currentLocation : CLLocation?
+    var previousLocation: CLLocation?
+    var currentLocation: CLLocation?
     
     // MARK: - Life Cycle
     
