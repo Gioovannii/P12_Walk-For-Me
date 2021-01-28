@@ -35,11 +35,21 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     func activateLocationServices() {
-//        locationManager?.startUpdatingLocation()
+        locationManager?.startUpdatingLocation()
         
         // MARK: - Ask location only one time
-
-        locationManager?.requestLocation()
+        
+//        locationManager?.requestLocation()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CellToMap" {
+            
+            guard let mapController = segue.destination as? MapViewController else { return }
+            guard let currentLocation = currentLocation else { return }
+            mapController.longitude = currentLocation.coordinate.longitude
+            mapController.latitude = currentLocation.coordinate.latitude
+        }
     }
 }
 
