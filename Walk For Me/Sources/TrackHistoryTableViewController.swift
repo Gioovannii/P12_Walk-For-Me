@@ -23,7 +23,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 1...5 {
+        tableView.tableFooterView = UIView()
+        for i in 1...paceNumber.count {
             paceTitle.append("Nombre de pas " + "\(i)")
         }
         
