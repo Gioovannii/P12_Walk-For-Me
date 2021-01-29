@@ -8,10 +8,11 @@
 import Foundation
 
 struct Constant {
-    static let cellIdentifier = "Walk Cell"
-    static let performToMap = "CellToMap"
+    static let walkCell = "Walk Cell"
+    static let cellToMap = "CellToMap"
     
     struct Config {
-       
+        // TODO: - Here we can do so key privacy
+
     }
 }
