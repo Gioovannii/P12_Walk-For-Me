@@ -286,7 +286,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Standard" width="110"/>
-                                <segment title="Satellite" width="110"/>
+                                <segment title="Satellite Flyover" width="110"/>
                             </segments>
                             <connections>
                                 <action selector="changeMapType:" destination="xv8-ib-guO" eventType="valueChanged" id="CZg-ZO-fsl"/>
