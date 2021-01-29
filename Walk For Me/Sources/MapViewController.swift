@@ -36,7 +36,7 @@ class MapViewController: UIViewController {
         case 0:
             mapView.mapType = .standard
         case 1:
-            mapView.mapType = .satellite
+            mapView.mapType = .satelliteFlyover
         default:
             return
         }
