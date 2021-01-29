@@ -67,10 +67,9 @@
                                                 </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Avd-QG-A8E" secondAttribute="trailing" constant="20" id="NqB-e9-CyV"/>
-                                                <constraint firstItem="Avd-QG-A8E" firstAttribute="trailing" secondItem="3m6-Zz-RIi" secondAttribute="trailingMargin" id="U3R-WF-goe"/>
+                                                <constraint firstAttribute="trailing" secondItem="Avd-QG-A8E" secondAttribute="trailing" constant="20" id="StS-0O-Opc"/>
+                                                <constraint firstItem="Avd-QG-A8E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rog-s1-SJu" secondAttribute="trailing" constant="8" symbolic="YES" id="WPh-fS-u1Q"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Rog-s1-SJu" secondAttribute="bottom" id="XZA-i4-XOT"/>
-                                                <constraint firstItem="Avd-QG-A8E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rog-s1-SJu" secondAttribute="trailing" constant="8" symbolic="YES" id="rJm-HT-qpS"/>
                                                 <constraint firstItem="Avd-QG-A8E" firstAttribute="bottom" secondItem="Rog-s1-SJu" secondAttribute="bottom" id="tx3-91-W7N"/>
                                                 <constraint firstItem="Rog-s1-SJu" firstAttribute="top" secondItem="3m6-Zz-RIi" secondAttribute="topMargin" id="u8M-ro-kvk"/>
                                                 <constraint firstItem="Rog-s1-SJu" firstAttribute="leading" secondItem="3m6-Zz-RIi" secondAttribute="leadingMargin" constant="10" id="zj8-xm-meP"/>
@@ -91,17 +90,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mZK-KV-Dcw">
-                                                    <rect key="frame" x="345" y="11" width="51" height="28"/>
+                                                    <rect key="frame" x="345" y="8" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mZK-KV-Dcw" firstAttribute="top" secondItem="otE-yX-yPd" secondAttribute="top" id="7I0-QS-vhB"/>
                                                 <constraint firstItem="mZK-KV-Dcw" firstAttribute="bottom" secondItem="otE-yX-yPd" secondAttribute="bottom" id="HPw-jN-SGH"/>
+                                                <constraint firstAttribute="trailing" secondItem="mZK-KV-Dcw" secondAttribute="trailing" constant="20" id="Y2r-ep-dZj"/>
                                                 <constraint firstItem="otE-yX-yPd" firstAttribute="top" secondItem="nNc-Bc-rfi" secondAttribute="topMargin" id="arx-XC-z51"/>
                                                 <constraint firstItem="otE-yX-yPd" firstAttribute="leading" secondItem="nNc-Bc-rfi" secondAttribute="leadingMargin" constant="10" id="k1c-Zz-jMT"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="otE-yX-yPd" secondAttribute="bottom" id="nwd-Mv-ewo"/>
-                                                <constraint firstAttribute="trailing" secondItem="mZK-KV-Dcw" secondAttribute="trailing" constant="20" id="sxm-6D-HyF"/>
-                                                <constraint firstItem="mZK-KV-Dcw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="otE-yX-yPd" secondAttribute="trailing" constant="8" symbolic="YES" id="wfw-Ua-qqs"/>
+                                                <constraint firstItem="mZK-KV-Dcw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="otE-yX-yPd" secondAttribute="trailing" constant="8" symbolic="YES" id="zd8-M7-bgO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
