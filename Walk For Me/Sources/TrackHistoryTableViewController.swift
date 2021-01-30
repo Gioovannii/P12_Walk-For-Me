@@ -13,8 +13,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Properties
     
     var paceTitle = [String]()
-    var paceNumber = ["1", "20", "59", "78", "71", "82", "56"]
-
+    var paceNumber = ["1"]
+    
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
     var currentLocation: CLLocation?
@@ -104,7 +104,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             paceNumber[0] = "\(distanceRounded)"
             print(paceNumber[0])
             tableView.reloadData()
-
+            
             previousLocation = latest
         }
     }
