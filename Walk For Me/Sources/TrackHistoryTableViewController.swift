@@ -96,6 +96,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         
         if previousLocation == nil {
             previousLocation = locations.first
+            currentLocation = locations.first
         } else {
             guard let latest = locations.first else { return }
             let distanceInMeters = previousLocation?.distance(from: latest) ?? 0
