@@ -44,7 +44,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CellToMap" {
+        if segue.identifier == Constant.cellToMap {
             
             guard let mapController = segue.destination as? MapViewController else { return }
             guard let currentLocation = currentLocation else { return }
@@ -62,7 +62,7 @@ extension TrackHistoryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Walk Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
         cell.textLabel?.text = paceTitle[indexPath.row]
         cell.detailTextLabel?.text = paceNumber[indexPath.row]
         return cell
