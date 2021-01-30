@@ -49,7 +49,7 @@ class MapViewController: UIViewController {
             }
 
         default:
-            return
+            print("Nothing happened")
         }
     }
     
