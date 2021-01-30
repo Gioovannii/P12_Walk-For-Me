@@ -16,7 +16,10 @@ class MapViewController: UIViewController {
     
     var longitude = 0.0
     var latitude = 0.0
-    
+    var location: CLLocationCoordinate2D? = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+
+    //        = CLLocationCoordinate2D(latitude: 48.858093, longitude: 2.294694)
+        
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
