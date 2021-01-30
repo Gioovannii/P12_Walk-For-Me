@@ -11,8 +11,8 @@ class UpdateProfilController: UITableViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var sexChoiceButton: UIButton!
-    @IBOutlet weak var weightChoiceButton: UIButton!
+    @IBOutlet weak var sexeLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
     
     private var sexChoice = ["Homme", "Femme"]
     private var weightChoice = [String]()
@@ -29,22 +29,7 @@ class UpdateProfilController: UITableViewController {
         }
     }
     
-    // MARK: - Actions
-    
-    @IBAction private func changeSexPressed(_ sender: Any) {
-        
-        displayAlert(tag: 1) { information in
-            self.sexChoiceButton.setTitle(information, for: .normal)
-        }
-    }
-    
-    @IBAction private func weightButtonPressed(_ sender: Any) {
-        displayAlert(tag: 2) { information  in
-            self.weightChoiceButton.setTitle(information! + " kg", for: .normal)
-        }
-    }
-    
-    func displayAlert(tag: Int, information: @escaping (String?) -> Void) {
+    private func displayAlert(tag: Int, information: @escaping (String?) -> Void) {
         let alertController = UIAlertController(title: "Choisissez votre sexe" , message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
@@ -61,7 +46,6 @@ class UpdateProfilController: UITableViewController {
         present(alertController, animated: true)
     }
 }
-
 
 // MARK: - PickerView Delegate / DataSource
 
@@ -88,6 +72,25 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         return ""
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            tableView.deselectRow(at: indexPath, animated: true)
+            displayAlert(tag: 1) { information in
+                self.sexeLabel.text = information
+                tableView.reloadData()
+            }
+        case 1:
+            displayAlert(tag: 2) { information  in
+                guard let information = information else { return }
+                self.weightLabel.text = "\(information + " kg") "
+            }
+        default:
+            print("default case")
+        }
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
             switch row {
@@ -99,22 +102,27 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
                 typeValue = "Something"
             }
         } else if pickerView.tag == 2 {
-            if row == 0 {
+            switch row {
+            case 0:
                 typeValue = "40"
-            } else if row == 1 {
+            case 1:
                 typeValue = "41"
-            } else if row == 2 {
+            case 2:
                 typeValue = "42"
-            } else if row == 3 {
+            case 3:
                 typeValue = "43"
-            } else if row == 4 {
+            case 4:
                 typeValue = "44"
-            } else if row == 5 {
+            case 5:
                 typeValue = "45"
-            } else if row == 6 {
+            case 6:
                 typeValue = "46"
-            } else if row == 7 {
+            case 7:
                 typeValue = "47"
+            case 8:
+                typeValue = "48"
+            default:
+                print("Default case")
             }
         }
     }

@@ -144,11 +144,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-o2-xgE">
+                                                    <rect key="frame" x="303" y="0.0" width="60" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="hgL-Mo-oNm" secondAttribute="bottom" id="92F-dF-cKJ"/>
                                                 <constraint firstItem="hgL-Mo-oNm" firstAttribute="leading" secondItem="uQP-k6-J53" secondAttribute="leading" constant="10" id="FjP-2c-Gmw"/>
+                                                <constraint firstItem="6g3-o2-xgE" firstAttribute="centerY" secondItem="hgL-Mo-oNm" secondAttribute="centerY" id="Nh6-aF-zs5"/>
+                                                <constraint firstAttribute="trailing" secondItem="6g3-o2-xgE" secondAttribute="trailing" constant="20" id="Qwy-9T-Lqe"/>
                                                 <constraint firstItem="hgL-Mo-oNm" firstAttribute="top" secondItem="uQP-k6-J53" secondAttribute="top" id="fNF-5t-jSE"/>
+                                                <constraint firstItem="6g3-o2-xgE" firstAttribute="top" secondItem="hgL-Mo-oNm" secondAttribute="top" id="kbr-LB-dWN"/>
+                                                <constraint firstItem="6g3-o2-xgE" firstAttribute="bottom" secondItem="hgL-Mo-oNm" secondAttribute="bottom" id="oB5-Iw-eCL"/>
+                                                <constraint firstItem="6g3-o2-xgE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hgL-Mo-oNm" secondAttribute="trailing" constant="8" symbolic="YES" id="rdh-3d-PSL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -165,11 +176,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-j1-6RV">
+                                                    <rect key="frame" x="312" y="0.0" width="51" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="uRT-92-ZZ2" secondAttribute="bottom" id="HvV-ob-RcQ"/>
                                                 <constraint firstItem="uRT-92-ZZ2" firstAttribute="leading" secondItem="q9T-na-QXH" secondAttribute="leading" constant="10" id="K6R-Ob-5EK"/>
+                                                <constraint firstItem="d8e-j1-6RV" firstAttribute="centerY" secondItem="uRT-92-ZZ2" secondAttribute="centerY" id="R0g-Ph-b5r"/>
                                                 <constraint firstItem="uRT-92-ZZ2" firstAttribute="top" secondItem="q9T-na-QXH" secondAttribute="top" id="Ral-Cz-nST"/>
+                                                <constraint firstItem="d8e-j1-6RV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uRT-92-ZZ2" secondAttribute="trailing" constant="8" symbolic="YES" id="Z7d-Eu-2ve"/>
+                                                <constraint firstItem="d8e-j1-6RV" firstAttribute="top" secondItem="uRT-92-ZZ2" secondAttribute="top" id="jf7-oy-Sfy"/>
+                                                <constraint firstAttribute="trailing" secondItem="d8e-j1-6RV" secondAttribute="trailing" constant="20" id="q04-uB-WI6"/>
+                                                <constraint firstItem="d8e-j1-6RV" firstAttribute="bottom" secondItem="uRT-92-ZZ2" secondAttribute="bottom" id="xUc-Lu-e2J"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -182,6 +204,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Modifier le Profil" largeTitleDisplayMode="never" id="ZGY-I5-Q3M"/>
+                    <connections>
+                        <outlet property="sexeLabel" destination="6g3-o2-xgE" id="Hk2-2M-4Pt"/>
+                        <outlet property="weightLabel" destination="d8e-j1-6RV" id="oS9-b2-Jx1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwE-xz-NTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
