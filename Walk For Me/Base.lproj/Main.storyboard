@@ -144,21 +144,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A5-WY-6bB">
-                                                    <rect key="frame" x="319" y="10" width="54" height="30"/>
-                                                    <state key="normal" title="Homme"/>
-                                                    <connections>
-                                                        <action selector="changeSexPressed:" destination="q9V-G8-p0U" eventType="touchUpInside" id="cPp-sc-JwH"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4A5-WY-6bB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hgL-Mo-oNm" secondAttribute="trailing" constant="8" symbolic="YES" id="3WO-4x-LdS"/>
                                                 <constraint firstAttribute="bottom" secondItem="hgL-Mo-oNm" secondAttribute="bottom" id="92F-dF-cKJ"/>
                                                 <constraint firstItem="hgL-Mo-oNm" firstAttribute="leading" secondItem="uQP-k6-J53" secondAttribute="leading" constant="10" id="FjP-2c-Gmw"/>
                                                 <constraint firstItem="hgL-Mo-oNm" firstAttribute="top" secondItem="uQP-k6-J53" secondAttribute="top" id="fNF-5t-jSE"/>
-                                                <constraint firstItem="4A5-WY-6bB" firstAttribute="centerY" secondItem="hgL-Mo-oNm" secondAttribute="centerY" id="idb-Q6-Gqi"/>
-                                                <constraint firstAttribute="trailing" secondItem="4A5-WY-6bB" secondAttribute="trailing" constant="10" id="kmt-fF-ipD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -175,21 +165,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FET-ax-vQe">
-                                                    <rect key="frame" x="327" y="10" width="46" height="30"/>
-                                                    <state key="normal" title="100 kg"/>
-                                                    <connections>
-                                                        <action selector="weightButtonPressed:" destination="q9V-G8-p0U" eventType="touchUpInside" id="b0X-j3-ITL"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="FET-ax-vQe" secondAttribute="trailing" constant="10" id="72m-As-6Jx"/>
                                                 <constraint firstAttribute="bottom" secondItem="uRT-92-ZZ2" secondAttribute="bottom" id="HvV-ob-RcQ"/>
                                                 <constraint firstItem="uRT-92-ZZ2" firstAttribute="leading" secondItem="q9T-na-QXH" secondAttribute="leading" constant="10" id="K6R-Ob-5EK"/>
-                                                <constraint firstItem="FET-ax-vQe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uRT-92-ZZ2" secondAttribute="trailing" constant="8" symbolic="YES" id="N8f-VA-5nV"/>
                                                 <constraint firstItem="uRT-92-ZZ2" firstAttribute="top" secondItem="q9T-na-QXH" secondAttribute="top" id="Ral-Cz-nST"/>
-                                                <constraint firstItem="FET-ax-vQe" firstAttribute="centerY" secondItem="uRT-92-ZZ2" secondAttribute="centerY" id="SIX-R5-0f3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -202,10 +182,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Modifier le Profil" largeTitleDisplayMode="never" id="ZGY-I5-Q3M"/>
-                    <connections>
-                        <outlet property="sexChoiceButton" destination="4A5-WY-6bB" id="SzA-3v-OCp"/>
-                        <outlet property="weightChoiceButton" destination="FET-ax-vQe" id="xfj-fc-AEt"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwE-xz-NTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
