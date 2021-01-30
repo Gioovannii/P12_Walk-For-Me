@@ -24,6 +24,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let loadLocation = CLLocation(latitude: self.latitude, longitude: self.longitude)
         let regionRadius: CLLocationDistance = 1000.0
         let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -38,6 +39,7 @@ class MapViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             mapView.mapType = .standard
+            mapView.isRotateEnabled = false
         case 1:
             mapView.mapType = .satelliteFlyover
         default:
