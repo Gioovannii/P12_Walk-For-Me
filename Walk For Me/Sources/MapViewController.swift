@@ -42,6 +42,12 @@ class MapViewController: UIViewController {
             mapView.isRotateEnabled = false
         case 1:
             mapView.mapType = .satelliteFlyover
+            if let taipei = location {
+                let camera = MKMapCamera(lookingAtCenter: taipei, fromDistance: 300, pitch: 40, heading: 0)
+                mapView.camera = camera
+                mapView.isRotateEnabled = true
+            }
+
         default:
             return
         }
