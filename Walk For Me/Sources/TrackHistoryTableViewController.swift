@@ -18,6 +18,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
     var currentLocation: CLLocation?
+    var trackMoving = false
     
     // MARK: - Life Cycle
     
@@ -89,8 +90,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         // MARK: - Check current location
-//                currentLocation = locations.first
-//                print(currentLocation as Any)
+//        currentLocation = locations.first
+//        print(currentLocation as Any)
         
         if previousLocation == nil {
             previousLocation = locations.first
