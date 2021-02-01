@@ -17,6 +17,9 @@ class ProfilViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
+    @IBAction func reminderSwitch(_ sender: UISwitch) {
+    }
+    
     func FollowSteps(sender: UISwitch) {
         switch sender.isOn {
         case true:
