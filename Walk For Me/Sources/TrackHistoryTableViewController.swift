@@ -19,7 +19,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     var previousLocation: CLLocation?
     var currentLocation: CLLocation?
     var user = PositionUser()
-    var userArray = [CLLocation]()
+//    var userArray = [CLLocation]()
     
     // MARK: - Life Cycle
     
@@ -41,7 +41,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         // MARK: - Ask location only one time
         
-//        locationManager?.requestLocation()
+        //        locationManager?.requestLocation()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
