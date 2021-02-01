@@ -69,7 +69,7 @@ extension TrackHistoryTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
         cell.textLabel?.text = paceTitle[indexPath.row]
-        cell.detailTextLabel?.text = paceNumber[indexPath.row]
+        cell.detailTextLabel?.text = "\(paceNumber[indexPath.row]) mètres par secondes"
         return cell
     }
     
@@ -95,8 +95,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         // MARK: - Check current location
-//        currentLocation = locations.first
-//        print(currentLocation as Any)
+        //        currentLocation = locations.first
+        //        print(currentLocation as Any)
         
         if previousLocation == nil {
             previousLocation = locations.first
