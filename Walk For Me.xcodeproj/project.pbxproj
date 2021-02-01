@@ -16,10 +16,11 @@
 		7B65725F25B183E100940F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725D25B183E100940F65 /* LaunchScreen.storyboard */; };
 		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
+		7B8A119725C53D98004321AB /* Double + removeZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A119625C53D98004321AB /* Double + removeZero.swift */; };
+		7B8A119F25C54B24004321AB /* PositionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A119E25C54B24004321AB /* PositionUser.swift */; };
 		7B90106A25B6CF09004DF3BF /* TrackHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90106925B6CF09004DF3BF /* TrackHistoryTableViewController.swift */; };
 		7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */; };
 		7BF54A0625BFD53F00D1F005 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF54A0525BFD53F00D1F005 /* Constant.swift */; };
-		7BF59FF025BCEFCB00FF5DA7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF59FEF25BCEFCB00FF5DA7 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +56,11 @@
 		7B65727025B183E200940F65 /* Walk For MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walk For MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
 		7B65727625B183E200940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B8A119625C53D98004321AB /* Double + removeZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + removeZero.swift"; sourceTree = "<group>"; };
+		7B8A119E25C54B24004321AB /* PositionUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionUser.swift; sourceTree = "<group>"; };
 		7B90106925B6CF09004DF3BF /* TrackHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHistoryTableViewController.swift; sourceTree = "<group>"; };
 		7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfilController.swift; sourceTree = "<group>"; };
 		7BF54A0525BFD53F00D1F005 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		7BF59FEF25BCEFCB00FF5DA7 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		7B922C4925B2B00F00A5C35D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B8A119E25C54B24004321AB /* PositionUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,7 +205,7 @@
 		7BF59FEB25BCEEA800FF5DA7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7BF59FEF25BCEFCB00FF5DA7 /* UIViewController.swift */,
+				7B8A119625C53D98004321AB /* Double + removeZero.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,11 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8A119F25C54B24004321AB /* PositionUser.swift in Sources */,
 				7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */,
-				7BF59FF025BCEFCB00FF5DA7 /* UIViewController.swift in Sources */,
 				7B90106A25B6CF09004DF3BF /* TrackHistoryTableViewController.swift in Sources */,
 				7BF54A0625BFD53F00D1F005 /* Constant.swift in Sources */,
 				7B65725725B183E100940F65 /* ProfilViewController.swift in Sources */,
+				7B8A119725C53D98004321AB /* Double + removeZero.swift in Sources */,
 				7B65725325B183E100940F65 /* AppDelegate.swift in Sources */,
 				7B65725525B183E100940F65 /* SceneDelegate.swift in Sources */,
 				7B24410225BC11F3001B5654 /* MapViewController.swift in Sources */,
