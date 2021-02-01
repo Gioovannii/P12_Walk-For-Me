@@ -18,7 +18,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
     var currentLocation: CLLocation?
-    var trackMoving = false
+    var user = PositionUser()
+    var userArray = [CLLocation]()
     
     // MARK: - Life Cycle
     
