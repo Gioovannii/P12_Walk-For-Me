@@ -49,9 +49,12 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             guard let mapController = segue.destination as? MapViewController else { return }
             guard let currentLocation = currentLocation else { return }
-            mapController.location = currentLocation.coordinate
-            mapController.longitude = currentLocation.coordinate.longitude
-            mapController.latitude = currentLocation.coordinate.latitude
+            mapController.currentLocation = currentLocation
+//            mapController.location = currentLocation.coordinate
+//            mapController.longitude = currentLocation.coordinate.longitude
+//            mapController.latitude = currentLocation.coordinate.latitude
+            mapController.user.locations = user.locations
+//            mapController.user.locations = self.userArray
         }
     }
 }
