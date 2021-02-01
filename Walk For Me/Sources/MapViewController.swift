@@ -14,11 +14,13 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var longitude = 0.0
-    var latitude = 0.0
-    var location: CLLocationCoordinate2D? = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
-
-    //        = CLLocationCoordinate2D(latitude: 48.858093, longitude: 2.294694)
+    var currentLocation: CLLocation?
+    var location: CLLocationCoordinate2D?
+    var user = PositionUser()
+    
+//    var longitude = 0.0
+//    var latitude = 0.0
+    
         
     // MARK: - Life Cycle
     
