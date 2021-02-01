@@ -24,10 +24,10 @@ class ProfilViewController: UITableViewController {
         switch sender.isOn {
         case true:
             print("Activate follow Steps")
-            return
+            followSteps.isOn = true
         case false:
             print("Activate follow Steps")
-            return
+            followSteps.isOn = false
             
         }
     }
