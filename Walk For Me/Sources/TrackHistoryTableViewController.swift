@@ -111,7 +111,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             print("Distance in meters: \(distanceRounded)")
             let unwrappedPaceNumber = paceNumber[0]
             distanceRounded += Double(unwrappedPaceNumber)!
-            paceNumber[0] = "\(distanceRounded)"
+            paceNumber[0] = "\(distanceRounded.clean)"
             print(paceNumber[0])
             tableView.reloadData()
             
