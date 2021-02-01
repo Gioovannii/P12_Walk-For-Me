@@ -88,7 +88,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let polyRenderer = MKPolygonRenderer(overlay: overlay)
         polyRenderer.strokeColor = .blue
-        polyRenderer.lineWidth = 9.0
+        polyRenderer.lineWidth = 4.0
         
         return polyRenderer
     }
