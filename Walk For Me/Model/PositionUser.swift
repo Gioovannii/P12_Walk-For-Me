@@ -8,9 +8,8 @@
 import Foundation
 import CoreLocation
 
-class PositionUser {
+struct PositionUser {
     
-    var location = CLLocation()
     var locations = [CLLocation]()
 
 }
