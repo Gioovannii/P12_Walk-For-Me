@@ -17,10 +17,7 @@ class MapViewController: UIViewController {
     var currentLocation: CLLocation?
     var location: CLLocationCoordinate2D?
     var user = PositionUser()
-    
-//    var longitude = 0.0
-//    var latitude = 0.0
-    
+
         
     // MARK: - Life Cycle
     
@@ -69,11 +66,6 @@ class MapViewController: UIViewController {
         points.append(CLLocationCoordinate2DMake(user.locations[i].coordinate.latitude, user.locations[i].coordinate.longitude))
             
         }
-        
-//        points.append(CLLocationCoordinate2DMake(25.029835, 121.529526))
-//        points.append(CLLocationCoordinate2DMake(25.029900, 121.529570))
-//        points.append(CLLocationCoordinate2DMake(25.030450, 121.529890))
-//        points.append(CLLocationCoordinate2DMake(25.030500, 121.532000))
 
         let polygon = MKPolygon(coordinates: &points, count: points.count)
         mapView.addOverlay(polygon)
