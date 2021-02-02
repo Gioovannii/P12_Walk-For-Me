@@ -19,8 +19,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     var previousLocation: CLLocation?
     var currentLocation: CLLocation?
     var user = PositionUser()
-//    var userArray = [CLLocation]()
-    
+    var index = 0
+
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
