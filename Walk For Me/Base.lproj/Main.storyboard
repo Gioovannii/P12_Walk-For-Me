@@ -258,7 +258,13 @@
                             <outlet property="delegate" destination="Z5n-34-arc" id="0tI-Na-n8V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw"/>
+                    <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw">
+                        <barButtonItem key="rightBarButtonItem" title="Nouvelle Session" id="GoH-yJ-X0y">
+                            <connections>
+                                <action selector="newSessionButton:" destination="Z5n-34-arc" id="6sr-6h-xeA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keG-05-vQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
