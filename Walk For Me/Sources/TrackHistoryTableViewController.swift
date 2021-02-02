@@ -31,16 +31,16 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager?.allowsBackgroundLocationUpdates = true
     }
     
-    func activateLocationServices() {
-        locationManager?.startUpdatingLocation()
-        
-        // MARK: - Ask location only one time
-        
-        //        locationManager?.requestLocation()
+    @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
+        paceTitle.append("Nombre de pas \(paceNumber.count + 1)")
+        paceNumber.append("0")
+        index += 1
+        tableView.reloadData()
     }
+    
+    func activateLocationServices() { locationManager?.startUpdatingLocation() }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
