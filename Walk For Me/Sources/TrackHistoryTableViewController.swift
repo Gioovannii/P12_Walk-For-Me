@@ -26,9 +26,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        for i in 1...paceNumber.count {
-            paceTitle.append("Nombre de pas " + "\(i)")
-        }
+        paceTitle.append("nombre de pas \(paceNumber.count)")
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
