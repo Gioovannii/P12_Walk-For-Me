@@ -23,14 +23,15 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let loadLocation = CLLocation(latitude: self.latitude, longitude: self.longitude)
         guard let currentLocation = currentLocation else { return }
-        let loadLocation = CLLocation(latitude: (currentLocation.coordinate.latitude), longitude: (currentLocation.coordinate.longitude))
+        let loadLocation = CLLocation(latitude: (currentLocation.coordinate.latitude),
+                                      longitude: (currentLocation.coordinate.longitude))
 
         let regionRadius: CLLocationDistance = 1000.0
         let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(region, animated: true)
         mapView.delegate = self
+        
         produceOverlay()
     }
     
