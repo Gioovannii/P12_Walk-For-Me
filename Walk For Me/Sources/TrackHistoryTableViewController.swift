@@ -88,11 +88,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        // MARK: - Check current location
-        //        currentLocation = locations.first
-        //        print(currentLocation as Any)
-        
         if previousLocation == nil {
             previousLocation = locations.first
             user.location = previousLocation!
