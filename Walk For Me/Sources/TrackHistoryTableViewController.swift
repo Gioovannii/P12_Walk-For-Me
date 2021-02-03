@@ -94,6 +94,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
         } else {
             guard let latest = locations.first else { return }
+            guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
+            
             let distanceInMeters = previousLocation?.distance(from: latest) ?? 0
             var distanceRounded = distanceInMeters.rounded()
             print("Distance in meters: \(distanceRounded)")
