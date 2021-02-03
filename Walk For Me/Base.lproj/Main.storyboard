@@ -259,6 +259,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw">
+                        <barButtonItem key="leftBarButtonItem" id="D8U-xH-Hro"/>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle Session" id="GoH-yJ-X0y">
                             <connections>
                                 <action selector="newSessionButton:" destination="Z5n-34-arc" id="6sr-6h-xeA"/>
