@@ -98,11 +98,10 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             let distanceInMeters = previousLocation?.distance(from: latest) ?? 0
             var distanceRounded = distanceInMeters.rounded()
-            print("Distance in meters: \(distanceRounded)")
-            let unwrappedPaceNumber = paceNumber[0]
-            distanceRounded += Double(unwrappedPaceNumber)!
-            paceNumber[0] = "\(distanceRounded.clean)"
-            print(paceNumber[0])
+            
+            distanceRounded += unwrappedPaceNumber
+            paceNumber[index] = "\(distanceRounded.clean)"
+            print(distanceRounded.clean)
             tableView.reloadData()
             user.locations.append(CLLocation(latitude: latest.coordinate.latitude, longitude: latest.coordinate.longitude))
             print("User array location: \(user.locations)")
