@@ -59,12 +59,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            return sexChoice[row]
-        } else if pickerView.tag == 2 {
-            return weightChoice[row]
-        }
-        return ""
+        return pickerView.tag == 1 ? sexChoice[row] : weightChoice[row]
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
