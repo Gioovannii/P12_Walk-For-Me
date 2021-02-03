@@ -13,7 +13,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Properties
     
     var paceTitle = [String]()
-    var paceNumber = ["1"]
+    var paceNumber = ["0"]
     
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
@@ -90,9 +90,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if previousLocation == nil {
             previousLocation = locations.first
-            user.location = previousLocation!
-            print("First location of user: \(user.location)")
-            //            currentLocation = locations.first
+
             
         } else {
             guard let latest = locations.first else { return }
