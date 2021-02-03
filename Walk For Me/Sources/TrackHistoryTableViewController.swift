@@ -105,7 +105,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             tableView.reloadData()
             user.locations.append(CLLocation(latitude: latest.coordinate.latitude, longitude: latest.coordinate.longitude))
             print("User array location: \(user.locations)")
-            //self.userArray = user.locations
+            
             previousLocation = latest
             currentLocation = latest
             

@@ -259,8 +259,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw">
-                        <barButtonItem key="leftBarButtonItem" id="D8U-xH-Hro"/>
+                        <leftBarButtonItems>
+                            <barButtonItem image="video-play-button" id="Ey5-xn-N5c"/>
+                            <barButtonItem image="stop-button-1" style="done" id="D8U-xH-Hro"/>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle Session" id="GoH-yJ-X0y">
+                            <color key="tintColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="newSessionButton:" destination="Z5n-34-arc" id="6sr-6h-xeA"/>
                             </connections>
@@ -376,6 +380,8 @@
     <resources>
         <image name="human-footprints" width="31" height="44"/>
         <image name="settings" width="38" height="44"/>
+        <image name="stop-button-1" width="25" height="25"/>
+        <image name="video-play-button" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
