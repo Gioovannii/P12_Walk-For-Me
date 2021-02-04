@@ -16,7 +16,7 @@ class UpdateProfilController: UITableViewController {
     
     private var sexChoice = ["Homme", "Femme"]
     private var weightChoice = [String]()
-    var typeValue = ""
+    private var currentValue = ""
     
     
     // MARK: - Life cycles
