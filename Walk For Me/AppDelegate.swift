@@ -6,24 +6,14 @@
 //
 
 import UIKit
-import CoreLocation
 
 @main
 @available(iOS 13.0, *)
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
-    
-    let trackHistory = TrackHistoryTableViewController()
-    var locationManager: CLLocationManager?
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        locationManager = CLLocationManager()
-
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways {
-            trackHistory.activateLocationServices()
-        } else {
-            locationManager?.requestAlwaysAuthorization()
-        }
         return true
     }
     
