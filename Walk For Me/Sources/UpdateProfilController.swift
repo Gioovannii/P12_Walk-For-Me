@@ -74,6 +74,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
             }
             
         case 1:
+            tableView.deselectRow(at: indexPath, animated: true)
             displayAlert(tag: 2) { information in
                 guard let information = information else { return }
                 self.weightLabel.text = "\(information + " kg") "
