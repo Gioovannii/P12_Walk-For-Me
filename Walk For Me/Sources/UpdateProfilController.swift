@@ -100,10 +100,6 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         default:
             print("Default case")
         }
-//        if pickerView.tag == 1 {
-//            currentValue = checkRow(pickerArray: sexChoice, row: row)
-//
-//        } else if pickerView.tag == 2 { currentValue = checkRow(pickerArray: weightChoice, row: row) }
     }
     
     func checkRow(pickerArray: [String], row: Int) -> String {
