@@ -72,14 +72,17 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
                 self.sexeLabel.text = information
                 tableView.reloadData()
             }
+            
         case 1:
             displayAlert(tag: 2) { information in
                 guard let information = information else { return }
                 self.weightLabel.text = "\(information + " kg") "
                 tableView.reloadData()
             }
+            
         default:
             print("default case")
+            
         }
     }
     
