@@ -68,6 +68,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 0:
             tableView.deselectRow(at: indexPath, animated: true)
             displayAlert(tag: 1) { information in
+                guard let information = information else { return }
                 self.sexeLabel.text = information
                 tableView.reloadData()
             }
