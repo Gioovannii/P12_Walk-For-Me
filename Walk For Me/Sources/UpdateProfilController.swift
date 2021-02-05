@@ -76,6 +76,10 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             tableView.deselectRow(at: indexPath, animated: true)
             displayAlert(tag: 2) { information in
+                if information == "Homme" || information == "Femme" {
+                    self.presentAlert(title: "Erreur", message: "Veuillez utliser la roulette 🧐")
+                    return
+                }
                 guard let information = information else { return }
                 self.weightLabel.text = "\(information + " kg") "
                 tableView.reloadData()
