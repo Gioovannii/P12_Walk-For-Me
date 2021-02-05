@@ -83,8 +83,8 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-      
-        if pickerView.tag == 1 {
+        switch pickerView.tag {
+        case 1:
             currentValue = checkRow(pickerArray: sexChoice, row: row)
 
         } else if pickerView.tag == 2 { currentValue = checkRow(pickerArray: weightChoice, row: row) }
