@@ -98,7 +98,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 2:
             currentValue = checkRow(pickerArray: weightChoice, row: row)
         default:
-            break
+            print("Default case")
         }
 //        if pickerView.tag == 1 {
 //            currentValue = checkRow(pickerArray: sexChoice, row: row)
