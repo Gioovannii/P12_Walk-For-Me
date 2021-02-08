@@ -12,15 +12,22 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var paceTitle = [String]()
-    var paceNumber = ["0"]
+    private var paceTitle = [String]()
+    private var paceNumber = ["0"]
     
-    var locationManager: CLLocationManager?
-    var previousLocation: CLLocation?
-    var currentLocation: CLLocation?
-    var user = PositionUser()
-    var index = 0
-
+    private var locationManager: CLLocationManager?
+    private var previousLocation: CLLocation?
+    private var currentLocation: CLLocation?
+    
+    private var user = PositionUser()
+    private var index = 0
+    private var totalPace = ""
+    
+    var lastLocationError: Error?
+    var location: CLLocation?
+    
+    @IBOutlet weak var stopButton: UIBarButtonItem!
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
