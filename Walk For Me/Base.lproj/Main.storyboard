@@ -279,6 +279,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="playButton" destination="Ey5-xn-N5c" id="Neq-ve-neF"/>
                         <outlet property="stopButton" destination="D8U-xH-Hro" id="FlP-T4-2Vi"/>
                     </connections>
                 </tableViewController>
