@@ -34,6 +34,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         paceTitle.append("nombre de pas \(paceNumber.count)")
+        locationManager = CLLocationManager()
+        requestLocation()
+        stopButton.isEnabled = false
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
