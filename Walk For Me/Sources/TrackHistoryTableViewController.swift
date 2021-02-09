@@ -26,6 +26,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     var lastLocationError: Error?
     var location: CLLocation?
     
+    @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
     
     // MARK: - Life Cycle
