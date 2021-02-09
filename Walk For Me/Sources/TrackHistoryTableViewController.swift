@@ -67,6 +67,27 @@ final class TrackHistoryTableViewController: UITableViewController {
             mapController.user.locations = user.locations
         }
     }
+    
+    @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
+        locationManager = CLLocationManager()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager?.delegate = self
+        stopButton.isEnabled = true
+    }
+    
+    @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
+        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Tu as gagner \(totalPace) de pas", preferredStyle: .alert)
+        let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) { _ in
+            self.stopButton.isEnabled = false
+            self.locationManager?.stopUpdatingLocation()
+        }
+        let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
+        
+        alertVC.addAction(continueAction)
+        alertVC.addAction(cancelAction)
+        present(alertVC, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - TableView DataSource
