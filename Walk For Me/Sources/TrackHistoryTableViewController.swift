@@ -159,13 +159,12 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             totalPace = "\(convert.rounded().clean)"
             print(distanceRounded.clean)
             tableView.reloadData()
-            user.locations.append(CLLocation(latitude: latest.coordinate.latitude, longitude: latest.coordinate.longitude))
-            print("User array location: \(user.locations)")
-            
-            previousLocation = latest
-            currentLocation = latest
-            
 
+            user.locations.append(CLLocation(latitude: newLocation.coordinate.latitude,
+                                             longitude: newLocation.coordinate.longitude))
+
+            previousLocation = newLocation
+            currentLocation = newLocation
         }
     }
 }
