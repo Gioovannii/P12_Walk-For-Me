@@ -129,8 +129,20 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        
+        if previousLocation == nil { previousLocation = locations.first
+        } else {
+//            print("Prev loc \(previousLocation)")
+            
+            guard let newLocation = locations.last else { return }
+           // if newLocation.course < 50 { return }
+            if newLocation.speed > 0 {
+                if newLocation.speed < 1 { print("not mooving?")
+                    presentAlert(title: "Erreur", message: "As tu arreter l'entrainement ??")
+                } else if newLocation.speed > 8.8 { print("too fast")
+                    presentAlert(title: "Erreur", message: "Tu dois faire du sport et non prendre les transport 🧐 ")
+                }
+            }
+            print("Loc now \(newLocation)")
 
             
         } else {
