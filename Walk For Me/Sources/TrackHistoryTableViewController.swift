@@ -121,7 +121,11 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
+        print("Error detected: \(error.localizedDescription)")
+        
+        if (error as NSError).code == CLError.locationUnknown.rawValue { return }
+        lastLocationError = error
+        locationManager?.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
