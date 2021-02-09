@@ -50,6 +50,14 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     func activateLocationServices() { locationManager?.startUpdatingLocation() }
     
+    func requestLocation() {
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways {
+            activateLocationServices()
+        } else {
+            locationManager?.requestAlwaysAuthorization()
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
             
