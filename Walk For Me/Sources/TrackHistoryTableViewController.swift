@@ -149,9 +149,14 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             // Get distance from previous to latest to get distance walked
             let distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
             var distanceRounded = distanceInMeters.rounded()
-            
+
             distanceRounded += unwrappedPaceNumber
             paceNumber[index] = "\(distanceRounded.clean)"
+
+            
+            guard let convertToDouble = Double(paceNumber[index]) else { return }
+            let convert = convertToDouble / 0.762
+            totalPace = "\(convert.rounded().clean)"
             print(distanceRounded.clean)
             tableView.reloadData()
             user.locations.append(CLLocation(latitude: latest.coordinate.latitude, longitude: latest.coordinate.longitude))
