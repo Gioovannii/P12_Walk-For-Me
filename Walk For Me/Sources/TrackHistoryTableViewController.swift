@@ -39,9 +39,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         requestLocation()
         stopButton.isEnabled = false
         
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
     
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
