@@ -146,7 +146,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
             
-            let distanceInMeters = previousLocation?.distance(from: latest) ?? 0
+            // Get distance from previous to latest to get distance walked
+            let distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
             var distanceRounded = distanceInMeters.rounded()
             
             distanceRounded += unwrappedPaceNumber
