@@ -45,7 +45,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         paceTitle.append("Nombre de pas \(paceNumber.count + 1)")
         paceNumber.append("0")
         index += 1
+        playButton.isEnabled = true
         tableView.reloadData()
+        
     }
     
     func activateLocationServices() { locationManager?.startUpdatingLocation() }
