@@ -83,7 +83,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
-        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Tu as gagner \(totalPace) de pas", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Tu as gagner \(totalPace) pas", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) { _ in
             self.stopButton.isEnabled = false
             self.locationManager?.stopUpdatingLocation()
@@ -153,6 +153,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
             
+            
             // Get distance from previous to latest to get distance walked
             let distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
             var distanceRounded = distanceInMeters.rounded()
@@ -172,6 +173,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 
             previousLocation = newLocation
             currentLocation = newLocation
+            
         }
     }
 }
