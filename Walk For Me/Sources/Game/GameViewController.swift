@@ -16,6 +16,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    @IBAction func slotButton1Tapped(_ sender: Any) {
+        print("Tapped")
     }
     
 }

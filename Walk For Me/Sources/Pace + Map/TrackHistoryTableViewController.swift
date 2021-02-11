@@ -87,6 +87,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) { _ in
             self.stopButton.isEnabled = false
             self.locationManager?.stopUpdatingLocation()
+            locationManager?.delegate = nil
         }
         let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
         
@@ -141,15 +142,32 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 //            print("Prev loc \(previousLocation)")
             
             guard let newLocation = locations.last else { return }
-           // if newLocation.course < 50 { return }
+            
             if newLocation.speed > 0 {
-                if newLocation.speed < 1 { print("not mooving?")
-                    presentAlert(title: "Erreur", message: "As tu arreter l'entrainement ??")
-                } else if newLocation.speed > 8.8 { print("too fast")
-                    presentAlert(title: "Erreur", message: "Tu dois faire du sport et non prendre les transport 🧐 ")
+                if newLocation.speed < 1 {
+                    print("Too slow")
+                    
+
+                } else if newLocation.speed >= 8.8 {
+                    print("too fast")
+                  
                 }
-            }
-            print("Loc now \(newLocation)")
+            } else { locationManager?.startUpdatingLocation()}
+//            switch newLocation.speed > 0{
+//            case newLocation.speed  0...1:
+//                print("Too Slow")
+//                alertPresent = true
+//                playButton.isEnabled = false
+//
+//            case newLocation.speed >= 8.8:
+//                print("Too fast")
+//                presentAlert(title: "Error", message: "Too fast")
+//                playButton.isEnabled = false
+//
+//            default:
+//                print("Correct speed")
+//            }
+            print("Speed now \(newLocation.speed)")
 
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
             
