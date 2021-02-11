@@ -29,8 +29,8 @@ class UpdateProfilController: UITableViewController {
         }
     }
     
-    private func displayAlert(tag: Int, information: @escaping (String?) -> Void) {
-        let alertController = UIAlertController(title: "Choisissez votre sexe" , message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
+    private func displayAlert(tag: Int, title: String, information: @escaping (String?) -> Void) {
+        let alertController = UIAlertController(title: title, message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
         pickerFrame.tag = tag
@@ -67,7 +67,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch indexPath.row {
         case 0:
             tableView.deselectRow(at: indexPath, animated: true)
-            displayAlert(tag: 1) { information in
+            displayAlert(tag: 1, title: "Choisissez votre sexe") { information in
                 guard let information = information else { return }
                 self.sexeLabel.text = information
                 tableView.reloadData()
@@ -75,7 +75,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
             
         case 1:
             tableView.deselectRow(at: indexPath, animated: true)
-            displayAlert(tag: 2) { information in
+            displayAlert(tag: 2, title: "Choisissez votre poids") { information in
                 if information == "Homme" || information == "Femme" {
                     self.presentAlert(title: "Erreur", message: "Veuillez utliser la roulette 🧐")
                     return

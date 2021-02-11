@@ -92,6 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B02826725D51D9800D63F5E /* Accueil */ = {
+			isa = PBXGroup;
+			children = (
+				7B65725625B183E100940F65 /* ProfilViewController.swift */,
+				7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */,
+			);
+			path = Accueil;
+			sourceTree = "<group>";
+		};
+		7B02826825D51DAA00D63F5E /* Pace + Map */ = {
+			isa = PBXGroup;
+			children = (
+				7B90106925B6CF09004DF3BF /* TrackHistoryTableViewController.swift */,
+				7B24410125BC11F3001B5654 /* MapViewController.swift */,
+			);
+			path = "Pace + Map";
+			sourceTree = "<group>";
+		};
+		7B02826925D51DC200D63F5E /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				7B02826225D4DAD300D63F5E /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		7B65724625B183E100940F65 = {
 			isa = PBXGroup;
 			children = (
@@ -151,11 +177,9 @@
 		7B65728525B1AB7100940F65 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7B65725625B183E100940F65 /* ProfilViewController.swift */,
-				7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */,
-				7B90106925B6CF09004DF3BF /* TrackHistoryTableViewController.swift */,
-				7B24410125BC11F3001B5654 /* MapViewController.swift */,
-				7B02826225D4DAD300D63F5E /* GameViewController.swift */,
+				7B02826725D51D9800D63F5E /* Accueil */,
+				7B02826825D51DAA00D63F5E /* Pace + Map */,
+				7B02826925D51DC200D63F5E /* Game */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
