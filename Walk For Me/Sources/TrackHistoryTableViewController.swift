@@ -60,6 +60,11 @@ final class TrackHistoryTableViewController: UITableViewController {
             locationManager?.requestAlwaysAuthorization()
         }
     }
+    
+    func stopLoc() {
+        locationManager?.stopUpdatingLocation()
+        locationManager?.delegate = nil
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
             
