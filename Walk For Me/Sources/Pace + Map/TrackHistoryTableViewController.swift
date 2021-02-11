@@ -95,7 +95,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         alertVC.addAction(cancelAction)
         present(alertVC, animated: true, completion: nil)
     }
-    
 }
 
 // MARK: - TableView DataSource
@@ -139,8 +138,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if previousLocation == nil { previousLocation = locations.first
         } else {
-//            print("Prev loc \(previousLocation)")
-            
             guard let newLocation = locations.last else { return }
             
             if newLocation.speed > 0 {
