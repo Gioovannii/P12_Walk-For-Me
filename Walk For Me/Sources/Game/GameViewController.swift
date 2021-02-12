@@ -14,8 +14,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var slotButton3: UIButton!
     @IBOutlet weak var slotButton4: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var paceNumberLabel: UILabel!
+    @IBOutlet weak var moneyNumberLabel: UILabel!
+    @IBOutlet weak var squareMeterNumberLabel: UILabel!
+    @IBOutlet weak var tomatoesQuantityLabel: UILabel!
+    @IBOutlet weak var potatoeQuantityLabel: UILabel!
+    @IBOutlet weak var wheatQuantityLAbel: UILabel!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
     @IBAction func slotButton1Tapped(_ sender: Any) {
