@@ -183,8 +183,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             paceNumber[index] = "\(distanceRounded.clean)"
             
             guard let convertToDouble = Double(paceNumber[index]) else { return }
-            let convert = convertToDouble / 0.762
-            totalPace = "\(convert.rounded().clean)"
+            self.distanceInMeters = convertToDouble
+            
             print(distanceRounded.clean)
             tableView.reloadData()
 
