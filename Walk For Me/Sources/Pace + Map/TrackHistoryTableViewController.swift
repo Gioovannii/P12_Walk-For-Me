@@ -19,9 +19,9 @@ final class TrackHistoryTableViewController: UITableViewController {
     private var previousLocation: CLLocation?
     private var currentLocation: CLLocation?
     
-    private var user = PositionUser()
+    private var user = User()
     private var index = 0
-    private var totalPace = ""
+    var distanceInMeters = 0.0
     
     var lastLocationError: Error?
     var location: CLLocation?
@@ -47,7 +47,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         index += 1
         playButton.isEnabled = true
         tableView.reloadData()
-        
     }
     
     func activateLocationServices() { locationManager?.startUpdatingLocation() }
@@ -164,6 +163,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 //            default:
 //                print("Correct speed")
 //            }
+            
             print("Speed now \(newLocation.speed)")
 
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
