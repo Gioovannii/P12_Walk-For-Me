@@ -90,8 +90,11 @@ final class TrackHistoryTableViewController: UITableViewController {
         let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) { _ in
             self.stopButton.isEnabled = false
             self.locationManager?.stopUpdatingLocation()
-            locationManager?.delegate = nil
+            self.locationManager?.delegate = nil
+            self.user.totalPace += convert
+            print("UserPace: \(self.user.totalPace)")
         }
+        
         let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
         
         alertVC.addAction(continueAction)
