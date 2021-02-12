@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
     
     var currentLocation: CLLocation?
     var location: CLLocationCoordinate2D?
-    var user = PositionUser()
+    var user = User()
 
         
     // MARK: - Life Cycle
