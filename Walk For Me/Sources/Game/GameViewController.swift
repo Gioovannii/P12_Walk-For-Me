@@ -25,6 +25,14 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // TODO: - Use Core Data to retrieve all informations
+
+        paceNumberLabel.text = "0"
+        moneyNumberLabel.text = "0"
+        squareMeterNumberLabel.text = "0"
+        tomatoesQuantityLabel.text = "0"
+        potatoeQuantityLabel.text = "0"
+        wheatQuantityLAbel.text = "0"
     }
     @IBAction func slotButton1Tapped(_ sender: Any) {
         print("Tapped")
