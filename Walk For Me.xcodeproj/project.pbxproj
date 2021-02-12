@@ -18,7 +18,7 @@
 		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
 		7B8A119725C53D98004321AB /* Double + removeZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A119625C53D98004321AB /* Double + removeZero.swift */; };
-		7B8A119F25C54B24004321AB /* PositionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A119E25C54B24004321AB /* PositionUser.swift */; };
+		7B8A119F25C54B24004321AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A119E25C54B24004321AB /* User.swift */; };
 		7B90106A25B6CF09004DF3BF /* TrackHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90106925B6CF09004DF3BF /* TrackHistoryTableViewController.swift */; };
 		7B90593C25CBFD62006E09DF /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */; };
 		7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */; };
@@ -60,7 +60,7 @@
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
 		7B65727625B183E200940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B8A119625C53D98004321AB /* Double + removeZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + removeZero.swift"; sourceTree = "<group>"; };
-		7B8A119E25C54B24004321AB /* PositionUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionUser.swift; sourceTree = "<group>"; };
+		7B8A119E25C54B24004321AB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B90106925B6CF09004DF3BF /* TrackHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHistoryTableViewController.swift; sourceTree = "<group>"; };
 		7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
 		7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfilController.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		7B922C4925B2B00F00A5C35D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7B8A119E25C54B24004321AB /* PositionUser.swift */,
+				7B8A119E25C54B24004321AB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8A119F25C54B24004321AB /* PositionUser.swift in Sources */,
+				7B8A119F25C54B24004321AB /* User.swift in Sources */,
 				7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */,
 				7B90106A25B6CF09004DF3BF /* TrackHistoryTableViewController.swift in Sources */,
 				7BF54A0625BFD53F00D1F005 /* Constant.swift in Sources */,

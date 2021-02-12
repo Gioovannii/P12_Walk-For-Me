@@ -34,8 +34,8 @@ class GameViewController: UIViewController {
         potatoeQuantityLabel.text = "0"
         wheatQuantityLAbel.text = "0"
     }
+
     @IBAction func slotButton1Tapped(_ sender: Any) {
         print("Tapped")
     }
-    
 }
