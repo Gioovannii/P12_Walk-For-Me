@@ -94,6 +94,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mZK-KV-Dcw">
                                                     <rect key="frame" x="345" y="8" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="followsteps:" destination="FXp-vv-gad" eventType="valueChanged" id="HZA-ss-fbB"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -117,6 +120,7 @@
                     <navigationItem key="navigationItem" title="Accueil" largeTitleDisplayMode="always" id="VbU-L1-7ne"/>
                     <connections>
                         <outlet property="followSteps" destination="mZK-KV-Dcw" id="Z2B-8o-QSC"/>
+                        <outlet property="reminderSwitch" destination="Avd-QG-A8E" id="eCo-zS-iqQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPW-4S-XKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
