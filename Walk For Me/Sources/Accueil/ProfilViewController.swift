@@ -10,6 +10,7 @@ import UIKit
 class ProfilViewController: UITableViewController {
     
     @IBOutlet weak var followSteps: UISwitch!
+    @IBOutlet weak var reminderSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +19,24 @@ class ProfilViewController: UITableViewController {
     }
     
     @IBAction func reminderSwitch(_ sender: UISwitch) {
-    }
+            switch sender.isOn {
+            case true:
+                print("Activate Notifications")
+                reminderSwitch.isOn = true
+            case false:
+                print("Desativate notification")
+                reminderSwitch.isOn = false
+            }
+        }
     
-    func FollowSteps(sender: UISwitch) {
+    @IBAction func followsteps(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
-            print("Activate follow Steps")
+            print("Activate pace tracking")
             followSteps.isOn = true
         case false:
-            print("Activate follow Steps")
+            print("Desativate pace tracking")
             followSteps.isOn = false
-            
         }
     }
 }
