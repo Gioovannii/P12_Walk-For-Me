@@ -40,6 +40,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager = CLLocationManager()
         requestLocation()
         stopButton.isEnabled = false
+        //print("Fetch core data")
         
     }
     
@@ -94,7 +95,9 @@ final class TrackHistoryTableViewController: UITableViewController {
             self.locationManager?.stopUpdatingLocation()
             self.locationManager?.delegate = nil
             self.user.totalPace += convert
-            print("UserPace: \(self.user.totalPace)")
+            print("UserPace local save: \(self.user.totalPace)")
+            self.coreDataManager?.savePace(numberOfPace: "\(self.user.totalPace)")
+            print("CoreData: \(String(describing: self.coreDataManager?.users[0]))")
         }
         
         let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
