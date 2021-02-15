@@ -17,7 +17,7 @@
 		7B65725F25B183E100940F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725D25B183E100940F65 /* LaunchScreen.storyboard */; };
 		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
-		7B86D2D725D781F500D50917 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B86D2D525D781F500D50917 /* Model.xcdatamodeld */; };
+		7B825ABA25D94ACC00237BFD /* Walk_For_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B825AB825D94ACC00237BFD /* Walk_For_Me.xcdatamodeld */; };
 		7B86D2DC25D788E100D50917 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86D2DB25D788E100D50917 /* CoreDataStack.swift */; };
 		7B86D2E125D7894300D50917 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86D2E025D7894300D50917 /* CoreDataManager.swift */; };
 		7B8A119725C53D98004321AB /* Double + removeZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A119625C53D98004321AB /* Double + removeZero.swift */; };
@@ -48,7 +48,7 @@
 /* Begin PBXFileReference section */
 		7B02826225D4DAD300D63F5E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7B24410125BC11F3001B5654 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		7B65724F25B183E100940F65 /* Walk For Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk For Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B65724F25B183E100940F65 /* Walk_For_Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walk_For_Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65725225B183E100940F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B65725425B183E100940F65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B65725625B183E100940F65 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
@@ -56,13 +56,13 @@
 		7B65725B25B183E100940F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B65725E25B183E100940F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B65726025B183E100940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B65726525B183E100940F65 /* Walk For MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walk For MeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B65726525B183E100940F65 /* Walk_For_MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walk_For_MeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65726925B183E100940F65 /* Walk_For_MeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeTests.swift; sourceTree = "<group>"; };
 		7B65726B25B183E100940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B65727025B183E200940F65 /* Walk For MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walk For MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B65727025B183E200940F65 /* Walk_For_MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walk_For_MeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
 		7B65727625B183E200940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B86D2D625D781F500D50917 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7B825AB925D94ACC00237BFD /* Walk_For_Me.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Walk_For_Me.xcdatamodel; sourceTree = "<group>"; };
 		7B86D2DB25D788E100D50917 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7B86D2E025D7894300D50917 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7B8A119625C53D98004321AB /* Double + removeZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + removeZero.swift"; sourceTree = "<group>"; };
@@ -137,9 +137,9 @@
 		7B65725025B183E100940F65 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B65724F25B183E100940F65 /* Walk For Me.app */,
-				7B65726525B183E100940F65 /* Walk For MeTests.xctest */,
-				7B65727025B183E200940F65 /* Walk For MeUITests.xctest */,
+				7B65724F25B183E100940F65 /* Walk_For_Me.app */,
+				7B65726525B183E100940F65 /* Walk_For_MeTests.xctest */,
+				7B65727025B183E200940F65 /* Walk_For_MeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 		7B86D2D425D7816D00D50917 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				7B86D2D525D781F500D50917 /* Model.xcdatamodeld */,
+				7B825AB825D94ACC00237BFD /* Walk_For_Me.xcdatamodeld */,
 				7B86D2DB25D788E100D50917 /* CoreDataStack.swift */,
 				7B86D2E025D7894300D50917 /* CoreDataManager.swift */,
 			);
@@ -260,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B65724E25B183E100940F65 /* Walk For Me */ = {
+		7B65724E25B183E100940F65 /* Walk_For_Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B65727925B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk For Me" */;
+			buildConfigurationList = 7B65727925B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk_For_Me" */;
 			buildPhases = (
 				7B65724B25B183E100940F65 /* Sources */,
 				7B65724C25B183E100940F65 /* Frameworks */,
@@ -272,14 +272,14 @@
 			);
 			dependencies = (
 			);
-			name = "Walk For Me";
+			name = Walk_For_Me;
 			productName = "Walk For Me";
-			productReference = 7B65724F25B183E100940F65 /* Walk For Me.app */;
+			productReference = 7B65724F25B183E100940F65 /* Walk_For_Me.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7B65726425B183E100940F65 /* Walk For MeTests */ = {
+		7B65726425B183E100940F65 /* Walk_For_MeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B65727C25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk For MeTests" */;
+			buildConfigurationList = 7B65727C25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk_For_MeTests" */;
 			buildPhases = (
 				7B65726125B183E100940F65 /* Sources */,
 				7B65726225B183E100940F65 /* Frameworks */,
@@ -290,14 +290,14 @@
 			dependencies = (
 				7B65726725B183E100940F65 /* PBXTargetDependency */,
 			);
-			name = "Walk For MeTests";
+			name = Walk_For_MeTests;
 			productName = "Walk For MeTests";
-			productReference = 7B65726525B183E100940F65 /* Walk For MeTests.xctest */;
+			productReference = 7B65726525B183E100940F65 /* Walk_For_MeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7B65726F25B183E200940F65 /* Walk For MeUITests */ = {
+		7B65726F25B183E200940F65 /* Walk_For_MeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B65727F25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk For MeUITests" */;
+			buildConfigurationList = 7B65727F25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk_For_MeUITests" */;
 			buildPhases = (
 				7B65726C25B183E200940F65 /* Sources */,
 				7B65726D25B183E200940F65 /* Frameworks */,
@@ -308,9 +308,9 @@
 			dependencies = (
 				7B65727225B183E200940F65 /* PBXTargetDependency */,
 			);
-			name = "Walk For MeUITests";
+			name = Walk_For_MeUITests;
 			productName = "Walk For MeUITests";
-			productReference = 7B65727025B183E200940F65 /* Walk For MeUITests.xctest */;
+			productReference = 7B65727025B183E200940F65 /* Walk_For_MeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -335,7 +335,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B65724A25B183E100940F65 /* Build configuration list for PBXProject "Walk For Me" */;
+			buildConfigurationList = 7B65724A25B183E100940F65 /* Build configuration list for PBXProject "Walk_For_Me" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -348,9 +348,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B65724E25B183E100940F65 /* Walk For Me */,
-				7B65726425B183E100940F65 /* Walk For MeTests */,
-				7B65726F25B183E200940F65 /* Walk For MeUITests */,
+				7B65724E25B183E100940F65 /* Walk_For_Me */,
+				7B65726425B183E100940F65 /* Walk_For_MeTests */,
+				7B65726F25B183E200940F65 /* Walk_For_MeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,6 +391,7 @@
 				7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */,
 				7B90106A25B6CF09004DF3BF /* TrackHistoryTableViewController.swift in Sources */,
 				7BF54A0625BFD53F00D1F005 /* Constant.swift in Sources */,
+				7B825ABA25D94ACC00237BFD /* Walk_For_Me.xcdatamodeld in Sources */,
 				7B65725725B183E100940F65 /* ProfilViewController.swift in Sources */,
 				7B8A119725C53D98004321AB /* Double + removeZero.swift in Sources */,
 				7B86D2DC25D788E100D50917 /* CoreDataStack.swift in Sources */,
@@ -400,7 +401,6 @@
 				7B02826325D4DAD300D63F5E /* GameViewController.swift in Sources */,
 				7B90593C25CBFD62006E09DF /* UIViewController + Alert.swift in Sources */,
 				7B86D2E125D7894300D50917 /* CoreDataManager.swift in Sources */,
-				7B86D2D725D781F500D50917 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,12 +425,12 @@
 /* Begin PBXTargetDependency section */
 		7B65726725B183E100940F65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B65724E25B183E100940F65 /* Walk For Me */;
+			target = 7B65724E25B183E100940F65 /* Walk_For_Me */;
 			targetProxy = 7B65726625B183E100940F65 /* PBXContainerItemProxy */;
 		};
 		7B65727225B183E200940F65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B65724E25B183E100940F65 /* Walk For Me */;
+			target = 7B65724E25B183E100940F65 /* Walk_For_Me */;
 			targetProxy = 7B65727125B183E200940F65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -627,7 +627,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walk For Me.app/Walk For Me";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walk_For_Me.app/Walk_For_Me";
 			};
 			name = Debug;
 		};
@@ -649,7 +649,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walk For Me.app/Walk For Me";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Walk_For_Me.app/Walk_For_Me";
 			};
 			name = Release;
 		};
@@ -696,7 +696,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B65724A25B183E100940F65 /* Build configuration list for PBXProject "Walk For Me" */ = {
+		7B65724A25B183E100940F65 /* Build configuration list for PBXProject "Walk_For_Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B65727725B183E200940F65 /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B65727925B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk For Me" */ = {
+		7B65727925B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk_For_Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B65727A25B183E200940F65 /* Debug */,
@@ -714,7 +714,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B65727C25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk For MeTests" */ = {
+		7B65727C25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk_For_MeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B65727D25B183E200940F65 /* Debug */,
@@ -723,7 +723,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B65727F25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk For MeUITests" */ = {
+		7B65727F25B183E200940F65 /* Build configuration list for PBXNativeTarget "Walk_For_MeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B65728025B183E200940F65 /* Debug */,
@@ -735,13 +735,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7B86D2D525D781F500D50917 /* Model.xcdatamodeld */ = {
+		7B825AB825D94ACC00237BFD /* Walk_For_Me.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7B86D2D625D781F500D50917 /* Model.xcdatamodel */,
+				7B825AB925D94ACC00237BFD /* Walk_For_Me.xcdatamodel */,
 			);
-			currentVersion = 7B86D2D625D781F500D50917 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 7B825AB925D94ACC00237BFD /* Walk_For_Me.xcdatamodel */;
+			path = Walk_For_Me.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
