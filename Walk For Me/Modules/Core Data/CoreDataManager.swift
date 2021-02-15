@@ -27,8 +27,6 @@ final class CoreDataManager {
         return users
     }
 
-    
-    
     func savePace(numberOfPace: String) {
         let user = User(context: managedObjectContext)
         user.pace = numberOfPace
