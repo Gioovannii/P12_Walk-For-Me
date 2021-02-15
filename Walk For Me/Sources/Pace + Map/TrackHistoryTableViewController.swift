@@ -104,9 +104,15 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             // ** Save to core data
             self.user.totalPace += convert
-            print("UserPace local save: \(self.user.totalPace)")
-            self.coreDataManager?.savePace(numberOfPace: "\(self.user.totalPace)")
-            print("CoreData: \(String(describing: self.coreDataManager?.users[0]))")
+            
+            let rounded = self.user.totalPace.rounded().clean
+            print("Pace send to save: \(rounded)")
+            self.coreDataManager!.savePace(numberOfPace: "\(rounded)")
+            
+            // Open all values register
+            for user in coreDataManager.users {
+                print("CoreData Values: \(user.pace ?? "Default")")
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
