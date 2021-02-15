@@ -11,6 +11,8 @@ import UIKit
 @available(iOS 13.0, *)
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var coreDataStack = CoreDataStack(modelName: "Walk_For_Me")
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -33,3 +35,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+//@UIApplicationMain
+//class AppDelegate: UIResponder, UIApplicationDelegate {
+//
+//    var window: UIWindow?
+//
+//    lazy var coreDataStack = CoreDataStack(modelName: "Walk For Me")
+//
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        return true
+//    }
+//
+//    func applicationDidEnterBackground(_ application: UIApplication) {
+//        coreDataStack.saveContext()
+//    }
+//
+//    func applicationWillTerminate(_ application: UIApplication) {
+//        coreDataStack.saveContext()
+//    }
+//}
