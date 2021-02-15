@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 
+//@available(iOS 13.0, *)
 final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
@@ -41,7 +42,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         requestLocation()
         stopButton.isEnabled = false
         //print("Fetch core data")
-        
     }
     
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
@@ -84,6 +84,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         stopButton.isEnabled = true
     }
     
+    @available(iOS 13.0, *)
     @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
         
         let convert = distanceInMeters / 0.762
@@ -155,26 +156,26 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
                 if newLocation.speed < 1 {
                     print("Too slow")
                     
-
+                    
                 } else if newLocation.speed >= 8.8 {
                     print("too fast")
-                  
+                    
                 }
             } else { locationManager?.startUpdatingLocation()}
-//            switch newLocation.speed > 0{
-//            case newLocation.speed  0...1:
-//                print("Too Slow")
-//                alertPresent = true
-//                playButton.isEnabled = false
-//
-//            case newLocation.speed >= 8.8:
-//                print("Too fast")
-//                presentAlert(title: "Error", message: "Too fast")
-//                playButton.isEnabled = false
-//
-//            default:
-//                print("Correct speed")
-//            }
+            //            switch newLocation.speed > 0{
+            //            case newLocation.speed  0...1:
+            //                print("Too Slow")
+            //                alertPresent = true
+            //                playButton.isEnabled = false
+            //
+            //            case newLocation.speed >= 8.8:
+            //                print("Too fast")
+            //                presentAlert(title: "Error", message: "Too fast")
+            //                playButton.isEnabled = false
+            //
+            //            default:
+            //                print("Correct speed")
+            //            }
             
             print("Speed now \(newLocation.speed)")
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
@@ -183,7 +184,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             // Get distance from previous to latest to get distance walked
             let distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
             var distanceRounded = distanceInMeters.rounded()
-
+            
             distanceRounded += unwrappedPaceNumber
             paceNumber[index] = "\(distanceRounded.clean)"
             
@@ -192,10 +193,10 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             print(distanceRounded.clean)
             tableView.reloadData()
-
+            
             user.locations.append(CLLocation(latitude: newLocation.coordinate.latitude,
                                              longitude: newLocation.coordinate.longitude))
-
+            
             previousLocation = newLocation
             currentLocation = newLocation
             
