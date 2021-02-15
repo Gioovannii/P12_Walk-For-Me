@@ -95,8 +95,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         let convert = distanceInMeters / 0.762
         user.totalPace = convert.rounded()
         
-        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Tu as gagner \(user.totalPace.clean) pas", preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) { _ in
+        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(user.totalPace.clean) pas", preferredStyle: .alert)
+        let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
+            // * Stop Action
             self.stopButton.isEnabled = false
             self.locationManager?.stopUpdatingLocation()
             self.locationManager?.delegate = nil
