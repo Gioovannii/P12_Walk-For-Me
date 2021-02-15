@@ -101,6 +101,8 @@ final class TrackHistoryTableViewController: UITableViewController {
             self.stopButton.isEnabled = false
             self.locationManager?.stopUpdatingLocation()
             self.locationManager?.delegate = nil
+            
+            // ** Save to core data
             self.user.totalPace += convert
             print("UserPace local save: \(self.user.totalPace)")
             self.coreDataManager?.savePace(numberOfPace: "\(self.user.totalPace)")
