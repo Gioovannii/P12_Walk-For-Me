@@ -87,6 +87,11 @@ final class TrackHistoryTableViewController: UITableViewController {
     @available(iOS 13.0, *)
     @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+        guard let coreDataManager = coreDataManager else { return }
+        self.coreDataManager = coreDataManager
+        
         let convert = distanceInMeters / 0.762
         user.totalPace = convert.rounded()
         
