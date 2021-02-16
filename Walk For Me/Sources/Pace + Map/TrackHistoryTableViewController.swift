@@ -168,9 +168,12 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             if newLocation.speed > 0  {
                 if newLocation.speed < 1  {
                     print("Too slow")
+                    print(newLocation)
+//                    locationManager?.stopUpdatingLocation()
+//                    presentAlert(title: "too slow", message: "")
                     
                     
-                } else if newLocation.speed >= 8.8 {
+                } else if newLocation.speed >= 8.8  {
                     print("too fast")
                     
                 }
