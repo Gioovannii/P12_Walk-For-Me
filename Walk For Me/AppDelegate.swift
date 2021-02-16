@@ -32,26 +32,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 }
-
-
-//import UIKit
-
-//@UIApplicationMain
-//class AppDelegate: UIResponder, UIApplicationDelegate {
-//
-//    var window: UIWindow?
-//
-//    lazy var coreDataStack = CoreDataStack(modelName: "Walk For Me")
-//
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        return true
-//    }
-//
-//    func applicationDidEnterBackground(_ application: UIApplication) {
-//        coreDataStack.saveContext()
-//    }
-//
-//    func applicationWillTerminate(_ application: UIApplication) {
-//        coreDataStack.saveContext()
-//    }
-//}
