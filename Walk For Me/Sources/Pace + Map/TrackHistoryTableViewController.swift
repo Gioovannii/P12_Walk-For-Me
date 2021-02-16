@@ -8,7 +8,6 @@
 import UIKit
 import CoreLocation
 
-//@available(iOS 13.0, *)
 final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
@@ -213,7 +212,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             previousLocation = newLocation
             currentLocation = newLocation
-            
         }
     }
 }
