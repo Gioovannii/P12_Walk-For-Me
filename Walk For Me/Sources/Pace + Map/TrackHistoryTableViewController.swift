@@ -165,8 +165,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         } else {
             guard let newLocation = locations.last else { return }
             
-            if newLocation.speed > 0 {
-                if newLocation.speed < 1 {
+            if newLocation.speed > 0  {
+                if newLocation.speed < 1  {
                     print("Too slow")
                     
                     
