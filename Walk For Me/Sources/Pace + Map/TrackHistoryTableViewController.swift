@@ -85,9 +85,11 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     @available(iOS 13.0, *)
     @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let delegate = windowScene.delegate as? SceneDelegate else { return }
+            
+        coreDataManager = CoreDataManager(coreDataStack: delegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
