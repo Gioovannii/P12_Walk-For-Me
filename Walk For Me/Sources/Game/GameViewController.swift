@@ -27,9 +27,12 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // TODO: - Use Core Data to retrieve all informations
-
-        paceNumberLabel.text = "0"
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
+        coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
+        guard let coredataManager = coreDataManager else { return }
+   
+        paceNumberLabel.text = "\(total)"
         moneyNumberLabel.text = "0"
         squareMeterNumberLabel.text = "0"
         tomatoesQuantityLabel.text = "0"
