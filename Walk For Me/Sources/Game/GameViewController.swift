@@ -31,6 +31,17 @@ class GameViewController: UIViewController {
               let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
         coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
         guard let coredataManager = coreDataManager else { return }
+        
+        var total = 0
+        for user in coredataManager.users {
+            if let pace = user.pace {
+                guard let paceNumber = Int(pace) else { return }
+                total += paceNumber
+                print(total)
+            } else {
+                print("Unwrapped failed")
+            }
+        }
    
         paceNumberLabel.text = "\(total)"
         moneyNumberLabel.text = "0"
@@ -39,6 +50,7 @@ class GameViewController: UIViewController {
         potatoeQuantityLabel.text = "0"
         wheatQuantityLAbel.text = "0"
     }
+    
     
     @IBAction func slotButton1Tapped(_ sender: Any) {
         print("Tapped")
