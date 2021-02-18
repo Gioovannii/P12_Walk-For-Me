@@ -108,7 +108,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             let rounded = self.user.totalPace.rounded().clean
             print("Pace send to save: \(rounded)")
-            self.coreDataManager!.savePace(numberOfPace: "\(rounded)")
+            //self.coreDataManager!.savePace(numberOfPace: "\(rounded)")
             
             // Open all values register
             for user in coreDataManager.users {
@@ -163,6 +163,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let seconds = 300.0
+        
         if previousLocation == nil { previousLocation = locations.first
         } else {
             guard let newLocation = locations.last else { return }
