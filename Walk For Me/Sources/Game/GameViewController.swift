@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var potatoeQuantityLabel: UILabel!
     @IBOutlet weak var wheatQuantityLAbel: UILabel!
     
+    var coreDataManager: CoreDataManager?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
