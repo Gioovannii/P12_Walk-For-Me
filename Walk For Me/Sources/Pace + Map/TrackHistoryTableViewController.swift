@@ -183,21 +183,9 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 
 
                 }
-            } else { locationManager?.startUpdatingLocation()}
-            //            switch newLocation.speed > 0{
-            //            case newLocation.speed  0...1:
-            //                print("Too Slow")
-            //                alertPresent = true
-            //                playButton.isEnabled = false
-            //
-            //            case newLocation.speed >= 8.8:
-            //                print("Too fast")
-            //                presentAlert(title: "Error", message: "Too fast")
-            //                playButton.isEnabled = false
-            //
-            //            default:
-            //                print("Correct speed")
-            //            }
+            } else {
+                locationManager?.startUpdatingLocation()
+            }
             
             print("Speed now \(newLocation.speed)")
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
