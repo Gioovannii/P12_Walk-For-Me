@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class GameViewController: UIViewController {
 
     @IBOutlet weak var slotButton1: UIButton!
@@ -34,7 +35,7 @@ class GameViewController: UIViewController {
         potatoeQuantityLabel.text = "0"
         wheatQuantityLAbel.text = "0"
     }
-
+    
     @IBAction func slotButton1Tapped(_ sender: Any) {
         print("Tapped")
     }
