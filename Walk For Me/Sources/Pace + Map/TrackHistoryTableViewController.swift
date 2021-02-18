@@ -170,7 +170,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             guard let newLocation = locations.last else { return }
             
             if newLocation.speed > 0  {
-                if newLocation.speed < 1  {
+                DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
                     print("Too slow")
                     print(newLocation)
 //                    locationManager?.stopUpdatingLocation()
