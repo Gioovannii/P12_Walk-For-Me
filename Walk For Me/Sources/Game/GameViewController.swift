@@ -63,7 +63,11 @@ class GameViewController: UIViewController {
                 print("Unwrapped failed")
             }
         }
-   
+        
+        updateUI(total: total)
+    }
+    
+    func updateUI(total: Int) {
         paceNumberLabel.text = "\(total)"
         moneyNumberLabel.text = "0"
         squareMeterNumberLabel.text = "0"
