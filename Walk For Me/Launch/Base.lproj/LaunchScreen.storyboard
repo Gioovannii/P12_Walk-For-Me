@@ -33,19 +33,19 @@
                                             <constraint firstAttribute="height" constant="148" id="XNW-87-l5n"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walking-the-dog" translatesAutoresizingMaskIntoConstraints="NO" id="Vgn-gv-dDw">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch2Walking-the-dog" translatesAutoresizingMaskIntoConstraints="NO" id="Vgn-gv-dDw">
                                         <rect key="frame" x="191" y="277" width="183" height="103"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="103" id="bLY-Tt-yhj"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walking-to-school" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-BW-32a">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch3Walking-to-school" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-BW-32a">
                                         <rect key="frame" x="47" y="515" width="204" height="140"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="140" id="GBn-fS-BG3"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="lHH-AQ-0Ac">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch4Woman" translatesAutoresizingMaskIntoConstraints="NO" id="lHH-AQ-0Ac">
                                         <rect key="frame" x="191" y="666" width="183" height="160"/>
                                     </imageView>
                                 </subviews>
@@ -89,9 +89,9 @@
     </scenes>
     <resources>
         <image name="grandFatherImage" width="173" height="173"/>
-        <image name="walking-the-dog" width="183" height="161"/>
-        <image name="walking-to-school" width="167" height="183"/>
-        <image name="woman" width="144" height="160"/>
+        <image name="launch2Walking-the-dog" width="183" height="161"/>
+        <image name="launch3Walking-to-school" width="167" height="183"/>
+        <image name="launch4Woman" width="144" height="160"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
