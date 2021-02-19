@@ -172,10 +172,14 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             if newLocation.speed > 0  {
                 DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
                     print("Too slow")
-                    print(newLocation)
-//                    locationManager?.stopUpdatingLocation()
-//                    presentAlert(title: "too slow", message: "")
-                    
+                    print(newLocation.timestamp)
+                }
+                if newLocation.speed < 1  {
+             
+                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                        print("Too slow")
+                        print(newLocation.timestamp)
+                    }
                     
                 } else if newLocation.speed >= 8.8  {
                     print("too fast")
