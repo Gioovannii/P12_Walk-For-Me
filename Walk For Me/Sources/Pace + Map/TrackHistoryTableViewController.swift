@@ -189,10 +189,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
 
                     }
                     print("too fast")
-//                    locationManager?.stopUpdatingLocation()
-//                    presentAlert(title: "too fast", message: "")
-                    print(newLocation)
-
+                    print(newLocation.timestamp)
 
                 }
             } else {
