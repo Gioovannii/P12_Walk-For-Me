@@ -51,8 +51,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func activateLocationServices() { locationManager?.startUpdatingLocation() }
-    
+    // MARK: - Localisation Services
+
     func requestLocation() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways {
