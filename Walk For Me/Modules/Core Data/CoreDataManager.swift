@@ -28,7 +28,7 @@ final class CoreDataManager {
     }
 
     func savePace(numberOfPace: String) {
-        let user = User(context: managedObjectContext)
+        let user = UserEntity(context: managedObjectContext)
         user.pace = numberOfPace
         coreDataStack.saveContext()
     }
