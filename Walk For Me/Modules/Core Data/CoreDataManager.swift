@@ -21,8 +21,8 @@ final class CoreDataManager {
         self.managedObjectContext = coreDataStack.mainContext
     }
     
-    var users: [User] {
-        let request: NSFetchRequest<User> = User.fetchRequest()
+    var users: [UserEntity] {
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         guard let users = try? managedObjectContext.fetch(request) else { return [] }
         return users
     }
