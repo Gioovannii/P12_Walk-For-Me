@@ -112,7 +112,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             let rounded = self.user.totalPace.rounded().clean
             print("Pace send to save: \(rounded)")
-            //self.coreDataManager!.savePace(numberOfPace: "\(rounded)")
+            //coreDataManager.savePace(numberOfPace: "\(rounded)")
             
             // Open all values register
             for user in coreDataManager.users {
