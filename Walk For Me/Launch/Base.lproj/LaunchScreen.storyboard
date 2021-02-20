@@ -26,7 +26,7 @@
                                         <color key="textColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grandFatherImage" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-to-dYP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch1GrandFather" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-to-dYP">
                                         <rect key="frame" x="47" y="100" width="204" height="148"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="204" id="LP2-iv-KI4"/>
@@ -88,7 +88,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="grandFatherImage" width="173" height="173"/>
+        <image name="launch1GrandFather" width="173" height="173"/>
         <image name="launch2Walking-the-dog" width="183" height="161"/>
         <image name="launch3Walking-to-school" width="167" height="183"/>
         <image name="launch4Woman" width="144" height="160"/>
