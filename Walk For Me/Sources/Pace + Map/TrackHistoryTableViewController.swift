@@ -62,7 +62,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         }
     }
     
-    func stopLoc() {
+    func activateLocationServices() { locationManager?.startUpdatingLocation() }
+    
+    func stopLocalisationServices() {
         locationManager?.stopUpdatingLocation()
         locationManager?.delegate = nil
     }
