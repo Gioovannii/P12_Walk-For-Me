@@ -32,4 +32,12 @@ final class CoreDataManager {
         user.pace = numberOfPace
         coreDataStack.saveContext()
     }
+    
+    func saveTrack(latitude: Double, longitude: Double) {
+        let user = UserEntity(context: managedObjectContext)
+        user.latitude = latitude
+        user.longitude = longitude
+        coreDataStack.saveContext()
+        
+    }
 }
