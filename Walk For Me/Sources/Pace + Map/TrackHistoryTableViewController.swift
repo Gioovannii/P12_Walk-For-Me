@@ -30,11 +30,13 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
-    
+ 
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presentAlert(title: "⚠️Informations⚠️", message: "🛑 Pour éviter toute erreur nous ajusterons votre nombre de pas à 0.\n Si vous êtes en dessous de la marche normale ou au-dessus de la vitesse maximum en vélo. 🛑 \n\n Allez tu peux le faire. 💪")
+        
         tableView.tableFooterView = UIView()
         paceTitle.append("nombre de pas \(paceNumber.count)")
         locationManager = CLLocationManager()
@@ -149,7 +151,6 @@ extension TrackHistoryTableViewController {
 }
 
 // MARK: - Location Manager Delegate
-
 extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -202,7 +203,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             print("Speed now \(newLocation.speed)")
             guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
-            
             
             // Get distance from previous to latest to get distance walked
             let distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
