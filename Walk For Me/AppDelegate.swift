@@ -11,8 +11,6 @@ import UIKit
 @available(iOS 13.0, *)
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-   // lazy var coreDataStack = CoreDataStack(modelName: "Walk_For_Me")
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
