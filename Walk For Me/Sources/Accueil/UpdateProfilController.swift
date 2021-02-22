@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UpdateProfilController: UITableViewController {
+final class UpdateProfilController: UITableViewController {
     
     // MARK: - Outlets
     
