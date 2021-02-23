@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-struct UserInformations {
+struct User {
     
     var locations = [CLLocation]()
     var totalPace = 0.0
