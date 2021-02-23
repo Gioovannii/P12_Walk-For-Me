@@ -38,6 +38,13 @@ final class CoreDataManager {
         user.latitude = latitude
         user.longitude = longitude
         coreDataStack.saveContext()
-        
+    }
+    
+    func showEntries() {
+        for user in users {
+            print("User pace \(user.pace as Any)")
+            print("User latitude \(user.latitude)")
+            print("User longitude \(user.longitude)")
+        }
     }
 }
