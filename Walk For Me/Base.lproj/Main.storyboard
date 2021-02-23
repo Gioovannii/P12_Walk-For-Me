@@ -135,6 +135,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-uh-mYv">
+                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7fV-a6-zhB">
                                 <rect key="frame" x="20" y="148" width="143.66666666666666" height="40"/>
                                 <subviews>
@@ -286,10 +289,13 @@
                             <constraint firstItem="aOS-pa-l8c" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="H1y-PG-SM8"/>
                             <constraint firstItem="7fV-a6-zhB" firstAttribute="trailing" secondItem="aOS-pa-l8c" secondAttribute="trailing" id="IYl-PV-i3O"/>
                             <constraint firstItem="asc-HK-pjI" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="61" id="Kc5-XX-iWs"/>
+                            <constraint firstItem="9Vi-9R-4hx" firstAttribute="bottom" secondItem="ZTa-uh-mYv" secondAttribute="bottom" id="LjG-hj-JZ3"/>
                             <constraint firstItem="7fV-a6-zhB" firstAttribute="top" secondItem="aOS-pa-l8c" secondAttribute="bottom" constant="10" id="Pjv-lW-tZo"/>
                             <constraint firstItem="asc-HK-pjI" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="XaT-2m-9iz"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="top" secondItem="7fV-a6-zhB" secondAttribute="bottom" constant="10" id="Xsb-2B-WYd"/>
                             <constraint firstItem="aOS-pa-l8c" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="10" id="aCc-5m-cHD"/>
+                            <constraint firstItem="ZTa-uh-mYv" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" id="b87-H3-sUN"/>
+                            <constraint firstItem="ZTa-uh-mYv" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" id="eZ2-u2-GPw"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="trailing" secondItem="7fV-a6-zhB" secondAttribute="trailing" id="hzS-7H-3bT"/>
                             <constraint firstItem="Oe9-tL-LBE" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="kal-Ju-wVy"/>
                             <constraint firstItem="9Vi-9R-4hx" firstAttribute="bottom" secondItem="asc-HK-pjI" secondAttribute="bottom" constant="104" id="n9d-w1-LAD"/>
@@ -297,6 +303,7 @@
                             <constraint firstItem="9Vi-9R-4hx" firstAttribute="trailing" secondItem="TZj-Ii-dg2" secondAttribute="trailing" constant="20" id="u3c-vb-yY7"/>
                             <constraint firstItem="TZj-Ii-dg2" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="10" id="v7G-4F-lyx"/>
                             <constraint firstItem="7fV-a6-zhB" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="wJA-Vc-nuG"/>
+                            <constraint firstItem="9Vi-9R-4hx" firstAttribute="trailing" secondItem="ZTa-uh-mYv" secondAttribute="trailing" id="zpr-as-PXo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Maison" largeTitleDisplayMode="always" id="5yo-aU-8dK"/>
@@ -614,6 +621,7 @@
         <image name="homeImage6Tomato" width="40" height="40"/>
         <image name="homeImage8farmer" width="40" height="40"/>
         <image name="homeImage9House" width="512" height="508"/>
+        <image name="homeImageBackground" width="506" height="761"/>
         <image name="tabBar1Setting" width="65" height="65"/>
         <image name="tabBar2Footprints" width="65" height="65"/>
         <image name="tabBar3Home" width="65" height="65"/>
