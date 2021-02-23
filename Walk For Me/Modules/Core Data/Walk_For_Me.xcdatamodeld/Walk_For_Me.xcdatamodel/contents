@@ -3,7 +3,7 @@
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="pace" attributeType="String"/>
+        <attribute name="pace" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="74"/>
