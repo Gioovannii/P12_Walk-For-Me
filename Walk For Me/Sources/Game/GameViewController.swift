@@ -24,24 +24,6 @@ class GameViewController: UIViewController {
     var coreDataManager: CoreDataManager?
     
     // MARK: - LifeCycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let image = UIImage(named: "homeBackground") else { return }
-        var imageView = UIImageView(image: image)
-        
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = image
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
-        
-        self.view.backgroundColor = UIColor(patternImage: image)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
