@@ -29,8 +29,10 @@ class GameViewController: UIViewController {
         
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
+        
         coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
-        guard let coredataManager = coreDataManager else { return }
+        guard let coreDataManager = coreDataManager else { return }
+        self.coreDataManager = coreDataManager
         
         var total = 0
         for user in coredataManager.users {
