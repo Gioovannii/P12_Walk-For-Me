@@ -62,11 +62,12 @@ class MapViewController: UIViewController {
     /// Set some line where user go
     private func produceOverlay() {
         var points: [CLLocationCoordinate2D] = []
-    
-        for i in 0..<user.locations.count {
-        points.append(CLLocationCoordinate2DMake(user.locations[i].coordinate.latitude, user.locations[i].coordinate.longitude))
-            
-        }
+
+        
+//        for i in 0..<user.locations.count {
+//        points.append(CLLocationCoordinate2DMake(user.locations[i].coordinate.latitude, user.locations[i].coordinate.longitude))
+//
+//        }
 
         let polygon = MKPolygon(coordinates: &points, count: points.count)
         mapView.addOverlay(polygon)
