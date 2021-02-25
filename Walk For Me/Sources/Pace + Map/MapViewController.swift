@@ -61,7 +61,6 @@ class MapViewController: UIViewController {
     
     /// Set some line where user go
     private func produceOverlay() {
-        
         var points: [CLLocationCoordinate2D] = []
     
         for i in 0..<user.locations.count {
