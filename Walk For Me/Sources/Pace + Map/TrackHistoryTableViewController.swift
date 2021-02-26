@@ -33,8 +33,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presentAlert(title: "⚠️Informations⚠️", message: "🛑 Pour éviter toute erreur nous ajusterons votre nombre de pas à 0.\n Si vous êtes en dessous de la marche normale ou au-dessus de la vitesse maximum en vélo. 🛑 \n\n Allez tu peux le faire. 💪")
-        
         tableView.tableFooterView = UIView()
         paceTitle.append("nombre de pas \(paceNumber.count)")
         locationManager = CLLocationManager()
