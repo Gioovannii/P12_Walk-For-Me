@@ -83,54 +83,8 @@ final class TrackHistoryTableViewController: UITableViewController {
             guard let currentLocation = currentLocation else { return }
             mapController.currentLocation = currentLocation
             mapController.user.locations = user.locations
+            mapController.index = index
         }
-    }
-    
-    @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
-        locationManager = CLLocationManager()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager?.delegate = self
-        stopButton.isEnabled = true
-    }
-    
-    @available(iOS 13.0, *)
-    @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
-
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let delegate = windowScene.delegate as? SceneDelegate else { return }
-            
-        coreDataManager = CoreDataManager(coreDataStack: delegate.coreDataStack)
-        guard let coreDataManager = coreDataManager else { return }
-        self.coreDataManager = coreDataManager
-        
-        let convert = distanceInMeters / 0.762
-        user.totalPace = convert.rounded()
-        
-        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(user.totalPace.clean) pas", preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
-            // * Stop Action
-            self.stopButton.isEnabled = false
-            self.locationManager?.stopUpdatingLocation()
-            self.locationManager?.delegate = nil
-            
-            // ** Save to core data
-            self.user.totalPace += convert
-            
-            let rounded = self.user.totalPace.rounded().clean
-            print("Pace send to save: \(rounded)")
-            //coreDataManager.savePace(numberOfPace: "\(rounded)")
-            
-            // Open all values register
-            for user in coreDataManager.users {
-                print("CoreData Values: \(user.pace ?? "Default")")
-            }
-        }
-        
-        let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
-        
-        alertVC.addAction(continueAction)
-        alertVC.addAction(cancelAction)
-        present(alertVC, animated: true, completion: nil)
     }
 }
 
