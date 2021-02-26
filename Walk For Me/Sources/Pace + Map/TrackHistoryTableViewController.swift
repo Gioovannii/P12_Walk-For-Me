@@ -143,6 +143,24 @@ extension TrackHistoryTableViewController {
     }
 }
 
+// MARK: - Table View Delegate
+extension TrackHistoryTableViewController {
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "⚠️Informations⚠️ \n\n 🛑 Pour éviter toute erreur nous ajusterons votre nombre de pas à 0.\n Si vous êtes en dessous de la marche normale ou au-dessus de la vitesse maximum en vélo. 🛑 \n\n Allez tu peux le faire. 💪 \n\n 🚀 Pour commencer Creer une nouvelle session. 🚀 "
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        label.textAlignment = .center
+        label.textColor = Constant.Color.pink
+
+        return label
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return paceNumber.isEmpty ? 300 : 0
+    }
+}
+
 // MARK: - Location Manager Delegate
 extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     
