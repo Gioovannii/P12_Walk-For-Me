@@ -55,6 +55,42 @@ final class TrackHistoryTableViewController: UITableViewController {
         index += 1
         playButton.isEnabled = true
         tableView.reloadData()
+         
+    }
+    
+    @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
+        locationManager = CLLocationManager()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager?.delegate = self
+        stopButton.isEnabled = true
+    }
+    
+    // MARK: - StopButton
+
+    @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
+        guard let coreDataManager = coreDataManager else { return }
+        locationManager?.stopUpdatingLocation()
+        
+        let convert = user.totalPace / 0.762
+        self.user.totalPace = convert.rounded()
+        let rounded = "\(self.user.totalPace.clean)"
+
+        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(user.totalPace.clean) pas", preferredStyle: .alert)
+        let stopAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
+            self.stopButton.isEnabled = false
+            self.locationManager?.delegate = nil
+
+            //print("Pace send to save: \(rounded)")
+            coreDataManager.savePace(numberOfPace: "\(rounded)")
+        }
+        
+        let continueAction = UIAlertAction(title: "Annuler", style: .cancel) { _ in
+            self.locationManager?.startUpdatingLocation()
+        }
+        
+        alertVC.addAction(stopAction)
+        alertVC.addAction(continueAction)
+        present(alertVC, animated: true, completion: nil)
     }
     
     // MARK: - Localisation Services
