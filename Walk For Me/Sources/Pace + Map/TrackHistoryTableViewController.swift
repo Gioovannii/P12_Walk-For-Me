@@ -37,6 +37,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         paceTitle.append("nombre de pas \(paceNumber.count)")
         locationManager = CLLocationManager()
         requestLocation()
+        playButton.isEnabled = false
         stopButton.isEnabled = false
         //print("Fetch core data")
     }
@@ -134,7 +135,7 @@ extension TrackHistoryTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
-        cell.textLabel?.text = paceTitle[indexPath.row]
+        cell.textLabel?.text = paceTitle[indexPath.row + 1]
         cell.detailTextLabel?.text = "\(paceNumber[indexPath.row]) mètres parcourrus"
         return cell
     }
