@@ -28,7 +28,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
- 
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     // MARK: - Localisation Services
-
     func requestLocation() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways {
@@ -66,8 +65,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager?.stopUpdatingLocation()
         locationManager?.delegate = nil
     }
-    
-    
+ 
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
             
@@ -127,7 +127,6 @@ final class TrackHistoryTableViewController: UITableViewController {
 }
 
 // MARK: - TableView DataSource
-
 extension TrackHistoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paceNumber.count
