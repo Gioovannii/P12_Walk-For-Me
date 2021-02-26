@@ -18,7 +18,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     private var previousLocation: CLLocation?
     private var currentLocation: CLLocation?
     
-    private var user = UserInformations()
+    private var user = User()
     private var index = 0
     var distanceInMeters = 0.0
     
