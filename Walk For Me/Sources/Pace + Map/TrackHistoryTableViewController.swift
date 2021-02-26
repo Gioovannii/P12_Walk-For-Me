@@ -43,6 +43,13 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
+        
+        coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
+        guard let coreDataManager = coreDataManager else { return }
+        self.coreDataManager = coreDataManager
+        
         paceTitle.append("Nombre de pas \(paceNumber.count + 1)")
         paceNumber.append("0")
         index += 1
