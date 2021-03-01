@@ -49,7 +49,15 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         paceTitle.append("Nombre de pas \(paceNumber.count + 1)")
         paceNumber.append("0")
-        index += 1
+        
+        if paceNumber.count > 1 {
+            index += 1
+            let newArray = [CLLocation]()
+            user.locations.append(newArray)
+        }
+        else {
+            index = 0
+        }
         playButton.isEnabled = true
         tableView.reloadData()
         
@@ -169,7 +177,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         print("Error detected: \(error.localizedDescription)")
         
         if (error as NSError).code == CLError.locationUnknown.rawValue { return }
-        lastLocationError = error
         locationManager?.stopUpdatingLocation()
     }
     
