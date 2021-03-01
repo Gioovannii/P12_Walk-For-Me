@@ -194,6 +194,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             if distanceInMeters < 1 || distanceInMeters > 8.8 { distanceInMeters = 0 }
             
             var distanceRounded = distanceInMeters.rounded()
+            distanceRounded += positionTrackArray
             
             distanceRounded += unwrappedPaceNumber
             paceNumber[index] = "\(distanceRounded.clean)"
