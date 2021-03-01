@@ -181,36 +181,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         if previousLocation == nil { previousLocation = locations.first
         } else {
             guard let newLocation = locations.last else { return }
-            
-            if newLocation.speed > 0  {
-                DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                    print("Too slow")
-                    print(newLocation.timestamp)
-                }
-                if newLocation.speed < 1  {
-             
-                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                        print("Too slow")
-                        print(newLocation.timestamp)
-                    }
-                    
-                } else if newLocation.speed >= 8.8  {
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                        print("too fast")
-                        print(newLocation.timestamp)
-
-                    }
-                    print("too fast")
-                    print(newLocation.timestamp)
-
-                }
-            } else {
-                locationManager?.startUpdatingLocation()
-            }
-            
-            print("Speed now \(newLocation.speed)")
-            guard let unwrappedPaceNumber = Double(paceNumber[index]) else { return }
+            guard let positionTrackArray = Double(paceNumber[index]) else { return }
             
             // Get distance from previous to latest to get distance walked
             let distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
