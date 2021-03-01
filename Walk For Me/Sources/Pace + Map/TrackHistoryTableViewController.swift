@@ -23,8 +23,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     var coreDataManager: CoreDataManager?
     
-    var location: CLLocation?
-    
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
     
