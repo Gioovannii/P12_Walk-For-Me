@@ -201,9 +201,13 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             tableView.reloadData()
             
-            user.locations.append(CLLocation(latitude: newLocation.coordinate.latitude,
-                                             longitude: newLocation.coordinate.longitude))
-            
+            if user.locations.isEmpty {
+                user.locations.append([CLLocation(latitude: newLocation.coordinate.latitude,
+                                                  longitude: newLocation.coordinate.longitude)])
+            } else { user.locations[index].append(CLLocation(latitude: newLocation.coordinate.latitude, longitude: newLocation.coordinate.longitude))
+                
+            }
+            print(user.locations[index])
             previousLocation = newLocation
             currentLocation = newLocation
         }
