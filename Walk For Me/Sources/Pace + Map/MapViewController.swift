@@ -31,7 +31,10 @@ class MapViewController: UIViewController {
         let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(region, animated: true)
         mapView.delegate = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         produceOverlay()
     }
     
@@ -91,7 +94,7 @@ extension MapViewController: MKMapViewDelegate {
         
         return polyRenderer
     }
-
+    
     func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
         print("Rendering ...")
     }
