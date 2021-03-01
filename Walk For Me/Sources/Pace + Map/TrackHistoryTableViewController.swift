@@ -20,7 +20,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     private var user = User()
     private var index = 0
-    var distanceInMeters = 0.0
     
     var coreDataManager: CoreDataManager?
     
@@ -152,7 +151,7 @@ extension TrackHistoryTableViewController {
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.textAlignment = .center
         label.textColor = Constant.Color.pink
-
+        
         return label
     }
     
