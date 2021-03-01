@@ -14,17 +14,17 @@ final class CoreDataManager {
     private let coreDataStack: CoreDataStack
     private let managedObjectContext: NSManagedObjectContext
     
-    // MARK: - Initializer
-    
-    init(coreDataStack: CoreDataStack) {
-        self.coreDataStack = coreDataStack
-        self.managedObjectContext = coreDataStack.mainContext
-    }
-    
+ 
     var users: [UserEntity] {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         guard let users = try? managedObjectContext.fetch(request) else { return [] }
         return users
+    }
+    
+    // MARK: - Initializer
+    init(coreDataStack: CoreDataStack) {
+        self.coreDataStack = coreDataStack
+        self.managedObjectContext = coreDataStack.mainContext
     }
 
     func savePace(numberOfPace: String) {
