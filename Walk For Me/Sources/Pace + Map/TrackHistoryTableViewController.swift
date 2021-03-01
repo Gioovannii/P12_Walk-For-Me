@@ -196,7 +196,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             var distanceRounded = distanceInMeters.rounded()
             distanceRounded += positionTrackArray
             
-            distanceRounded += unwrappedPaceNumber
             paceNumber[index] = "\(distanceRounded.clean)"
             
             guard let convertToDouble = Double(paceNumber[index]) else { return }
