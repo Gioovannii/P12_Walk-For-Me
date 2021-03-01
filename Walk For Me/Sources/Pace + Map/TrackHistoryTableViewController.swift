@@ -181,7 +181,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let seconds = 300.0
         
         if previousLocation == nil { previousLocation = locations.first
         } else {
