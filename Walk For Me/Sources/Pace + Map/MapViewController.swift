@@ -18,8 +18,7 @@ class MapViewController: UIViewController {
     var user = User()
     var currentLocation: CLLocation?
     var index = 0
-
-        
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -27,7 +26,7 @@ class MapViewController: UIViewController {
         guard let currentLocation = currentLocation else { return }
         let loadLocation = CLLocation(latitude: (currentLocation.coordinate.latitude),
                                       longitude: (currentLocation.coordinate.longitude))
-
+        
         let regionRadius: CLLocationDistance = 1000.0
         let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(region, animated: true)
@@ -53,7 +52,7 @@ class MapViewController: UIViewController {
                 mapView.camera = camera
                 mapView.isRotateEnabled = true
             }
-
+            
         default:
             print("Nothing happened")
         }
