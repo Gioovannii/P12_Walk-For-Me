@@ -36,9 +36,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         requestLocation()
         playButton.isEnabled = false
         stopButton.isEnabled = false
-        //print("Fetch core data")
     }
     
+    // MARK: - Actions
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
@@ -52,7 +52,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         index += 1
         playButton.isEnabled = true
         tableView.reloadData()
-         
+        
     }
     
     @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
@@ -63,7 +63,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     // MARK: - StopButton
-
     @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
         guard let coreDataManager = coreDataManager else { return }
         locationManager?.stopUpdatingLocation()
@@ -71,12 +70,12 @@ final class TrackHistoryTableViewController: UITableViewController {
         let convert = user.totalPace / 0.762
         self.user.totalPace = convert.rounded()
         let rounded = "\(self.user.totalPace.clean)"
-
+        
         let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(user.totalPace.clean) pas", preferredStyle: .alert)
         let stopAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
             self.stopButton.isEnabled = false
             self.locationManager?.delegate = nil
-
+            
             //print("Pace send to save: \(rounded)")
             coreDataManager.savePace(numberOfPace: "\(rounded)")
         }
@@ -106,9 +105,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager?.stopUpdatingLocation()
         locationManager?.delegate = nil
     }
- 
+    
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
             
