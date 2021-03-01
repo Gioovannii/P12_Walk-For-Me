@@ -39,7 +39,6 @@ class MapViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction func changeMapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -64,27 +63,24 @@ class MapViewController: UIViewController {
     /// Set some line where user go
     private func produceOverlay() {
         var points: [CLLocationCoordinate2D] = []
-
         
-//        for i in 0..<user.locations.count {
-//        points.append(CLLocationCoordinate2DMake(user.locations[i].coordinate.latitude, user.locations[i].coordinate.longitude))
-//
-//        }
-        
-        for i in 0..<user.locations.count {
-            print("For loop locations :  \(user.locations[i])")
+        for i in 0..<user.locations[index].count {
+            print("For loop locations :  \(user.locations[index][i].coordinate)")
             
-//            points.append(CLLocationCoordinate2DMake(user.locations[location.coordinate.latitude], user.locations[location.coordinate.longitude]))
+            points.append(CLLocationCoordinate2DMake(user.locations[index][i].coordinate.latitude, user.locations[index][i].coordinate.longitude))
+            
+            //            points.append(CLLocationCoordinate2DMake(user.locations[location.coordinate.latitude], user.locations[location.coordinate.longitude]))
         }
-
+        
+        print(points)
+        
         let polygon = MKPolygon(coordinates: &points, count: points.count)
         mapView.addOverlay(polygon)
-
+        
     }
 }
 
 // MARK: - Map View Delegate
-
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
