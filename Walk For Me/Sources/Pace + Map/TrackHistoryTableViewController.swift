@@ -197,11 +197,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             distanceRounded += positionTrackArray
             
             paceNumber[index] = "\(distanceRounded.clean)"
+            user.totalPace = distanceRounded
             
-            guard let convertToDouble = Double(paceNumber[index]) else { return }
-            self.distanceInMeters = convertToDouble
-            
-            print(distanceRounded.clean)
             tableView.reloadData()
             
             user.locations.append(CLLocation(latitude: newLocation.coordinate.latitude,
