@@ -31,6 +31,13 @@ final class TrackHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
+        
+        coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
+        guard let coreDataManager = coreDataManager else { return }
+        self.coreDataManager = coreDataManager
+        
         tableView.tableFooterView = UIView()
         paceTitle.append("nombre de pas \(paceNumber.count)")
         locationManager = CLLocationManager()
