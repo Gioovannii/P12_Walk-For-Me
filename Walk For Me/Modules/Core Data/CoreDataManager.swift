@@ -26,10 +26,17 @@ final class CoreDataManager {
         self.coreDataStack = coreDataStack
         self.managedObjectContext = coreDataStack.mainContext
     }
+    
+    func newSession() {
+        let user = UserEntity(context: managedObjectContext)
+        
+    }
 
-    func savePace(numberOfPace: String) {
+    func saveTrack(numberOfPace: String, locations: [CLLocation]) {
         let user = UserEntity(context: managedObjectContext)
         user.pace = numberOfPace
+        user.locations = locations
+        user.timestamp = locations.last?.timestamp
         coreDataStack.saveContext()
     }
 }
