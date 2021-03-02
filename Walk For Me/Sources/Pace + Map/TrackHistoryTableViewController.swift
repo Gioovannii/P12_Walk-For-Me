@@ -20,6 +20,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     private var user = Track()
     private var index = 0
+    var temporaryLocations = [CLLocation]()
     
     var coreDataManager: CoreDataManager?
     
