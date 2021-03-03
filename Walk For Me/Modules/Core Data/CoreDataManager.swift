@@ -30,7 +30,8 @@ final class CoreDataManager {
     
     func newSession() {
         let user = UserEntity(context: managedObjectContext)
-        
+        user.locations = [CLLocation]()
+        user.pace = ""
     }
 
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
