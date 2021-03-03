@@ -23,6 +23,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     var temporaryLocations = [CLLocation]()
     
     var coreDataManager: CoreDataManager?
+    var countTrack = 0
     
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
