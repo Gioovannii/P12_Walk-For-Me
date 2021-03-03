@@ -14,6 +14,7 @@ final class CoreDataManager {
     private let coreDataStack: CoreDataStack
     private let managedObjectContext: NSManagedObjectContext
     
+    var count = [String]()
  
     var users: [UserEntity] {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
