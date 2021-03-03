@@ -47,6 +47,15 @@ final class TrackHistoryTableViewController: UITableViewController {
         requestLocation()
         playButton.isEnabled = false
         stopButton.isEnabled = false
+        
+        
+        for track in coreDataManager.users {
+            print("Looping sessions \(track.locations as Any)")
+            coreDataManager.count.append("\(countTrack + 1)")
+            let last = Int(coreDataManager.count.last!)
+            countTrack = last!
+            
+        }
     }
     
     // MARK: - Actions
