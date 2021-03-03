@@ -60,10 +60,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-        
-        coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
