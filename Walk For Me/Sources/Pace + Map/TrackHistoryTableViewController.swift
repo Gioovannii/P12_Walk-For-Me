@@ -61,7 +61,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Actions
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
         guard let coreDataManager = coreDataManager else { return }
-        self.coreDataManager = coreDataManager
+        index = coreDataManager.users.count - 1
         
         paceTitle.append("Nombre de pas \(paceNumber.count + 1)")
         paceNumber.append("0")
