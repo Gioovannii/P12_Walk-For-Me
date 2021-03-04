@@ -155,6 +155,8 @@ extension TrackHistoryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let coreDataManager = coreDataManager else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
         cell.textLabel?.text = paceTitle[indexPath.row + 1]
         cell.detailTextLabel?.text = "\(paceNumber[indexPath.row]) mètres parcourrus"
