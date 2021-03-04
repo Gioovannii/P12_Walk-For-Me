@@ -227,13 +227,9 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             tableView.reloadData()
             
-            if user.locations.isEmpty {
-                user.locations.append([CLLocation(latitude: newLocation.coordinate.latitude,
-                                                  longitude: newLocation.coordinate.longitude)])
-            } else { user.locations[index].append(CLLocation(latitude: newLocation.coordinate.latitude, longitude: newLocation.coordinate.longitude))
-                
-            }
-            print(user.locations[index])
+            // Store Location temporary in array which will be use until user stop to save in Core Data
+            temporaryLocations.append(CLLocation(latitude: newLocation.coordinate.latitude, longitude: newLocation.coordinate.longitude))
+            
             previousLocation = newLocation
             currentLocation = newLocation
         }
