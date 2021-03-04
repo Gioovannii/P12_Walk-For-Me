@@ -137,7 +137,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
-            
+
             guard let mapController = segue.destination as? MapViewController else { return }
             guard let currentLocation = currentLocation else { return }
             mapController.currentLocation = currentLocation
