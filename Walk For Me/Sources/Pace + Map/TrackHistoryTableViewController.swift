@@ -32,6 +32,9 @@ final class TrackHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        playButton.isEnabled = false
+        stopButton.isEnabled = false
+        
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
         
