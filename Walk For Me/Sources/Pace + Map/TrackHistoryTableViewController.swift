@@ -73,14 +73,14 @@ final class TrackHistoryTableViewController: UITableViewController {
         coreDataManager.newSession()
         paceNumber.append("0")
     
-        //if paceNumber.count > 1 {
-//            index += 1
-//            let newArray = [CLLocation]()
-//            user.locations.append(newArray)
-//        }
-//        else {
-//            index = 0
-//        }
+        if paceNumber.count > 1 {
+            index += 1
+            let newArray = [CLLocation]()
+            user.locations.append(newArray)
+        }
+        else {
+            index = 0
+        }
         playButton.isEnabled = true
         tableView.reloadData()
         
