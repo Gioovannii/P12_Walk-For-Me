@@ -214,7 +214,8 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         if previousLocation == nil { previousLocation = locations.first
         } else {
             guard let newLocation = locations.last else { return }
-            guard let positionTrackArray = Double(paceNumber[index]) else { return }
+            guard let positionTrackArray = Double(paceNumber[(coreDataManager?.users.count)! - 1]) else { return }
+            
             
             // Get distance from previous to latest to get distance walked
             var distanceInMeters = previousLocation?.distance(from: newLocation) ?? 0
