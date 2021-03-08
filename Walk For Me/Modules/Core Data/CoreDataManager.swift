@@ -29,6 +29,19 @@ final class CoreDataManager {
         self.managedObjectContext = coreDataStack.mainContext
     }
     
+    func loadNumberOfElements() {
+        let trackController = TrackHistoryTableViewController()
+        for track in users {
+            print("Looping sessions \(track.locations as Any)")
+            count.append("\(countTrack + 1)")
+            trackController.paceNumber.append("0")
+            print("corDatMAnager \(trackController.paceNumber)")
+            guard let last = count.last else { return }
+            guard let lastAsInt = Int(last) else { return }
+            countTrack = lastAsInt
+        }
+    }
+    
     func newSession() {
         let user = UserEntity(context: managedObjectContext)
         user.locations = [CLLocation]()
