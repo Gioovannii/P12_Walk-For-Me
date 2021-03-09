@@ -67,7 +67,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         count.append("\(countTrack + 1)")
         guard let last = Int(count.last ?? "0") else { return }
         countTrack = last
-//        paceTitle.append("Nombre de pas \(paceNumber.count + 1)")
         coreDataManager.newSession()
         paceNumber.append("0")
     
