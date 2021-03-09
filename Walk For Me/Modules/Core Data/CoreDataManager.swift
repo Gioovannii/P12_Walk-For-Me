@@ -33,6 +33,7 @@ final class CoreDataManager {
         let user = UserEntity(context: managedObjectContext)
         user.locations = [CLLocation]()
         user.pace = ""
+        coreDataStack.saveContext()
     }
 
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
