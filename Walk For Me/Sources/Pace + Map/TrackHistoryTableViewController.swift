@@ -149,7 +149,6 @@ final class TrackHistoryTableViewController: UITableViewController {
 extension TrackHistoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coreDataManager?.users.count ?? 0
-//        return paceNumber.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
