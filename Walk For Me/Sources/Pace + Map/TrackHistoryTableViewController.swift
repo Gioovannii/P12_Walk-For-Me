@@ -103,8 +103,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             self.stopButton.isEnabled = false
             self.locationManager?.delegate = nil
             
-            //print("Pace send to save: \(rounded)")
-            coreDataManager.saveTrack(numberOfPace: "\(rounded)", locations: self.user.locations[self.index])
+            coreDataManager.saveTrack(numberOfPace: "\(rounded)", locations: self.temporaryLocations)
         }
         
         let continueAction = UIAlertAction(title: "Annuler", style: .cancel) { _ in
