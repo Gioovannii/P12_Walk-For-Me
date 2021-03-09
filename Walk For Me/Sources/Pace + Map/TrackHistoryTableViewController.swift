@@ -154,6 +154,7 @@ extension TrackHistoryTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let coreDataManager = coreDataManager else { return UITableViewCell() }
+        guard let pace = coreDataManager.users[indexPath.row].pace else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
 //        cell.textLabel?.text = paceTitle[indexPath.row + 1]
         cell.textLabel?.text = "Nombre de pas: \(coreDataManager.count[indexPath.row])"
