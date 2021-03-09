@@ -207,6 +207,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         if previousLocation == nil { previousLocation = locations.first
         } else {
             guard let newLocation = locations.last else { return }
+//            guard paceNumber.isEmpty else { return }
             guard let positionTrackArray = Double(paceNumber[(coreDataManager?.users.count)! - 1]) else { return }
             
             
