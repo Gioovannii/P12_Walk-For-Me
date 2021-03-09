@@ -11,7 +11,6 @@ import CoreLocation
 final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
-//    private var paceTitle = [String]()
     var paceNumber = [String]()
     
     private var locationManager: CLLocationManager?
