@@ -80,7 +80,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         }
         playButton.isEnabled = true
         tableView.reloadData()
-        
     }
     
     @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
