@@ -44,8 +44,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         if !coreDataManager.users.isEmpty { playButton.isEnabled = true }
         tableView.tableFooterView = UIView()
-//        paceTitle.append("nombre de pas \(paceNumber.count)")
-        //paceTitle.append("nombre de pas \(coreDataManager.users.count)")
+
         locationManager = CLLocationManager()
         requestLocation()
         
