@@ -231,14 +231,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             previousLocation = newLocation
             currentLocation = newLocation
             print("temporaryLocations: \(temporaryLocations)")
-//            if user.locations.isEmpty {
-//                user.locations.append([CLLocation(latitude: newLocation.coordinate.latitude,
-//                                                  longitude: newLocation.coordinate.longitude)])
-//            } else { user.locations[index].append(CLLocation(latitude: newLocation.coordinate.latitude, longitude: newLocation.coordinate.longitude))
-//
-//            }
-//            print(user.locations[index])
-           
         }
     }
 }
