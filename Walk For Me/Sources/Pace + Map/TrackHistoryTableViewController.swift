@@ -54,8 +54,8 @@ final class TrackHistoryTableViewController: UITableViewController {
             print("Looping sessions \(track.locations as Any)")
             count.append("\(countTrack + 1)")
             paceNumber.append("0")
-            guard let last = Int(count.last ?? "") else { return }
-            countTrack = last
+            let last = Int(count.last!)
+            countTrack = last!
         }
     }
     
