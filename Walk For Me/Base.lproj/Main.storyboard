@@ -464,7 +464,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw">
                         <leftBarButtonItems>
-                            <barButtonItem image="barButton1Play" id="Ey5-xn-N5c" userLabel="start Button Item">
+                            <barButtonItem enabled="NO" image="barButton1Play" id="Ey5-xn-N5c" userLabel="start Button Item">
                                 <connections>
                                     <action selector="startButtonPressed:" destination="Z5n-34-arc" id="0RS-y4-5Ed"/>
                                 </connections>
