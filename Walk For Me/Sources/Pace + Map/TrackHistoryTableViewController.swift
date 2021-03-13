@@ -179,7 +179,6 @@ extension TrackHistoryTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return coreDataManager?.users.isEmpty ?? true ? 300 : 0
-            //paceNumber.isEmpty ? 300 : 0
     }
 }
 
