@@ -39,5 +39,12 @@ final class CoreDataManager {
         user.locations = locations
         user.timestamp = locations.last?.timestamp
         coreDataStack.saveContext()
+        
+//        let user = UserEntity(context: managedObjectContext)
+////        user.id =
+//        user.pace = numberOfPace
+//        user.locations = locations
+//        user.timestamp = locations.last?.timestamp
+//        coreDataStack.saveContext()
     }
 }
