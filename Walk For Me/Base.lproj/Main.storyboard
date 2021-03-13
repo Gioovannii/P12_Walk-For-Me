@@ -469,7 +469,7 @@
                                     <action selector="startButtonPressed:" destination="Z5n-34-arc" id="0RS-y4-5Ed"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="barButton2Stop" style="done" id="D8U-xH-Hro" userLabel="Stop Button Item">
+                            <barButtonItem enabled="NO" image="barButton2Stop" style="done" id="D8U-xH-Hro" userLabel="Stop Button Item">
                                 <connections>
                                     <action selector="stopButtonPressed:" destination="Z5n-34-arc" id="pJ9-3J-QMJ"/>
                                 </connections>
