@@ -49,7 +49,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         for track in coreDataManager.users {
             print("Looping sessions \(track.locations as Any)")
-            count.append("\(countTrack + 1)")
+            count.append("\(countTrack )")
             paceNumber.append("0")
             let last = Int(count.last!)
             countTrack = last!
