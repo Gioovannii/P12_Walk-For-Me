@@ -28,6 +28,8 @@ final class CoreDataManager {
 
     func newSession() {
         let user = UserEntity(context: managedObjectContext)
+        let id = UUID()
+        
         user.locations = [CLLocation]()
         user.pace = ""
         coreDataStack.saveContext()
