@@ -101,6 +101,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             self.locationManager?.delegate = nil
             
             coreDataManager.saveTrack(numberOfPace: "\(rounded)", locations: self.temporaryLocations)
+            self.tableView.reloadData()
         }
         
         let continueAction = UIAlertAction(title: "Annuler", style: .cancel) { _ in
