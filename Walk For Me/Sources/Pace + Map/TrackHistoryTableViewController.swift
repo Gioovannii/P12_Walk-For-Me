@@ -45,8 +45,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager = CLLocationManager()
         requestLocation()
      
-        countTrack = coreDataManager.users.count
-        
+        /// append one in array count for each track
         for track in coreDataManager.users {
             print("Looping sessions \(track.locations as Any)")
             count.append("\(countTrack )")
