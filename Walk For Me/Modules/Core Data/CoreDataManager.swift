@@ -31,7 +31,9 @@ final class CoreDataManager {
         let id = UUID()
         
         user.locations = [CLLocation]()
-        user.pace = ""
+        user.pace = "0"
+        user.id = id
+        print("id new session \(id)")
         coreDataStack.saveContext()
     }
 
