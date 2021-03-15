@@ -40,7 +40,7 @@ final class CoreDataManager {
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         
-        request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+        //request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
         guard let user = try? managedObjectContext.fetch(request) else { return }
         guard let session = user.first else { return }
         session.pace = numberOfPace
