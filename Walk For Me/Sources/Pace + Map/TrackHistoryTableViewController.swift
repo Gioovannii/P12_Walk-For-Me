@@ -12,8 +12,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
     var paceNumber = [String]()
-    var count = [String]()
-    var countTrack = 0
+    var countSessionArray = [String]()
+    var sessionCount = 0
     
     private var locationManager: CLLocationManager?
     private var previousLocation: CLLocation?
