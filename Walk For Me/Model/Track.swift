@@ -10,6 +10,6 @@ import CoreLocation
 
 struct Track {
     
-    var locations = [[CLLocation]]()
+    var locations = [CLLocation]()
     var totalPace = 0.0
 }
