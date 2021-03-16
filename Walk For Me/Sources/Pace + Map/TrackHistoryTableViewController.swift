@@ -60,9 +60,9 @@ final class TrackHistoryTableViewController: UITableViewController {
         guard let coreDataManager = coreDataManager else { return }
         index = coreDataManager.users.count - 1
         
-        count.append("\(countTrack + 1)")
-        guard let last = Int(count.last ?? "0") else { return }
-        countTrack = last
+        countSessionArray.append("\(sessionCount + 1)")
+        guard let last = Int(countSessionArray.last ?? "0") else { return }
+        sessionCount = last
         coreDataManager.newSession()
         paceNumber.append("0")
     
