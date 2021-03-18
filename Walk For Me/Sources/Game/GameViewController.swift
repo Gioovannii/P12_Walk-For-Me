@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
         self.coreDataManager = coreDataManager
         
         var total = 0
-        for user in coreDataManager.users {
+        for user in coreDataManager.tracks {
             if let pace = user.pace {
                 print(pace)
                 guard let paceNumber = Int(pace) else { return }
