@@ -27,8 +27,8 @@ final class CoreDataManager {
     }
 
     func newSession() {
-        let user = UserEntity(context: managedObjectContext)
-        let id = UUID()
+        let user = TrackEntity(context: managedObjectContext)
+       // let id = UUID()
         
         user.locations = [CLLocation]()
         user.pace = "0"
