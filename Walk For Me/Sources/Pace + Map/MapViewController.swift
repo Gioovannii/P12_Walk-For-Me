@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     private var location: CLLocationCoordinate2D?
-    var user = Track()
+    var currentTrack = Track()
     var currentLocation: CLLocation?
     var index = 0
     
