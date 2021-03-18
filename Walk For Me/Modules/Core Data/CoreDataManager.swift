@@ -32,8 +32,8 @@ final class CoreDataManager {
         
         user.locations = [CLLocation]()
         user.pace = "0"
-        user.id = id
-        print("id new session \(id)")
+       // user.id = id
+        //print("id new session \(id)")
         coreDataStack.saveContext()
     }
 
