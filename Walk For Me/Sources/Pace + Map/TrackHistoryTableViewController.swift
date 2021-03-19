@@ -47,7 +47,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         //init(locations: [CLLocation]? = nil, totalPace: Double? = nil, timeStamp: Date? = nil)
         
-        let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations) }
+        let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations, totalPace: Double($0.totalPace!), timeStamp: $0.timestamp ) }
+        
         print("Locations mapped \(track)")
         
         /// append one in array count for each track
