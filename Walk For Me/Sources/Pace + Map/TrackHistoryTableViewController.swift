@@ -76,7 +76,16 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         //paceNumber.append("0")
     
-        if paceNumber.count > 1 {
+//        if paceNumber.count > 1 {
+//            index += 1
+//            let newArray = [CLLocation]()
+//            user.locations.append(newArray)
+//        }
+//        else {
+//            index = 0
+//        }
+        
+        if coreDataManager.tracks.count > 1 {
             index += 1
             let newArray = [CLLocation]()
             user.locations.append(newArray)
