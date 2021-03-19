@@ -87,10 +87,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         if coreDataManager.tracks.count > 1 {
             index += 1
-            let newArray = [CLLocation]()
-            user.locations.append(newArray)
-        }
-        else {
+            
+        } else {
             index = 0
         }
         playButton.isEnabled = true
