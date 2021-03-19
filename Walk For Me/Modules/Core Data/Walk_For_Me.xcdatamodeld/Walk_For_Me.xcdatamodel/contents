@@ -2,8 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="TrackEntity" representedClassName="TrackEntity" syncable="YES" codeGenerationType="class">
         <attribute name="locations" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName=".[CLLocation]"/>
-        <attribute name="pace" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalPace" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="TrackEntity" positionX="-63" positionY="-18" width="128" height="74"/>
