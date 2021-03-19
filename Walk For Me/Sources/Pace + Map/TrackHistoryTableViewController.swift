@@ -56,6 +56,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             countSessionArray.append("\(sessionCount + 1)")
             paceNumber.append("\(sessionCount)")
             guard let last = Int(countSessionArray.last ?? "0") else { return }
+          
             sessionCount = last
         }
     }
