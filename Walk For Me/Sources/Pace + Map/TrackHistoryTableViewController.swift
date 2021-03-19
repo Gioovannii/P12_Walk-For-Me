@@ -65,7 +65,8 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Actions
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
         guard let coreDataManager = coreDataManager else { return }
-        index = coreDataManager.users.count - 1
+        
+        index = coreDataManager.tracks.count - 1
         
         countSessionArray.append("\(sessionCount + 1)")
         guard let last = Int(countSessionArray.last ?? "0") else { return }
