@@ -43,7 +43,7 @@ final class CoreDataManager {
         //request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
         guard let user = try? managedObjectContext.fetch(request) else { return }
         guard let session = user.first else { return }
-        session.pace = numberOfPace
+        session.totalPace = numberOfPace
         session.locations = locations
         session.timestamp = locations.last?.timestamp
         coreDataStack.saveContext()
