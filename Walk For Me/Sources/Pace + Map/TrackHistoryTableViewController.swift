@@ -51,7 +51,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         print("Locations mapped \(track)")
         
         /// append one in array count for each track
-        for track in coreDataManager.users {
+        for track in coreDataManager.tracks {
             print("Looping sessions \(track.locations as Any)")
             countSessionArray.append("\(sessionCount + 1)")
             paceNumber.append("\(sessionCount)")
