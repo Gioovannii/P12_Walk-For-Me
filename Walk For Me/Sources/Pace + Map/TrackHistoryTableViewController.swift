@@ -44,7 +44,12 @@ final class TrackHistoryTableViewController: UITableViewController {
 
         locationManager = CLLocationManager()
         requestLocation()
-     
+        
+        //init(locations: [CLLocation]? = nil, totalPace: Double? = nil, timeStamp: Date? = nil)
+        
+        let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations) }
+        print("Locations mapped \(track)")
+        
         /// append one in array count for each track
         for track in coreDataManager.users {
             print("Looping sessions \(track.locations as Any)")
