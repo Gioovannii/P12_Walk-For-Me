@@ -216,6 +216,7 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
         locationManager?.stopUpdatingLocation()
     }
     
+    // MARK: - Update locations
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if previousLocation == nil { previousLocation = locations.first
