@@ -107,11 +107,12 @@ final class TrackHistoryTableViewController: UITableViewController {
         guard let coreDataManager = coreDataManager else { return }
         locationManager?.stopUpdatingLocation()
         
-        let convert = user.totalPace / 0.762
-        self.user.totalPace = convert.rounded()
-        let rounded = "\(self.user.totalPace.clean)"
         
-        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(user.totalPace.clean) pas", preferredStyle: .alert)
+        let convert = currentTrack.totalPace ?? 0.0 / 0.762
+        self.currentTrack.totalPace = convert.rounded()
+        let rounded = "\(String(describing: self.currentTrack.totalPace?.clean))"
+        
+        let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(currentTrack.totalPace?.clean ?? "Erreur de ") pas", preferredStyle: .alert)
         let stopAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
             self.stopButton.isEnabled = false
             self.locationManager?.delegate = nil
