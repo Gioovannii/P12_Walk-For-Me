@@ -154,7 +154,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             guard let mapController = segue.destination as? MapViewController else { return }
             guard let currentLocation = currentLocation else { return }
             mapController.currentLocation = currentLocation
-            mapController.user.locations = user.locations
+            mapController.currentTrack.locations = currentTrack.locations
             mapController.index = index
         }
     }
