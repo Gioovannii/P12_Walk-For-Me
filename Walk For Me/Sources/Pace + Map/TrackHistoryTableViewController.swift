@@ -69,33 +69,15 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
-        guard let coreDataManager = coreDataManager else { return }
+ 
+        //coreDataManager.newSession()
         
-        index = coreDataManager.tracks.count - 1
+        currentTrack = Track(locations: temporaryLocations)
+        trackMapped.append(currentTrack)
         
-        countSessionArray.append("\(sessionCount + 1)")
-        guard let last = Int(countSessionArray.last ?? "0") else { return }
-        sessionCount = last
-        coreDataManager.newSession()
-        
-        
-        //paceNumber.append("0")
-    
-//        if paceNumber.count > 1 {
-//            index += 1
-//            let newArray = [CLLocation]()
-//            user.locations.append(newArray)
-//        }
-//        else {
-//            index = 0
-//        }
-        
-        if coreDataManager.tracks.count > 1 {
-            index += 1
-            
-        } else {
-            index = 0
-        }
+//        paceNumber.append("0")
+
+        index = trackMapped.count - 1
         playButton.isEnabled = true
         tableView.reloadData()
     }
