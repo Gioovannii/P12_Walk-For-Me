@@ -64,8 +64,8 @@ class MapViewController: UIViewController {
     private func produceOverlay() {
         var points: [CLLocationCoordinate2D] = []
         
-        for i in 0..<currentTrack.locations!.count {
-            print("For loop locations :  \(currentTrack.locations![i].coordinate)")
+        for i in 0..<currentTrack.locations.count {
+            print("For loop locations :  \(currentTrack.locations[i].coordinate)")
             
             points.append(CLLocationCoordinate2DMake(currentTrack.locations![i].coordinate.latitude, currentTrack.locations![i].coordinate.longitude))
             
