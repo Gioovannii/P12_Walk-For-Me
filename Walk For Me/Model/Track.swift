@@ -10,7 +10,7 @@ import CoreLocation
 
 struct Track {
     
-    var locations: [CLLocation]?
-    var totalPace: Double?
-    var timeStamp: Date?
+    var locations: [CLLocation] = []
+    var totalPace: Double = 0.0
+    var timeStamp: Date = Date()
 }
