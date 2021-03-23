@@ -34,14 +34,11 @@ final class CoreDataManager {
     }
 
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
-        let request: NSFetchRequest<TrackEntity> = TrackEntity.fetchRequest()
-        
-        //request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
-        guard let user = try? managedObjectContext.fetch(request) else { return }
-        guard let session = user.first else { return }
-        session.totalPace = numberOfPace
-        session.locations = locations
-        session.timestamp = locations.last?.timestamp
+
+        let track = TrackEntity(context: managedObjectContext)
+        track.totalPace = numberOfPace
+        track.locations = locations
+        track.timestamp = locations.last?.timestamp
         coreDataStack.saveContext()
         
 //        let user = UserEntity(context: managedObjectContext)
