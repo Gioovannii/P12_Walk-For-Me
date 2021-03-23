@@ -30,8 +30,6 @@ final class CoreDataManager {
         let user = TrackEntity(context: managedObjectContext)
         user.locations = [CLLocation]()
         user.totalPace = "0"
-       // user.id = id
-        //print("id new session \(id)")
         coreDataStack.saveContext()
     }
 
