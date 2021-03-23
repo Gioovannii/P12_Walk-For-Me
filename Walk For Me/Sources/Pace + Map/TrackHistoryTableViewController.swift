@@ -25,6 +25,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     var coreDataManager: CoreDataManager?
     
+    var trackMapped = [Track]()
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
     
