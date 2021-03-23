@@ -30,6 +30,15 @@ final class TrackHistoryTableViewController: UITableViewController {
     @IBOutlet weak var stopButton: UIBarButtonItem!
     
     // MARK: - Life Cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let track: [Track] = coreDataManager!.tracks.map { Track(locations: $0.locations!, totalPace: Double($0.totalPace ?? "0")!, timeStamp: $0.timestamp! ) }
+        
+        self.trackMapped = track
+        
+        print("Locations mapped \(track)")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
