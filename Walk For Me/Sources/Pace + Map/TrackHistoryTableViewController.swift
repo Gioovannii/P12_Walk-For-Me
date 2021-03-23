@@ -55,21 +55,16 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager = CLLocationManager()
         requestLocation()
         
-        //init(locations: [CLLocation]? = nil, totalPace: Double? = nil, timeStamp: Date? = nil)
-        
-        let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations, totalPace: Double($0.totalPace!), timeStamp: $0.timestamp ) }
-        
-        print("Locations mapped \(track)")
-        
-        /// append one in array count for each track
-        for track in coreDataManager.tracks {
-            print("Looping sessions \(track.locations as Any)")
-            countSessionArray.append("\(sessionCount + 1)")
-            paceNumber.append("\(sessionCount)")
-            guard let last = Int(countSessionArray.last ?? "0") else { return }
-          
-            sessionCount = last
-        }
+//        /// append one in array count for each track
+//        for track in coreDataManager.tracks {
+//            print("Looping sessions \(track.locations as Any)")
+//            countSessionArray.append("\(sessionCount + 1)")
+//            paceNumber.append("\(sessionCount)")
+//            guard let last = Int(countSessionArray.last ?? "0") else { return }
+//
+//           // coreDataManager.tracks.remove(at: coreDataManager.tracks.count)
+//            sessionCount = last
+//        }
     }
     
     // MARK: - Actions
