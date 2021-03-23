@@ -49,7 +49,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
-        if !coreDataManager.tracks.isEmpty { playButton.isEnabled = true }
+        //if !coreDataManager.tracks.isEmpty { playButton.isEnabled = true }
         tableView.tableFooterView = UIView()
 
         locationManager = CLLocationManager()
