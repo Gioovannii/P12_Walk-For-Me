@@ -169,8 +169,9 @@ extension TrackHistoryTableViewController {
         let pace = trackMapped[indexPath.row].totalPace
         print(pace)
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
-        cell.textLabel?.text = "Nombre de pas: \(countSessionArray[indexPath.row])"
-        cell.detailTextLabel?.text = "\(pace) mètres parcourrus"
+//        cell.textLabel?.text = "Nombre de pas: \(countSessionArray[indexPath.row])"
+        cell.textLabel?.text = "Nombre de pas: \(indexPath.row + 1)"
+        cell.detailTextLabel?.text = "\(pace.clean) mètres parcourrus"
         return cell
     }
     
