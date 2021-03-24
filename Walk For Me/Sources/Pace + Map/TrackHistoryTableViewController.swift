@@ -109,6 +109,9 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             self.trackMapped = track
             self.tableView.reloadData()
+            print("***\(self.trackMapped)")
+            self.temporaryLocations = [CLLocation]()
+            print(self.temporaryLocations)
         }
         
         let continueAction = UIAlertAction(title: "Annuler", style: .cancel) { _ in
