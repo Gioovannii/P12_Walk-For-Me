@@ -236,8 +236,9 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             distanceRounded += positionTrackArray
             
 //            paceNumber[(coreDataManager?.users.count)! - 1] = "\(distanceRounded.clean)"
-            coreDataManager?.tracks.last!.totalPace = "\(distanceRounded.clean)"
-
+//            coreDataManager?.tracks.last!.totalPace = "\(distanceRounded.clean)"
+            trackMapped[index].totalPace = distanceRounded
+            
             currentTrack.totalPace = distanceRounded
             
             tableView.reloadData()
