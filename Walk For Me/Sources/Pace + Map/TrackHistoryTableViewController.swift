@@ -195,7 +195,8 @@ extension TrackHistoryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return coreDataManager?.tracks.isEmpty ?? true ? 300 : 0
+//        return coreDataManager?.tracks.isEmpty ?? true ? 300 : 0
+        return trackMapped.isEmpty ? 300 : 0
     }
 }
 
