@@ -69,8 +69,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         guard let coreDataManager = coreDataManager else { return }
         locationManager?.stopUpdatingLocation()
         
-        
-        let convert = currentTrack.totalPace ?? 0.0 / 0.762
+        let convert = currentTrack.totalPace / 0.762
         self.currentTrack.totalPace = convert.rounded()
         let rounded = "\(String(describing: self.currentTrack.totalPace.clean))"
         
