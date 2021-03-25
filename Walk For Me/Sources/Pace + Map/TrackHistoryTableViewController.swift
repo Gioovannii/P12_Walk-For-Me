@@ -11,7 +11,6 @@ import CoreLocation
 final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
-    
     private var locationManager: CLLocationManager?
     private var previousLocation: CLLocation?
     private var currentLocation: CLLocation?
@@ -29,17 +28,16 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-        
         coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
         //if !coreDataManager.tracks.isEmpty { playButton.isEnabled = true }
         tableView.tableFooterView = UIView()
-
+        
         locationManager = CLLocationManager()
         requestLocation()
         
@@ -132,7 +130,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
-
+            
             guard let mapController = segue.destination as? MapViewController else { return }
             guard let currentLocation = currentLocation else { return }
             mapController.currentLocation = currentLocation
@@ -228,7 +226,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             trackMapped[index].totalPace = distanceRounded
             
             currentTrack.totalPace = distanceRounded
-            
             tableView.reloadData()
             
             // Store Location temporary in array which will be use until user stop to save in Core Data
