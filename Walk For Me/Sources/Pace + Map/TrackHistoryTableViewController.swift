@@ -53,10 +53,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
         currentTrack = Track(locations: temporaryLocations)
         trackMapped.append(currentTrack)
-        
-//        paceNumber.append("0")
-
-        index = trackMapped.count - 1
         playButton.isEnabled = true
         tableView.reloadData()
     }
