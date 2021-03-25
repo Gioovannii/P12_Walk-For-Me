@@ -51,9 +51,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func newSessionButton(_ sender: UIBarButtonItem) {
- 
-        //coreDataManager.newSession()
-        
         currentTrack = Track(locations: temporaryLocations)
         trackMapped.append(currentTrack)
         
