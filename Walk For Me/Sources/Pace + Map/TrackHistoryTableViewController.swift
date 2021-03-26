@@ -118,9 +118,12 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             guard let mapController = segue.destination as? MapViewController else { return }
             guard let currentLocation = currentLocation else { return }
-            mapController.currentLocation = currentLocation
-            mapController.currentTrack.locations = currentTrack.locations
-            mapController.index = index
+            mapController.currentLocation = currentLocation  // updte by delegate each seconds
+            mapController.currentTrack = trackMapped[selectedRow].locations
+            print("Track Mapped Index \(trackMapped[selectedRow].locations)")
+            print("Track Map \(trackMapped)")
+            //            mapController.currentTrack.locations = currentTrack.locations
+            mapController.index = sender as? Int ?? 0
         }
     }
 }
