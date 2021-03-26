@@ -93,7 +93,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         alertVC.addAction(stopAction)
         alertVC.addAction(continueAction)
         present(alertVC, animated: true, completion: nil)
-        print("Tracks save \(coreDataManager.tracks)")
     }
     
     // MARK: - Localisation Services
