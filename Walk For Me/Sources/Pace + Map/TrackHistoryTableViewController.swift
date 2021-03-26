@@ -136,8 +136,6 @@ extension TrackHistoryTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //guard let coreDataManager = coreDataManager else { return UITableViewCell() }
-        //guard let pace = coreDataManager.tracks[indexPath.row].totalPace else { return UITableViewCell() }
         let pace = trackMapped[indexPath.row].totalPace
         print(pace)
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.walkCell, for: indexPath)
