@@ -145,7 +145,8 @@ extension TrackHistoryTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        index = indexPath.row
+        selectedRow = indexPath.row
+//        performSegue(withIdentifier: Constant.cellToMap, sender: indexPath.row)
     }
 }
 
