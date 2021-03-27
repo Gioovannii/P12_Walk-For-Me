@@ -48,6 +48,15 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         self.trackMapped = track
         print(trackMapped , trackMapped.count)
+        
+        if trackMapped.isEmpty {
+            playButton.isEnabled = false
+            clearButton.isEnabled = false
+        } else {
+            playButton.isEnabled = true
+            clearButton.isEnabled = true
+
+        }
     }
     
     // MARK: - Actions
