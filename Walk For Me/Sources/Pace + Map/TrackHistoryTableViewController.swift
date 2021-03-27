@@ -26,6 +26,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     // MARK: - Outlets
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var stopButton: UIBarButtonItem!
+    @IBOutlet weak var clearButton: UIBarButtonItem!
     
     // MARK: - Life Cycle
     
