@@ -24,9 +24,11 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let currentLocation = currentLocation else { return }
-        let loadLocation = CLLocation(latitude: (currentLocation.coordinate.latitude),
-                                      longitude: (currentLocation.coordinate.longitude))
+//        print("Current loc \(currentLocation)")
+//        guard let currentLocation = currentLocation else { return }
+        print("*** \(currentTrack)")
+//        let loadLocation = CLLocation(latitude: (currentLocation.coordinate.latitude),
+//                                      longitude: (currentLocation.coordinate.longitude))
         
         let regionRadius: CLLocationDistance = 1000.0
         let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
