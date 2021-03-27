@@ -31,7 +31,8 @@ class MapViewController: UIViewController {
 //                                      longitude: (currentLocation.coordinate.longitude))
         
         let regionRadius: CLLocationDistance = 1000.0
-        let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//        let region = MKCoordinateRegion(center: loadLocation.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        let region = MKCoordinateRegion(center: currentTrack.last!.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(region, animated: true)
         mapView.delegate = self
     }
