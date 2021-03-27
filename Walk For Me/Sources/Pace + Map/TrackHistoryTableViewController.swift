@@ -62,6 +62,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         currentTrack = Track(locations: temporaryLocations)
         trackMapped.append(currentTrack)
         playButton.isEnabled = true
+        clearButton.isEnabled = true
         tableView.reloadData()
     }
     
