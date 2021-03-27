@@ -41,4 +41,9 @@ final class CoreDataManager {
         track.timestamp = locations.last?.timestamp
         coreDataStack.saveContext()
     }
+    
+    func clearTracks() {
+        tracks.forEach { managedObjectContext.delete($0)}
+        coreDataStack.saveContext()
+    }
 }
