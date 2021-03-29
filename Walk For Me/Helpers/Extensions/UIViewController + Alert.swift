@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    func presentAlert(title: String, message: String) {
+    func presentAlert(title: String, message: String, actionTitle: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Annuler", style: .cancel))
 
