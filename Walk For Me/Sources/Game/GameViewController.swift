@@ -40,7 +40,6 @@ class GameViewController: UIViewController {
             if let pace = user.totalPace {
                 guard let paceNumber = Int(pace) else { return }
                 total += paceNumber
-                print(total)
             } else {
                 print("Unwrapped failed")
             }
