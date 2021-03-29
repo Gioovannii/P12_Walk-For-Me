@@ -44,7 +44,6 @@ class GameViewController: UIViewController {
                 print("Unwrapped failed")
             }
         }
-        print(total)
         updateUI(total: total)
     }
     
