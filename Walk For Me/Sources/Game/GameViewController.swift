@@ -9,6 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var slotButton1: UIButton!
     @IBOutlet weak var slotButton2: UIButton!
     @IBOutlet weak var slotButton3: UIButton!
