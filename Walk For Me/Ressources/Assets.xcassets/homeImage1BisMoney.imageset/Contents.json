@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-sac-d'argent-64.png",
+      "filename" : "money-exchange.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "money-exchange@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "money-exchange@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
