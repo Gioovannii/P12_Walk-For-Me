@@ -62,7 +62,21 @@ class GameViewController: UIViewController {
         wheatQuantityLAbel.text = "0"
     }
     
-    @IBAction func slotButton1Tapped(_ sender: Any) {
+    // MARK: - Actions
+    @IBAction func exchangeButtonTapped(_ sender: UIButton) {
+        displayExchangeAlert { paceNumber in
+            guard let paceNumber = paceNumber else { return }
+            guard var paceNumberLabel = self.paceNumberLabel.text else { return }
+            paceNumberLabel =  "\((Int(paceNumberLabel)! - Int(paceNumber)!))"
+            
+            
+            print(paceNumber)
+            self.paceNumberLabel.text = paceNumberLabel
+            self.moneyNumberLabel.text = paceNumber
+        }
+    }
+    
+    @IBAction func slotButton1Tapped(_ sender: UIButton) {
         print("Tapped")
     }
 }
