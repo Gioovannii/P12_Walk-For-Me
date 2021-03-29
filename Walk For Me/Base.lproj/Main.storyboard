@@ -257,6 +257,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4m-u5-lPs">
                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="40"/>
                                                 <state key="normal" image="homeImage8farmer"/>
+                                                <connections>
+                                                    <action selector="slotButton1Tapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="6is-F3-nAU"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJG-hG-pwK">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
@@ -283,14 +286,19 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uvb-TW-J50" userLabel="Stack View convert">
-                                <rect key="frame" x="180" y="98" width="64" height="40"/>
+                                <rect key="frame" x="180" y="98" width="40" height="40"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-sac-d'argent-64" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-z4-Z7b">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-Yl-kfR">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="WJK-rK-hqm"/>
+                                            <constraint firstAttribute="height" constant="40" id="C6p-6X-7HP"/>
+                                            <constraint firstAttribute="width" constant="40" id="JGl-w5-vw3"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="homeImage1BisMoney"/>
+                                        <connections>
+                                            <action selector="exchangeButtonTapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="AEy-fs-0Ob"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -298,6 +306,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Oe9-tL-LBE" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="220" id="0C2-4g-Vav"/>
+                            <constraint firstItem="uvb-TW-J50" firstAttribute="centerY" secondItem="aOS-pa-l8c" secondAttribute="centerY" id="6nU-8W-LZH"/>
                             <constraint firstItem="9Vi-9R-4hx" firstAttribute="trailing" secondItem="asc-HK-pjI" secondAttribute="trailing" constant="61" id="Dm9-I4-vzh"/>
                             <constraint firstItem="uvb-TW-J50" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="10" id="FCx-Zw-ksP"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="Gj1-Uk-Rid"/>
@@ -639,6 +648,7 @@
     <resources>
         <image name="barButton1Play" width="25" height="25"/>
         <image name="barButton2Stop" width="25" height="25"/>
+        <image name="homeImage1BisMoney" width="64" height="58"/>
         <image name="homeImage1Runner" width="40" height="40"/>
         <image name="homeImage2Dollar" width="40" height="40"/>
         <image name="homeImage3Blueprint" width="40" height="40"/>
@@ -648,7 +658,6 @@
         <image name="homeImage8farmer" width="40" height="40"/>
         <image name="homeImage9House" width="512" height="508"/>
         <image name="homeImageBackground" width="506" height="761"/>
-        <image name="icons8-sac-d'argent-64" width="64" height="64"/>
         <image name="tabBar1Setting" width="65" height="65"/>
         <image name="tabBar2Footprints" width="65" height="65"/>
         <image name="tabBar3Home" width="65" height="65"/>
