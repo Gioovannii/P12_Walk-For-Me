@@ -80,7 +80,6 @@ final class TrackHistoryTableViewController: UITableViewController {
             self.playButton.isEnabled = false
             self.stopButton.isEnabled = false
             self.locationManager?.delegate = nil
-            
             coreDataManager.saveTrack(numberOfPace: "\(rounded)", locations: self.temporaryLocations)
             let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations!, totalPace: Double($0.totalPace ?? "0")!, timeStamp: $0.timestamp!) }
             
