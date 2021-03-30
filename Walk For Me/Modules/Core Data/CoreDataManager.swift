@@ -35,7 +35,6 @@ final class CoreDataManager {
     // MARK: - Track
 
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
-
         let track = TrackEntity(context: managedObjectContext)
         track.totalPace = numberOfPace
         track.locations = locations
