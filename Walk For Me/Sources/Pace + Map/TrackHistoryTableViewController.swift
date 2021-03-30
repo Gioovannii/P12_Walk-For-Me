@@ -129,10 +129,11 @@ final class TrackHistoryTableViewController: UITableViewController {
 //            guard let currentLocation = currentLocation else { return } we don't want user to come back and zoom to the position user 
 //            mapController.currentLocation = currentLocation  // updte by delegate each seconds ** need it
             mapController.currentTrack = trackMapped[selectedRow].locations
-            print("Track Mapped Index \(trackMapped[selectedRow].locations)")
-            print("Track Map \(trackMapped)")
-            //            mapController.currentTrack.locations = currentTrack.locations
-            mapController.index = sender as? Int ?? 0
+//            print("Track Mapped Index \(trackMapped[selectedRow].locations)")
+            print("selected row \(selectedRow)")
+//            print("Track selected \(trackMapped[selectedRow])")
+//            print("Track Map \(trackMapped)")
+            //  mapController.currentTrack.locations = currentTrack.locations
         }
     }
 }
