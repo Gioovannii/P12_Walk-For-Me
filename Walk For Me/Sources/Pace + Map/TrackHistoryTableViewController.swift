@@ -77,6 +77,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(currentTrack.totalPace.clean) pas", preferredStyle: .alert)
         let stopAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
+            self.playButton.isEnabled = false
             self.stopButton.isEnabled = false
             self.locationManager?.delegate = nil
             
