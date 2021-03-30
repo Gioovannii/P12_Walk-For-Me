@@ -46,4 +46,9 @@ final class CoreDataManager {
         tracks.forEach { managedObjectContext.delete($0)}
         coreDataStack.saveContext()
     }
+    
+    // MARK: - Game
+    func saveData(paceAmount: String, moneyAmount: String) {
+        
+    }
 }
