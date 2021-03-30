@@ -126,8 +126,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         if segue.identifier == Constant.cellToMap {
             
             guard let mapController = segue.destination as? MapViewController else { return }
-            guard let currentLocation = currentLocation else { return }
-            mapController.currentLocation = currentLocation  // updte by delegate each seconds
+//            guard let currentLocation = currentLocation else { return } we don't want user to come back and zoom to the position user 
+//            mapController.currentLocation = currentLocation  // updte by delegate each seconds ** need it
             mapController.currentTrack = trackMapped[selectedRow].locations
             print("Track Mapped Index \(trackMapped[selectedRow].locations)")
             print("Track Map \(trackMapped)")
