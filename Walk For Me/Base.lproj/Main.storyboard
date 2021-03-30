@@ -474,9 +474,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="xv8-ib-guO" kind="show" identifier="CellToMap" id="uMg-Vk-n6k"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -513,6 +510,7 @@
                         <outlet property="clearButton" destination="Rip-9x-iBW" id="voH-9g-jav"/>
                         <outlet property="playButton" destination="Ey5-xn-N5c" id="Neq-ve-neF"/>
                         <outlet property="stopButton" destination="D8U-xH-Hro" id="FlP-T4-2Vi"/>
+                        <segue destination="xv8-ib-guO" kind="show" identifier="CellToMap" id="480-FN-Wf6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keG-05-vQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
