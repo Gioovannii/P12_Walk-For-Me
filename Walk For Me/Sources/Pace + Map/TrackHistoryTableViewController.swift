@@ -96,6 +96,13 @@ final class TrackHistoryTableViewController: UITableViewController {
         alertVC.addAction(continueAction)
         present(alertVC, animated: true, completion: nil)
     }
+    @IBAction func deleteTracks(_ sender: UIBarButtonItem) {
+        coreDataManager?.clearTracks()
+        trackMapped.removeAll()
+        playButton.isEnabled = false
+        clearButton.isEnabled = false
+        tableView.reloadData()
+    }
     
     // MARK: - Localisation Services
     func requestLocation() {
