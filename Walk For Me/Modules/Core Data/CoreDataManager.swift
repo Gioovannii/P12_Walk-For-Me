@@ -32,12 +32,7 @@ final class CoreDataManager {
         self.managedObjectContext = coreDataStack.mainContext
     }
 
-    func newSession() {
-        let user = TrackEntity(context: managedObjectContext)
-        user.locations = [CLLocation]()
-        user.totalPace = "0"
-        coreDataStack.saveContext()
-    }
+    // MARK: - Track
 
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
 
