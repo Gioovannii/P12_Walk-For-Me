@@ -17,7 +17,6 @@ class MapViewController: UIViewController {
     private var location: CLLocationCoordinate2D?
     var currentTrack = [CLLocation]()
     var currentLocation: CLLocation?
-    var index = 0
     
     // MARK: - Life Cycle
     
