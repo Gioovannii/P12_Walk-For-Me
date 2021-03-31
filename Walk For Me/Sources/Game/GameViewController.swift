@@ -48,7 +48,6 @@ class GameViewController: UIViewController {
             }
         }
         updateUI(total: total)
-        
         coreDataCount = coreDataManager.tracks.count
     }
     
