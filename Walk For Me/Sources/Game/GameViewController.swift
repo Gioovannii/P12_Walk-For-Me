@@ -77,12 +77,15 @@ class GameViewController: UIViewController {
         displayExchangeAlert { paceNumber in
             guard let paceNumber = paceNumber else { return }
             guard var paceNumberLabel = self.paceNumberLabel.text else { return }
-            paceNumberLabel =  "\((Int(paceNumberLabel)! - Int(paceNumber)!))"
-            
-            
-            print(paceNumber)
-            self.paceNumberLabel.text = paceNumberLabel
-            self.moneyNumberLabel.text = paceNumber
+            if Int(paceNumber)! > Int(paceNumberLabel)! {
+                self.presentAlert(title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez", actionTitle: "Bon ok !")}
+            else {
+                paceNumberLabel =  "\(Int(paceNumberLabel)! - Int(paceNumber)!)"
+                
+                print(paceNumber)
+                self.paceNumberLabel.text = paceNumberLabel
+                self.moneyNumberLabel.text = paceNumber
+            }
         }
     }
     
