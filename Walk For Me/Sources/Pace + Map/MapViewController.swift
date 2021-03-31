@@ -72,7 +72,6 @@ class MapViewController: UIViewController {
             points.append(CLLocationCoordinate2DMake(currentTrack[i].coordinate.latitude, currentTrack[i].coordinate.longitude))
             
             //            points.append(CLLocationCoordinate2DMake(user.locations[location.coordinate.latitude], user.locations[location.coordinate.longitude]))
-            
         }
         
         print(points)
