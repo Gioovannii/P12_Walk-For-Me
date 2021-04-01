@@ -127,7 +127,6 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             guard let mapController = segue.destination as? MapViewController else { return }
             mapController.currentTrack = trackMapped[selectedRow].locations
-//            print("Track Mapped Index \(trackMapped[selectedRow].locations)")
             print("selected row \(selectedRow)")
 //            print("Track selected \(trackMapped[selectedRow])")
 //            print("Track Map \(trackMapped)")
