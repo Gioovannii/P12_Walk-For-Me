@@ -22,10 +22,10 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("*** \(currentTrack)")
+        //        print("*** \(currentTrack)")
         guard let latitude = currentTrack.last?.coordinate.latitude else { return }
         guard let longitude = currentTrack.last?.coordinate.longitude else { return }
-
+        
         let loadLocation = CLLocation(latitude: (latitude),longitude: (longitude))
         
         let regionRadius: CLLocationDistance = 1000.0
@@ -67,7 +67,7 @@ class MapViewController: UIViewController {
         var points: [CLLocationCoordinate2D] = []
         
         for i in 0..<currentTrack.count {
-//            print("For loop locations :  \(currentTrack[i].coordinate)")
+            //            print("For loop locations :  \(currentTrack[i].coordinate)")
             
             points.append(CLLocationCoordinate2DMake(currentTrack[i].coordinate.latitude, currentTrack[i].coordinate.longitude))
             
@@ -94,6 +94,6 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
-//        print("Rendering ...")
+        //        print("Rendering ...")
     }
 }
