@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
         coreDataManager = CoreDataManager(coreDataStack: sceneDelegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
-               
+        
         guard coreDataCount != coreDataManager.tracks.count else { return }
         
         var total = 0
