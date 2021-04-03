@@ -79,7 +79,7 @@ class GameViewController: UIViewController {
             else {
                 paceNumberLabel -=  moneyNumber
                 self.paceNumberLabel.text = "\(paceNumberLabel)"
-                self.moneyNumberLabel.text = "\(paceNumber)"
+                self.moneyNumberLabel.text = "\(moneyNumber)"
             }
         }
     }
