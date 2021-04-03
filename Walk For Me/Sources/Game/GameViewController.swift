@@ -81,6 +81,7 @@ class GameViewController: UIViewController {
                 self.paceNumberLabel.text = "\(paceNumberLabel)"
                 self.moneyNumberLabel.text = "\(moneyNumber)"
             }
+            self.coreDataManager?.saveData(paceAmount: "\(paceNumberLabel)", moneyAmount: "\(moneyNumber)")
         }
     }
     
