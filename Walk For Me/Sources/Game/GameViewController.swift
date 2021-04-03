@@ -79,7 +79,7 @@ class GameViewController: UIViewController {
             if paceNumber > paceNumberLabel {
                 self.presentAlert(title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez", actionTitle: "Bon ok !")}
             else {
-                paceNumberLabel =  "\(Int(paceNumberLabel)! - Int(paceNumber)!)"
+                paceNumberLabel =  paceNumberLabel - paceNumber
                 
                 print(paceNumber)
                 self.paceNumberLabel.text = paceNumberLabel
