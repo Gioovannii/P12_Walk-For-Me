@@ -82,8 +82,8 @@ class GameViewController: UIViewController {
                 paceNumberLabel =  paceNumberLabel - paceNumber
                 
                 print(paceNumber)
-                self.paceNumberLabel.text = paceNumberLabel
-                self.moneyNumberLabel.text = paceNumber
+                self.paceNumberLabel.text = "\(paceNumberLabel)"
+                self.moneyNumberLabel.text = "\(paceNumber)"
             }
         }
     }
