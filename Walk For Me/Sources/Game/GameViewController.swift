@@ -47,6 +47,7 @@ class GameViewController: UIViewController {
                 print("Unwrapped failed")
             }
         }
+        coreDataManager.saveData(paceAmount: "\(total)", moneyAmount: "0")
         updateUI(total: total)
         coreDataCount = coreDataManager.tracks.count
     }
