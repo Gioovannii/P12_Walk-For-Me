@@ -58,8 +58,11 @@ class GameViewController: UIViewController {
     }
     
     func updateUI(total: Int) {
-        paceNumberLabel.text = "\(total)"
-        moneyNumberLabel.text = "0"
+        for i in coreDataManager!.game {
+            print(i)
+        }
+        paceNumberLabel.text = "\(coreDataManager?.game.last?.paceAmount ?? "0")"
+        moneyNumberLabel.text = "\(coreDataManager?.game.last?.moneyAmount ?? "0")"
         squareMeterNumberLabel.text = "0"
         tomatoesQuantityLabel.text = "0"
         potatoeQuantityLabel.text = "0"
