@@ -57,11 +57,6 @@ class GameViewController: UIViewController {
         presentAlert(title: "Information", message: "Vous pouvez échanger vos pas contre \n de l'argent grâce au logo échange", actionTitle: "OK")
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        coreDataManager?.saveData(paceAmount: paceNumberLabel.text, moneyAmount: moneyNumberLabel.text)
-    }
-    
     func updateUI(total: Int) {
         paceNumberLabel.text = "\(total)"
         moneyNumberLabel.text = "0"
