@@ -36,6 +36,7 @@ class GameViewController: UIViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
+        // Check if there is one more track
         guard coreDataCount != coreDataManager.tracks.count else { return }
         
         var total = 0
