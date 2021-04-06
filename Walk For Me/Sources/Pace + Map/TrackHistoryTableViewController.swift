@@ -29,7 +29,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     @IBOutlet weak var clearButton: UIBarButtonItem!
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -127,8 +126,7 @@ final class TrackHistoryTableViewController: UITableViewController {
             
             guard let mapController = segue.destination as? MapViewController else { return }
             mapController.currentTrack = trackMapped[selectedRow].locations
-            print("selected row \(selectedRow)")
-            //  mapController.currentTrack.locations = currentTrack.locations
+//         mapController.currentTrack.locations = currentTrack.locations // Do something with location of user
         }
     }
 }
