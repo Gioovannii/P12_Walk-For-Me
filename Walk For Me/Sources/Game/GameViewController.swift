@@ -39,6 +39,7 @@ class GameViewController: UIViewController {
         // Check if there is one more track
         guard coreDataCount != coreDataManager.tracks.count else { return }
         
+        // We pass guard take all tracks and add the last track
         var total = 0
         for user in coreDataManager.tracks {
             if let pace = user.totalPace {
