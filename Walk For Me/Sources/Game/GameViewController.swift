@@ -48,7 +48,7 @@ class GameViewController: UIViewController {
         presentAlert(title: "Information", message: "Vous pouvez échanger vos pas contre \n de l'argent grâce au logo échange", actionTitle: "OK")
     }
     
-    func updateUI(total: Int) {
+    func updateUI(total: GameEntity) {
         for i in coreDataManager!.game {
             print(i)
         }
