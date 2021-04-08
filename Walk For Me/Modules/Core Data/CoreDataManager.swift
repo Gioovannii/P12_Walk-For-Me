@@ -51,6 +51,10 @@ final class CoreDataManager {
     func saveData(paceAmount: String?) {
         let game = GameEntity(context: managedObjectContext)
         game.paceAmount = paceAmount
-        game.moneyAmount = moneyAmount
+    }
+    
+    func deleteTrack() {
+        game.forEach { managedObjectContext.delete($0)}
+        coreDataStack.saveContext()
     }
 }
