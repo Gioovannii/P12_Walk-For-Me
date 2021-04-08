@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
         for entity in coreDataManager.game {
             print(entity.paceAmount as Any)
         }
-        coreDataManager.saveData(paceAmount: "\(total)", moneyAmount: coreDataManager.game.last?.moneyAmount)
+        guard let total = coreDataManager.game.last else { return }
         updateUI(total: total)
         coreDataCount = coreDataManager.tracks.count
     }
