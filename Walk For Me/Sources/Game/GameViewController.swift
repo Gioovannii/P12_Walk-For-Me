@@ -41,7 +41,6 @@ class GameViewController: UIViewController {
         }
         guard let total = coreDataManager.game.last else { return }
         updateUI(total: total)
-        coreDataCount = coreDataManager.tracks.count
     }
     
     override func viewDidLoad() {
