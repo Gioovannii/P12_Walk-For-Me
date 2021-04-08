@@ -36,18 +36,8 @@ class GameViewController: UIViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
-        // Check if there is one more track
-        guard coreDataCount != coreDataManager.tracks.count else { return }
-        
-        // We pass guard take all tracks and add the last track
-        var total = 0
-        for user in coreDataManager.tracks {
-            if let pace = user.totalPace {
-                guard let paceNumber = Int(pace) else { return }
-                total += paceNumber
-            } else {
-                print("Unwrapped failed")
-            }
+        for entity in coreDataManager.game {
+            print(entity.paceAmount as Any)
         }
         coreDataManager.saveData(paceAmount: "\(total)", moneyAmount: coreDataManager.game.last?.moneyAmount)
         updateUI(total: total)
