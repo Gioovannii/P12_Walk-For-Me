@@ -103,6 +103,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         playButton.isEnabled = false
         clearButton.isEnabled = false
         tableView.reloadData()
+        coreDataManager?.deleteTrack()
     }
     
     // MARK: - Localisation Services
