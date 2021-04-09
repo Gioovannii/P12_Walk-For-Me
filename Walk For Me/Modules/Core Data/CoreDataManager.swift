@@ -48,7 +48,7 @@ final class CoreDataManager {
     }
     
     // MARK: - Game
-    func saveData(paceAmount: String?) {
+    func savePace(paceAmount: String?) {
         let game = GameEntity(context: managedObjectContext)
         game.paceAmount = paceAmount
     }
