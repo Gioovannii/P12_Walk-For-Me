@@ -95,7 +95,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         alertVC.addAction(continueAction)
         present(alertVC, animated: true, completion: nil)
         
-        coreDataManager.saveData(paceAmount: "\(rounded)")
+        coreDataManager.savePace(paceAmount: "\(rounded)")
     }
     @IBAction func deleteTracks(_ sender: UIBarButtonItem) {
         coreDataManager?.clearTracks()
