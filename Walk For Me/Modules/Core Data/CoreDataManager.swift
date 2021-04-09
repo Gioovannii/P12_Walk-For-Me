@@ -51,6 +51,7 @@ final class CoreDataManager {
     func savePace(paceAmount: String?) {
         let game = GameEntity(context: managedObjectContext)
         game.paceAmount = paceAmount
+        coreDataStack.saveContext()
     }
     
     func deleteTrack() {
