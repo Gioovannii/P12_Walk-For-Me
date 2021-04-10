@@ -51,6 +51,7 @@ final class CoreDataManager {
     func savePace(paceAmount: String?, moneyAmount: String) {
         let game = GameEntity(context: managedObjectContext)
         game.paceAmount = paceAmount
+        game.moneyAmount = moneyAmount
         coreDataStack.saveContext()
     }
     
