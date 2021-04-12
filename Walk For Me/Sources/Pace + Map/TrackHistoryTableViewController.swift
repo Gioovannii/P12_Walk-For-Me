@@ -69,7 +69,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     @IBAction func stopButtonPressed(_ sender: UIBarButtonItem) {
         guard let coreDataManager = coreDataManager else { return }
         locationManager?.stopUpdatingLocation()
-        var rounded = ""
         let convert = currentTrack.totalPace / 0.762
         self.currentTrack.totalPace = convert.rounded()
        
