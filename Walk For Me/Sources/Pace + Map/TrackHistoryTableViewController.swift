@@ -70,6 +70,10 @@ final class TrackHistoryTableViewController: UITableViewController {
         guard let coreDataManager = coreDataManager else { return }
         locationManager?.stopUpdatingLocation()
         let convert = currentTrack.totalPace / 0.762
+        
+        // Retrieve last pace and add current amount of pace
+        guard let lastPace = Int((coreDataManager.game.last?.paceAmount ?? "0")) else { return }
+        let paceToGame = lastPace + Int(convert)
         self.currentTrack.totalPace = convert.rounded()
        
         guard let lastPace = Int((coreDataManager.game.last?.paceAmount!)!) else { return }
@@ -96,7 +100,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         alertVC.addAction(continueAction)
         present(alertVC, animated: true, completion: nil)
         
-        coreDataManager.savePace(paceAmount: "\(rounded)", moneyAmount: (coreDataManager.game.last?.moneyAmount) ?? "0" )
+        coreDataManager.savePace(paceAmount: "\(paceToGame)", moneyAmount: (coreDataManager.game.last?.moneyAmount) ?? "0" )
     }
     @IBAction func deleteTracks(_ sender: UIBarButtonItem) {
         coreDataManager?.clearTracks()
