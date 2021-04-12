@@ -77,6 +77,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         self.currentTrack.totalPace = convert.rounded()
         let rounded = "\(String(describing: self.currentTrack.totalPace.clean))"
         
+        print("Rounded \(rounded)")
         let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(currentTrack.totalPace.clean) pas", preferredStyle: .alert)
         let stopAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
             self.playButton.isEnabled = false
