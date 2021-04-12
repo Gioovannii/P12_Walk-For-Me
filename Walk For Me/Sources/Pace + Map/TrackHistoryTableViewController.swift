@@ -75,9 +75,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         guard let lastPace = Int((coreDataManager.game.last?.paceAmount ?? "0")) else { return }
         let paceToGame = lastPace + Int(convert)
         self.currentTrack.totalPace = convert.rounded()
-       
-        guard let lastPace = Int((coreDataManager.game.last?.paceAmount!)!) else { return }
-        rounded = "\(String(describing: self.currentTrack.totalPace.clean + "\(lastPace)"))"
+        let rounded = "\(String(describing: self.currentTrack.totalPace.clean))"
         
         let alertVC = UIAlertController(title: "Veut tu arreter l'entrainement? ", message: "Félicitations!! Tu as gagner \(currentTrack.totalPace.clean) pas", preferredStyle: .alert)
         let stopAction = UIAlertAction(title: "Oui je suis sûr de moi", style: .default) {  _ in
