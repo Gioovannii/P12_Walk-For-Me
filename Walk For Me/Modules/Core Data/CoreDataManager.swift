@@ -22,8 +22,9 @@ final class CoreDataManager {
     
     var game: GameEntity? {
         let request: NSFetchRequest<GameEntity> = GameEntity.fetchRequest()
-        guard let users = try? managedObjectContext.fetch(request) else { return [] }
-        return users
+        guard let games = try? managedObjectContext.fetch(request) else { return  nil }
+        guard let game = games.first else { return nil }
+        return game
     }
     
     // MARK: - Initializer
