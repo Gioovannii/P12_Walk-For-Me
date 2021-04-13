@@ -63,6 +63,7 @@ final class CoreDataManager {
            
         coreDataStack.saveContext()
     }
+    
     func deleteTrack() {
         game.forEach { managedObjectContext.delete($0)}
         coreDataStack.saveContext()
