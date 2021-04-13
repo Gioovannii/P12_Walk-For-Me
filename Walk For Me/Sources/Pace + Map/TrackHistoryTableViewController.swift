@@ -46,7 +46,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations!, totalPace: Double($0.totalPace ?? "0")!, timeStamp: $0.timestamp! ) }
         
         self.trackMapped = track
-        print(trackMapped , trackMapped.count)
     }
     
     // MARK: - Actions
