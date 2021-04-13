@@ -20,7 +20,7 @@ final class CoreDataManager {
         return users
     }
     
-    var game: [GameEntity] {
+    var game: GameEntity? {
         let request: NSFetchRequest<GameEntity> = GameEntity.fetchRequest()
         guard let users = try? managedObjectContext.fetch(request) else { return [] }
         return users
