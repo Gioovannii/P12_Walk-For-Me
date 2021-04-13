@@ -69,9 +69,10 @@ class GameViewController: UIViewController {
             if moneyNumber > paceNumber {
                 self.presentAlert(title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez", actionTitle: "Bon ok !")}
             else {
-                paceNumberLabel -=  moneyNumber
-                self.paceNumberLabel.text = "\(paceNumberLabel)"
-                self.moneyNumberLabel.text = "\(moneyNumber)"
+                paceNumber -=  moneyNumber
+                guard let previousMoneyNumber = Int(self.moneyNumberLabel.text ?? "0") else { return }
+                self.paceNumberLabel.text = "\(paceNumber)"
+                self.moneyNumberLabel.text = "\(previousMoneyNumber + moneyNumber)"
             }
             //self.coreDataManager?.savePace(paceAmount: "\(paceNumberLabel)")
             self.coreDataManager?.game.last?.moneyAmount = "\(moneyNumber)"
