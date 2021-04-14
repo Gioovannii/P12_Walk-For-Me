@@ -71,8 +71,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         let convert = currentTrack.totalPace / 0.762
         
         // Retrieve last pace and add current amount of pace
-        guard let lastPace = Int((coreDataManager.game.last?.paceAmount ?? "0")) else { return }
-        let paceToGame = lastPace + Int(convert)
+        guard let lastPace = Int((coreDataManager.game?.paceAmount ?? "0")) else { return }
+        let paceToGame = lastPace + Int(convert.rounded())
         self.currentTrack.totalPace = convert.rounded()
         let rounded = "\(String(describing: self.currentTrack.totalPace.clean))"
         
@@ -219,7 +219,6 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             previousLocation = newLocation
             currentLocation = newLocation
-            print("temporaryLocations: \(temporaryLocations)")
         }
     }
 }
