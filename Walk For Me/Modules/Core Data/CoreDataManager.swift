@@ -49,14 +49,7 @@ final class CoreDataManager {
     }
     
     // MARK: - Game
-    func savePace(paceAmount: String?, moneyAmount: String) {
-        let game = GameEntity(context: managedObjectContext)
-        game.paceAmount = paceAmount
-        game.moneyAmount = moneyAmount
-        coreDataStack.saveContext()
-    }
-    
-    func saveMoney(moneyamount: String, paceAmount: String) {
+    func saveData(moneyamount: String, paceAmount: String) {
         guard let currentGame = game else { return }
         currentGame.moneyAmount = moneyamount
         currentGame.paceAmount = paceAmount
