@@ -35,10 +35,7 @@ class GameViewController: UIViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
-        for entity in coreDataManager.game {
-            print(entity.paceAmount as Any)
-        }
-        guard let total = coreDataManager.game.last else { return }
+        guard let total = coreDataManager.game else { return }
         updateUI(total: total)
     }
     
