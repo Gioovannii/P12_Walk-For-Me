@@ -23,7 +23,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var wheatQuantityLAbel: UILabel!
     
     var coreDataManager: CoreDataManager?
-    var coreDataCount = 0
     
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
