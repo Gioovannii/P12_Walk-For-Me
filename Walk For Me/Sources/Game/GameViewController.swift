@@ -75,8 +75,9 @@ class GameViewController: UIViewController {
             print("PaceToInt \(paceToInt)")
             print("PacenumberLabel \(paceNumber)")
 
-            self.coreDataManager?.saveMoney(moneyamount: "\(paceToInt)", paceAmount: "\(paceNumberLabel)")
-            print("new value \(String(describing: self.coreDataManager?.game.last?.paceAmount))")
+            self.coreDataManager?.saveData(moneyamount: "\(paceToInt)", paceAmount: "\(paceNumber)")
+            print("new value \(String(describing: self.coreDataManager?.game?.paceAmount))")
+            
         }
     }
     
