@@ -36,9 +36,9 @@ final class CoreDataManager {
         self.coreDataStack = coreDataStack
         self.managedObjectContext = coreDataStack.mainContext
     }
-
+    
     // MARK: - Track
-
+    
     func saveTrack(numberOfPace: String, locations: [CLLocation]) {
         let track = TrackEntity(context: managedObjectContext)
         track.totalPace = numberOfPace
