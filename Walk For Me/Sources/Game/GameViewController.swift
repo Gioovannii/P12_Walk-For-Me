@@ -35,8 +35,17 @@ class GameViewController: UIViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
-        guard let total = coreDataManager.game else { return }
-        updateUI(total: total)
+        
+        let total = coreDataManager.game!.moneyAmount
+        print(total)
+            coreDataManager.game?.moneyAmount = "0"
+            coreDataManager.game?.paceAmount = "0"
+            
+            print(coreDataManager.game?.paceAmount, coreDataManager.game?.moneyAmount)
+          
+//        total.moneyAmount = ""
+//        total.paceAmount = ""
+//        updateUI(total: total)
         print("core data \(coreDataManager)")
         print("money \(coreDataManager.game?.moneyAmount)")
     }
