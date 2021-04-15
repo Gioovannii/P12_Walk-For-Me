@@ -24,7 +24,6 @@ final class CoreDataManager {
         let request: NSFetchRequest<GameEntity> = GameEntity.fetchRequest()
         guard let games = try? managedObjectContext.fetch(request) else { return nil }
         if games.isEmpty {
-            games.
             games.first?.moneyAmount = "0"
             games.first?.paceAmount = "0"
         }
