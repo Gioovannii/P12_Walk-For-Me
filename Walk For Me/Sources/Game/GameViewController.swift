@@ -48,8 +48,6 @@ class GameViewController: UIViewController {
 //        total.moneyAmount = ""
 //        total.paceAmount = ""
 //        updateUI(total: total)
-        print("core data \(coreDataManager)")
-        print("money \(coreDataManager.game!.moneyAmount)")
     }
     
     override func viewDidLoad() {
