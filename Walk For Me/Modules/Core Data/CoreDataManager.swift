@@ -59,6 +59,7 @@ final class CoreDataManager {
         currentGame.moneyAmount = moneyamount
         currentGame.paceAmount = paceAmount
         coreDataStack.saveContext()
+        }
     }
     
     func deleteTrack() {
