@@ -37,8 +37,10 @@ class GameViewController: UIViewController {
         self.coreDataManager = coreDataManager
         
         
-        let total = coreDataManager.game!.moneyAmount
-        print(total)
+        let games = coreDataManager.game
+        currentGame = games
+        
+        print("current game \(currentGame)")
             coreDataManager.game?.moneyAmount = "0"
             coreDataManager.game?.paceAmount = "0"
             
