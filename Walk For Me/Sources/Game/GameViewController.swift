@@ -44,7 +44,6 @@ class GameViewController: UIViewController {
             coreDataManager.game?.moneyAmount = "0"
             coreDataManager.game?.paceAmount = "0"
             
-            print(coreDataManager.game?.paceAmount, coreDataManager.game?.moneyAmount)
           
 //        total.moneyAmount = ""
 //        total.paceAmount = ""
