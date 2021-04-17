@@ -39,14 +39,9 @@ class GameViewController: UIViewController {
         
         let total = coreDataManager.game
         
-        print("current game \(currentGame)")
-            coreDataManager.game?.moneyAmount = "0"
-            coreDataManager.game?.paceAmount = "0"
-            
-          
-//        total.moneyAmount = ""
-//        total.paceAmount = ""
-//        updateUI(total: total)
+        print("current game \(total?.paceAmount)")
+
+        updateUI(total: total!)
     }
     
     override func viewDidLoad() {
