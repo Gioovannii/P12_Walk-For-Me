@@ -79,15 +79,6 @@ class GameViewController: UIViewController {
                 self.coreDataManager?.saveData(paceAmount: "\(currentPaceNumber)", moneyAmount: "\(previousMoneyNumber + moneyNumberExchange)")
                 print("new value \(String(describing: self.coreDataManager?.game?.paceAmount))")
             }
-            //self.coreDataManager?.game.last?.moneyAmount = "\(moneyNumber)"
-            guard var paceToInt = Int((self.coreDataManager?.game?.paceAmount)!) else { return }
-            paceToInt -= paceNumber
-            print("PaceToInt \(paceToInt)")
-            print("PacenumberLabel \(paceNumber)")
-
-            self.coreDataManager?.saveData(moneyamount: "\(paceToInt)", paceAmount: "\(paceNumber)")
-            print("new value \(String(describing: self.coreDataManager?.game?.paceAmount))")
-            
         }
     }
     
