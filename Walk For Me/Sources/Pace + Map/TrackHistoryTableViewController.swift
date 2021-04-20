@@ -100,7 +100,8 @@ final class TrackHistoryTableViewController: UITableViewController {
         present(alertVC, animated: true, completion: nil)
         
         // Game Data
-        coreDataManager.saveData(moneyamount: "\(paceToGame)", paceAmount: (coreDataManager.game?.moneyAmount) ?? "0")
+        coreDataManager.saveData(paceAmount: "\(paceToGame)", moneyAmount: (coreDataManager.game?.moneyAmount) ?? "0")
+        tableView.reloadData()
     }
     @IBAction func deleteTracks(_ sender: UIBarButtonItem) {
         coreDataManager?.clearTracks()
