@@ -72,7 +72,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         
         // Retrieve last pace and add current amount of pace
         guard let lastPace = Int((coreDataManager.game?.paceAmount ?? "0")) else { return }
-        print(lastPace)
         let paceToGame = lastPace + Int(convert.rounded())
         self.currentTrack.totalPace = convert.rounded()
         let rounded = "\(String(describing: self.currentTrack.totalPace.clean))"
