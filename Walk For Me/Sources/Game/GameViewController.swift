@@ -37,7 +37,7 @@ class GameViewController: UIViewController {
         self.coreDataManager = coreDataManager
         
         
-        let total = coreDataManager.game
+        guard let total = coreDataManager.game else { return }
         
         print("current game \(total?.paceAmount)")
 
