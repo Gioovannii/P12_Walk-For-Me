@@ -55,7 +55,8 @@ final class CoreDataManager {
             let newGame = GameEntity(context: managedObjectContext)
             newGame.moneyAmount = moneyAmount
             newGame.paceAmount = paceAmount
-            newGame.moneyAmount = moneyamount
+            coreDataStack.saveContext()
+
         } else {
             guard let currentGame = game else { return }
             currentGame.moneyAmount = moneyamount
