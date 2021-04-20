@@ -61,10 +61,12 @@ class GameViewController: UIViewController {
     // MARK: - Actions
     @IBAction func exchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert { moneyNumber in
-            guard let moneyNumber = Int(moneyNumber ?? "0") else { return }
-//            guard var paceNumber = Int(self.paceNumberLabel.text ?? "0") else { return }
-            guard var paceNumber = Int(self.coreDataManager?.game?.paceAmount ?? "0") else { return }
-            if moneyNumber > paceNumber {
+            // We need 3 things current monney / current pace and money to exchange
+            guard let moneyNumberExchange = Int(moneyNumber ?? "0") else { return }
+            guard var currentMonney = Int(self.coreDataManager?.game?.moneyAmount ?? "0") else { return }
+            guard var currentPaceNumber = Int(self.coreDataManager?.game?.paceAmount ?? "0") else { return }
+            // Check if exchange more than needed
+            if moneyNumberExchange > currentPaceNumber {
                 self.presentAlert(title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez", actionTitle: "Bon ok !")}
             else {
                 paceNumber -=  moneyNumber
