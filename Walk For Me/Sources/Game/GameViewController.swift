@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
         
         print("current game \(String(describing: total))")
 
-        updateUI(total: total!)
+        updateUI(total: total)
     }
     
     override func viewDidLoad() {
