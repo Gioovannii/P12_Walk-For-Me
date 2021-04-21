@@ -36,5 +36,128 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Walk For Me/Sources/Accueil/UpdateProfilController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "UpdateProfilController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - d9c47a1afc3095ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.sexeLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - 8aff1d190c357198"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.sexeLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - b3d79128daf7731f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.sexeLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - d3450cbee910a52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.sexeLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - 70a88c1b6ac72779"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.init(style: __C.UITableViewStyle) -&gt; Walk_For_Me.UpdateProfilController"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "193">
+               </Location>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - aae514e6d359337"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Walk_For_Me.UpdateProfilController"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "293">
+               </Location>
+               <Location
+                  uuid = "7BEF180D-A5AF-4E78-8B01-107B85A84711 - 4f4cf32fdcedbf72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Walk_For_Me.UpdateProfilController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Walk_For_Me.UpdateProfilController&gt;"
+                  moduleName = "Walk_For_Me"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathangaffe/Documents/Parcours%20iOS/P12_Walk%20For%20Me/Walk%20For%20Me/Sources/Accueil/UpdateProfilController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "234">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
