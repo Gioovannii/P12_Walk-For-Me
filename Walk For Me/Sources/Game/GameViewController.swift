@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
     
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
+    private var currentValue = ""
     
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
