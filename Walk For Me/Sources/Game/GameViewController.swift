@@ -59,6 +59,22 @@ class GameViewController: UIViewController {
         wheatQuantityLAbel.text = "0"
     }
     
+    
+    private func displayAlert(tag: Int, title: String, information: @escaping (String?) -> Void) {
+        let alertController = UIAlertController(title: title, message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
+        
+        let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
+        pickerFrame.tag = tag
+        alertController.view.addSubview(pickerFrame)
+        
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+            information(self.currentValue)
+        })
+        
+        present(alertController, animated: true)
+    }
     // MARK: - Actions
     @IBAction func exchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert { moneyNumber in
