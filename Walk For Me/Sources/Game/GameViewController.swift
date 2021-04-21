@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var potatoeQuantityLabel: UILabel!
     @IBOutlet weak var wheatQuantityLAbel: UILabel!
     
+    // MARK: - Properties
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
     private var currentValue = ""
