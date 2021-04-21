@@ -100,5 +100,7 @@ class GameViewController: UIViewController {
     
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         print("Tapped")
+        displayAlert(tag: 1, title: <#T##String#>, information: <#T##(String?) -> Void#>)
+        
     }
 }
