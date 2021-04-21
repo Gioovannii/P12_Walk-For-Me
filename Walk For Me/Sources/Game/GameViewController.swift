@@ -94,7 +94,6 @@ class GameViewController: UIViewController {
                 self.moneyNumberLabel.text = "\(previousMoneyNumber + moneyNumberExchange)"
                 
                 self.coreDataManager?.saveData(paceAmount: "\(currentPaceNumber)", moneyAmount: "\(previousMoneyNumber + moneyNumberExchange)")
-                print("new value \(String(describing: self.coreDataManager?.game?.paceAmount))")
             }
         }
     }
