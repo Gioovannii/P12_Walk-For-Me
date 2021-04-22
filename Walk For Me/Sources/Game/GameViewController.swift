@@ -75,6 +75,7 @@ class GameViewController: UIViewController {
         
         present(alertController, animated: true)
     }
+    
     // MARK: - Actions
     @IBAction func exchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert { moneyNumber in
