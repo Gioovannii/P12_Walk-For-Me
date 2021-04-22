@@ -218,7 +218,7 @@
                                 <rect key="frame" x="347.66666666666669" y="98" width="60.333333333333314" height="141"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gRI-LW-Dwf">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNX-De-FvB">
                                                 <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="45"/>
