@@ -68,7 +68,6 @@ class GameViewController: UIViewController {
         pickerFrame.tag = tag
         alertController.view.addSubview(pickerFrame)
         
-        
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
             information(self.currentValue)
