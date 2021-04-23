@@ -39,7 +39,6 @@ class GameViewController: UIViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
-        
         guard let total = coreDataManager.game else { return }
         
         print("current game \(String(describing: total))")
