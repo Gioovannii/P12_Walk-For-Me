@@ -99,6 +99,17 @@ class GameViewController: UIViewController {
         }
     }
     
+    @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
+        print("Let's exchange")
+        
+        displayAlert(tag: 1, title: "Choisis") { information in
+            print(information)
+            guard let information = information else { return }
+        }
+    }
+    
+    
+    
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         print("Tapped")
         
