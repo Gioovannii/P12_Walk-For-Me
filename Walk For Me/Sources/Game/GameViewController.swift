@@ -77,7 +77,7 @@ class GameViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func exchangeButtonTapped(_ sender: UIButton) {
+    @IBAction func paceExchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert { moneyNumber in
             // We need 3 things current monney / current pace and money to exchange
             guard let moneyNumberExchange = Int(moneyNumber ?? "0") else { return }
