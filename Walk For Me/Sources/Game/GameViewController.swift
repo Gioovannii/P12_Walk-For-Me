@@ -22,7 +22,7 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var potatoeQuantityLabel: UILabel!
     @IBOutlet weak private var wheatQuantityLAbel: UILabel!
     
-    let vegetableChoice = ["Céréales", "Pomme de terre", "Tomates"]
+    private let vegetableChoice = ["Céréales", "Pomme de terre", "Tomates"]
     // MARK: - Properties
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
