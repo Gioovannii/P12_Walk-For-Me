@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfilViewController: UITableViewController {
+final class ProfilViewController: UITableViewController {
     
     @IBOutlet weak var followSteps: UISwitch!
     @IBOutlet weak var reminderSwitch: UISwitch!
