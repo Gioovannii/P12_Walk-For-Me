@@ -103,7 +103,7 @@ final class GameViewController: UIViewController {
         print("Let's exchange")
         
         displayAlert(tag: 1, title: "Choisis") { information in
-           print(information)
+            print(information as Any)
         }
     }
     
