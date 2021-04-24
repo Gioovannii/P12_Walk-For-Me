@@ -10,10 +10,10 @@ import UIKit
 final class GameViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var slotButton1: UIButton!
-    @IBOutlet weak var slotButton2: UIButton!
-    @IBOutlet weak var slotButton3: UIButton!
-    @IBOutlet weak var slotButton4: UIButton!
+    @IBOutlet weak private var slotButton1: UIButton!
+    @IBOutlet weak private var slotButton2: UIButton!
+    @IBOutlet weak private var slotButton3: UIButton!
+    @IBOutlet weak private var slotButton4: UIButton!
     
     @IBOutlet weak var paceNumberLabel: UILabel!
     @IBOutlet weak var moneyNumberLabel: UILabel!
