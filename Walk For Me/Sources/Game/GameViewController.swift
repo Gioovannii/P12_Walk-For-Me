@@ -133,6 +133,9 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             print("Current value : \(currentValue)")
             if currentValue == "" { presentAlert(title: "", message: "", actionTitle: "")}
         }
-        
+    }
+    
+    func checkRow(pickerArray: [String], row: Int) -> String {
+        return pickerArray[row]
     }
 }
