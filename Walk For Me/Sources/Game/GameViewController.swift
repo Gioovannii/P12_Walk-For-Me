@@ -105,6 +105,10 @@ final class GameViewController: UIViewController {
         
         displayAlert(tag: 1, title: "Choisis") { information in
             print(information as Any)
+            guard let information = information else { return }
+            self.displayExchangeAlert(type: information) { amountVegies in
+                print(amountVegies)
+            }
         }
     }
     
