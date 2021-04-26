@@ -26,6 +26,8 @@ final class GameViewController: UIViewController {
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
     private var currentValue = ""
+    private let vegetableChoice = ["Céréales", "Pomme de terre", "Tomates"]
+
     
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
