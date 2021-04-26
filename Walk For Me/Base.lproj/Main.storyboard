@@ -164,7 +164,7 @@
                                         </constraints>
                                         <state key="normal" image="homeImage1BisMoney"/>
                                         <connections>
-                                            <action selector="exchangeButtonTapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="AEy-fs-0Ob"/>
+                                            <action selector="paceExchangeButtonTapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="AEy-fs-0Ob"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -221,18 +221,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNX-De-FvB">
-                                                <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="45"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="45"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage4Wheat" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-Wj-IjB">
-                                                <rect key="frame" x="20.333333333333314" y="0.0" width="40" height="45"/>
+                                                <rect key="frame" x="21.333333333333314" y="0.0" width="40" height="45"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-vT-ENq">
-                                        <rect key="frame" x="0.0" y="53" width="60.333333333333336" height="40"/>
+                                        <rect key="frame" x="0.0" y="53" width="61.333333333333336" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-IW-IiW">
                                                 <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="40"/>
@@ -276,14 +276,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rqi-Qs-rlG">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4m-u5-lPs">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4m-u5-lPs">
                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="40"/>
                                                 <state key="normal" image="homeImage8farmer"/>
                                                 <connections>
                                                     <action selector="slotButton1Tapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="6is-F3-nAU"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJG-hG-pwK">
+                                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJG-hG-pwK">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
                                                 <state key="normal" image="homeImage8farmer"/>
                                             </button>
@@ -292,11 +292,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ce3-N8-1gQ">
                                         <rect key="frame" x="0.0" y="68" width="68" height="0.0"/>
                                         <subviews>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-Wy-D5P">
+                                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-Wy-D5P">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
                                                 <state key="normal" image="homeImage8farmer"/>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsV-SB-2Ve">
+                                            <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsV-SB-2Ve">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
                                                 <state key="normal" image="homeImage8farmer"/>
                                             </button>
@@ -659,7 +659,7 @@
         <image name="homeImage8farmer" width="40" height="40"/>
         <image name="homeImage9House" width="512" height="508"/>
         <image name="homeImageBackground" width="506" height="761"/>
-        <image name="icons8-échange-euro-64" width="64" height="64"/>
+        <image name="icons8-boîte-à-légumes-64" width="64" height="64"/>
         <image name="tabBar1Setting" width="65" height="65"/>
         <image name="tabBar2Footprints" width="65" height="65"/>
         <image name="tabBar3Home" width="65" height="65"/>
