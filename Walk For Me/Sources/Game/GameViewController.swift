@@ -111,9 +111,7 @@ final class GameViewController: UIViewController {
             }
         }
     }
-    
-    
-    
+
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         print("Start planting")
     }
@@ -134,10 +132,7 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        if pickerView.tag == 1 { currentValue = checkRow(pickerArray: vegetableChoice, row: row)
-            print("Current value : \(currentValue)")
-            if currentValue == "" { presentAlert(title: "", message: "", actionTitle: "")}
-        }
+        if pickerView.tag == 1 { currentValue = checkRow(pickerArray: vegetableChoice, row: row) }
     }
     
     func checkRow(pickerArray: [String], row: Int) -> String {
