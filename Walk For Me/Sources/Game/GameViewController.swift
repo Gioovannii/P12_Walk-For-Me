@@ -101,7 +101,6 @@ final class GameViewController: UIViewController {
     }
     
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
-        print("Let's exchange")
         
         displayAlert(tag: 1, title: "Choisis") { information in
             print(information as Any)
