@@ -190,7 +190,7 @@
                                             <constraint firstAttribute="height" constant="40" id="mll-O7-mee"/>
                                             <constraint firstAttribute="width" constant="40" id="pqP-LR-ZLE"/>
                                         </constraints>
-                                        <state key="normal" image="icons8-échange-euro-64"/>
+                                        <state key="normal" image="icons8-boîte-à-légumes-64"/>
                                         <connections>
                                             <action selector="exchangeButtonTapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="dBw-uP-FIW"/>
                                         </connections>
