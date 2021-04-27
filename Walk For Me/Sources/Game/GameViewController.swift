@@ -113,7 +113,7 @@ final class GameViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         print("Start planting")
     }
