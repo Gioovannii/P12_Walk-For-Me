@@ -108,7 +108,16 @@ final class GameViewController: UIViewController {
             self.displayExchangeAlert(type: information) { amountVegies in
                 print(amountVegies!)
                 // TODO: - Add to vegies and remove from money
-
+                switch information {
+//                ["Céréales", "Pomme de terre", "Tomates"]
+                case "Céréales" :
+                    print("Cere")
+                case "Pomme de terre" :
+                    print("Pomo")
+                case "Tomates" :
+                    print("Tomo")
+               
+                }
             }
         }
     }
