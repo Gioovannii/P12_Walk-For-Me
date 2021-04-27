@@ -116,7 +116,9 @@ final class GameViewController: UIViewController {
                     print("Pomo")
                 case "Tomates" :
                     print("Tomo")
-               
+                    
+                default:
+                    break
                 }
             }
         }
