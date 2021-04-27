@@ -192,7 +192,7 @@
                                         </constraints>
                                         <state key="normal" image="icons8-boîte-à-légumes-64"/>
                                         <connections>
-                                            <action selector="exchangeButtonTapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="dBw-uP-FIW"/>
+                                            <action selector="moneyExchangeButtonTapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="jzB-04-YYq"/>
                                         </connections>
                                     </button>
                                 </subviews>
