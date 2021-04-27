@@ -107,7 +107,9 @@ final class GameViewController: UIViewController {
             print(information as Any)
             guard let information = information else { return }
             self.displayExchangeAlert(type: information) { amountVegies in
-                print(amountVegies)
+                print(amountVegies!)
+                // TODO: - Add to vegies and remove from money
+
             }
         }
     }
