@@ -215,7 +215,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TZj-Ii-dg2" userLabel="Stack View Products">
-                                <rect key="frame" x="347.66666666666669" y="98" width="60.333333333333314" height="141"/>
+                                <rect key="frame" x="346.66666666666669" y="98" width="61.333333333333314" height="141"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gRI-LW-Dwf">
                                         <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="45"/>
