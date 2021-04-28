@@ -18,7 +18,8 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var paceNumberLabel: UILabel!
     @IBOutlet weak private var moneyNumberLabel: UILabel!
     @IBOutlet weak private var squareMeterNumberLabel: UILabel!
-    @IBOutlet weak private var tomatoesQuantityLabel: UILabel!
+    
+    @IBOutlet weak private var wheatQuantityLabel: UILabel!
     @IBOutlet weak private var potatoeQuantityLabel: UILabel!
     @IBOutlet weak private var wheatQuantityLAbel: UILabel!
     
