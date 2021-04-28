@@ -107,8 +107,7 @@ final class GameViewController: UIViewController {
         displayAlert(tag: 1, title: "Que souhaite tu planter") { information in
             print(information as Any)
             guard let information = information else { return }
-            self.displayExchangeAlert(type: information) { amountVegies in
-                print(amountVegies!)
+            self.displayExchangeAlert(type: information) { [weak self] amountVegies in
                 // TODO: - Add to vegies and remove from money
                 switch information {
 //                ["Céréales", "Pomme de terre", "Tomates"]
