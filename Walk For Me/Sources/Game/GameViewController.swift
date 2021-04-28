@@ -109,6 +109,11 @@ final class GameViewController: UIViewController {
             guard let information = information else { return }
             self.displayExchangeAlert(type: information) { [weak self] amountVegies in
                 // TODO: - Add to vegies and remove from money
+                
+                print("* money number \(self?.moneyNumberLabel.text)")
+                guard var moneyNumberConverted = Int(self?.moneyNumberLabel.text ?? "0") else { return }
+                guard let amountConverted = Int(amountVegies ?? "0") else  { return }
+                
                 switch information {
 //                ["Céréales", "Pomme de terre", "Tomates"]
                 case "Céréales" :
