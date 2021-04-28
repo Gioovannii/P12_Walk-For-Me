@@ -57,7 +57,7 @@ final class GameViewController: UIViewController {
         squareMeterNumberLabel.text = "0"
         tomatoesQuantityLabel.text = "0"
         potatoeQuantityLabel.text = "0"
-        wheatQuantityLAbel.text = "0"
+        wheatQuantityLabel.text = "0"
     }
     
     
