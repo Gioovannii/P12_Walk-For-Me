@@ -116,6 +116,8 @@ final class GameViewController: UIViewController {
                 
                 switch information {
                 case "Céréales" :
+                    self?.wheatQuantityLabel.text = "\(amountConverted)"
+                   moneyNumberConverted -= amountConverted
                     print("Cere")
                 case "Pomme de terre" :
                     print("Pomo")
