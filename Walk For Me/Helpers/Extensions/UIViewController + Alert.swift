@@ -19,8 +19,8 @@ extension UIViewController {
         present(alert, animated: true)
     }
     
-    func displayExchangeAlert(type: String, handlerExchangeName: @escaping (String?) -> Void) {
-        let alert = UIAlertController(title: "Combien \(type) veut tu échanger", message: "", preferredStyle: .alert)
+    func displayExchangeAlert(type: String, placeHolder: String, handlerExchangeName: @escaping (String?) -> Void) {
+        let alert = UIAlertController(title: "Combien de \(type) veut tu échanger", message: "", preferredStyle: .alert)
         alert.addTextField { textField in
             textField.placeholder = "nombre de pas"
         }
