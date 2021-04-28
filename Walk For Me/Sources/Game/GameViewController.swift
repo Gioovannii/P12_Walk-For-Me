@@ -115,7 +115,6 @@ final class GameViewController: UIViewController {
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
                 switch information {
-//                ["Céréales", "Pomme de terre", "Tomates"]
                 case "Céréales" :
                     print("Cere")
                 case "Pomme de terre" :
