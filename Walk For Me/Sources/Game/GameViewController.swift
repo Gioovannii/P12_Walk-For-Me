@@ -127,7 +127,10 @@ final class GameViewController: UIViewController {
                     self?.potatoeQuantityLabel.text = "\(amountConverted)"
                    moneyNumberConverted -= amountConverted
                     self?.moneyNumberLabel.text = "\(moneyNumberConverted)"
-               
+                case "tomates" :
+                    self?.tomatoesQuantityLabel.text = "\(amountConverted)"
+                   moneyNumberConverted -= amountConverted
+                    self?.moneyNumberLabel.text = "\(moneyNumberConverted)"
                     
                 default:
                     break
