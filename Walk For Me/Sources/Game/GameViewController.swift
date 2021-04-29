@@ -109,7 +109,7 @@ final class GameViewController: UIViewController {
     
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
         
-        displayAlert(tag: 1, title: "Que souhaite tu planter") { information in
+        displayAlert(tag: 1, title: "Que souhaite tu acheter") { information in
             print(information as Any)
             guard let information = information else { return }
             self.displayExchangeAlert(type: information) { [weak self] amountVegies in
