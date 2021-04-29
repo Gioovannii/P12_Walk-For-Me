@@ -112,7 +112,7 @@ final class GameViewController: UIViewController {
         displayAlert(tag: 1, title: "Que souhaite tu acheter") { information in
             print(information as Any)
             guard let information = information else { return }
-            self.displayExchangeAlert(type: information) { [weak self] amountVegies in
+            self.displayExchangeAlert(type: information, placeHolder: "nombre de légumes") { [weak self] amountVegies in
                 // TODO: - Add to vegies and remove from money
                 
                 print("* money number \(self?.moneyNumberLabel.text)")
