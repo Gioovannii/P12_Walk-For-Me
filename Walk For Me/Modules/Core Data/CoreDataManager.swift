@@ -70,4 +70,18 @@ final class CoreDataManager {
         managedObjectContext.delete(currentGame)
         coreDataStack.saveContext()
     }
+    
+    func saveVegetable(vegetableAmount: String) {
+        guard let currentGame = game else { return }
+        switch vegetableAmount {
+        case "céréales":
+            currentGame.wheatAmount = vegetableAmount
+        case "pomme de terre":
+            currentGame.potatoeAmount = vegetableAmount
+        case "tomate":
+            currentGame.tomatoeAmount = vegetableAmount
+        default:
+            break
+        }
+    }
 }
