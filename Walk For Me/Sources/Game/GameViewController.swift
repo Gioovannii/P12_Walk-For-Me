@@ -44,6 +44,11 @@ final class GameViewController: UIViewController {
         
         guard let total = coreDataManager.game else { return }
         updateUI(total: total)
+        
+        print("Tomatoe \(coreDataManager.game?.tomatoeAmount)")
+        print("Cereales \(coreDataManager.game?.wheatAmount)")
+        print("patates \(coreDataManager.game?.potatoeAmount)")
+
     }
     
     override func viewDidLoad() {
