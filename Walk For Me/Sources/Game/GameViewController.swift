@@ -28,7 +28,7 @@ final class GameViewController: UIViewController {
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
     private var currentValue = ""
-    private let vegetableChoice = ["Céréales", "Pomme de terre", "Tomates"]
+    private let vegetableChoice = ["céréales", "pomme de terre", "tomates"]
     
     
     // MARK: - LifeCycle
