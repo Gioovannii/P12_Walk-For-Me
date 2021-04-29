@@ -122,11 +122,9 @@ final class GameViewController: UIViewController {
                 case "céréales" :
                     self?.wheatQuantityLabel.text = "\(amountConverted)"
                    moneyNumberConverted -= amountConverted
-                    print("Cere")
-                case "Pomme de terre" :
-                    print("Pomo")
-                case "Tomates" :
-                    print("Tomo")
+                    self?.moneyNumberLabel.text = "\(moneyNumberConverted)"
+                case "pomme de terre" :
+                 
                     
                 default:
                     break
