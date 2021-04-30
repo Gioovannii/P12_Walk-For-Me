@@ -133,7 +133,7 @@ final class GameViewController: UIViewController {
                     case "tomates":
                         self?.tomatoesQuantityLabel.text = "\(amountConverted)"
                         self?.moneyNumberLabel.text = "\(moneyNumber)"
-                        
+                        self?.coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
                     default:
                         break
                     }
