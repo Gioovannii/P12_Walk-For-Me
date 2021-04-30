@@ -73,7 +73,7 @@ final class CoreDataManager {
     
     func saveVegetable(vegetableType: String, vegetableAmount: String, moneyAmount: String) {
         guard let currentGame = game else { return }
-        switch vegetableAmount {
+        switch vegetableType {
         case "céréales":
             currentGame.wheatAmount = vegetableAmount
             currentGame.moneyAmount = moneyAmount
