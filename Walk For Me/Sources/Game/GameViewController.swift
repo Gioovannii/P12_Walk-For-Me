@@ -48,7 +48,7 @@ final class GameViewController: UIViewController {
         print("Tomatoe \(coreDataManager.game?.tomatoeAmount)")
         print("Cereales \(coreDataManager.game?.wheatAmount)")
         print("patates \(coreDataManager.game?.potatoeAmount)")
-
+        
     }
     
     override func viewDidLoad() {
@@ -115,25 +115,29 @@ final class GameViewController: UIViewController {
             self.displayExchangeAlert(type: information, placeHolder: "nombre de légumes") { [weak self] amountVegies in
                 // TODO: - Add to vegies and remove from money
                 
-                guard var moneyNumberConverted = Int(self?.moneyNumberLabel.text ?? "0") else { return }
+                guard var moneyNumber = Int(self?.moneyNumberLabel.text ?? "0") else { return }
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
-                switch information {
-                case "céréales" :
-                    self?.wheatQuantityLabel.text = "\(amountConverted)"
-                   moneyNumberConverted -= amountConverted
-                    self?.moneyNumberLabel.text = "\(moneyNumberConverted)"
-                case "pomme de terre" :
-                    self?.potatoeQuantityLabel.text = "\(amountConverted)"
-                   moneyNumberConverted -= amountConverted
-                    self?.moneyNumberLabel.text = "\(moneyNumberConverted)"
-                case "tomates" :
-                    self?.tomatoesQuantityLabel.text = "\(amountConverted)"
-                   moneyNumberConverted -= amountConverted
-                    self?.moneyNumberLabel.text = "\(moneyNumberConverted)"
-                    
-                default:
-                    break
+                if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
+                } else {
+                    moneyNumber -= amountConverted
+                    switch information {
+                    case "céréales":
+                        self?.wheatQuantityLabel.text = "\(amountConverted)"
+                        //moneyNumberConverted -= amountConverted
+                        self?.moneyNumberLabel.text = "\(moneyNumber)"
+                    case "pomme de terre":
+                        self?.potatoeQuantityLabel.text = "\(moneyNumber)"
+                        //moneyNumberConverted -= amountConverted
+                        self?.moneyNumberLabel.text = "\(moneyNumber)"
+                    case "tomates":
+                        self?.tomatoesQuantityLabel.text = "\(amountConverted)"
+                        //moneyNumberConverted -= amountConverted
+                        self?.moneyNumberLabel.text = "\(moneyNumber)"
+                        
+                    default:
+                        break
+                    }
                 }
             }
         }
