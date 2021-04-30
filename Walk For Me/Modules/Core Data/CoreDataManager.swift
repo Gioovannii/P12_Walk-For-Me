@@ -76,6 +76,7 @@ final class CoreDataManager {
         switch vegetableAmount {
         case "céréales":
             currentGame.wheatAmount = vegetableAmount
+            currentGame.moneyAmount = moneyAmount
         case "pomme de terre":
             currentGame.potatoeAmount = vegetableAmount
         case "tomate":
