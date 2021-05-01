@@ -117,7 +117,7 @@ final class GameViewController: UIViewController {
             self.displayExchangeAlert(type: information, placeHolder: "nombre de légumes") { [weak self] amountVegies in
                 // TODO: - Add to vegies and remove from money
                 
-                guard var moneyNumber = Int(self?.moneyNumberLabel.text ?? "0") else { return }
+                guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
                 if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
