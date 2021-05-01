@@ -73,6 +73,11 @@ final class CoreDataManager {
     
     func saveVegetable(vegetableType: String, vegetableAmount: String, moneyAmount: String) {
         guard let currentGame = game else { return }
+        
+        guard var wheatAmount = Int(currentGame.wheatAmount ?? "0") else { return }
+        guard var potatoeAmount = Int(currentGame.potatoeAmount ?? "0") else { return }
+        guard var tomatoeAmount = Int(currentGame.tomatoeAmount ?? "0") else { return }
+        
         switch vegetableType {
         case "céréales":
             currentGame.wheatAmount = vegetableAmount
