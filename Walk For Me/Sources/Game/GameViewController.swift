@@ -63,7 +63,8 @@ final class GameViewController: UIViewController {
         
         wheatQuantityLabel.text = "\(coreDataManager?.game?.wheatAmount ?? "0")"
         potatoeQuantityLabel.text = "\(coreDataManager?.game?.potatoeAmount ?? "0")"
-        
+        tomatoesQuantityLabel.text = "\(coreDataManager?.game?.tomatoeAmount ?? "0")"
+
     }
     
     
