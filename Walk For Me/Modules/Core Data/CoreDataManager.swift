@@ -85,7 +85,8 @@ final class CoreDataManager {
         case "pomme de terre":
             potatoeAmount += Int(vegetableAmount) ?? 0
             currentGame.moneyAmount = moneyAmount
-       
+        case "tomates":
+            tomatoeAmount += Int(vegetableAmount) ?? 0
         default:
             break
         }
