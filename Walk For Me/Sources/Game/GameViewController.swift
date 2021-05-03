@@ -123,6 +123,8 @@ final class GameViewController: UIViewController {
                 if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
                 } else {
                     moneyNumber -= amountConverted
+                    self?.coreDataManager?.saveVegetable(vegetableType: information, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
+                    self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
                     switch information {
                     case "céréales":
                         self?.wheatQuantityLabel.text = "\(amountConverted)"
