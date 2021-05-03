@@ -92,6 +92,7 @@ final class CoreDataManager {
         default:
             break
         }
+        
         coreDataStack.saveContext()
     }
 }
