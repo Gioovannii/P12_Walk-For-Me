@@ -127,9 +127,7 @@ final class GameViewController: UIViewController {
                     self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
                     switch information {
                     case "céréales":
-                        self?.wheatQuantityLabel.text = "\(amountConverted)"
-                        self?.moneyNumberLabel.text = "\(moneyNumber)"
-                        self?.coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
+                        self?.wheatQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
                     case "pomme de terre":
                         self?.potatoeQuantityLabel.text = "\(moneyNumber)"
                         self?.moneyNumberLabel.text = "\(moneyNumber)"
