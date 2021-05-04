@@ -129,7 +129,7 @@ final class GameViewController: UIViewController {
                     case "céréales":
                         self?.wheatQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
                     case "pomme de terre":
-                        self?.potatoeQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
+                        self?.potatoeQuantityLabel.text = self?.coreDataManager?.game?.potatoeAmount
                     case "tomates":
                         self?.tomatoesQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
                     default:
