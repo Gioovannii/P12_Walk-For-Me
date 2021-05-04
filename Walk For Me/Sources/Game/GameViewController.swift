@@ -135,24 +135,6 @@ final class GameViewController: UIViewController {
                     default:
                         break
                     }
-                    
-                    
-//                    switch information {
-//                    case "céréales":
-//                        self?.wheatQuantityLabel.text = "\(amountConverted)"
-//                        self?.moneyNumberLabel.text = "\(moneyNumber)"
-//                        self?.coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
-//                    case "pomme de terre":
-//                        self?.potatoeQuantityLabel.text! += "\(amountConverted)"
-//                        self?.moneyNumberLabel.text = "\(moneyNumber)"
-//                        self?.coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
-//                    case "tomates":
-//                        self?.tomatoesQuantityLabel.text = "\(amountConverted)"
-//                        self?.moneyNumberLabel.text = "\(moneyNumber)"
-//                        self?.coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
-//                    default:
-//                        break
-//                    }
                 }
             }
         }
