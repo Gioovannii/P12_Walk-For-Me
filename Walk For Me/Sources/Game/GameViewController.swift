@@ -96,7 +96,7 @@ final class GameViewController: UIViewController {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-       
+        return UICollectionViewCompositionalLayout(section: section)
     }
     
     // MARK: - Actions
