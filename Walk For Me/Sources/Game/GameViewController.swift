@@ -23,6 +23,7 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var potatoeQuantityLabel: UILabel!
     @IBOutlet weak private var tomatoesQuantityLabel: UILabel!
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
     var coreDataManager: CoreDataManager?
