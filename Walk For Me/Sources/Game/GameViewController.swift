@@ -95,7 +95,8 @@ final class GameViewController: UIViewController {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.1), heightDimension: .absolute(44.0))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
-        
+        let section = NSCollectionLayoutSection(group: group)
+       
     }
     
     // MARK: - Actions
