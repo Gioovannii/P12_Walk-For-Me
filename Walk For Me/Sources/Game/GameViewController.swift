@@ -88,6 +88,11 @@ final class GameViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    func configureLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+       
+    }
+    
     // MARK: - Actions
     @IBAction func paceExchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert(type: "de pas", placeHolder: "nombre de pas") { moneyNumber in
