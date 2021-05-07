@@ -107,6 +107,15 @@ final class GameViewController: UIViewController {
         return UICollectionViewCompositionalLayout(section: section)
     }
     
+    func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: self.collectionView) { (collectionView, indexPath, number) -> UICollectionViewCell? in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.reuseIdentifier, for: indexPath) else {
+                fatalError("Cannot create new cell")
+            }
+            
+        }
+    }
+    
     // MARK: - Actions
     @IBAction func paceExchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert(type: "de pas", placeHolder: "nombre de pas") { moneyNumber in
