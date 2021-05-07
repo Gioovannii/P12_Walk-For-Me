@@ -11,7 +11,7 @@ import UIKit
 struct Constant {
     static let walkCell = "Walk Cell"
     static let cellToMap = "CellToMap"
-    
+    static let reuseIdentifier = "VegetableCell"
     struct Config {
         // TODO: - Here we can do so key privacy
 
