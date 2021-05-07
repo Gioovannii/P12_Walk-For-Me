@@ -63,6 +63,7 @@ final class GameViewController: UIViewController {
         presentAlert(title: "Information", message: "Vous pouvez échanger vos pas contre \n de l'argent grâce au logo échange, ainsi que votre argent en légumes", actionTitle: "OK")
         
         collectionView.collectionViewLayout = configureLayout()
+        configureDataSource()
     }
     
     func updateUI(total: GameEntity) {
