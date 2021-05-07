@@ -29,6 +29,7 @@ final class GameViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     // MARK: - Properties
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
