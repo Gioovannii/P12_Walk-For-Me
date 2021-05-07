@@ -9,6 +9,10 @@ import UIKit
 
 final class GameViewController: UIViewController {
     
+    enum Section {
+        case main
+    }
+    
     // MARK: - Outlets
     @IBOutlet weak private var slotButton1: UIButton!
     @IBOutlet weak private var slotButton2: UIButton!
