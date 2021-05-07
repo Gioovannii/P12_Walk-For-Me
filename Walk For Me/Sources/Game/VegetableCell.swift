@@ -14,5 +14,5 @@ class VegetableCell: UICollectionViewCell {
         // Initialization code
     }
    
-    
+    @IBOutlet weak var vegetable: UIView!
 }
