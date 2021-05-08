@@ -109,7 +109,7 @@ final class GameViewController: UIViewController {
     
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: self.collectionView) { (collectionView, indexPath, number) -> UICollectionViewCell? in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.reuseIdentifier, for: indexPath) else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.reuseIdentifier, for: indexPath)  as? NumberCell else {
                 fatalError("Cannot create new cell")
             }
             
