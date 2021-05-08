@@ -339,6 +339,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Oe9-tL-LBE" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="220" id="0C2-4g-Vav"/>
+                            <constraint firstItem="ogz-7v-oz3" firstAttribute="bottom" secondItem="9Vi-9R-4hx" secondAttribute="bottom" id="DMC-C9-HFP"/>
+                            <constraint firstItem="ogz-7v-oz3" firstAttribute="top" secondItem="Oe9-tL-LBE" secondAttribute="bottom" constant="8" id="Dpn-9X-yD0"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="Gj1-Uk-Rid"/>
                             <constraint firstItem="aOS-pa-l8c" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="H1y-PG-SM8"/>
                             <constraint firstItem="7fV-a6-zhB" firstAttribute="trailing" secondItem="aOS-pa-l8c" secondAttribute="trailing" id="IYl-PV-i3O"/>
