@@ -359,6 +359,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Maison" largeTitleDisplayMode="always" id="5yo-aU-8dK"/>
                     <connections>
+                        <outlet property="collectionView" destination="ogz-7v-oz3" id="ZZg-sW-Xaw"/>
                         <outlet property="moneyNumberLabel" destination="cEi-gq-jwn" id="NwI-8E-iNj"/>
                         <outlet property="paceNumberLabel" destination="zoc-XK-gqa" id="91v-94-hzz"/>
                         <outlet property="potatoeQuantityLabel" destination="NZn-IW-IiW" id="ftc-eP-ffh"/>
