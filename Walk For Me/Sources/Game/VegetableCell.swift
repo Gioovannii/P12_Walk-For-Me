@@ -15,4 +15,5 @@ class VegetableCell: UICollectionViewCell {
     }
    
     @IBOutlet weak var vegetable: UIView!
+    @IBOutlet weak var vegatebaleImageView: UIImageView!
 }
