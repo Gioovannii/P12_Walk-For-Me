@@ -31,9 +31,7 @@ final class GameViewController: UIViewController {
     var currentGame : GameEntity?
     private var currentValue = ""
     private let vegetableChoice = ["céréales", "pomme de terre", "tomates"]
-    
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
-    
+        
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
