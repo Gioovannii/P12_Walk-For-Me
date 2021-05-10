@@ -9,10 +9,6 @@ import UIKit
 
 final class GameViewController: UIViewController {
     
-    enum Section {
-        case main
-    }
-    
     // MARK: - Outlets
     @IBOutlet weak private var slotButton1: UIButton!
     @IBOutlet weak private var slotButton2: UIButton!
@@ -61,9 +57,7 @@ final class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presentAlert(title: "Information", message: "Vous pouvez échanger vos pas contre \n de l'argent grâce au logo échange, ainsi que votre argent en légumes", actionTitle: "OK")
-        
-        collectionView.collectionViewLayout = configureLayout()
-        configureDataSource()
+
     }
     
     func updateUI(total: GameEntity) {
@@ -196,3 +190,4 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         return pickerArray[row]
     }
 }
+
