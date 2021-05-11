@@ -172,3 +172,9 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
+extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+   
+}
+
+
