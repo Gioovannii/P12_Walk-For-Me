@@ -178,7 +178,11 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return 10
     }
     
-   
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? VegetableCell else { return UICollectionViewCell() }
+     
+        return cell
+    }
 }
 
 
