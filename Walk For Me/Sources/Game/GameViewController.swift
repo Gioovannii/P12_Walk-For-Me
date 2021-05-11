@@ -90,26 +90,6 @@ final class GameViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    func configureLayout() -> UICollectionViewCompositionalLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.1), heightDimension: .absolute(44.0))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        let section = NSCollectionLayoutSection(group: group)
-        return UICollectionViewCompositionalLayout(section: section)
-    }
-    
-    func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: self.collectionView) { (collectionView, indexPath, number) -> UICollectionViewCell? in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.reuseIdentifier, for: indexPath)  as? VegetableCell else {
-                fatalError("Cannot create new cell")
-            }
-            
-        }
-    }
-    
     // MARK: - Actions
     @IBAction func paceExchangeButtonTapped(_ sender: UIButton) {
         displayExchangeAlert(type: "de pas", placeHolder: "nombre de pas") { moneyNumber in
