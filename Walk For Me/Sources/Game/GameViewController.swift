@@ -179,8 +179,12 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? VegetableCell else { return UICollectionViewCell() }
-     
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell",for: indexPath) as? VegetableCell else { return UICollectionViewCell() }
+        
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 10
+        cell.vegetableImageView.image = UIImage(named: "homeImage6Tomato")
+        
         return cell
     }
 }
