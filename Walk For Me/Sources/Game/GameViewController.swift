@@ -25,6 +25,7 @@ final class GameViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let gardenImages = [String]()
     
     // MARK: - Properties
     var coreDataManager: CoreDataManager?
