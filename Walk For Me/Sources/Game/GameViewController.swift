@@ -71,7 +71,6 @@ final class GameViewController: UIViewController {
         tomatoesQuantityLabel.text = "\(coreDataManager?.game?.tomatoeAmount ?? "0")"
     }
     
-    
     private func displayAlert(tag: Int, title: String, information: @escaping (String?) -> Void) {
         let alertController = UIAlertController(title: title, message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         
