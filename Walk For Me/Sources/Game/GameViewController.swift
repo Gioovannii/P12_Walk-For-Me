@@ -32,7 +32,7 @@ final class GameViewController: UIViewController {
     var currentGame : GameEntity?
     private var currentValue = ""
     private let vegetableChoice = ["céréales", "pomme de terre", "tomates"]
-        
+    
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,7 +69,6 @@ final class GameViewController: UIViewController {
         wheatQuantityLabel.text = "\(coreDataManager?.game?.wheatAmount ?? "0")"
         potatoeQuantityLabel.text = "\(coreDataManager?.game?.potatoeAmount ?? "0")"
         tomatoesQuantityLabel.text = "\(coreDataManager?.game?.tomatoeAmount ?? "0")"
-        
     }
     
     
