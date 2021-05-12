@@ -119,7 +119,6 @@ final class GameViewController: UIViewController {
             if information == "" {  self.presentAlert(title: "Alerte", message: "Veuillez selectionner \n un élément", actionTitle: "OK") }
             guard let information = information else { return }
             self.displayExchangeAlert(type: information, placeHolder: "nombre de légumes") { [weak self] amountVegies in
-                // TODO: - Add to vegies and remove from money
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
