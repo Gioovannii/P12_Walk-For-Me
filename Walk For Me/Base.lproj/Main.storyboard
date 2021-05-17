@@ -329,7 +329,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="70" height="70"/>
                                         <connections>
-                                            <outlet property="vegetable" destination="Tdq-t3-2K6" id="6lg-tT-gKX"/>
+                                            <outlet property="vegetable" destination="Tdq-t3-2K6" id="oEu-lT-Kx0"/>
+                                            <outlet property="vegetableImageView" destination="BFo-m2-hXJ" id="7uN-fQ-MYh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
