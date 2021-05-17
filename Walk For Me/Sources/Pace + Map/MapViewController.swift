@@ -87,6 +87,6 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
-        //        print("Rendering ...")
+                print("Rendering ...")
     }
 }
