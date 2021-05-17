@@ -22,7 +22,6 @@ final class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        print("*** \(currentTrack)")
         guard let latitude = currentTrack.last?.coordinate.latitude else { return }
         guard let longitude = currentTrack.last?.coordinate.longitude else { return }
         
