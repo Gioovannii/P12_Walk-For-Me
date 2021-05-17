@@ -8,11 +8,6 @@
 import UIKit
 
 class VegetableCell: UICollectionViewCell {
-
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
    
     @IBOutlet weak var vegetable: UIView!
     @IBOutlet weak var vegetableImageView: UIImageView!
