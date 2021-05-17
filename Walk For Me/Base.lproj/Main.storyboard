@@ -300,7 +300,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-7v-oz3">
-                                <rect key="frame" x="0.0" y="384" width="414" height="429"/>
+                                <rect key="frame" x="20" y="384" width="374" height="429"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WPb-Db-Kjd">
                                     <size key="itemSize" width="70" height="70"/>
