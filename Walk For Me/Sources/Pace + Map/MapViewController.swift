@@ -68,9 +68,7 @@ final class MapViewController: UIViewController {
         for i in 0..<currentTrack.count {
             points.append(CLLocationCoordinate2DMake(currentTrack[i].coordinate.latitude, currentTrack[i].coordinate.longitude))
         }
-        
-        print(points)
-        
+                
         let polygon = MKPolygon(coordinates: &points, count: points.count)
         mapView.addOverlay(polygon)
         
