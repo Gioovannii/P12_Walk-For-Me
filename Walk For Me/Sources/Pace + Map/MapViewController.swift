@@ -66,8 +66,6 @@ final class MapViewController: UIViewController {
         var points: [CLLocationCoordinate2D] = []
         
         for i in 0..<currentTrack.count {
-            //            print("For loop locations :  \(currentTrack[i].coordinate)")
-            
             points.append(CLLocationCoordinate2DMake(currentTrack[i].coordinate.latitude, currentTrack[i].coordinate.longitude))
             
             //            points.append(CLLocationCoordinate2DMake(user.locations[location.coordinate.latitude], user.locations[location.coordinate.longitude]))
