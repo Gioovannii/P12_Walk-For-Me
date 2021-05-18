@@ -148,13 +148,13 @@ final class GameViewController: UIViewController {
             if information == "" {
                 self.presentAlert(title: "Alerte", message: "Veuillez selectionner \n un élément", actionTitle: "OK") }
             switch information {
-                case "céréales":
-                    self.gardenImages.append("homeImage4Wheat")
-                case "pomme de terre":
-                    self.gardenImages.append("homeImage5Potatoe")
-                case "tomates":
-                    self.gardenImages.append("homeImage6Tomato")
-
+            case "céréales":
+                self.gardenImages.append("homeImage4Wheat")
+            case "pomme de terre":
+                self.gardenImages.append("homeImage5Potatoe")
+            case "tomates":
+                self.gardenImages.append("homeImage6Tomato")
+                
             default:
                 break
             }
