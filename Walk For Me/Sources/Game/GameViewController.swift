@@ -181,6 +181,7 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
+// MARK: - Collection Delegate
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return 10 }
