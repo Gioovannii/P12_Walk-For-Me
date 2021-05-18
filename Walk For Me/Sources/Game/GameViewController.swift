@@ -142,6 +142,24 @@ final class GameViewController: UIViewController {
     
     // MARK: - Farmer slot
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
+        displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
+            print("Info : \(information)")
+            guard let information = information else { return }
+            if information == "" {
+                self.presentAlert(title: "Alerte", message: "Veuillez selectionner \n un élément", actionTitle: "OK") }
+            switch information {
+                case "céréales":
+                    self.gardenImages.append("homeImage4Wheat")
+                case "pomme de terre":
+                    self.gardenImages.append("homeImage5Potatoe")
+                case "tomates":
+                    self.gardenImages.append("homeImage6Tomato")
+
+            default:
+                break
+            }
+            self.collectionView.reloadData()
+        }
         print("Start planting")
     }
 }
