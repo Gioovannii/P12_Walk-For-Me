@@ -80,7 +80,7 @@ final class GameViewController: UIViewController {
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
         
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "Annuler", style: .cancel))
         alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
             information(self.currentValue)
         })
