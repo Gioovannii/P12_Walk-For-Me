@@ -195,8 +195,8 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 10
-        cell.vegetableImageView.image = UIImage(named: "homeImage6Tomato")
-        
+        cell.vegetableImageView.image = UIImage(named: gardenImages[indexPath.row])
+
         return cell
     }
 }
