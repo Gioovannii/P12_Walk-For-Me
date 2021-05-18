@@ -164,6 +164,7 @@ final class GameViewController: UIViewController {
     }
 }
 
+// MARK: - Picker Delegate
 extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { 1 }
     
