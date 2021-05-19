@@ -60,6 +60,11 @@ final class GameViewController: UIViewController {
         collectionView.delegate = self
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        coreDataManager?.saveCell(images: gardenImages)
+    }
+    
     func updateUI(total: GameEntity) {
         paceNumberLabel.text = "\(coreDataManager?.game?.paceAmount ?? "0")"
         moneyNumberLabel.text = "\(coreDataManager?.game?.moneyAmount ?? "0")"
