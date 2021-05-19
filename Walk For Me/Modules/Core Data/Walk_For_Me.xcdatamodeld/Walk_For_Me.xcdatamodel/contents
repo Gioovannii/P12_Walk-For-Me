@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="GameEntity" representedClassName="GameEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="imagesCell" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[String]"/>
         <attribute name="moneyAmount" optional="YES" attributeType="String"/>
         <attribute name="paceAmount" optional="YES" attributeType="String"/>
         <attribute name="potatoeAmount" optional="YES" attributeType="String"/>
@@ -13,7 +14,7 @@
         <attribute name="totalPace" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="GameEntity" positionX="-63" positionY="9" width="128" height="104"/>
+        <element name="GameEntity" positionX="-63" positionY="9" width="128" height="119"/>
         <element name="TrackEntity" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>
