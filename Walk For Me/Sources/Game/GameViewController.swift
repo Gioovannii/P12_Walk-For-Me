@@ -30,6 +30,7 @@ final class GameViewController: UIViewController {
     var currentGame : GameEntity?
     private var currentValue = ""
     private let vegetableChoice = ["céréales", "pomme de terre", "tomates"]
+    var gardenImages = [String]()
     
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
