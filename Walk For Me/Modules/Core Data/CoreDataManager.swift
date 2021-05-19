@@ -97,4 +97,10 @@ final class CoreDataManager {
         }
         coreDataStack.saveContext()
     }
+    
+    func saveCell(images: [String]) {
+        guard let currentGame = game else { return }
+        currentGame.imagesCell = images
+        coreDataStack.saveContext()
+    }
 }
