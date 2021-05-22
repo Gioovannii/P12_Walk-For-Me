@@ -148,6 +148,9 @@ final class GameViewController: UIViewController {
     
     // MARK: - Farmer slot
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
+        guard let wheat = coreDataManager?.game?.wheatAmount else { return }
+       
+
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
