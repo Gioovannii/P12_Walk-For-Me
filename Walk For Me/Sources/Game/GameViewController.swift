@@ -29,7 +29,7 @@ final class GameViewController: UIViewController {
     var coreDataManager: CoreDataManager?
     var currentGame : GameEntity?
     private var currentValue = ""
-    private let vegetableChoice = ["céréales", "pomme de terre", "tomates"]
+    private var vegetableChoice = ["céréales", "pomme de terre", "tomates"]
     var gardenImages = [String]()
     
     // MARK: - LifeCycle
@@ -150,7 +150,7 @@ final class GameViewController: UIViewController {
     
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         guard let wheat = coreDataManager?.game?.wheatAmount else { return }
-       
+        guard let potatoes = coreDataManager?.game?.potatoeAmount else { return }
 
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
