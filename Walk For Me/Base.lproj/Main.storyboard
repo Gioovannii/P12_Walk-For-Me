@@ -317,14 +317,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-m2-hXJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <rect key="frame" x="2" y="2" width="66" height="66"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BFo-m2-hXJ" firstAttribute="top" secondItem="Tdq-t3-2K6" secondAttribute="top" id="TXs-wV-1Sc"/>
-                                                <constraint firstAttribute="bottom" secondItem="BFo-m2-hXJ" secondAttribute="bottom" id="U9Z-mf-wEB"/>
-                                                <constraint firstAttribute="trailing" secondItem="BFo-m2-hXJ" secondAttribute="trailing" id="VDa-Sb-vve"/>
-                                                <constraint firstItem="BFo-m2-hXJ" firstAttribute="leading" secondItem="Tdq-t3-2K6" secondAttribute="leading" id="d9p-KZ-O6d"/>
+                                                <constraint firstAttribute="trailing" secondItem="BFo-m2-hXJ" secondAttribute="trailing" constant="2" id="BP2-hI-lVZ"/>
+                                                <constraint firstItem="BFo-m2-hXJ" firstAttribute="top" secondItem="Tdq-t3-2K6" secondAttribute="top" constant="2" id="HTQ-Ei-vGu"/>
+                                                <constraint firstItem="BFo-m2-hXJ" firstAttribute="leading" secondItem="Tdq-t3-2K6" secondAttribute="leading" constant="2" id="hk0-w5-iPV"/>
+                                                <constraint firstAttribute="bottom" secondItem="BFo-m2-hXJ" secondAttribute="bottom" constant="2" id="uCe-sm-Bml"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="70" height="70"/>
