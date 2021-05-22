@@ -147,6 +147,7 @@ final class GameViewController: UIViewController {
     }
     
     // MARK: - Farmer slot
+    
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         guard let wheat = coreDataManager?.game?.wheatAmount else { return }
        
@@ -174,6 +175,7 @@ final class GameViewController: UIViewController {
 }
 
 // MARK: - Picker Delegate
+
 extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { 1 }
     
@@ -191,6 +193,7 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 // MARK: - Collection Delegate
+
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
