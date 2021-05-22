@@ -151,7 +151,7 @@ final class GameViewController: UIViewController {
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
         guard let wheat = coreDataManager?.game?.wheatAmount else { return }
         guard let potatoes = coreDataManager?.game?.potatoeAmount else { return }
-        guard let tomatoes = coreDataManager?.game?.tomatoeAmount else { return }
+        guard let tomatoes = coreDataManager?.game?.tomatoeAmount else { coreDataManager?.saveVegetable(vegetableType: , vegetableAmount: <#T##String#>, moneyAmount: <#T##String#>) return }
 
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             guard information ?? "0" > wheat || information ?? "0" > potatoes || information ?? "0" > tomatoes else { return }
