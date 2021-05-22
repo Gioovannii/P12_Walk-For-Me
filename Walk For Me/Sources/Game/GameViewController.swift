@@ -154,6 +154,7 @@ final class GameViewController: UIViewController {
         guard let tomatoes = coreDataManager?.game?.tomatoeAmount else { return }
 
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
+            guard information ?? "0" > wheat || information ?? "0" > potatoes || information ?? "0" > tomatoes else { return }
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
             if information == "" {
