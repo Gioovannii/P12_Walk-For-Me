@@ -169,8 +169,7 @@ final class GameViewController: UIViewController {
             
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
-            if information == "" {
-                self.presentAlert(title: "Alerte", message: "Veuillez selectionner \n un élément", actionTitle: "OK") }
+
             switch information {
             case "céréales":
                 self.gardenImages.append("homeImage4Wheat")
