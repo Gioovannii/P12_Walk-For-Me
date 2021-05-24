@@ -157,6 +157,9 @@ final class GameViewController: UIViewController {
         guard let potatoes = coreDataManager?.game?.potatoeAmount else { coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
             return }
        
+        guard let tomatoes = coreDataManager?.game?.tomatoeAmount else { coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
+            return
+        }
     
 
         print(wheat)
