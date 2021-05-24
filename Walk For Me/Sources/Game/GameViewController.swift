@@ -166,7 +166,6 @@ final class GameViewController: UIViewController {
         print(potatoes)
         print(tomatoes)
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
-            
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
 
