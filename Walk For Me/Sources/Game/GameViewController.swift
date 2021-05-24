@@ -170,6 +170,8 @@ final class GameViewController: UIViewController {
             guard let information = information else { return }
 
             switch information {
+            case "":
+               fallthrough
             case "céréales":
                 self.gardenImages.append("homeImage4Wheat")
             case "pomme de terre":
