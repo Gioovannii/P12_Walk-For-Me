@@ -149,9 +149,11 @@ final class GameViewController: UIViewController {
     // MARK: - Farmer slot
     
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
-        guard let wheat = coreDataManager?.game?.wheatAmount else { return }
-        guard let potatoes = coreDataManager?.game?.potatoeAmount else { return }
-        guard let tomatoes = coreDataManager?.game?.tomatoeAmount else { coreDataManager?.saveVegetable(vegetableType: , vegetableAmount: <#T##String#>, moneyAmount: <#T##String#>) return }
+        guard let wheat = coreDataManager?.game?.wheatAmount else {
+            coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
+            return
+        }
+    
 
         print(wheat)
         print(potatoes)
