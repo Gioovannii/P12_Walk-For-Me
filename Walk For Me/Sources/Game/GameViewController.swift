@@ -143,7 +143,7 @@ final class GameViewController: UIViewController {
             }
         }
     }
-  
+    
     // MARK: - Farmer slot
     
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
@@ -155,7 +155,7 @@ final class GameViewController: UIViewController {
         guard let potatoeAmount = Int(coreDataManager?.game?.potatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
             return
         }
-       
+        
         guard let tomatoeAmount = Int(coreDataManager?.game?.tomatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
             return
         }
