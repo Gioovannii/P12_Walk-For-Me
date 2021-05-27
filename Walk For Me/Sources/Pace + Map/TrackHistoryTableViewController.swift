@@ -143,6 +143,7 @@ final class TrackHistoryTableViewController: UITableViewController {
 }
 
 // MARK: - TableView DataSource
+
 extension TrackHistoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trackMapped.count
