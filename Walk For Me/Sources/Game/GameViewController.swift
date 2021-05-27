@@ -159,10 +159,6 @@ final class GameViewController: UIViewController {
         guard let tomatoeAmount = Int(coreDataManager?.game?.tomatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
             return
         }
-
-        print(wheatAmount)
-        print(potatoeAmount)
-        print(tomatoeAmount)
         
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
