@@ -163,22 +163,27 @@ final class GameViewController: UIViewController {
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
-
-            switch information {
-            case "":
-               fallthrough
-            case "céréales":
-                self.gardenImages.append("homeImage4Wheat")
-            case "pomme de terre":
-                self.gardenImages.append("homeImage5Potatoe")
-            case "tomates":
-                self.gardenImages.append("homeImage6Tomato")
+            self.displayExchangeAlert(type: information, placeHolder: "Nombre de \(information) ") { amount in
+                guard let amount = Int(amount ?? "0") else { return }
                 
-            default:
-                break
+                
+                switch information {
+                case "":
+                    fallthrough
+                case "céréales":
+                    if amount > wheatAmount { self.presentAlert(title: "", message: "", actionTitle: "ok")
+                    } else { self.gardenImages.append("homeImage4Wheat") }
+                case "pomme de terre":
+                    self.gardenImages.append("homeImage5Potatoe")
+                case "tomates":
+                    self.gardenImages.append("homeImage6Tomato")
+                    
+                default:
+                    break
+                }
+                self.currentValue = ""
+                self.collectionView.reloadData()
             }
-            self.currentValue = ""
-            self.collectionView.reloadData()
         }
         print("Start planting")
     }
