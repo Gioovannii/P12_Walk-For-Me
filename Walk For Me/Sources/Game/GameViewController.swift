@@ -180,8 +180,7 @@ final class GameViewController: UIViewController {
                 case "":
                     fallthrough
                 case "céréales":
-                    if amount > wheatAmount { self.presentAlert(title: "", message: "", actionTitle: "ok")
-                    } else { self.gardenImages.append("homeImage4Wheat") }
+                    self.checkIfOverAmount(amount: amount, product: wheatAmount, image: "homeImage4Wheat")
                 case "pomme de terre":
                     self.gardenImages.append("homeImage5Potatoe")
                 case "tomates":
