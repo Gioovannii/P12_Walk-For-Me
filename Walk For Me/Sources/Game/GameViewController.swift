@@ -167,7 +167,14 @@ final class GameViewController: UIViewController {
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
-            self.displayExchangeAlert(type: information, placeHolder: "Nombre de \(information) ") { amount in
+    
+            var informationFailed = ""
+            if information.isEmpty == true { informationFailed = "céréales"
+            } else { informationFailed = information }
+            //self.currentValue = informationFailed
+            
+            print(informationFailed)
+            self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de legumes") { amount in
                 guard let amount = Int(amount ?? "0") else { return }
                 
                 
