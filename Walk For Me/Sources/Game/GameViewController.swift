@@ -143,6 +143,7 @@ final class GameViewController: UIViewController {
                         break
                     }
                 }
+                self?.currentValue = ""
             }
         }
     }
