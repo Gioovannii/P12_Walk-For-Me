@@ -182,7 +182,7 @@ final class GameViewController: UIViewController {
                 case "céréales":
                     self.checkIfOverAmount(amount: amount, product: wheatAmount, image: "homeImage4Wheat")
                 case "pomme de terre":
-                    self.gardenImages.append("homeImage5Potatoe")
+                    self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: "homeImage5Potatoe")
                 case "tomates":
                     self.gardenImages.append("homeImage6Tomato")
                     
