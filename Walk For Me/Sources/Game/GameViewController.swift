@@ -118,7 +118,10 @@ final class GameViewController: UIViewController {
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
         displayAlert(tag: 1, title: "Que souhaites-tu acheter") { information in
             guard let information = information else { return }
-            self.displayExchangeAlert(type: information, placeHolder: "nombre de légumes") { [weak self] amountVegies in
+            
+            var informationFailed = ""
+            if information == "" { informationFailed = "céréales"}
+            self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de légumes") { [weak self] amountVegies in
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
