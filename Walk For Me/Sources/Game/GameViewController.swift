@@ -176,8 +176,6 @@ final class GameViewController: UIViewController {
             print(informationFailed)
             self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de legumes") { amount in
                 guard let amount = Int(amount ?? "0") else { return }
-                
-                
                 switch information {
                 case "":
                     fallthrough
