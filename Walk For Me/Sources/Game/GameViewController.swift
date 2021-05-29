@@ -194,6 +194,7 @@ final class GameViewController: UIViewController {
                     break
                 }
                 self.currentValue = ""
+                informationFailed = ""
                 self.collectionView.reloadData()
             }
         }
