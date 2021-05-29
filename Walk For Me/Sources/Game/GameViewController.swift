@@ -198,7 +198,13 @@ final class GameViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
-        print("Start planting")
+    }
+
+    
+    func checkIfOverAmount(amount: Int, product: Int, image: String) {
+        if amount > product {
+        presentAlert(title: "Attention", message: "Il te faut plus ", actionTitle: "OK")
+        } else { gardenImages.append(image)}
     }
 }
 
