@@ -178,8 +178,7 @@ final class GameViewController: UIViewController {
             var informationFailed = ""
             if information.isEmpty == true { informationFailed = "céréales"
             } else { informationFailed = information }
-            //self.currentValue = informationFailed
-            
+
             print(informationFailed)
             self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de legumes") { amount in
                 guard let amount = Int(amount ?? "0") else { return }
