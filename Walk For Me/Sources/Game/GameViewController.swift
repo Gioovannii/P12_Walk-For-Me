@@ -181,6 +181,9 @@ final class GameViewController: UIViewController {
 
             print(informationFailed)
             self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de legumes") { amount in
+                guard amount != "" else { self.presentAlert(title: "Attention", message: "", actionTitle: "Compris !")
+                    return
+                }
                 guard let amount = Int(amount ?? "0") else { return }
                 switch information {
                 case "":
