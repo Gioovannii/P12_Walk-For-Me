@@ -38,6 +38,7 @@ extension UIViewController {
         alert.view.backgroundColor = UIColor(red: 0.290, green: 0.412, blue: 0.714, alpha: 1.0)
         
         alert.addAction(action)
+        alert.addAction(cancel)
         present(alert, animated: true)
     }
 }
