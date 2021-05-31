@@ -25,6 +25,10 @@ extension UIViewController {
         alert.addTextField { textField in
             textField.placeholder = placeHolder
         }
+        
+        let cancel = UIAlertAction(title: "Annuler", style: .cancel)  { _ in
+            print("Tapped cancel")
+        }
         let action = UIAlertAction(title: "Echanger maintenant", style: .default, handler: { _ in
             guard let textField = alert.textFields else { return }
             handlerExchangeName(textField[0].text)
