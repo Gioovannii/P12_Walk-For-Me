@@ -122,6 +122,9 @@ final class GameViewController: UIViewController {
             var informationFailed = ""
             if information == "" { informationFailed = "céréales"}
             self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de légumes") { [weak self] amountVegies in
+                guard amountVegies != "" else { self?.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
+                    return
+                }
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
