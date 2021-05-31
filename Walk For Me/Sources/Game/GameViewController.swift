@@ -102,9 +102,10 @@ final class GameViewController: UIViewController {
             guard let moneyNumberExchange = Int(moneyNumber ?? "0") else { return }
             guard var currentMonney = Int(self.coreDataManager?.game?.moneyAmount ?? "0") else { return }
             guard var currentPaceNumber = Int(self.coreDataManager?.game?.paceAmount ?? "0") else { return }
-            // Check if exchange more than needed
-            if moneyNumberExchange > currentPaceNumber {
-                self.presentAlert(title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez", actionTitle: "Bon ok !")}
+           
+            if moneyNumberExchange > currentPaceNumber { self.presentAlert(
+                title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez",
+                actionTitle: "Bon ok !")}
             else {
                 guard let previousMoneyNumber = Int(self.coreDataManager?.game?.moneyAmount ?? "0") else { return }
                 currentPaceNumber -=  moneyNumberExchange
