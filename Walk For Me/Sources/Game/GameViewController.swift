@@ -140,7 +140,8 @@ final class GameViewController: UIViewController {
                 } else {
                     if info == "" { info = "céréales" }
                     moneyNumber -= amountConverted
-                    self?.coreDataManager?.saveVegetable(vegetableType: information, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
+                   
+                    self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)")
                     self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
                     switch information {
                     case "":
