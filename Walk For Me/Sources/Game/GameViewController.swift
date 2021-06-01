@@ -185,9 +185,9 @@ final class GameViewController: UIViewController {
             } else { self.currentValue = information }
             self.displayExchangeAlert(type: self.currentValue, placeHolder: "Nombre de legumes") { amount in
 
-            print(informationFailed)
-            self.displayExchangeAlert(type: informationFailed, placeHolder: "Nombre de legumes") { amount in
-                guard amount != "" else { self.presentAlert(title: "Attention", message: "", actionTitle: "Compris !")
+                guard amount != "" else {
+                    self.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
+                    self.currentValue = ""
                     return
                 }
                 
