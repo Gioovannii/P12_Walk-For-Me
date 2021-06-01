@@ -132,6 +132,7 @@ final class GameViewController: UIViewController {
                     self?.currentValue = ""
                     return
                 }
+                
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
                 guard let amountConverted = Int(amountVegies ?? "0") else  { return }
                 
@@ -191,6 +192,7 @@ final class GameViewController: UIViewController {
                 guard amount != "" else { self.presentAlert(title: "Attention", message: "", actionTitle: "Compris !")
                     return
                 }
+                
                 guard let amount = Int(amount ?? "0") else { return }
                 switch information {
                 case "":
@@ -201,7 +203,6 @@ final class GameViewController: UIViewController {
                     self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: "homeImage5Potatoe")
                 case "tomates":
                     self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: "homeImage6Tomato")
-                    
                 default:
                     break
                 }
@@ -211,8 +212,7 @@ final class GameViewController: UIViewController {
             }
         }
     }
-
-    
+ 
     func checkIfOverAmount(amount: Int, product: Int, image: String) {
         if amount > product {
         presentAlert(title: "Attention", message: "Il te faut plus ", actionTitle: "OK")
