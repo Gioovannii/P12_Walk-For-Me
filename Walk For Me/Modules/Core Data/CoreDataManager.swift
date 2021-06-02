@@ -80,9 +80,15 @@ final class CoreDataManager {
         
         switch vegetableType {
         case "céréales":
-            wheatAmount += Int(vegetableAmount) ?? 0
-            currentGame.wheatAmount = "\(wheatAmount)"
-            currentGame.moneyAmount = moneyAmount
+            if isPlanting { wheatAmount -= Int(vegetableAmount) ?? 0
+                currentGame.wheatAmount = "\(wheatAmount)"
+            } else { wheatAmount += Int(vegetableAmount) ?? 0
+                currentGame.wheatAmount = "\(wheatAmount)"
+                currentGame.moneyAmount = moneyAmount
+            }
+//         wheatAmount += Int(vegetableAmount) ?? 0
+//            currentGame.wheatAmount = "\(wheatAmount)"
+//            currentGame.moneyAmount = moneyAmount
         case "pomme de terre":
             potatoeAmount += Int(vegetableAmount) ?? 0
             currentGame.potatoeAmount = "\(potatoeAmount)"
