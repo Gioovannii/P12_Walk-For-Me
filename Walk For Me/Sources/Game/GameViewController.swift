@@ -208,7 +208,7 @@ final class GameViewController: UIViewController {
                     
                     self.wheatQuantityLabel.text = "\(wheatAmount - amount)"
                 case "pomme de terre":
-                    self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: "homeImage5Potatoe")
+                    self.checkIfOverAmount(amount: amount, product: potatoesAmount, image: "homeImage5Potatoe")
                 case "tomates":
                     self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: "homeImage6Tomato")
                 default:
