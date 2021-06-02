@@ -71,7 +71,7 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
-    func saveVegetable(vegetableType: String, vegetableAmount: String, moneyAmount: String) {
+    func saveVegetable(vegetableType: String, vegetableAmount: String, moneyAmount: String, isPlanting: Bool) {
         guard let currentGame = game else { return }
         
         guard var wheatAmount = Int(currentGame.wheatAmount ?? "0") else { return }
