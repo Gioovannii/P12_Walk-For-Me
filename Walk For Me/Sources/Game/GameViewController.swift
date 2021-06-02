@@ -210,7 +210,7 @@ final class GameViewController: UIViewController {
                 case "pomme de terre":
                     self.checkIfOverAmount(amount: amount, product: potatoesAmount, image: "homeImage5Potatoe")
                 case "tomates":
-                    self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: "homeImage6Tomato")
+                    self.checkIfOverAmount(amount: amount, product: tomatoesAmount, image: "homeImage6Tomato")
                 default:
                     break
                 }
