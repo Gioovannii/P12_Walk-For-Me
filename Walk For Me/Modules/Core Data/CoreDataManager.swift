@@ -104,10 +104,6 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
-    func plantVegetable() {
-        
-    }
-    
     func saveCell(images: [String]) {
         guard let currentGame = game else { return }
         currentGame.imagesCell = images
