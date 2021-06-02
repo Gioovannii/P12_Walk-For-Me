@@ -164,19 +164,24 @@ final class GameViewController: UIViewController {
     // MARK: - Farmer slot
     
     @IBAction func slotButton1Tapped(_ sender: UIButton) {
-        guard let wheatAmount = Int(coreDataManager?.game?.wheatAmount ?? "0") else {
-            coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
-            return
-        }
+//        guard let wheatAmount = Int(coreDataManager?.game?.wheatAmount ?? "0") else {
+//            coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+//            return
+//        }
+//
+//        guard let potatoeAmount = Int(coreDataManager?.game?.potatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+//            return
+//        }
+//
+//        guard let tomatoeAmount = Int(coreDataManager?.game?.tomatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+//            return
+//        }
         
-        guard let potatoeAmount = Int(coreDataManager?.game?.potatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
-            return
-        }
         
-        guard let tomatoeAmount = Int(coreDataManager?.game?.tomatoeAmount ?? "0") else { coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "0", moneyAmount: coreDataManager?.game?.moneyAmount ?? "0")
-            return
-        }
-        
+        guard var wheatAmount = Int(coreDataManager?.game?.wheatAmount ?? "0") else { return }
+        guard let potatoesAmount = Int(potatoeQuantityLabel.text ?? "0") else { return }
+        guard let tomatoesAmount = Int(tomatoesQuantityLabel.text ?? "0") else { return }
+
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
