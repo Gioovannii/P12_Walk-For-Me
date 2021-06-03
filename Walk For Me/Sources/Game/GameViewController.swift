@@ -87,7 +87,7 @@ final class GameViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Annuler", style: .cancel) { _ in
             self.currentValue = ""
         })
-       
+        
         alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
             information(self.currentValue)
         })
@@ -102,7 +102,7 @@ final class GameViewController: UIViewController {
             guard let moneyNumberExchange = Int(moneyNumber ?? "0") else { return }
             guard var currentMonney = Int(self.coreDataManager?.game?.moneyAmount ?? "0") else { return }
             guard var currentPaceNumber = Int(self.coreDataManager?.game?.paceAmount ?? "0") else { return }
-           
+            
             if moneyNumberExchange > currentPaceNumber { self.presentAlert(
                 title: "Erreur", message: "Vous ne pouvez pas échanger plus de pas que vous en avez",
                 actionTitle: "Bon ok !")}
@@ -126,7 +126,7 @@ final class GameViewController: UIViewController {
                 
             } else { info = information ?? "" }
             self.displayExchangeAlert(type: info, placeHolder: "Nombre de légumes") { [weak self] amountVegies in
-
+                
                 guard amountVegies != "" else {
                     self?.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
                     self?.currentValue = ""
@@ -140,7 +140,7 @@ final class GameViewController: UIViewController {
                 } else {
                     if info == "" { info = "céréales" }
                     moneyNumber -= amountConverted
-                   
+                    
                     self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)", isPlanting: false)
                     self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
                     switch information {
@@ -181,15 +181,15 @@ final class GameViewController: UIViewController {
         guard var wheatAmount = Int(coreDataManager?.game?.wheatAmount ?? "0") else { return }
         guard let potatoesAmount = Int(potatoeQuantityLabel.text ?? "0") else { return }
         guard let tomatoesAmount = Int(tomatoesQuantityLabel.text ?? "0") else { return }
-
+        
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             print("Info : \(String(describing: information))")
             guard let information = information else { return }
-    
+            
             if information.isEmpty { self.currentValue = "céréales"
             } else { self.currentValue = information }
             self.displayExchangeAlert(type: self.currentValue, placeHolder: "Nombre de legumes") { amount in
-
+                
                 guard amount != "" else {
                     self.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
                     self.currentValue = ""
@@ -219,15 +219,15 @@ final class GameViewController: UIViewController {
             }
         }
     }
- 
+    
     func checkIfOverAmount(amount: Int, product: Int, image: String) {
         if amount > product {
-        presentAlert(title: "Attention", message: "Il te faut plus ", actionTitle: "OK")
+            presentAlert(title: "Attention", message: "Il te faut plus ", actionTitle: "OK")
         } else {
             gardenImages.append(contentsOf: repeatElement(image, count: amount))
             coreDataManager?.saveCell(images: gardenImages)
             collectionView.reloadData()
-
+            
         }
     }
 }
