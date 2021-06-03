@@ -183,7 +183,6 @@ final class GameViewController: UIViewController {
         guard let tomatoesAmount = Int(tomatoesQuantityLabel.text ?? "0") else { return }
         
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
-            print("Info : \(String(describing: information))")
             guard let information = information else { return }
             
             if information.isEmpty { self.currentValue = "céréales"} else { self.currentValue = information }
