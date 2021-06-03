@@ -266,6 +266,10 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.vegetableImageView.image = UIImage(named: gardenImages[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected item at \(indexPath.row)")
+    }
 }
 
 
