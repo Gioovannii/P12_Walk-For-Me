@@ -225,7 +225,9 @@ final class GameViewController: UIViewController {
         presentAlert(title: "Attention", message: "Il te faut plus ", actionTitle: "OK")
         } else {
             gardenImages.append(contentsOf: repeatElement(image, count: amount))
-            
+            coreDataManager?.saveCell(images: gardenImages)
+            collectionView.reloadData()
+
         }
     }
 }
