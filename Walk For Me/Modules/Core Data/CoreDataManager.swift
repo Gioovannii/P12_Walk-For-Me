@@ -83,6 +83,7 @@ final class CoreDataManager {
             if isPlanting { print("*CDM \(wheatAmount)")
                 wheatAmount -= Int(vegetableAmount) ?? 0
                 currentGame.wheatAmount = "\(wheatAmount)"
+                print("**CDM\(wheatAmount)")
             } else { wheatAmount += Int(vegetableAmount) ?? 0
                 currentGame.wheatAmount = "\(wheatAmount)"
                 currentGame.moneyAmount = moneyAmount
