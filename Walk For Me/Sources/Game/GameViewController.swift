@@ -27,11 +27,11 @@ final class GameViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var coreDataManager: CoreDataManager?
-    var currentGame : GameEntity?
+    
+    private var coreDataManager: CoreDataManager?
     private var currentValue = ""
     private var vegetableChoice = ["céréales", "pomme de terre", "tomates"]
-    var gardenImages = [String]()
+    private var gardenImages = [String]()
     
     // MARK: - LifeCycle
     
