@@ -10,6 +10,7 @@ import UIKit
 final class GameViewController: UIViewController {
     
     // MARK: - Outlets
+    
     @IBOutlet weak private var slotButton1: UIButton!
     @IBOutlet weak private var slotButton2: UIButton!
     @IBOutlet weak private var slotButton3: UIButton!
@@ -33,6 +34,7 @@ final class GameViewController: UIViewController {
     var gardenImages = [String]()
     
     // MARK: - LifeCycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -44,9 +46,9 @@ final class GameViewController: UIViewController {
         guard let total = coreDataManager.game else { return }
         updateUI(total: total)
         
-        print("Tomatoe \(coreDataManager.game?.tomatoeAmount ?? "0")")
         print("Cereales \(coreDataManager.game?.wheatAmount ?? "0")")
         print("patates \(coreDataManager.game?.potatoeAmount ?? "0")")
+        print("Tomatoe \(coreDataManager.game?.tomatoeAmount ?? "0")")
         
     }
     
