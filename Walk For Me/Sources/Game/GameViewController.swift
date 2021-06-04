@@ -187,6 +187,7 @@ final class GameViewController: UIViewController {
                 case "":
                     fallthrough
                 case "céréales":
+                    print("cereales \(wheatAmount)")
                     self.checkIfOverAmount(amount: amount, product: wheatAmount, image: "homeImage4Wheat")
                     wheatAmount -= amount
                     self.coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
