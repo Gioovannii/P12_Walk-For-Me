@@ -172,11 +172,10 @@ final class GameViewController: UIViewController {
         guard let tomatoeAmount = Int(coreDataManager?.game?.tomatoeAmount ?? "0") else { return }
         
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
-            guard let information = information else { return }
+            guard var info = information else { return }
+            if information == "" { info = "céréales"} else { info = information ?? "" }
             
-            if information.isEmpty { self.currentValue = "céréales"} else { self.currentValue = information }
-            
-            self.displayExchangeAlert(type: self.currentValue, placeHolder: "Nombre de legumes") { amount in
+            self.displayExchangeAlert(type: info, placeHolder: "Nombre de légumes") { amount in
                 
                 guard amount != "" else {
                     self.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
