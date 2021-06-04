@@ -80,7 +80,8 @@ final class CoreDataManager {
         
         switch vegetableType {
         case "céréales":
-            if isPlanting { wheatAmount -= Int(vegetableAmount) ?? 0
+            if isPlanting { print("*CDM \(wheatAmount)")
+                wheatAmount -= Int(vegetableAmount) ?? 0
                 currentGame.wheatAmount = "\(wheatAmount)"
             } else { wheatAmount += Int(vegetableAmount) ?? 0
                 currentGame.wheatAmount = "\(wheatAmount)"
