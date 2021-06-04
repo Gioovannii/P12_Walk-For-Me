@@ -97,10 +97,11 @@ final class CoreDataManager {
             }
             
         case "tomates":
-            tomatoeAmount += Int(vegetableAmount) ?? 0
-            currentGame.tomatoeAmount = "\(tomatoeAmount)"
-            currentGame.moneyAmount = moneyAmount
-
+            if isPlanting { currentGame.tomatoeAmount = "\(vegetableAmount)"
+            } else { tomatoeAmount += Int(vegetableAmount) ?? 0
+                currentGame.tomatoeAmount = "\(tomatoeAmount)"
+                currentGame.moneyAmount = moneyAmount
+            }
         default:
             break
         }
