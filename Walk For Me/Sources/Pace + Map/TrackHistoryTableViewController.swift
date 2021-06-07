@@ -32,9 +32,6 @@ final class TrackHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-//              let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
