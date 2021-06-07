@@ -124,7 +124,7 @@ final class GameViewController: UIViewController {
     
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
         
-        displayAlert(tag: 1, title: "Que souhaites-tu acheter ?") { information in
+        displayAlert(tag: 2, title: "Que souhaites-tu acheter ?") { information in
             guard var info = information else { return }
             if information == "" { info = "céréales"
                 
