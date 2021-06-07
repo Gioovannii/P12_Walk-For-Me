@@ -195,7 +195,7 @@ final class GameViewController: UIViewController {
                     wheatAmount -= amount
                     self.coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
                     self.wheatQuantityLabel.text = self.coreDataManager?.game?.wheatAmount
-
+                    
                 case "pomme de terre":
                     self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: "homeImage5Potatoe")
                 case "tomates":
@@ -216,7 +216,6 @@ final class GameViewController: UIViewController {
             gardenImages.append(contentsOf: repeatElement(image, count: amount))
             coreDataManager?.saveCell(images: gardenImages)
             collectionView.reloadData()
-            
         }
     }
 }
@@ -233,10 +232,10 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 { currentValue = checkRow(pickerArray: vegetableChoice, row: row) }
     }
-    
-    func checkRow(pickerArray: [String], row: Int) -> String {
-        return pickerArray[row]
-    }
+}
+
+func checkRow(pickerArray: [String], row: Int) -> String {
+    return pickerArray[row]
 }
 
 // MARK: - Collection Delegate
