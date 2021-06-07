@@ -123,18 +123,6 @@ final class GameViewController: UIViewController {
     }
     
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
-        for (index, value) in vegetableChoice.enumerated() {
-            switch value {
-            case "céréales":
-               vegetableChoice[index] = value + " 10 pièces"
-            case "pomme de terre":
-               vegetableChoice[index] = value + " 20 pièces"
-            case "tomates":
-               vegetableChoice[index] = value + " 30 pièces"
-            default:
-                break
-            }
-        }
         
         displayAlert(tag: 1, title: "Que souhaites-tu acheter ?") { information in
             guard var info = information else { return }
