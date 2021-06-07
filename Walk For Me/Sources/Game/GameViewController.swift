@@ -198,6 +198,10 @@ final class GameViewController: UIViewController {
                     
                 case "pomme de terre":
                     self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: "homeImage5Potatoe")
+                    potatoeAmount -= amount
+                    self.coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "\(potatoeAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+                    self.potatoeQuantityLabel.text = self.coreDataManager?.game?.potatoeAmount
+                    
                 case "tomates":
                     self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: "homeImage6Tomato")
                 default:
