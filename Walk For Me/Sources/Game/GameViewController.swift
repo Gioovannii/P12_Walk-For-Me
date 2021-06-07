@@ -31,6 +31,7 @@ final class GameViewController: UIViewController {
     private var coreDataManager: CoreDataManager?
     private var currentValue = ""
     private var vegetableChoice = ["céréales", "pomme de terre", "tomates"]
+    private var vegetableChoiceMoney = ["céréales 10💰 ", "pomme de terre 20💰", "tomates 30💰"]
     private var gardenImages = [String]()
     
     // MARK: - LifeCycle
