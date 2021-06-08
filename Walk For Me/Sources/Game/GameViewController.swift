@@ -254,7 +254,8 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 { currentValue = checkRow(pickerArray: vegetableChoice, row: row) }
+        if pickerView.tag == 1 { currentValue = checkRow(pickerArray: vegetableChoice, row: row)
+        } else { currentValue = checkRow(pickerArray: vegetableChoice, row: row)}
     }
 }
 
