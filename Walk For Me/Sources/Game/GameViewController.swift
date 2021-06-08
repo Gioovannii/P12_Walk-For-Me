@@ -138,7 +138,7 @@ final class GameViewController: UIViewController {
                 }
                 
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
-                guard let amountConverted = Int(amountVegies ?? "0") else  { return }
+                guard var amountConverted = Int(amountVegies ?? "0") else  { return }
                 
                 if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
                 } else {
