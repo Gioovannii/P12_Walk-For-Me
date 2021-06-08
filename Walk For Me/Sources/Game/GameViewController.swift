@@ -146,7 +146,7 @@ final class GameViewController: UIViewController {
                     var total = 0
                     switch info {
                     case "céréales":
-                        amountConverted =  amountConverted * 10
+                        total =  amountConverted * 10
                     case "pomme de terre":
                         amountConverted = amountConverted * 20
                     case "tomates":
