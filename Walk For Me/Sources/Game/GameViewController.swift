@@ -141,8 +141,18 @@ final class GameViewController: UIViewController {
                 guard var amountConverted = Int(amountVegies ?? "0") else  { return }
                 
                 if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
-                } else {
-                    if info == "" { info = "céréales" }
+                } else { if info == "" { info = "céréales" }
+                    switch info {
+                    case "céréales":
+                        amountConverted =  amountConverted * 10
+                    case "pomme de terre":
+                        amountConverted = amountConverted * 20
+                    case "tomates":
+                        amountConverted = amountConverted * 30
+                    default:
+                        break
+                    }
+                   
                     moneyNumber -= amountConverted
                     
                     self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)", isPlanting: false)
