@@ -142,6 +142,7 @@ final class GameViewController: UIViewController {
                 
                 if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
                 } else { if info == "" { info = "céréales" }
+                    var total = 0
                     switch info {
                     case "céréales":
                         amountConverted =  amountConverted * 10
