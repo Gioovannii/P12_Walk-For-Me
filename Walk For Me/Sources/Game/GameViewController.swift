@@ -154,7 +154,6 @@ final class GameViewController: UIViewController {
                     }
                    
                     moneyNumber -= amountConverted
-                    
                     self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)", isPlanting: false)
                     self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
                     switch information {
