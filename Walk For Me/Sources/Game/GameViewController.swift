@@ -166,6 +166,7 @@ final class GameViewController: UIViewController {
                     case "tomates":
                         self?.tomatoesQuantityLabel.text = self?.coreDataManager?.game?.tomatoeAmount
                     default:
+                        print("I've break")
                         break
                     }
                 }
