@@ -177,6 +177,7 @@ final class GameViewController: UIViewController {
                     break
                 }
             }
+            self.currentValue = ""
         }
         vegetableChoice = ["céréales", "pomme de terre", "tomates"]
     }
