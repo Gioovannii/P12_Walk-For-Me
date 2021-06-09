@@ -133,9 +133,8 @@ final class GameViewController: UIViewController {
         
         displayAlert(tag: 2, title: "Que souhaites-tu acheter ?") { information in
             guard var info = information else { return }
-            if information == "" { info = "céréales"
-                
-            } else { info = information ?? "" }
+            if information == "" { info = "céréales"} else { info = information ?? "" }
+            
             self.displayExchangeAlert(type: info, placeHolder: "Nombre de légumes") { [weak self] amountVegies in
                 
                 guard amountVegies != "" else {
