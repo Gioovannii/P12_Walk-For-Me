@@ -179,7 +179,6 @@ final class GameViewController: UIViewController {
             }
             self.currentValue = ""
         }
-        vegetableChoice = ["céréales", "pomme de terre", "tomates"]
     }
     
     // MARK: - Farmer slot
