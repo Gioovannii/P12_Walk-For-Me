@@ -52,6 +52,9 @@ final class GameViewController: UIViewController {
         print("patates \(coreDataManager.game?.potatoeAmount ?? "0")")
         print("Tomatoe \(coreDataManager.game?.tomatoeAmount ?? "0")")
         
+        
+        // TODO: - RetrieveTimeStamp with diference with timestamp when Disappear
+        
     }
     
     override func viewDidLoad() {
