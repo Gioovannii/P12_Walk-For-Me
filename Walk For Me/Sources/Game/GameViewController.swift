@@ -160,37 +160,22 @@ final class GameViewController: UIViewController {
                 guard moneyNumber >= total else {
                     self?.presentAlert(title: "Attention", message: "Vous ne pouvez pas acheter ", actionTitle: "OK")
                     return
-                } else { if info == "" { info = "céréales" }
-                    var total = 0
-                    switch info {
-                    case "céréales":
-                        total =  amountConverted * 10
-                    case "pomme de terre":
-                        amountConverted = amountConverted * 20
-                    case "tomates":
-                        amountConverted = amountConverted * 30
-                    default:
-                        break
-                    }
-                   
-                    moneyNumber -= amountConverted
-                    self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)", isPlanting: false)
-                    self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
-                    switch information {
-                    case "":
-                        fallthrough
-                    case "céréales":
-                        self?.wheatQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
-                    case "pomme de terre":
-                        self?.potatoeQuantityLabel.text = self?.coreDataManager?.game?.potatoeAmount
-                    case "tomates":
-                        self?.tomatoesQuantityLabel.text = self?.coreDataManager?.game?.tomatoeAmount
-                    default:
-                        print("I've break")
-                        break
-                    }
                 }
-                self?.currentValue = ""
+                moneyNumber -= total
+                self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)", isPlanting: false)
+                self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
+                switch information {
+                case "":
+                    fallthrough
+                case "céréales":
+                    self?.wheatQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
+                case "pomme de terre":
+                    self?.potatoeQuantityLabel.text = self?.coreDataManager?.game?.potatoeAmount
+                case "tomates":
+                    self?.tomatoesQuantityLabel.text = self?.coreDataManager?.game?.tomatoeAmount
+                default:
+                    break
+                }
             }
         }
         vegetableChoice = ["céréales", "pomme de terre", "tomates"]
