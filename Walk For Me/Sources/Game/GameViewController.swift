@@ -142,10 +142,23 @@ final class GameViewController: UIViewController {
                     return
                 }
                 
-                guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0") else { return }
-                guard let amountConverted = Int(amountVegies ?? "0") else  { return }
+                guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0"),
+                      let amountConverted = Int(amountVegies ?? "0")  else { return }
                 
-                if moneyNumber < amountConverted { self?.presentAlert(title: "Erreur", message: "Vous devez aquerrir plus d'argent", actionTitle: "Compris !")
+                var total = 0
+                switch info {
+                case "céréales":
+                    total =  amountConverted * 10
+                case "pomme de terre":
+                    total = amountConverted * 20
+                case "tomates":
+                    total = amountConverted * 30
+                default:
+                    break
+                }
+                
+                guard moneyNumber >= total else {
+                    self?.presentAlert(title: "Attention", message: "Vous ne pouvez pas acheter ", actionTitle: "OK")
                     return
                 } else { if info == "" { info = "céréales" }
                     var total = 0
