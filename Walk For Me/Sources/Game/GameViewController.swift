@@ -226,7 +226,7 @@ final class GameViewController: UIViewController {
                 default:
                     break
                 }
-//                self.currentValue = ""
+                self.currentValue = ""
                 self.collectionView.reloadData()
             }
         }
