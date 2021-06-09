@@ -68,6 +68,9 @@ final class GameViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         coreDataManager?.saveCell(images: gardenImages)
+        
+        // TODO: - Save TimeStamp
+        
     }
     
     func updateUI(total: GameEntity) {
