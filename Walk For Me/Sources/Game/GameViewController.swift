@@ -249,6 +249,10 @@ extension GameViewController {
     @objc func updateTimer() {
         if let fireDateDescription = timer?.fireDate.description { print(fireDateDescription) }
     }
+    func createTimer() {
+        if timer == nil {
+            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+     
 }
 
 // MARK: - Picker Delegate
