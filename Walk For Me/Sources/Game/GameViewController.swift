@@ -261,6 +261,11 @@ extension GameViewController {
             print(timer)
         }
     }
+    
+    func cancelTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
 }
 
 // MARK: - Picker Delegate
