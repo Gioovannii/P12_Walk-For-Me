@@ -243,6 +243,12 @@ final class GameViewController: UIViewController {
     }
 }
 
+// MARK: - Timer
+
+extension GameViewController {
+ 
+}
+
 // MARK: - Picker Delegate
 
 extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
