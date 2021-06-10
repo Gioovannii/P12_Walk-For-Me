@@ -274,6 +274,7 @@ extension GameViewController {
             
             self.timer = timer
             print(timer)
+            print(utcTime)
         }
     }
     
