@@ -257,7 +257,10 @@ extension GameViewController {
             RunLoop.current.add(timer, forMode: .common)
             timer.tolerance = 0.1
             
-         
+            self.timer = timer
+            print(timer)
+        }
+    }
 }
 
 // MARK: - Picker Delegate
