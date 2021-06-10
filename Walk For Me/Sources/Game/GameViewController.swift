@@ -244,6 +244,18 @@ final class GameViewController: UIViewController {
     }
 }
 
+
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        UTCTime.text = DateFormatter.utcLocalizedString(from: Date(), dateStyle: .none, timeStyle: .none)
+//        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
+//    }
+//
+//    @objc func tick() {
+//        UTCTime.text = DateFormatter.utcLocalizedString(from: Date(), dateStyle: .none, timeStyle: .short)
+//    }
+//}
 // MARK: - Timer
 
 extension GameViewController {
