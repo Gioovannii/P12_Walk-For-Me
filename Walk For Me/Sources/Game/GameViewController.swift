@@ -246,7 +246,9 @@ final class GameViewController: UIViewController {
 // MARK: - Timer
 
 extension GameViewController {
- 
+    @objc func updateTimer() {
+        if let fireDateDescription = timer?.fireDate.description { print(fireDateDescription) }
+    }
 }
 
 // MARK: - Picker Delegate
