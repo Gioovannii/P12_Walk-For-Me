@@ -57,7 +57,7 @@ final class GameViewController: UIViewController {
         
         
         // TODO: - RetrieveTimeStamp with diference with timestamp when Disappear
-        
+        print(coreDataManager.game?.gardenTimeInterval ?? [])
     }
     
     override func viewDidLoad() {
