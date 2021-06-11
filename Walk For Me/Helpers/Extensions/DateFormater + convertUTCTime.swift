@@ -14,7 +14,7 @@ extension DateFormatter {
         utcDateFormatter.formatterBehavior = .behavior10_4
         utcDateFormatter.dateStyle = dateStyle
         utcDateFormatter.timeStyle = timeStyle
-        utcDateFormatter.timeZone = TimeZone(abbreviation: "UTC+8")
+        utcDateFormatter.timeZone = .current
         return utcDateFormatter.string(from: from)
     }
 }
