@@ -35,6 +35,8 @@ final class GameViewController: UIViewController {
     private var vegetableChoice = ["céréales", "pomme de terre", "tomates"]
     private var vegetableChoiceMoney = ["céréales 10💰 ", "pomme de terre 20💰", "tomates 30💰"]
     private var gardenImages = [String]()
+    private var gardenImagesTime = [String]()
+    private var gardenImagesCount = 0
     
     // MARK: - LifeCycle
     
