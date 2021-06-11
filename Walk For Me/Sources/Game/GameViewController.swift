@@ -204,6 +204,7 @@ final class GameViewController: UIViewController {
                 }
                 
                 guard let amount = Int(amount ?? "0") else { return }
+                self.gardenImagesCount = amount
                 switch information {
                 case "":
                     fallthrough
