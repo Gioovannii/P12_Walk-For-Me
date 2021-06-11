@@ -30,6 +30,7 @@ final class GameViewController: UIViewController {
     // MARK: - Properties
     
     private var coreDataManager: CoreDataManager?
+    private var timer: Timer?
     private var currentValue = ""
     private var vegetableChoice = ["céréales", "pomme de terre", "tomates"]
     private var vegetableChoiceMoney = ["céréales 10💰 ", "pomme de terre 20💰", "tomates 30💰"]
