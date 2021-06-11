@@ -25,7 +25,7 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var tomatoesQuantityLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var timer: Timer?
+    
     
     // MARK: - Properties
     
