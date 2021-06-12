@@ -115,7 +115,6 @@ final class CoreDataManager {
     func saveTimeInterval(gardenTimeInterval: [String]) {
         guard let currentGame = game else { return }
         currentGame.gardenTimeInterval = gardenTimeInterval
-        print(currentGame.gardenTimeInterval!)
         coreDataStack.saveContext()
     }
 }
