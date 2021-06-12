@@ -8,13 +8,14 @@
 import Foundation
 
 extension DateFormatter {
-
-    static func utcLocalizedString(from: Date, dateStyle: Style, timeStyle: Style) -> String {
+    
+    static func localizedDate(from: Date, dateStyle: Style, timeStyle: Style) -> String {
         let utcDateFormatter = DateFormatter()
         utcDateFormatter.formatterBehavior = .behavior10_4
         utcDateFormatter.dateStyle = dateStyle
         utcDateFormatter.timeStyle = timeStyle
-        utcDateFormatter.timeZone = .current
+        utcDateFormatter.timeZone = .autoupdatingCurrent
         return utcDateFormatter.string(from: from)
+//        return utcDateFormatter.date(from: formatDate)!
     }
 }
