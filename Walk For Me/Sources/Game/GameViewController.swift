@@ -86,6 +86,7 @@ final class GameViewController: UIViewController {
         potatoeQuantityLabel.text = "\(coreDataManager?.game?.potatoeAmount ?? "0")"
         tomatoesQuantityLabel.text = "\(coreDataManager?.game?.tomatoeAmount ?? "0")"
         gardenImages = coreDataManager?.game?.imagesCell ?? [String]()
+        gardenImagesTime = coreDataManager?.game?.gardenTimeInterval ?? [String]()
     }
     
     private func displayAlert(tag: Int, title: String, information: @escaping (String?) -> Void) {
