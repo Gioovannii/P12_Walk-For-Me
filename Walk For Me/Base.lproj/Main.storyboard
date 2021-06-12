@@ -90,24 +90,35 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rog-s1-SJu">
-                                                    <rect key="frame" x="30" y="11" width="85" height="28"/>
+                                                    <rect key="frame" x="30" y="11" width="84.5" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoS-4H-5U9">
-                                                    <rect key="frame" x="383.5" y="16" width="10.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-AQ-PhK">
+                                                    <rect key="frame" x="357" y="11" width="37" height="28"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoS-4H-5U9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="10.5" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-zy-pRM" userLabel="xp">
+                                                            <rect key="frame" x="18.5" y="0.0" width="18.5" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CoS-4H-5U9" firstAttribute="top" secondItem="3m6-Zz-RIi" secondAttribute="topMargin" constant="5" id="Lww-N1-7M1"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="CoS-4H-5U9" secondAttribute="bottom" constant="5" id="RHV-km-GfS"/>
+                                                <constraint firstItem="cKX-AQ-PhK" firstAttribute="bottom" secondItem="Rog-s1-SJu" secondAttribute="bottom" id="5ZY-v1-eYf"/>
+                                                <constraint firstItem="cKX-AQ-PhK" firstAttribute="centerY" secondItem="Rog-s1-SJu" secondAttribute="centerY" id="JHS-6M-dfo"/>
+                                                <constraint firstItem="cKX-AQ-PhK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rog-s1-SJu" secondAttribute="trailing" constant="8" symbolic="YES" id="Tj5-oB-tXf"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Rog-s1-SJu" secondAttribute="bottom" id="XZA-i4-XOT"/>
-                                                <constraint firstItem="CoS-4H-5U9" firstAttribute="trailing" secondItem="3m6-Zz-RIi" secondAttribute="trailingMargin" id="hDu-iS-3JJ"/>
-                                                <constraint firstItem="CoS-4H-5U9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rog-s1-SJu" secondAttribute="trailing" constant="8" symbolic="YES" id="raB-IC-1Jb"/>
+                                                <constraint firstAttribute="trailing" secondItem="cKX-AQ-PhK" secondAttribute="trailing" constant="20" id="nGk-oX-2jw"/>
                                                 <constraint firstItem="Rog-s1-SJu" firstAttribute="top" secondItem="3m6-Zz-RIi" secondAttribute="topMargin" id="u8M-ro-kvk"/>
                                                 <constraint firstItem="Rog-s1-SJu" firstAttribute="leading" secondItem="3m6-Zz-RIi" secondAttribute="leadingMargin" constant="10" id="zj8-xm-meP"/>
                                             </constraints>
