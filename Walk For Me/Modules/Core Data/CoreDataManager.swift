@@ -56,7 +56,7 @@ final class CoreDataManager {
             newGame.moneyAmount = moneyAmount
             newGame.paceAmount = paceAmount
             coreDataStack.saveContext()
-
+            
         } else {
             guard let currentGame = game else { return }
             currentGame.moneyAmount = moneyAmount
