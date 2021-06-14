@@ -65,12 +65,6 @@ final class CoreDataManager {
         }
     }
     
-    func deleteTrack() {
-        guard let currentGame = game else { return }
-        managedObjectContext.delete(currentGame)
-        coreDataStack.saveContext()
-    }
-    
     func saveVegetable(vegetableType: String, vegetableAmount: String, moneyAmount: String, isPlanting: Bool) {
         guard let currentGame = game else { return }
         
