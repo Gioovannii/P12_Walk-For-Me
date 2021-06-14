@@ -315,6 +315,16 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("selected item at \(indexPath.row)")
+        
+        let date = DateFormatter.getDateToString(from: Date(), dateStyle: .medium, timeStyle: .full)
+        print("current date \(date)")
+        print("get the saved time \(gardenImagesTime[indexPath.row])")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") 
+        dateFormatter.dateFormat = "MMM d, y 'at' h:mm:ss a zzzz"
+        let dateFromString = dateFormatter.date(from:date)!
+        print("Date from string \(dateFromString)")
     }
 }
 
