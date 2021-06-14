@@ -249,6 +249,7 @@ extension GameViewController {
     @objc func updateTimer() {
         if let fireDateDescription = timer?.fireDate.description { print("*\(fireDateDescription)") }
     }
+    
     func createTimer() {
         if timer == nil {
             let utcTime = DateFormatter.utcLocalizedString(from: Date(), dateStyle: .long, timeStyle: .long)
@@ -312,7 +313,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.vegetableImageView.image = UIImage(named: gardenImages[indexPath.row])
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("selected item at \(indexPath.row)")
     }
