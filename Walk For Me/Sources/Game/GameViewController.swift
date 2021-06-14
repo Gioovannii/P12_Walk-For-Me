@@ -256,7 +256,6 @@ extension GameViewController {
             let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
             
             timer.tolerance = 0.1
-            
             self.timer = timer
             print(timer)
             print(utcTime)
