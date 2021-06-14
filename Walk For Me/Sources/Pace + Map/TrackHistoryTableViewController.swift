@@ -107,7 +107,6 @@ final class TrackHistoryTableViewController: UITableViewController {
         trackMapped.removeAll()
         playButton.isEnabled = false
         clearButton.isEnabled = false
-        coreDataManager?.deleteTrack()
         tableView.reloadData()
     }
     
