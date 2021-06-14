@@ -257,8 +257,11 @@ extension GameViewController {
             
             timer.tolerance = 0.1
             self.timer = timer
-            print(timer)
-            print(utcTime)
+            
+            print("** UTC \(utcTime)")
+            gardenImagesTime.append(contentsOf: repeatElement(utcTime, count: gardenImagesCount))
+            coreDataManager?.saveTimeInterval(gardenTimeInterval: gardenImagesTime)
+            cancelTimer()
         }
     }
     
