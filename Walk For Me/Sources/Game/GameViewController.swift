@@ -252,12 +252,9 @@ extension GameViewController {
     
     func createTimer() {
         if timer == nil {
-            let utcTime = DateFormatter.utcLocalizedString(from: Date(), dateStyle: .long, timeStyle: .long)
-            let time = Date().timeIntervalSince(<#T##date: Date##Date#>)
-            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            let utcTime = DateFormatter.getDateToString(from: Date(), dateStyle: .short, timeStyle: .long)
+            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
             
-            
-            RunLoop.current.add(timer, forMode: .common)
             timer.tolerance = 0.1
             
             self.timer = timer
