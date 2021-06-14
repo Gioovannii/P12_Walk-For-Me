@@ -247,7 +247,7 @@ final class GameViewController: UIViewController {
 
 extension GameViewController {
     @objc func updateTimer() {
-        if let fireDateDescription = timer?.fireDate.description { print(fireDateDescription) }
+        if let fireDateDescription = timer?.fireDate.description { print("*\(fireDateDescription)") }
     }
     func createTimer() {
         if timer == nil {
