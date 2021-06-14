@@ -68,7 +68,6 @@ final class GameViewController: UIViewController {
         super.viewWillDisappear(animated)
         coreDataManager?.saveCell(images: gardenImages)
         
-       
     }
     
     func updateUI(total: GameEntity) {
