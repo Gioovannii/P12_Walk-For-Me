@@ -54,12 +54,6 @@ final class GameViewController: UIViewController {
         print("Cereales \(coreDataManager.game?.wheatAmount ?? "0")")
         print("patates \(coreDataManager.game?.potatoeAmount ?? "0")")
         print("Tomatoe \(coreDataManager.game?.tomatoeAmount ?? "0")")
-        
-        
-        // TODO: - RetrieveTimeStamp with diference with timestamp when Disappear
-        print("Fetch gardenTime \(coreDataManager.game?.gardenTimeInterval ?? [])")
-        print("Fetch images \(coreDataManager.game?.imagesCell ?? [])")
-
     }
     
     override func viewDidLoad() {
