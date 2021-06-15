@@ -9,7 +9,7 @@ import Foundation
 
 extension DateFormatter {
     
-    static func getDateToString(from: Date, dateStyle: Style, timeStyle: Style) -> String {
+    static func getDateToString(from: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = dateStyle
         dateFormatter.timeStyle = timeStyle
