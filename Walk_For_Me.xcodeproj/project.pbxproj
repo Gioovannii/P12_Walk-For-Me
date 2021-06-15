@@ -27,6 +27,7 @@
 		7B90593C25CBFD62006E09DF /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */; };
 		7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */; };
 		7B9C38542672500E0071AD13 /* DateFormater + convertUTCTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C38532672500E0071AD13 /* DateFormater + convertUTCTime.swift */; };
+		7BA101A426789D1D00151FC0 /* TimeInterval + getStringReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA101A326789D1D00151FC0 /* TimeInterval + getStringReadable.swift */; };
 		7BA18A30264516900064DC92 /* VegetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA18A2E264516900064DC92 /* VegetableCell.swift */; };
 		7BF54A0625BFD53F00D1F005 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF54A0525BFD53F00D1F005 /* Constant.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
 		7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfilController.swift; sourceTree = "<group>"; };
 		7B9C38532672500E0071AD13 /* DateFormater + convertUTCTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormater + convertUTCTime.swift"; sourceTree = "<group>"; };
+		7BA101A326789D1D00151FC0 /* TimeInterval + getStringReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval + getStringReadable.swift"; sourceTree = "<group>"; };
 		7BA18A2E264516900064DC92 /* VegetableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableCell.swift; sourceTree = "<group>"; };
 		7BF54A0525BFD53F00D1F005 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +264,7 @@
 				7B8A119625C53D98004321AB /* Double + removeZero.swift */,
 				7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */,
 				7B9C38532672500E0071AD13 /* DateFormater + convertUTCTime.swift */,
+				7BA101A326789D1D00151FC0 /* TimeInterval + getStringReadable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				7B8A119725C53D98004321AB /* Double + removeZero.swift in Sources */,
 				7B86D2DC25D788E100D50917 /* CoreDataStack.swift in Sources */,
 				7B65725325B183E100940F65 /* AppDelegate.swift in Sources */,
+				7BA101A426789D1D00151FC0 /* TimeInterval + getStringReadable.swift in Sources */,
 				7B65725525B183E100940F65 /* SceneDelegate.swift in Sources */,
 				7B24410225BC11F3001B5654 /* MapViewController.swift in Sources */,
 				7B02826325D4DAD300D63F5E /* GameViewController.swift in Sources */,
