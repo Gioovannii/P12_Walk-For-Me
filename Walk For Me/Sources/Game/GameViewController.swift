@@ -313,7 +313,10 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let dateSaved = DateFormatter.getDateFromString(date: gardenImagesTime[indexPath.row])
         print(dateSaved)
-       
+        
+        let timeInSecondsSinceNow = dateSaved.timeIntervalSinceNow
+        guard let timeIntervalToDouble = Double(timeInSecondsSinceNow.description) else { return }
+        
     }
 }
 
