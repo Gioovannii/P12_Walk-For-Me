@@ -311,7 +311,9 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         print("Pressed at \(indexPath.row)")
         print("get the saved time => \(gardenImagesTime[indexPath.row])")
         
-   
+        let dateSaved = DateFormatter.getDateFromString(date: gardenImagesTime[indexPath.row])
+        print(dateSaved)
+       
     }
 }
 
