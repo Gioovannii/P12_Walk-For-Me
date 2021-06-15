@@ -316,7 +316,10 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let timeInSecondsSinceNow = dateSaved.timeIntervalSinceNow
         guard let timeIntervalToDouble = Double(timeInSecondsSinceNow.description) else { return }
-        
+        print(timeIntervalToDouble)
+        print(timeIntervalToDouble.clean)
+        let time = timeInSecondsSinceNow.stringFromTimeInterval()
+        print(time)
     }
 }
 
