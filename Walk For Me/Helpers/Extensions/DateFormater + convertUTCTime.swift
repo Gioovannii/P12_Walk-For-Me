@@ -11,9 +11,8 @@ extension DateFormatter {
     
     static func getDateToString(from: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = dateStyle
-        dateFormatter.timeStyle = timeStyle
-       
+        dateFormatter.dateFormat = "yyyy-MM-dd', 'HH:mm:ss ZZZZZ "
+        
         return dateFormatter.string(from: from)
     }
     
