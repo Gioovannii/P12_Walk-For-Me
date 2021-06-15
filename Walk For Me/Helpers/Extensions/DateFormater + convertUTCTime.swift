@@ -17,11 +17,14 @@ extension DateFormatter {
     }
     
     
-    func getDateFromString(isoDate: String)-> Date {
+    static func getDateFromString(date: String) -> Date {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .full
         dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.dateFormat = "MMM d, y 'at' h:mm:ss a zzzz"
-        let date = dateFormatter.date(from:isoDate)!
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC+8")
+        dateFormatter.dateFormat = "yyyy-MM-dd', 'HH:mm:ss ZZZZZ"
+        guard let date = dateFormatter.date(from:date) else { fatalError() }
         return date
     }
 }
