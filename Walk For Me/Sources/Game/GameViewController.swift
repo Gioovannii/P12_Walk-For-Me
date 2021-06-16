@@ -257,11 +257,6 @@ extension GameViewController {
             coreDataManager?.saveTimeInterval(gardenTimeInterval: gardenImagesTime)
         }
     }
-    
-    func cancelTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
 }
 
 // MARK: - Picker Delegate
