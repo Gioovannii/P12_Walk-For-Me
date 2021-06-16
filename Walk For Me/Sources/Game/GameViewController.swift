@@ -7,6 +7,13 @@
 
 import UIKit
 
+
+enum Vegetable: String {
+    case wheat = "céréales"
+    case potatoes = "pomme de terre"
+    case tomatoes = "tomates"
+}
+
 final class GameViewController: UIViewController {
     
     // MARK: - Outlets
