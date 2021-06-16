@@ -72,8 +72,10 @@ final class GameViewController: UIViewController {
     }
     
     func updateUI(total: GameEntity) {
-        paceNumberLabel.text = "\(coreDataManager?.game?.paceAmount ?? "0")"
-        moneyNumberLabel.text = "\(coreDataManager?.game?.moneyAmount ?? "0")"
+//        paceNumberLabel.text = "\(coreDataManager?.game?.paceAmount ?? "0")"
+//        moneyNumberLabel.text = "\(coreDataManager?.game?.moneyAmount ?? "0")"
+      
+
         squareMeterNumberLabel.text = "0"
         
         wheatQuantityLabel.text = "\(coreDataManager?.game?.wheatAmount ?? "0")"
@@ -147,7 +149,7 @@ final class GameViewController: UIViewController {
                 var total = 0
                 switch info {
                 case "céréales":
-                    total =  amountConverted * 10
+                    total = amountConverted * 10
                 case "pomme de terre":
                     total = amountConverted * 20
                 case "tomates":
