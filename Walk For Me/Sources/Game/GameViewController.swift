@@ -68,6 +68,8 @@ final class GameViewController: UIViewController {
         
     }
     
+    // MARK: - Load informations
+
     func updateUI(total: GameEntity) {
         var result = ""
         if coreDataManager?.game?.moneyAmount == nil {
