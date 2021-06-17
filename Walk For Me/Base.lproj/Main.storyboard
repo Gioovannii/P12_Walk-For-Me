@@ -325,14 +325,10 @@
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="bottom" secondItem="9Vi-9R-4hx" secondAttribute="bottom" id="DMC-C9-HFP"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="top" secondItem="Oe9-tL-LBE" secondAttribute="bottom" constant="8" id="Dpn-9X-yD0"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="Gj1-Uk-Rid"/>
-                            <constraint firstItem="aOS-pa-l8c" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="H1y-PG-SM8"/>
-                            <constraint firstItem="7fV-a6-zhB" firstAttribute="trailing" secondItem="aOS-pa-l8c" secondAttribute="trailing" id="IYl-PV-i3O"/>
-                            <constraint firstItem="7fV-a6-zhB" firstAttribute="top" secondItem="aOS-pa-l8c" secondAttribute="bottom" constant="10" id="Pjv-lW-tZo"/>
+                            <constraint firstItem="7fV-a6-zhB" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="10" id="REE-yV-jln"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="top" secondItem="7fV-a6-zhB" secondAttribute="bottom" constant="10" id="Xsb-2B-WYd"/>
-                            <constraint firstItem="aOS-pa-l8c" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="10" id="aCc-5m-cHD"/>
                             <constraint firstItem="zf3-ia-5n3" firstAttribute="trailing" secondItem="7fV-a6-zhB" secondAttribute="trailing" id="hzS-7H-3bT"/>
                             <constraint firstItem="Oe9-tL-LBE" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="kal-Ju-wVy"/>
-                            <constraint firstItem="zf3-ia-5n3" firstAttribute="trailing" secondItem="aOS-pa-l8c" secondAttribute="trailing" id="oh4-UZ-uLz"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="trailing" secondItem="9Vi-9R-4hx" secondAttribute="trailing" constant="-20" id="q0C-MH-oaN"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="sUf-HC-daW"/>
                             <constraint firstItem="9Vi-9R-4hx" firstAttribute="trailing" secondItem="TZj-Ii-dg2" secondAttribute="trailing" constant="20" id="u3c-vb-yY7"/>
