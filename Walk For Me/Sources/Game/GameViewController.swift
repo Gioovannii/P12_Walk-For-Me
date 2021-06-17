@@ -17,7 +17,6 @@ enum Vegetable: String {
 final class GameViewController: UIViewController {
     
     // MARK: - Outlets
-    
     @IBOutlet weak private var slotButton1: UIButton!
     @IBOutlet weak private var slotButton2: UIButton!
     @IBOutlet weak private var slotButton3: UIButton!
@@ -35,7 +34,6 @@ final class GameViewController: UIViewController {
     
     
     // MARK: - Properties
-    
     private var coreDataManager: CoreDataManager?
     private var timer: Timer?
     private var currentValue = ""
@@ -46,7 +44,6 @@ final class GameViewController: UIViewController {
     private var gardenImagesCount = 0
     
     // MARK: - LifeCycle
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
