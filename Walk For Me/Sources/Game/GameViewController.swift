@@ -64,11 +64,6 @@ final class GameViewController: UIViewController {
     // MARK: - Load informations
 
     func updateUI(total: GameEntity) {
-        var result = ""
-        if coreDataManager?.game?.moneyAmount == nil {
-            result = (coreDataManager?.game?.paceAmount ?? "0")
-        } else { result = (coreDataManager?.game?.paceAmount ?? "0") }
-        let getMoneyFromPace = result
         
         moneyNumberLabel.text = String(getMoneyFromPace)
         squareMeterNumberLabel.text = "0"
