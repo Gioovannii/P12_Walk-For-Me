@@ -106,8 +106,8 @@ final class GameViewController: UIViewController {
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
         
         displayAlert(tag: 2, title: "Que souhaites-tu acheter ?") { information in
-            guard var info = information else { return }
-            if information == "" { info = "céréales"} else { info = information ?? "" }
+            guard var info = information else { fatalError() }
+            if information == "" { info = Constant.wheat } else { info = information ?? "" }
             
             self.displayExchangeAlert(type: info, placeHolder: "Nombre de légumes") { [weak self] amountVegies in
                 guard amountVegies != "" else {
@@ -121,11 +121,11 @@ final class GameViewController: UIViewController {
                 
                 var total = 0
                 switch info {
-                case "céréales":
+                case Constant.wheat:
                     total = amountConverted * 10
-                case "pomme de terre":
+                case Constant.potatoe:
                     total = amountConverted * 20
-                case "tomates":
+                case Constant.tomatoe:
                     total = amountConverted * 30
                 default:
                     break
@@ -141,11 +141,11 @@ final class GameViewController: UIViewController {
                 switch information {
                 case "":
                     fallthrough
-                case "céréales":
+                case Constant.wheat:
                     self?.wheatQuantityLabel.text = self?.coreDataManager?.game?.wheatAmount
-                case "pomme de terre":
+                case Constant.potatoe:
                     self?.potatoeQuantityLabel.text = self?.coreDataManager?.game?.potatoeAmount
-                case "tomates":
+                case Constant.tomatoe:
                     self?.tomatoesQuantityLabel.text = self?.coreDataManager?.game?.tomatoeAmount
                 default:
                     break
@@ -165,7 +165,7 @@ final class GameViewController: UIViewController {
         
         displayAlert(tag: 1, title: "Que souhaitez vous planter ?") { information in
             guard var info = information else { return }
-            if information == "" { info = "céréales"} else { info = information ?? "" }
+            if information == "" { info = Constant.wheat } else { info = information ?? "" }
             
             self.displayExchangeAlert(type: info, placeHolder: "Nombre de légumes") { amount in
                 
@@ -180,22 +180,22 @@ final class GameViewController: UIViewController {
                 switch information {
                 case "":
                     fallthrough
-                case "céréales":
-                    self.checkIfOverAmount(amount: amount, product: wheatAmount, image: "homeImage4Wheat")
+                case Constant.wheat:
+                    self.checkIfOverAmount(amount: amount, product: wheatAmount, image: Constant.wheatImage)
                     wheatAmount -= amount
-                    self.coreDataManager?.saveVegetable(vegetableType: "céréales", vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+                    self.coreDataManager?.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
                     self.wheatQuantityLabel.text = self.coreDataManager?.game?.wheatAmount
                     
-                case "pomme de terre":
-                    self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: "homeImage5Potatoe")
+                case Constant.potatoe:
+                    self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: Constant.potatoeImage)
                     potatoeAmount -= amount
-                    self.coreDataManager?.saveVegetable(vegetableType: "pomme de terre", vegetableAmount: "\(potatoeAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+                    self.coreDataManager?.saveVegetable(vegetableType: Constant.potatoe, vegetableAmount: "\(potatoeAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
                     self.potatoeQuantityLabel.text = self.coreDataManager?.game?.potatoeAmount
                     
-                case "tomates":
-                    self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: "homeImage6Tomato")
+                case Constant.tomatoe:
+                    self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: Constant.tomatoeImage)
                     tomatoeAmount -= amount
-                    self.coreDataManager?.saveVegetable(vegetableType: "tomates", vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+                    self.coreDataManager?.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
                     self.potatoeQuantityLabel.text = self.coreDataManager?.game?.tomatoeAmount
                     
                 default:
