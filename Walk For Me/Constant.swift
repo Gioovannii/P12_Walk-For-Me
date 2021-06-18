@@ -12,6 +12,15 @@ struct Constant {
     static let walkCell = "Walk Cell"
     static let cellToMap = "CellToMap"
     static let reuseIdentifier = "VegetableCell"
+    
+    static let wheat = "céréale"
+    static let potatoe = "pomme de terre"
+    static let tomatoe = "tomate"
+    
+    static let wheatImage = "homeImage4Wheat"
+    static let potatoeImage = "homeImage5Potatoe"
+    static let tomatoeImage = "homeImage6Tomato"
+    
     struct Config {
         // TODO: - Here we can do so key privacy
 
