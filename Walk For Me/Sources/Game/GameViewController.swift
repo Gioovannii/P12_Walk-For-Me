@@ -30,8 +30,8 @@ final class GameViewController: UIViewController {
     private var coreDataManager: CoreDataManager?
     private var timer: Timer?
     private var currentValue = ""
-    private var vegetableChoice = ["céréales", "pomme de terre", "tomates"]
-    private var vegetableChoiceMoney = ["céréales 10💰 ", "pomme de terre 20💰", "tomates 30💰"]
+    private var vegetableChoice = [Constant.wheat, Constant.potatoe, Constant.tomatoe]
+    private var vegetableChoiceMoney = [ Constant.wheat + " 10💰 ", Constant.potatoe + " 20💰",  Constant.tomatoe + " 30💰"]
     private var gardenImages = [String]()
     private var gardenImagesTime = [String]()
     private var gardenImagesCount = 0
