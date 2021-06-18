@@ -209,7 +209,7 @@ final class GameViewController: UIViewController {
     
     func checkIfOverAmount(amount: Int, product: Int, image: String) {
         if amount > product {
-            presentAlert(title: "Attention", message: "Il te faut plus ", actionTitle: "OK")
+            presentAlert(title: "Attention", message: "Il t'en faut plus ", actionTitle: "OK")
         } else {
             gardenImages.append(contentsOf: repeatElement(image, count: amount))
             createTimer()
