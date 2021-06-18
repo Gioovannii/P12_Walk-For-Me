@@ -65,7 +65,8 @@ final class GameViewController: UIViewController {
 
     func updateUI(total: GameEntity) {
         
-        moneyNumberLabel.text = String(getMoneyFromPace)
+        let result = coreDataManager?.game?.moneyAmount ?? "0"
+        moneyNumberLabel.text = result
         squareMeterNumberLabel.text = "0"
         
         wheatQuantityLabel.text = "\(coreDataManager?.game?.wheatAmount ?? "0")"
