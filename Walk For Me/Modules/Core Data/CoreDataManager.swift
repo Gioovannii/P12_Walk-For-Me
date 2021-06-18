@@ -73,7 +73,7 @@ final class CoreDataManager {
         guard var tomatoeAmount = Int(currentGame.tomatoeAmount ?? "0") else { return }
         
         switch vegetableType {
-        case "céréales":
+        case Constant.wheat:
             if isPlanting {
                 currentGame.wheatAmount = "\(vegetableAmount)"
             } else { wheatAmount += Int(vegetableAmount) ?? 0
