@@ -24,7 +24,7 @@ extension DateFormatter {
         dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC+8")
         dateFormatter.dateFormat = "yyyy-MM-dd', 'HH:mm:ss ZZZZZ"
-        guard let date = dateFormatter.date(from:date) else { fatalError() }
+        guard let date = dateFormatter.date(from:date) else { fatalError(#function, file: #file, line: #line) }
         return date
     }
 }
