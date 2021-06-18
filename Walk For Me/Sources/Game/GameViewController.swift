@@ -110,7 +110,7 @@ final class GameViewController: UIViewController {
                     self?.currentValue = ""
                     return
                 }
-                
+            
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0"),
                       let amountConverted = Int(amountVegies ?? "0")  else { return }
                 
