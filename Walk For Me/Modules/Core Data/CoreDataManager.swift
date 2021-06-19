@@ -90,7 +90,7 @@ final class CoreDataManager {
             if isPlanting { currentGame.tomatoeAmount = "\(vegetableAmount)"
             } else { tomatoeAmount += Int(vegetableAmount) ?? 0
                 currentGame.tomatoeAmount = "\(tomatoeAmount)"
-                currentGame.moneyAmount = moneyAmount
+                currentGame.paceAmount = moneyAmount
             }
         default:
             break
