@@ -50,7 +50,7 @@ final class CoreDataManager {
     }
     
     // MARK: - Game
-    func saveData(paceAmount: String, moneyAmount: String) {
+    func saveData(paceAmount: String) {
         if game == nil {
             let newGame = GameEntity(context: managedObjectContext)
             newGame.moneyAmount = moneyAmount
