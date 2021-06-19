@@ -113,7 +113,7 @@ final class GameViewController: UIViewController {
                     return
                 }
             
-                guard var moneyNumber = Int(self?.coreDataManager?.game?.moneyAmount ?? "0"),
+                guard var moneyNumber = Int(self?.coreDataManager?.game?.paceAmount ?? "0"),
                       let amountConverted = Int(amountVegies ?? "0")  else { return }
                 
                 print("Money number befor to sum \(moneyNumber) ")
