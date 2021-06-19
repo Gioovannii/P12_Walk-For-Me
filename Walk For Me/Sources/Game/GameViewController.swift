@@ -201,7 +201,8 @@ final class GameViewController: UIViewController {
                 case Constant.tomatoe:
                     self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: Constant.tomatoeImage)
                     tomatoeAmount -= amount
-                    self.coreDataManager?.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.moneyAmount ?? "0", isPlanting: true)
+
+                    self.coreDataManager?.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
                     self.potatoeQuantityLabel.text = self.coreDataManager?.game?.tomatoeAmount
                     
                 default:
