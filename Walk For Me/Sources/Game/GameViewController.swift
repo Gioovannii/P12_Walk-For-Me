@@ -138,7 +138,9 @@ final class GameViewController: UIViewController {
                 }
                 moneyNumber -= total
                 self?.coreDataManager?.saveVegetable(vegetableType: info, vegetableAmount: "\(amountConverted)", moneyAmount: "\(moneyNumber)", isPlanting: false)
-                self?.moneyNumberLabel.text = self?.coreDataManager?.game?.moneyAmount
+                
+                self?.moneyNumberLabel.text = self?.coreDataManager?.game?.paceAmount
+
                 switch information {
                 case "":
                     fallthrough
