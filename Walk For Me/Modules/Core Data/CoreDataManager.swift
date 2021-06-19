@@ -83,7 +83,7 @@ final class CoreDataManager {
             if isPlanting { currentGame.potatoeAmount = "\(vegetableAmount)"
             } else { potatoeAmount += Int(vegetableAmount) ?? 0
                 currentGame.potatoeAmount = "\(potatoeAmount)"
-                currentGame.moneyAmount = moneyAmount
+                currentGame.paceAmount = moneyAmount
             }
             
         case Constant.tomatoe:
