@@ -126,9 +126,6 @@ final class GameViewController: UIViewController {
                 }
                 
                 guard moneyNumber >= total else {
-                    print("money \(moneyNumber) total \(total) after sum ")
-                    print(moneyNumber)
-                    print(total)
                     self?.presentAlert(title: "Attention", message: "Vous ne pouvez pas acheter ", actionTitle: "OK")
                     return
                 }
