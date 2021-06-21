@@ -288,7 +288,6 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         print("get the saved time => \(gardenImagesTime[indexPath.row])")
         
         let dateSaved = DateFormatter.getDateFromString(date: gardenImagesTime[indexPath.row])
-        print(dateSaved)
         
         let timeInSecondsSinceNow = abs(Double(dateSaved.timeIntervalSinceNow))
         let time = timeInSecondsSinceNow.stringFromTimeInterval()
