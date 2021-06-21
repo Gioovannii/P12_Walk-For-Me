@@ -290,8 +290,39 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let dateSaved = DateFormatter.getDateFromString(date: gardenImagesTime[indexPath.row])
         
         let timeInSecondsSinceNow = abs(Double(dateSaved.timeIntervalSinceNow))
-        let time = timeInSecondsSinceNow.stringFromTimeInterval()
-        print(time)
+        let time = timeInSecondsSinceNow.intFromTimeInterval()
+        
+        print(timeInSecondsSinceNow)
+        print(time, " min")
+        let currentImageType = gardenImages[indexPath.row]
+        print(currentImageType)
+        
+        checkimages(currentImageType: currentImageType, currentTime: time, row: indexPath.row, indexPath: indexPath)
+    }
+    
+    func checkimages(currentImageType: String, currentTime: Int, row: Int, indexPath: IndexPath) {
+        /// Time for each vegetable
+        let targetWheat = 1
+        let targetPotatoe = 2
+        let targetTomatoe = 3
+        
+        switch currentImageType {
+        case Constant.wheatImage:
+            if currentTime >= targetWheat {
+                coreDataManager?.removeImageAndTime(index: row)
+            } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
+            
+        case Constant.potatoeImage:
+            if currentTime >= targetPotatoe {
+                coreDataManager?.removeImageAndTime(index: row)
+            } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
+        case Constant.tomatoeImage:
+            if currentTime >= targetTomatoe {
+                coreDataManager?.removeImageAndTime(index: row)
+            } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
+        default:
+            collectionView.reloadData()
+        }
     }
 }
 
