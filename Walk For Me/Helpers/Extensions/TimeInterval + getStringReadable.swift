@@ -13,8 +13,6 @@ extension TimeInterval {
     func intFromTimeInterval() -> Int {
 
             let time = NSInteger(self)
-            
-            let seconds = time % 60
             let minutes = (time / 60) % 60
             let hours = (time / 3600)
 
