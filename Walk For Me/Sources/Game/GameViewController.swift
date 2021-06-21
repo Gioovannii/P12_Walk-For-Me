@@ -113,7 +113,6 @@ final class GameViewController: UIViewController {
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.paceAmount ?? "0"),
                       let amountConverted = Int(amountVegies ?? "0")  else { return }
                 
-                print("Money number befor to sum \(moneyNumber) ")
                 var total = 0
                 switch info {
                 case Constant.wheat:
