@@ -14,9 +14,8 @@ extension TimeInterval {
 
             let time = NSInteger(self)
             let minutes = (time / 60) % 60
-            let hours = (time / 3600)
 
-            return String(format: "%0.2dh %0.2dm %0.2ds",hours,minutes,seconds)
-
+//            return String(format: "%0.2d ",minutes)
+            return minutes
         }
     }
