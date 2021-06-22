@@ -58,7 +58,7 @@ final class GameViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         coreDataManager?.saveCell(images: gardenImages)
-        
+        print("View disapear \(coreDataManager?.game?.gardenTimeInterval)")
     }
     
     // MARK: - Load informations
