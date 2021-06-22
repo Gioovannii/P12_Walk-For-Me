@@ -55,12 +55,6 @@ final class GameViewController: UIViewController {
         collectionView.delegate = self
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        coreDataManager?.saveCell(images: gardenImages)
-        print("View disapear \(coreDataManager?.game?.gardenTimeInterval)")
-    }
-    
     // MARK: - Load informations
     
     func updateUI(total: GameEntity) {
