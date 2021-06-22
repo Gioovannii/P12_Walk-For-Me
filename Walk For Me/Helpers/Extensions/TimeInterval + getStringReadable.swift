@@ -9,13 +9,11 @@ import Foundation
 
 extension TimeInterval {
 
-//        func stringFromTimeInterval() -> String {
     func intFromTimeInterval() -> Int {
 
             let time = NSInteger(self)
             let minutes = (time / 60) % 60
 
-//            return String(format: "%0.2d ",minutes)
             return minutes
         }
     }
