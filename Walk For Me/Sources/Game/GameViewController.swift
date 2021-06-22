@@ -310,6 +310,9 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch currentImageType {
         case Constant.wheatImage:
             if currentTime >= targetWheat {
+                print("Can be delete")
+                gardenImages.remove(at: row)
+                print("removed \(gardenImages)")
                 coreDataManager?.removeImageAndTime(index: row)
             } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
             
