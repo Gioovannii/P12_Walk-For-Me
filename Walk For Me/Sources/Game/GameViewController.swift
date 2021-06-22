@@ -121,6 +121,7 @@ final class GameViewController: UIViewController {
                 
                 guard moneyNumber >= total else {
                     self?.presentAlert(title: "Attention", message: "Vous ne pouvez pas acheter ", actionTitle: "OK")
+
                     return
                 }
                 moneyNumber -= total
@@ -204,6 +205,8 @@ final class GameViewController: UIViewController {
     func checkIfOverAmount(amount: Int, product: Int, image: String) {
         if amount > product {
             presentAlert(title: "Attention", message: "Il t'en faut plus ", actionTitle: "OK")
+            
+            return
         } else {
             gardenImages.append(contentsOf: repeatElement(image, count: amount))
             createTimer()
@@ -318,6 +321,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Constant.tomatoeImage:
             if currentTime >= targetTomatoe {
                 coreDataManager?.removeImageAndTime(index: row)
+                
             } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
         default:
             collectionView.reloadData()
