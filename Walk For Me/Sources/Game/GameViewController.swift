@@ -242,7 +242,7 @@ extension GameViewController {
     }
 }
 
-// MARK: - Picker Delegate
+// MARK: - Picker Data Source / Delegate
 
 extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { 1 }
@@ -267,7 +267,7 @@ func checkRow(pickerArray: [String], row: Int) -> String {
     return pickerArray[row]
 }
 
-// MARK: - Collection Delegate
+// MARK: - Collection DataSource / Delegate
 
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
