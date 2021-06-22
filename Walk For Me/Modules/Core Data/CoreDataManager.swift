@@ -106,7 +106,6 @@ final class CoreDataManager {
     
     func removeImageAndTime(index: Int) {
         guard let currentGame = game else { return }
-        currentGame.gardenTimeInterval?.remove(at: index)
         currentGame.imagesCell?.remove(at: index)
         coreDataStack.saveContext()
     }
