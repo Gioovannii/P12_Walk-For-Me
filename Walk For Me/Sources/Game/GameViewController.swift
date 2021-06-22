@@ -319,6 +319,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case Constant.potatoeImage:
             if currentTime >= targetPotatoe {
                 coreDataManager?.removeImageAndTime(index: row)
+
             } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
         case Constant.tomatoeImage:
             if currentTime >= targetTomatoe {
