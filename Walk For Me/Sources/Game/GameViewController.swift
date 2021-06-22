@@ -237,6 +237,7 @@ extension GameViewController {
             print("** UTC \(utcTime)")
             gardenImagesTime.append(contentsOf: repeatElement(utcTime, count: gardenImagesCount))
             coreDataManager?.saveTimeInterval(gardenTimeInterval: gardenImagesTime)
+            timer.invalidate()
         }
     }
 }
