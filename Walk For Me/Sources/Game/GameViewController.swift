@@ -169,31 +169,31 @@ final class GameViewController: UIViewController {
                 case "":
                     fallthrough
                 case Constant.wheat:
-                    self.checkIfOverAmount(amount: amount, product: wheatAmount, image: Constant.wheatImage)
-                    wheatAmount -= amount
+                    if self.checkIfOverAmount(amount: amount, product: wheatAmount, image: Constant.wheatImage) {
+                        wheatAmount -= amount
                     
                     self.coreDataManager?.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
                     
                     self.wheatQuantityLabel.text = self.coreDataManager?.game?.wheatAmount
-                    
+                    }
                 case Constant.potatoe:
-                    self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: Constant.potatoeImage)
-                    potatoeAmount -= amount
+                    if self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: Constant.potatoeImage) {
+                        potatoeAmount -= amount
                     
                     self.coreDataManager?.saveVegetable(vegetableType: Constant.potatoe, vegetableAmount: "\(potatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
                     self.potatoeQuantityLabel.text = self.coreDataManager?.game?.potatoeAmount
-                    
+                    }
                 case Constant.tomatoe:
-                    self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: Constant.tomatoeImage)
-                    tomatoeAmount -= amount
+                    if self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: Constant.tomatoeImage) {
+                        tomatoeAmount -= amount
                     
                     self.coreDataManager?.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
                     self.potatoeQuantityLabel.text = self.coreDataManager?.game?.tomatoeAmount
-                    
+                    }
                 default:
                     break
                 }
-                self.currentValue = ""
+                self.game.currentValue = ""
                 self.collectionView.reloadData()
             }
         }
