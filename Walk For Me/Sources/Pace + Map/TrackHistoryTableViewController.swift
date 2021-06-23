@@ -212,6 +212,9 @@ extension TrackHistoryTableViewController: CLLocationManagerDelegate {
             
             trackMapped[trackMapped.count - 1].totalPace = distanceRounded
             currentTrack.totalPace = distanceRounded
+            print(distanceRounded)
+            print(distanceInMeters)
+            print("Instead of pas in table view")
             tableView.reloadData()
             
             // Store Location temporary in array which will be use until user stop to save in Core Data
