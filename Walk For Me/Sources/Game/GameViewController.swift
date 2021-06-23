@@ -221,18 +221,18 @@ extension GameViewController {
     }
     
     func createTimer() {
-        if timer == nil {
-            let utcTime = DateFormatter.getDateToString(from: Date())
-            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
-            
-            timer.tolerance = 0.1
-            self.timer = timer
-            
-            print("** UTC \(utcTime)")
-            gardenImagesTime.append(contentsOf: repeatElement(utcTime, count: gardenImagesCount))
-            coreDataManager?.saveTimeInterval(gardenTimeInterval: gardenImagesTime)
-            timer.invalidate()
-        }
+        
+        let utcTime = DateFormatter.getDateToString(from: Date())
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
+        
+        timer.tolerance = 0.1
+        self.timer = timer
+        
+        print("** UTC \(utcTime)")
+        game.gardenImagesTime.append(contentsOf: repeatElement(utcTime, count: game.gardenImagesCount))
+        coreDataManager?.saveTimeInterval(gardenTimeInterval: game.gardenImagesTime)
+        print(game.gardenImagesTime)
+        
     }
 }
 
