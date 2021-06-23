@@ -242,31 +242,28 @@ extension GameViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { 1 }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 { return vegetableChoice.count
-        } else { return vegetableChoiceMoney.count }
+        if pickerView.tag == 1 { return game.vegetableChoice.count } else { return game.vegetableChoiceMoney.count }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 { return vegetableChoice[row]
-        } else { return vegetableChoiceMoney[row] }
+        if pickerView.tag == 1 { return game.vegetableChoice[row] } else { return game.vegetableChoiceMoney[row] }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 { currentValue = checkRow(pickerArray: vegetableChoice, row: row)
-        } else { currentValue = checkRow(pickerArray: vegetableChoice, row: row)}
+        if pickerView.tag == 1 { game.currentValue = checkRow(pickerArray: game.vegetableChoice, row: row) } else {
+            game.currentValue = checkRow(pickerArray: game.vegetableChoice, row: row)
+        }
     }
 }
 
-func checkRow(pickerArray: [String], row: Int) -> String {
-    return pickerArray[row]
-}
+func checkRow(pickerArray: [String], row: Int) -> String { return pickerArray[row] }
 
 // MARK: - Collection DataSource / Delegate
 
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gardenImages.isEmpty ? 0 : gardenImages.count
+        return game.gardenImages.isEmpty ? 0 : game.gardenImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -274,24 +271,27 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 10
-        cell.vegetableImageView.image = UIImage(named: gardenImages[indexPath.row])
+        cell.vegetableImageView.image = UIImage(named: game.gardenImages[indexPath.row])
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Pressed at \(indexPath.row)")
-        print("get the saved time => \(gardenImagesTime[indexPath.row])")
+        print("get the saved time => \(game.gardenImagesTime[indexPath.row])")
         
-        let dateSaved = DateFormatter.getDateFromString(date: gardenImagesTime[indexPath.row])
+        
+        let dateSaved = DateFormatter.getDateFromString(date: game.gardenImagesTime[indexPath.row])
+        
         
         let timeInSecondsSinceNow = abs(Double(dateSaved.timeIntervalSinceNow))
         let time = timeInSecondsSinceNow.intFromTimeInterval()
         
         print(timeInSecondsSinceNow)
         print(time, " min")
-        let currentImageType = gardenImages[indexPath.row]
-        print(currentImageType)
+        let currentImageType = game.gardenImages[indexPath.row]
         
+        print(currentImageType)
         checkimages(currentImageType: currentImageType, currentTime: time, row: indexPath.row, indexPath: indexPath)
     }
     
@@ -304,25 +304,35 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch currentImageType {
         case Constant.wheatImage:
             if currentTime >= targetWheat {
-                print("Can be delete")
-                gardenImages.remove(at: row)
-                print("removed \(gardenImages)")
+                game.gardenImages.remove(at: row)
+                game.gardenImagesTime.remove(at: row)
                 coreDataManager?.removeImageAndTime(index: row)
-            } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
+                collectionView.reloadData()
+            } else {
+                print(targetWheat - currentTime)
+                presentAlert(title: "Attention", message: "vous devez attendre encore \(targetWheat - currentTime) min pour collecter", actionTitle: "Compris")}
             
         case Constant.potatoeImage:
             if currentTime >= targetPotatoe {
+                game.gardenImages.remove(at: row)
+                game.gardenImagesTime.remove(at: row)
                 coreDataManager?.removeImageAndTime(index: row)
-
-            } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
+                collectionView.reloadData()
+            } else {
+                presentAlert(title: "Attention", message: "vous devez attendre encore \(targetPotatoe - currentTime) min pour collecter", actionTitle: "Compris")}
         case Constant.tomatoeImage:
             if currentTime >= targetTomatoe {
+                game.gardenImages.remove(at: row)
+                game.gardenImagesTime.remove(at: row)
                 coreDataManager?.removeImageAndTime(index: row)
-                
-            } else { presentAlert(title: "Attention", message: "vous devez attendre encore pour collecter", actionTitle: "Compris")}
+                collectionView.reloadData()
+            } else {
+                presentAlert(title: "Attention", message: "vous devez attendre encore \(targetTomatoe - currentTime) min pour collecter", actionTitle: "Compris")}
         default:
-            collectionView.reloadData()
+            return
         }
+        print(game.gardenImages)
+        print(game.gardenImagesTime)
     }
 }
 
