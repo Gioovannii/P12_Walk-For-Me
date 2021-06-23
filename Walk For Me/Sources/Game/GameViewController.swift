@@ -96,7 +96,7 @@ final class GameViewController: UIViewController {
             self.displayExchangeAlert(type: info, placeHolder: "Nombre de légumes") { [weak self] amountVegies in
                 guard amountVegies != "" else {
                     self?.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
-                    self?.currentValue = ""
+                    self?.game.currentValue = ""
                     return
                 }
                 
@@ -117,7 +117,7 @@ final class GameViewController: UIViewController {
                 
                 guard moneyNumber >= total else {
                     self?.presentAlert(title: "Attention", message: "Vous ne pouvez pas acheter ", actionTitle: "OK")
-
+                    
                     return
                 }
                 moneyNumber -= total
