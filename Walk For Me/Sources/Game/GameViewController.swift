@@ -138,7 +138,8 @@ final class GameViewController: UIViewController {
                     break
                 }
             }
-            self.currentValue = ""
+            self.game.currentValue = ""
+            
         }
     }
     
