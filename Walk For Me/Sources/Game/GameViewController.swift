@@ -159,12 +159,12 @@ final class GameViewController: UIViewController {
                 
                 guard amount != "" else {
                     self.presentAlert(title: "Attention", message: "Vous ne souhaitez rien acheter ?", actionTitle: "C'est OK")
-                    self.currentValue = ""
+                    self.game.currentValue = ""
                     return
                 }
                 
                 guard let amount = Int(amount ?? "0") else { return }
-                self.gardenImagesCount = amount
+                self.game.gardenImagesCount = amount
                 switch information {
                 case "":
                     fallthrough
