@@ -29,12 +29,7 @@ final class GameViewController: UIViewController {
     // MARK: - Properties
     private var coreDataManager: CoreDataManager?
     private var timer: Timer?
-    private var currentValue = ""
-    private var vegetableChoice = [Constant.wheat, Constant.potatoe, Constant.tomatoe]
-    private var vegetableChoiceMoney = [ Constant.wheat + " 10💰 ", Constant.potatoe + " 20💰",  Constant.tomatoe + " 30💰"]
-    private var gardenImages = [String]()
-    private var gardenImagesTime = [String]()
-    private var gardenImagesCount = 0
+    private var game = Game()
     
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
