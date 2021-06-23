@@ -199,16 +199,16 @@ final class GameViewController: UIViewController {
         }
     }
     
-    func checkIfOverAmount(amount: Int, product: Int, image: String) {
+    func checkIfOverAmount(amount: Int, product: Int, image: String) -> Bool {
         if amount > product {
             presentAlert(title: "Attention", message: "Il t'en faut plus ", actionTitle: "OK")
-            
-            return
+            return false
         } else {
-            gardenImages.append(contentsOf: repeatElement(image, count: amount))
+            game.gardenImages.append(contentsOf: repeatElement(image, count: amount))
             createTimer()
-            coreDataManager?.saveCell(images: gardenImages)
+            coreDataManager?.saveCell(images: game.gardenImages)
             collectionView.reloadData()
+            return true
         }
     }
 }
