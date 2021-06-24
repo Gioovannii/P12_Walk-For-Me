@@ -116,4 +116,12 @@ final class CoreDataManager {
         currentGame.gardenTimeInterval = gardenTimeInterval
         coreDataStack.saveContext()
     }
+    
+    func saveExperience(xp: Int) {
+        guard let currentGame = game else { return }
+        guard let xpToInt = Int(currentGame.experience ?? "0") else { return }
+        currentGame.experience = "\(xpToInt + xp)"
+        coreDataStack.saveContext()
+    }
+    
 }
