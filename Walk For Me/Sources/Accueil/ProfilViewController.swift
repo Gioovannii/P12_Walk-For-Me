@@ -15,8 +15,14 @@ final class ProfilViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
         tableView.tableFooterView = UIView()
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+        guard let coreDataManager = coreDataManager else { return }
+        self.coreDataManager = coreDataManager
+        
+        experience.text = coreDataManager.game?.experience
     }
     
     @IBAction func reminderSwitch(_ sender: UISwitch) {
