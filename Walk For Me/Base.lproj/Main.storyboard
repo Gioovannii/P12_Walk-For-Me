@@ -134,6 +134,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Accueil" largeTitleDisplayMode="always" id="VbU-L1-7ne"/>
                     <connections>
+                        <outlet property="experience" destination="CoS-4H-5U9" id="1q2-s4-Ove"/>
                         <outlet property="followSteps" destination="mZK-KV-Dcw" id="Z2B-8o-QSC"/>
                     </connections>
                 </tableViewController>
