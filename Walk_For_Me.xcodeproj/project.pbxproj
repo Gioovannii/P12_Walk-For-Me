@@ -15,7 +15,7 @@
 		7B65725A25B183E100940F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725825B183E100940F65 /* Main.storyboard */; };
 		7B65725C25B183E100940F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725B25B183E100940F65 /* Assets.xcassets */; };
 		7B65725F25B183E100940F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725D25B183E100940F65 /* LaunchScreen.storyboard */; };
-		7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* Walk_For_MeTests.swift */; };
+		7B65726A25B183E100940F65 /* ExtensionsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* ExtensionsTestCase.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
 		7B7C45D425EDD8310001AC2D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C45D325EDD8310001AC2D /* Game.swift */; };
 		7B825ABA25D94ACC00237BFD /* Walk_For_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B825AB825D94ACC00237BFD /* Walk_For_Me.xcdatamodeld */; };
@@ -27,6 +27,7 @@
 		7B90593C25CBFD62006E09DF /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */; };
 		7B922C5325B2DF3000A5C35D /* UpdateProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */; };
 		7B9C38542672500E0071AD13 /* DateFormater + convertUTCTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C38532672500E0071AD13 /* DateFormater + convertUTCTime.swift */; };
+		7B9D053A2684802200E78834 /* CoreDataManagerTestcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D05392684802200E78834 /* CoreDataManagerTestcase.swift */; };
 		7BA101A426789D1D00151FC0 /* TimeInterval + getStringReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA101A326789D1D00151FC0 /* TimeInterval + getStringReadable.swift */; };
 		7BA18A30264516900064DC92 /* VegetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA18A2E264516900064DC92 /* VegetableCell.swift */; };
 		7BF54A0625BFD53F00D1F005 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF54A0525BFD53F00D1F005 /* Constant.swift */; };
@@ -61,7 +62,7 @@
 		7B65725E25B183E100940F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B65726025B183E100940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B65726525B183E100940F65 /* Walk_For_MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walk_For_MeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B65726925B183E100940F65 /* Walk_For_MeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeTests.swift; sourceTree = "<group>"; };
+		7B65726925B183E100940F65 /* ExtensionsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTestCase.swift; sourceTree = "<group>"; };
 		7B65726B25B183E100940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B65727025B183E200940F65 /* Walk_For_MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walk_For_MeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		7B90593B25CBFD62006E09DF /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
 		7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfilController.swift; sourceTree = "<group>"; };
 		7B9C38532672500E0071AD13 /* DateFormater + convertUTCTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormater + convertUTCTime.swift"; sourceTree = "<group>"; };
+		7B9D05392684802200E78834 /* CoreDataManagerTestcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTestcase.swift; sourceTree = "<group>"; };
 		7BA101A326789D1D00151FC0 /* TimeInterval + getStringReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval + getStringReadable.swift"; sourceTree = "<group>"; };
 		7BA18A2E264516900064DC92 /* VegetableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableCell.swift; sourceTree = "<group>"; };
 		7BF54A0525BFD53F00D1F005 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -174,7 +176,8 @@
 		7B65726825B183E100940F65 /* Walk For MeTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B65726925B183E100940F65 /* Walk_For_MeTests.swift */,
+				7B65726925B183E100940F65 /* ExtensionsTestCase.swift */,
+				7B9D05392684802200E78834 /* CoreDataManagerTestcase.swift */,
 				7B65726B25B183E100940F65 /* Info.plist */,
 			);
 			path = "Walk For MeTests";
@@ -424,7 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B65726A25B183E100940F65 /* Walk_For_MeTests.swift in Sources */,
+				7B9D053A2684802200E78834 /* CoreDataManagerTestcase.swift in Sources */,
+				7B65726A25B183E100940F65 /* ExtensionsTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
