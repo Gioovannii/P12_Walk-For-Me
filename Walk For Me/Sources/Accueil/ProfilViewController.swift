@@ -25,17 +25,6 @@ final class ProfilViewController: UITableViewController {
         experience.text = coreDataManager.game?.experience
     }
     
-    @IBAction func reminderSwitch(_ sender: UISwitch) {
-            switch sender.isOn {
-            case true:
-                print("Activate Notifications")
-                reminderSwitch.isOn = true
-            case false:
-                print("Desativate notification")
-                reminderSwitch.isOn = false
-            }
-        }
-    
     @IBAction func followsteps(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
