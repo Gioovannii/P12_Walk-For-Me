@@ -11,7 +11,7 @@ final class ProfilViewController: UITableViewController {
     
     @IBOutlet weak var experience: UILabel!
     @IBOutlet weak var followSteps: UISwitch!
-    @IBOutlet weak var reminderSwitch: UISwitch!
+    var coreDataManager: CoreDataManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
