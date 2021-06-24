@@ -307,6 +307,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 game.gardenImages.remove(at: row)
                 game.gardenImagesTime.remove(at: row)
                 coreDataManager?.removeImageAndTime(index: row)
+                coreDataManager?.saveExperience(xp: 10)
                 collectionView.reloadData()
             } else {
                 print(targetWheat - currentTime)
