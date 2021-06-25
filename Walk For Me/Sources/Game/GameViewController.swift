@@ -94,18 +94,7 @@ final class GameViewController: UIViewController {
                 guard var moneyNumber = Int(self?.coreDataManager?.game?.paceAmount ?? "0"),
                       let amountConverted = Int(amountVegies ?? "0")  else { return }
                 
-                var total = 0
-                switch info {
-                case Constant.wheat:
-                    total = amountConverted * 10
-                case Constant.potatoe:
-                    total = amountConverted * 20
-                case Constant.tomatoe:
-                    total = amountConverted * 30
-                default:
-                    break
-                }
-                
+                guard let total = self?.calculateAmount(info: info, amountConverted: amountConverted) else { return }
                 guard moneyNumber >= total else {
                     self?.presentAlert(title: "Attention", message: "Vous ne pouvez pas acheter ", actionTitle: "OK")
                     
@@ -130,8 +119,22 @@ final class GameViewController: UIViewController {
                 }
             }
             self.game.currentValue = ""
-            
         }
+    }
+    
+    func calculateAmount(info: String, amountConverted: Int) -> Int {
+        var total = 0
+        switch info {
+        case Constant.wheat:
+            total = amountConverted * 10
+        case Constant.potatoe:
+            total = amountConverted * 20
+        case Constant.tomatoe:
+            total = amountConverted * 30
+        default:
+            break
+        }
+        return total
     }
     
     // MARK: - Farmer slot
