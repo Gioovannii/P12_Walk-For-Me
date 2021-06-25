@@ -318,6 +318,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 game.gardenImages.remove(at: row)
                 game.gardenImagesTime.remove(at: row)
                 coreDataManager?.removeImageAndTime(index: row)
+                coreDataManager?.saveExperience(xp: 20)
                 collectionView.reloadData()
             } else {
                 presentAlert(title: "Attention", message: "vous devez attendre encore \(targetPotatoe - currentTime) min pour collecter", actionTitle: "Compris")}
@@ -326,6 +327,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 game.gardenImages.remove(at: row)
                 game.gardenImagesTime.remove(at: row)
                 coreDataManager?.removeImageAndTime(index: row)
+                coreDataManager?.saveExperience(xp: 30)
                 collectionView.reloadData()
             } else {
                 presentAlert(title: "Attention", message: "vous devez attendre encore \(targetTomatoe - currentTime) min pour collecter", actionTitle: "Compris")}
