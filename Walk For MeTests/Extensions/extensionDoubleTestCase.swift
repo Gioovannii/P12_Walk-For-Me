@@ -8,6 +8,9 @@
 import XCTest
 @testable import Walk_For_Me
 
-class ExtensionsTestCase: XCTestCase {
+class ExtensionDoubleTestCase: XCTestCase {
 
+    
+    
+    
 }

@@ -15,7 +15,7 @@
 		7B65725A25B183E100940F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725825B183E100940F65 /* Main.storyboard */; };
 		7B65725C25B183E100940F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725B25B183E100940F65 /* Assets.xcassets */; };
 		7B65725F25B183E100940F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B65725D25B183E100940F65 /* LaunchScreen.storyboard */; };
-		7B65726A25B183E100940F65 /* ExtensionDoubleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* ExtensionDoubleTestCase.swift */; };
+		7B65726A25B183E100940F65 /* extensionDoubleTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65726925B183E100940F65 /* extensionDoubleTestCase.swift */; };
 		7B65727525B183E200940F65 /* Walk_For_MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */; };
 		7B7C45D425EDD8310001AC2D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C45D325EDD8310001AC2D /* Game.swift */; };
 		7B825ABA25D94ACC00237BFD /* Walk_For_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B825AB825D94ACC00237BFD /* Walk_For_Me.xcdatamodeld */; };
@@ -65,7 +65,7 @@
 		7B65725E25B183E100940F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B65726025B183E100940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B65726525B183E100940F65 /* Walk_For_MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walk_For_MeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B65726925B183E100940F65 /* ExtensionDoubleTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDoubleTestCase.swift; sourceTree = "<group>"; };
+		7B65726925B183E100940F65 /* extensionDoubleTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionDoubleTestCase.swift; sourceTree = "<group>"; };
 		7B65726B25B183E100940F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B65727025B183E200940F65 /* Walk_For_MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Walk_For_MeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B65727425B183E200940F65 /* Walk_For_MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_For_MeUITests.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		7B9D053C2685AFC300E78834 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7B65726925B183E100940F65 /* ExtensionDoubleTestCase.swift */,
+				7B65726925B183E100940F65 /* extensionDoubleTestCase.swift */,
 				7B9D053D2685AFFC00E78834 /* AlertController.swift */,
 				7B9D053F2685B04F00E78834 /* DateFormatterTestCase.swift */,
 				7B9D05412685B06100E78834 /* TimeIntervalTestCase.swift */,
@@ -456,7 +456,7 @@
 				7B9D053A2684802200E78834 /* MockCoreDataStack.swift in Sources */,
 				7B9D05422685B06100E78834 /* TimeIntervalTestCase.swift in Sources */,
 				7B9D053E2685AFFC00E78834 /* AlertController.swift in Sources */,
-				7B65726A25B183E100940F65 /* ExtensionDoubleTestCase.swift in Sources */,
+				7B65726A25B183E100940F65 /* extensionDoubleTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
