@@ -72,15 +72,8 @@ final class GameViewController: UIViewController {
         pickerFrame.dataSource = self
         pickerFrame.delegate = self
         
-        alertController.addAction(UIAlertAction(title: "Annuler", style: .cancel) { _ in
-            self.game.currentValue = ""
-            
-        })
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
-            information(self.game.currentValue)
-        })
-        
+        alertController.addAction(UIAlertAction(title: "Annuler", style: .cancel) { _ in self.game.currentValue = "" })
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in information(self.game.currentValue) })
         present(alertController, animated: true)
     }
     
