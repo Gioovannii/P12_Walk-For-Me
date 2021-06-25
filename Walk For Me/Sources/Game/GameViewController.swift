@@ -289,21 +289,10 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Pressed at \(indexPath.row)")
-        print("get the saved time => \(game.gardenImagesTime[indexPath.row])")
-        
-        
         let dateSaved = DateFormatter.getDateFromString(date: game.gardenImagesTime[indexPath.row])
-        
-        
         let timeInSecondsSinceNow = abs(Double(dateSaved.timeIntervalSinceNow))
         let time = timeInSecondsSinceNow.intFromTimeInterval()
-        
-        print(timeInSecondsSinceNow)
-        print(time, " min")
         let currentImageType = game.gardenImages[indexPath.row]
-        
-        print(currentImageType)
         checkimages(currentImageType: currentImageType, currentTime: time, row: indexPath.row, indexPath: indexPath)
     }
     
@@ -322,7 +311,6 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 coreDataManager?.saveExperience(xp: 10)
                 collectionView.reloadData()
             } else {
-                print(targetWheat - currentTime)
                 presentAlert(title: "Attention", message: "vous devez attendre encore \(targetWheat - currentTime) min pour collecter", actionTitle: "Compris")}
             
         case Constant.potatoeImage:
@@ -344,8 +332,6 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         default:
             return
         }
-        print(game.gardenImages)
-        print(game.gardenImagesTime)
     }
 }
 
