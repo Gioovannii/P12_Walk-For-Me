@@ -260,6 +260,27 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell",for: indexPath) as? VegetableCell else { return UICollectionViewCell() }
         
+        let currentImageDate = DateFormatter.getDateFromString(date: game.gardenImagesTime[indexPath.row])
+        let currentDate = abs(Double(currentImageDate.timeIntervalSinceNow))
+        let timeInSecond = currentDate.intFromTimeInterval()
+        
+        switch game.gardenImages[indexPath.row] {
+        case Constant.wheatImage:
+            if timeInSecond > 1 {
+                cell.layer.borderColor = UIColor.green.cgColor
+                }
+        case Constant.potatoeImage:
+            if timeInSecond > 2 {
+                cell.layer.borderColor = UIColor.green.cgColor
+                }
+        case Constant.tomatoe:
+            if timeInSecond > 3 {
+                cell.layer.borderColor = UIColor.green.cgColor
+                }
+        default:
+            break
+        }
+    
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 10
         cell.vegetableImageView.image = UIImage(named: game.gardenImages[indexPath.row])
