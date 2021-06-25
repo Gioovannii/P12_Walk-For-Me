@@ -165,24 +165,24 @@ final class GameViewController: UIViewController {
                 case Constant.wheat:
                     if self.checkIfOverAmount(amount: amount, product: wheatAmount, image: Constant.wheatImage) {
                         wheatAmount -= amount
-                    
-                    self.coreDataManager?.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
-                    
-                    self.wheatQuantityLabel.text = self.coreDataManager?.game?.wheatAmount
+                        
+                        self.coreDataManager?.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "\(wheatAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
+                        
+                        self.wheatQuantityLabel.text = self.coreDataManager?.game?.wheatAmount
                     }
                 case Constant.potatoe:
                     if self.checkIfOverAmount(amount: amount, product: potatoeAmount, image: Constant.potatoeImage) {
                         potatoeAmount -= amount
-                    
-                    self.coreDataManager?.saveVegetable(vegetableType: Constant.potatoe, vegetableAmount: "\(potatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
-                    self.potatoeQuantityLabel.text = self.coreDataManager?.game?.potatoeAmount
+                        
+                        self.coreDataManager?.saveVegetable(vegetableType: Constant.potatoe, vegetableAmount: "\(potatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
+                        self.potatoeQuantityLabel.text = self.coreDataManager?.game?.potatoeAmount
                     }
                 case Constant.tomatoe:
                     if self.checkIfOverAmount(amount: amount, product: tomatoeAmount, image: Constant.tomatoeImage) {
                         tomatoeAmount -= amount
-                    
-                    self.coreDataManager?.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
-                    self.potatoeQuantityLabel.text = self.coreDataManager?.game?.tomatoeAmount
+                        
+                        self.coreDataManager?.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "\(tomatoeAmount)", moneyAmount: self.coreDataManager?.game?.paceAmount ?? "0", isPlanting: true)
+                        self.potatoeQuantityLabel.text = self.coreDataManager?.game?.tomatoeAmount
                     }
                 default:
                     break
@@ -222,11 +222,8 @@ extension GameViewController {
         timer.tolerance = 0.1
         self.timer = timer
         
-        print("** UTC \(utcTime)")
         game.gardenImagesTime.append(contentsOf: repeatElement(utcTime, count: game.gardenImagesCount))
         coreDataManager?.saveTimeInterval(gardenTimeInterval: game.gardenImagesTime)
-        print(game.gardenImagesTime)
-        
     }
 }
 
