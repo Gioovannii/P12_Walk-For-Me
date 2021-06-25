@@ -17,7 +17,6 @@ final class GameViewController: UIViewController {
     
     @IBOutlet weak private var moneyNumberLabel: UILabel!
     @IBOutlet weak private var squareMeterNumberLabel: UILabel!
-    
     @IBOutlet weak private var wheatQuantityLabel: UILabel!
     @IBOutlet weak private var potatoeQuantityLabel: UILabel!
     @IBOutlet weak private var tomatoesQuantityLabel: UILabel!
@@ -84,10 +83,9 @@ final class GameViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    // MARK: - Actions
+    // MARK: - Money Exchange
     
     @IBAction func moneyExchangeButtonTapped(_ sender: UIButton) {
-        
         displayAlert(tag: 2, title: "Que souhaites-tu acheter ?") { information in
             guard var info = information else { fatalError() }
             if information == "" { info = Constant.wheat } else { info = information ?? "" }
