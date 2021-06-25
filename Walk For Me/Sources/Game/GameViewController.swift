@@ -40,6 +40,7 @@ final class GameViewController: UIViewController {
         
         guard let total = coreDataManager.game else { return }
         updateUI(total: total)
+        collectionView.reloadData()
     }
     
     override func viewDidLoad() {
