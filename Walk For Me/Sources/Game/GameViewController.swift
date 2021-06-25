@@ -15,7 +15,6 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var slotButton3: UIButton!
     @IBOutlet weak private var slotButton4: UIButton!
     
-    @IBOutlet weak private var paceNumberLabel: UILabel!
     @IBOutlet weak private var moneyNumberLabel: UILabel!
     @IBOutlet weak private var squareMeterNumberLabel: UILabel!
     
