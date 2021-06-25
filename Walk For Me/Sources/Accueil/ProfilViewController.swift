@@ -16,7 +16,10 @@ final class ProfilViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
