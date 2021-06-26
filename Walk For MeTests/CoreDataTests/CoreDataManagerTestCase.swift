@@ -36,7 +36,7 @@ class CoreDataManagerTestCase: XCTestCase {
 
     func testSaveTracks() {
         coreDataManager.saveTrack(numberOfPace: "0", locations: locations)
-        
+        XCTAssert(locations[0].coordinate.latitude == 37.33021988)
         XCTAssertFalse(coreDataManager.tracks.isEmpty)
         
     }
@@ -67,18 +67,73 @@ class CoreDataManagerTestCase: XCTestCase {
     func testSaveVegetableWheat() {
         coreDataManager.saveData(paceAmount: "200")
         coreDataManager.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
+        XCTAssertTrue(coreDataManager.game?.wheatAmount == "10")
+        coreDataManager.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "10", moneyAmount: "100", isPlanting: false)
+        XCTAssert(coreDataManager.game?.wheatAmount == "20")
+    }
+    
+    func testSaveVegetablePotatoe() {
+        coreDataManager.saveData(paceAmount: "200")
+        coreDataManager.saveVegetable(vegetableType: Constant.potatoe, vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
+        XCTAssertTrue(coreDataManager.game?.potatoeAmount == "10")
+        coreDataManager.saveVegetable(vegetableType: Constant.potatoe, vegetableAmount: "10", moneyAmount: "100", isPlanting: false)
+        XCTAssert(coreDataManager.game?.potatoeAmount == "20")
+    }
+    
+    func testSaveVegetableTomatoe() {
+        coreDataManager.saveData(paceAmount: "200")
+        coreDataManager.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
+        XCTAssertTrue(coreDataManager.game?.tomatoeAmount == "10")
+        coreDataManager.saveVegetable(vegetableType: Constant.tomatoe, vegetableAmount: "10", moneyAmount: "100", isPlanting: false)
+        XCTAssert(coreDataManager.game?.tomatoeAmount == "20")
+    }
+    
+    func testSaveVegetableEnterBreak() {
+        coreDataManager.saveData(paceAmount: "200")
+        coreDataManager.saveVegetable(vegetableType: "tomatooes", vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
+        
+        XCTAssertFalse(coreDataManager.game?.tomatoeAmount == "10")
     }
     
     
-    // TODO: - Save cell
-    
+    // MARK: - Save cell
+    func testSaveCell() {
+        coreDataManager.saveData(paceAmount: "100")
+        coreDataManager.saveCell(images: [Constant.wheatImage, Constant.potatoeImage, Constant.tomatoeImage])
+        
+        XCTAssert(coreDataManager.game?.imagesCell?[0] == Constant.wheatImage)
+    }
     
     // TODO: - Remove image and time
     
+    func testRemoveImageAndTime() {
+        coreDataManager.saveData(paceAmount: "100")
+        coreDataManager.saveCell(images: [Constant.wheatImage, Constant.potatoeImage, Constant.tomatoeImage])
+        coreDataManager.removeImageAndTime(index: 0)
+        
+        XCTAssert(coreDataManager.game?.imagesCell?.count == 2)
+    }
     
-    // TODO: - Save time interval
-    
-    
-    // TODO: - Save experience
+    // MARK: - Save time interval
+    func testSaveTimeInterval() {
+        
+        coreDataManager.saveData(paceAmount: "100")
 
+        var gardenTimeInterval = [String]()
+        let timeStamp = locations[0].timestamp
+        let datetoString = DateFormatter.getDateToString(from: timeStamp)
+        gardenTimeInterval.append(datetoString)
+        coreDataManager.saveTimeInterval(gardenTimeInterval: gardenTimeInterval)
+        
+        XCTAssert(coreDataManager.game?.gardenTimeInterval == gardenTimeInterval)
+    }
+    
+    // MARK: - Save experience
+    
+    func testSaveExperience() {
+        coreDataManager.saveData(paceAmount: "10")
+        coreDataManager.saveExperience(xp: 10)
+        
+        XCTAssert(coreDataManager.game?.experience == "10")
+    }
 }
