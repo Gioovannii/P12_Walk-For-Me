@@ -24,5 +24,11 @@ class CoreDataManagerTestCase: XCTestCase {
         coreDataManager = CoreDataManager(coreDataStack: coreDataStack)
     }
     
+    override func tearDown() {
+        super.tearDown()
+        coreDataManager = nil
+        coreDataStack = nil
+    }
+    
     
 }
