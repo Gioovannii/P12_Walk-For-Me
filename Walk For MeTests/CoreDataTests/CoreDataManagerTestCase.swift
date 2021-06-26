@@ -71,5 +71,11 @@ class CoreDataManagerTestCase: XCTestCase {
         XCTAssertTrue(paceAmount == "100")
     }
     
- 
+    // TODO: - save vegetable
+    func testSaveVegetable() {
+        coreDataManager.saveData(paceAmount: "200")
+        coreDataManager.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
+    }
+    
+   
 }
