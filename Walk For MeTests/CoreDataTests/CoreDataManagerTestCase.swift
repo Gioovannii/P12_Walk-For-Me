@@ -35,11 +35,6 @@ class CoreDataManagerTestCase: XCTestCase {
     // MARK: - Save tracks
 
     func testSaveTracks() {
-       
-        let locations = [CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.33021988, longitude: -122.02396374), altitude: .zero, horizontalAccuracy: .zero, verticalAccuracy: .zero, timestamp: Date()),
-                         CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.33021794, longitude: -122.02391316), altitude: .zero, horizontalAccuracy: .zero, verticalAccuracy: .zero, timestamp: Date())]
-        
-       
         coreDataManager.saveTrack(numberOfPace: "0", locations: locations)
         
         XCTAssertFalse(coreDataManager.tracks.isEmpty)
@@ -49,11 +44,6 @@ class CoreDataManagerTestCase: XCTestCase {
     // MARK: - Clear Tracks
     
     func testClearTracks() {
-       
-        let locations = [CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.33021988, longitude: -122.02396374), altitude: .zero, horizontalAccuracy: .zero, verticalAccuracy: .zero, timestamp: Date()),
-                         CLLocation(coordinate: CLLocationCoordinate2D(latitude: 37.33021794, longitude: -122.02391316), altitude: .zero, horizontalAccuracy: .zero, verticalAccuracy: .zero, timestamp: Date())]
-        
-       
         coreDataManager.saveTrack(numberOfPace: "0", locations: locations)
         coreDataManager.clearTracks()
         XCTAssertTrue(coreDataManager.tracks.isEmpty)
