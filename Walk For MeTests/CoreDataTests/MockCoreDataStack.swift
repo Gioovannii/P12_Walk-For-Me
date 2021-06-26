@@ -13,7 +13,7 @@ final class MockCoreDataStack: CoreDataStack {
     // MARK: - Initializer
     
     convenience init() {
-        self.init(modelName: "Reciplease")
+        self.init(modelName: "Walk_For_Me")
     }
     
     override init(modelName: String) {
