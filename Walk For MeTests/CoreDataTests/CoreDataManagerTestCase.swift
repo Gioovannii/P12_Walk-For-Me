@@ -11,5 +11,10 @@ import CoreLocation
 
 class CoreDataManagerTestCase: XCTestCase {
 
- 
+    // MARK: - Properties
+
+    var coreDataStack: MockCoreDataStack!
+    var coreDataManager: CoreDataManager!
+    
+   
 }
