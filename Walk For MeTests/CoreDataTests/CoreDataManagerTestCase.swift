@@ -60,10 +60,9 @@ class CoreDataManagerTestCase: XCTestCase {
  
     }
     
-    // MARK: - save Data
+    // MARK: - Save Data
     
     func testSaveData() {
-       
         coreDataManager.saveData(paceAmount: "50")
         guard let paceAmount = coreDataManager.game?.paceAmount else { return }
         XCTAssertTrue(paceAmount == "50")
@@ -73,8 +72,9 @@ class CoreDataManagerTestCase: XCTestCase {
         XCTAssertTrue(paceAmount == "100")
     }
     
-    // TODO: - save vegetable
-    func testSaveVegetable() {
+    // MARK: - Save Vegetable
+    
+    func testSaveVegetableWheat() {
         coreDataManager.saveData(paceAmount: "200")
         coreDataManager.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
     }
