@@ -39,16 +39,6 @@
                ReferencedContainer = "container:Walk_For_Me.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B65726F25B183E200940F65"
-               BuildableName = "Walk_For_MeUITests.xctest"
-               BlueprintName = "Walk_For_MeUITests"
-               ReferencedContainer = "container:Walk_For_Me.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
