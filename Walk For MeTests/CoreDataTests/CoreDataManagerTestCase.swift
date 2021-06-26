@@ -77,5 +77,16 @@ class CoreDataManagerTestCase: XCTestCase {
         coreDataManager.saveVegetable(vegetableType: Constant.wheat, vegetableAmount: "10", moneyAmount: "100", isPlanting: true)
     }
     
-   
+    
+    // TODO: - Save cell
+    
+    
+    // TODO: - Remove image and time
+    
+    
+    // TODO: - Save time interval
+    
+    
+    // TODO: - Save experience
+
 }
