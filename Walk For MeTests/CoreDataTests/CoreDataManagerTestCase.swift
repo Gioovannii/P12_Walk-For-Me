@@ -58,5 +58,18 @@ class CoreDataManagerTestCase: XCTestCase {
  
     }
     
-   
+    // MARK: - save Data
+    
+    func testSaveData() {
+       
+        coreDataManager.saveData(paceAmount: "50")
+        guard let paceAmount = coreDataManager.game?.paceAmount else { return }
+        XCTAssertTrue(paceAmount == "50")
+        
+        coreDataManager.saveData(paceAmount: "100")
+        guard let paceAmount = coreDataManager.game?.paceAmount else { return }
+        XCTAssertTrue(paceAmount == "100")
+    }
+    
+ 
 }
