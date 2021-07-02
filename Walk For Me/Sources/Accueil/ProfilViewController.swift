@@ -24,7 +24,10 @@ final class ProfilViewController: UITableViewController {
         coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
-        
-        experience.text = coreDataManager.game?.experience
+        guard let experience = coreDataManager.game?.experience else {
+            experienceLabel.text = "0"
+            return
+        }
+        experienceLabel.text = experience
     }
 }
