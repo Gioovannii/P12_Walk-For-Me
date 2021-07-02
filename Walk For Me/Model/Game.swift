@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Data to store all Games information
 struct Game {
     
     var vegetableChoice = [Constant.wheat, Constant.potatoe, Constant.tomatoe]
