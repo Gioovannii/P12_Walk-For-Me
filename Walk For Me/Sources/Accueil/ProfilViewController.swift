@@ -27,16 +27,4 @@ final class ProfilViewController: UITableViewController {
         
         experience.text = coreDataManager.game?.experience
     }
-    
-    @IBAction func followsteps(_ sender: UISwitch) {
-        switch sender.isOn {
-        case true:
-            print("Activate pace tracking")
-            followSteps.isOn = true
-        case false:
-            print("Desativate pace tracking")
-            followSteps.isOn = false
-        }
-    }
 }
-
