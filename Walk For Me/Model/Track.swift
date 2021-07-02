@@ -8,6 +8,8 @@
 import Foundation
 import CoreLocation
 
+
+/// Data to set a New Track
 struct Track {
     
     var locations: [CLLocation] = []
