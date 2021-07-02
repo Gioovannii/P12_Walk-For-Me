@@ -260,10 +260,10 @@
 		7B9D053C2685AFC300E78834 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7B9D05432685CD8E00E78834 /* DoubleExtension.swift */,
 				7B9D053D2685AFFC00E78834 /* AlertController.swift */,
 				7B9D053F2685B04F00E78834 /* DateFormatterTestCase.swift */,
 				7B9D05412685B06100E78834 /* TimeIntervalTestCase.swift */,
-				7B9D05432685CD8E00E78834 /* DoubleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

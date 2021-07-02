@@ -15,6 +15,9 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var slotButton3: UIButton!
     @IBOutlet weak private var slotButton4: UIButton!
     
+    @IBOutlet weak var buyVegiesButtonTapped: UILabel!
+    @IBOutlet weak var plantLabelTapped: UILabel!
+    
     @IBOutlet weak private var moneyNumberLabel: UILabel!
     @IBOutlet weak private var squareMeterNumberLabel: UILabel!
     @IBOutlet weak private var wheatQuantityLabel: UILabel!
@@ -47,6 +50,16 @@ final class GameViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        buyVegiesButtonTapped.textColor = Constant.Color.pink
+        buyVegiesButtonTapped.layer.borderWidth = 1
+        buyVegiesButtonTapped.layer.borderColor = UIColor.gray.cgColor
+        buyVegiesButtonTapped.layer.cornerRadius = 5
+        
+        plantLabelTapped.textColor = Constant.Color.pink
+        plantLabelTapped.layer.borderWidth = 1
+        plantLabelTapped.layer.borderColor = UIColor.gray.cgColor
+        plantLabelTapped.layer.cornerRadius = 5
     }
     
     // MARK: - Load informations
