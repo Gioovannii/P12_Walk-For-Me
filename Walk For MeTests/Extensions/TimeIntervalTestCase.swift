@@ -10,22 +10,12 @@ import XCTest
 
 class TimeIntervalTestCase: XCTestCase {
     
-    var coreDataStack: MockCoreDataStack!
-    var coreDataManager: CoreDataManager!
-
-    // MARK: - Test life cycle
-
-    override func setUp() {
-        super.setUp()
-        coreDataStack = MockCoreDataStack()
-        coreDataManager = CoreDataManager(coreDataStack: coreDataStack)
+    func testTimeIntervalToInt() {
+        let firstDateTime = Date(timeIntervalSinceReferenceDate: 650000000.0)
+        let secondDate = Date(timeIntervalSinceReferenceDate: 65050000.0)
+        
+        let timeInterval = firstDateTime.timeIntervalSince(secondDate)
+        let date = timeInterval.intFromTimeInterval()
+        XCTAssert(date == 6)
     }
-    
-    override func tearDown() {
-        super.tearDown()
-        coreDataManager = nil
-        coreDataStack = nil
-    }
-    
-    
 }
