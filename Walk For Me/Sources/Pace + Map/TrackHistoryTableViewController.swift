@@ -37,7 +37,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
-        
+        if coreDataManager.tracks.isEmpty { clearButton.isEnabled = false }
         tableView.tableFooterView = UIView()
         
         locationManager = CLLocationManager()
@@ -46,6 +46,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         let track: [Track] = coreDataManager.tracks.map { Track(locations: $0.locations!, totalPace: Double($0.totalPace ?? "0")!, timeStamp: $0.timestamp! ) }
         
         self.trackMapped = track
+        
     }
     
     // MARK: - Actions
