@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+/// <#Description#>
 final class UpdateProfilController: UITableViewController {
     
     // MARK: - Outlets
@@ -19,7 +21,7 @@ final class UpdateProfilController: UITableViewController {
     private var currentValue = ""
     
     
-    // MARK: - Life cycles
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,12 @@ final class UpdateProfilController: UITableViewController {
         }
     }
     
+    
+    /// Display an alert to the user
+    /// - Parameters:
+    ///   - tag: Unique tag
+    ///   - title: title description
+    ///   - information: what we display
     private func displayAlert(tag: Int, title: String, information: @escaping (String?) -> Void) {
         let alertController = UIAlertController(title: title, message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         
