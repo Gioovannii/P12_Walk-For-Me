@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Controller for set User's profil
 final class ProfilViewController: UITableViewController {
     
     @IBOutlet weak var experienceLabel: UILabel!
