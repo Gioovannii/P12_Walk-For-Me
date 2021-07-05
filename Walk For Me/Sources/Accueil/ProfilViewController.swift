@@ -14,6 +14,8 @@ final class ProfilViewController: UITableViewController {
     @IBOutlet weak var followSteps: UISwitch!
     var coreDataManager: CoreDataManager?
     
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
