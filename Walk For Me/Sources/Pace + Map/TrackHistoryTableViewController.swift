@@ -12,6 +12,7 @@ import CoreLocation
 final class TrackHistoryTableViewController: UITableViewController {
     
     // MARK: - Properties
+    
     private var locationManager: CLLocationManager?
     private var previousLocation: CLLocation?
     private var currentLocation: CLLocation?
@@ -59,6 +60,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    /// Start button
     @IBAction func startButtonPressed(_ sender: UIBarButtonItem) {
         locationManager = CLLocationManager()
         locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -102,6 +104,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         // Game Data
         coreDataManager.saveData(paceAmount: "\(paceToGame)")
     }
+    
     @IBAction func deleteTracks(_ sender: UIBarButtonItem) {
         coreDataManager?.clearTracks()
         trackMapped.removeAll()
@@ -111,6 +114,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     // MARK: - Localisation Services
+    
     func requestLocation() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways {
@@ -128,6 +132,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.cellToMap {
             
