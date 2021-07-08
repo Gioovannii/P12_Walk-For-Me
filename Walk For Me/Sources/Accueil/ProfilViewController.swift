@@ -10,8 +10,8 @@ import UIKit
 /// Controller for set User's profil
 final class ProfilViewController: UITableViewController {
     
-    @IBOutlet weak var experienceLabel: UILabel!
-    @IBOutlet weak var followSteps: UISwitch!
+    // MARK: - Property / outlet
+    
     var coreDataManager: CoreDataManager?
     
     // MARK: - Life cycle
