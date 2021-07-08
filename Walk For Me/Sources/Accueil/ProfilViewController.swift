@@ -13,6 +13,7 @@ final class ProfilViewController: UITableViewController {
     // MARK: - Property / outlet
     
     var coreDataManager: CoreDataManager?
+    @IBOutlet weak var experienceLabel: UILabel!
     
     // MARK: - Life cycle
 
