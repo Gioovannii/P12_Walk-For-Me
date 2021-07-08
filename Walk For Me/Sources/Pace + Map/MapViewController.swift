@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+/// Map controller
 final class MapViewController: UIViewController {
     
     // MARK: - Outlet
