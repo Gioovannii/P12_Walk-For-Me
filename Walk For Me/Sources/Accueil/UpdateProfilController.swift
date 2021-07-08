@@ -99,6 +99,11 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
     }
     
+    /// Define a picker
+    /// - Parameters:
+    ///   - pickerView: pickerView
+    ///   - row: selected row
+    ///   - component: which component
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView.tag {
         case 1:
