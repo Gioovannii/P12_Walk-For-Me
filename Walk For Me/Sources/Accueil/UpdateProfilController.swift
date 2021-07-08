@@ -115,6 +115,7 @@ extension UpdateProfilController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
     }
     
+    /// check the row use by the picker
     func checkRow(pickerArray: [String], row: Int) -> String {
         return pickerArray[row]
     }
