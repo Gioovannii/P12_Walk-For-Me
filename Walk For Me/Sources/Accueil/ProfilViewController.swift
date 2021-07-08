@@ -22,7 +22,6 @@ final class ProfilViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
-    
     /// Each time user switch back here
     /// - Parameter animated: UI Purpose Only
     override func viewWillAppear(_ animated: Bool) {
