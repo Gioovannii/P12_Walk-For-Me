@@ -32,6 +32,7 @@ final class TrackHistoryTableViewController: UITableViewController {
     @IBOutlet weak var clearButton: UIBarButtonItem!
     
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
