@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Game controller
 final class GameViewController: UIViewController {
     
     // MARK: - Outlets
