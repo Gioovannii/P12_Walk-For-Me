@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 /// Controller for set User's profil
 final class ProfilViewController: UITableViewController {
@@ -36,4 +37,28 @@ final class ProfilViewController: UITableViewController {
         }
         experienceLabel.text = experience
     }
+    @IBAction func contactTapButton(_ sender: UIBarButtonItem) {
+        print("tapped")
+        sendEmail()
+    }
 }
+    
+extension ProfilViewController: MFMailComposeViewControllerDelegate {
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["gaffeJonathan@ymail.com"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
+
