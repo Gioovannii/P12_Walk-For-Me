@@ -37,12 +37,12 @@ final class ProfilViewController: UITableViewController {
         }
         experienceLabel.text = experience
     }
+    
     @IBAction func contactTapButton(_ sender: UIBarButtonItem) {
-        print("tapped")
         sendEmail()
     }
 }
-    
+
 extension ProfilViewController: MFMailComposeViewControllerDelegate {
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
