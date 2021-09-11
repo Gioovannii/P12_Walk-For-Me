@@ -45,6 +45,24 @@ final class ProfilViewController: UITableViewController {
     @IBAction func contactTapButton(_ sender: UIBarButtonItem) {
         sendEmail()
     }
+    
+    @IBAction func collectExperience(_ sender: UIBarButtonItem) {
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            guard self.progress.isFinished == false else {
+                timer.invalidate()
+                print("Finished")
+                return
+            }
+            
+            self.progress.completedUnitCount += 1
+            
+            let progressFloat = Float(self.progress.fractionCompleted)
+            self.progressView.setProgress(progressFloat, animated: true)
+        }
+        
+    }
+    
 }
 
 extension ProfilViewController: MFMailComposeViewControllerDelegate {
