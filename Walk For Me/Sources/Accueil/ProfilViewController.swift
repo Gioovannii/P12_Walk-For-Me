@@ -24,6 +24,7 @@ final class ProfilViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
     }
     
     /// Each time user switch back here
