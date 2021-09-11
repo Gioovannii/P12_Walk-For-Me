@@ -53,8 +53,8 @@ extension ProfilViewController: MFMailComposeViewControllerDelegate {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["gaffeJonathan@ymail.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-
+            mail.setMessageBody("<p>Bonjour, comment pouvons-nous vous aider ?</p>", isHTML: true)
+            
             present(mail, animated: true)
         } else {
             // show failure alert
