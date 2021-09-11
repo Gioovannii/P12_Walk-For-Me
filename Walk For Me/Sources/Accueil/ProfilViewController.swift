@@ -56,9 +56,7 @@ extension ProfilViewController: MFMailComposeViewControllerDelegate {
             mail.setMessageBody("<p>Bonjour, comment pouvons-nous vous aider ?</p>", isHTML: true)
             
             present(mail, animated: true)
-        } else {
-            // show failure alert
-        }
+        } else { presentAlert(title: "Oups", message: "Une erreur est survenue", actionTitle: "OK") }
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
