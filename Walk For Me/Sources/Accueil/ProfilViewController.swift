@@ -17,7 +17,7 @@ final class ProfilViewController: UITableViewController {
     @IBOutlet weak var experienceLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
-    let progress = Progress(totalUnitCount: 10)
+    let progress = Progress(totalUnitCount: 20)
     
     // MARK: - Life cycle
 
@@ -42,13 +42,15 @@ final class ProfilViewController: UITableViewController {
         experienceLabel.text = experience
     }
     
+    // MARK: - Actions
+
     @IBAction func contactTapButton(_ sender: UIBarButtonItem) {
         sendEmail()
     }
     
     @IBAction func collectExperience(_ sender: UIBarButtonItem) {
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { timer in
             guard self.progress.isFinished == false else {
                 timer.invalidate()
                 print("Finished")
@@ -64,6 +66,8 @@ final class ProfilViewController: UITableViewController {
     }
     
 }
+
+// MARK: - Mail Compose View Delegate
 
 extension ProfilViewController: MFMailComposeViewControllerDelegate {
     func sendEmail() {
