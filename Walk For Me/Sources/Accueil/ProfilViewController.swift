@@ -15,6 +15,9 @@ final class ProfilViewController: UITableViewController {
     
     var coreDataManager: CoreDataManager?
     @IBOutlet weak var experienceLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    let progress = Progress(totalUnitCount: 10)
     
     // MARK: - Life cycle
 
