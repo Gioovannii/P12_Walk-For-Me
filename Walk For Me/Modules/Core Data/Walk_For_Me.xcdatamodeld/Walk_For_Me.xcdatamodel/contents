@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="GameEntity" representedClassName="GameEntity" syncable="YES" codeGenerationType="class">
         <attribute name="experience" optional="YES" attributeType="String"/>
         <attribute name="gardenTimeInterval" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
@@ -9,13 +9,13 @@
         <attribute name="tomatoeAmount" optional="YES" attributeType="String"/>
         <attribute name="wheatAmount" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="TrackEntity" representedClassName="TrackEntity" syncable="YES" codeGenerationType="class">
+    <entity name="TrackEntity" representedClassName="TrackEntity" syncable="YES">
         <attribute name="locations" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName=".[CLLocation]"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="totalPace" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="GameEntity" positionX="-63" positionY="9" width="128" height="134"/>
-        <element name="TrackEntity" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="TrackEntity" positionX="-54" positionY="45" width="128" height="74"/>
     </elements>
 </model>
