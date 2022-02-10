@@ -127,20 +127,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hog-hb-03z" id="nMj-nI-WtQ">
                                             <rect key="frame" x="0.0" y="0.0" width="399.33333333333331" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifier le profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tf-EB-iiu">
-                                                    <rect key="frame" x="30" y="11" width="361.33333333333331" height="28"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="7Tf-EB-iiu" secondAttribute="bottom" id="2fq-Ua-2W7"/>
-                                                <constraint firstItem="7Tf-EB-iiu" firstAttribute="top" secondItem="nMj-nI-WtQ" secondAttribute="topMargin" id="lAh-3I-ERw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7Tf-EB-iiu" secondAttribute="trailing" id="qV5-7d-KEL"/>
-                                                <constraint firstItem="7Tf-EB-iiu" firstAttribute="leading" secondItem="nMj-nI-WtQ" secondAttribute="leadingMargin" constant="10" id="t8d-9d-tO0"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
