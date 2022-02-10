@@ -68,6 +68,7 @@ final class TrackHistoryTableViewController: UITableViewController {
         locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager?.delegate = self
         stopButton.isEnabled = true
+        playButton.isEnabled = false
     }
     
     // MARK: - StopButton

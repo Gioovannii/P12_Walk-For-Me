@@ -166,6 +166,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="experienceLabel" destination="CoS-4H-5U9" id="1q2-s4-Ove"/>
+                        <outlet property="levelLabel" destination="ghO-eB-7lT" id="U9O-9g-hIG"/>
                         <outlet property="progressView" destination="KYl-tx-fdh" id="SVD-l1-pXK"/>
                     </connections>
                 </tableViewController>
@@ -268,26 +269,6 @@
                                     <constraint firstAttribute="width" secondItem="Oe9-tL-LBE" secondAttribute="height" multiplier="1:1" id="GtT-Fn-sNy"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7fV-a6-zhB" userLabel="Stack View money">
-                                <rect key="frame" x="10" y="778" width="80" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-gq-jwn">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="BNm-0l-5mT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage2Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="xrL-SI-zIf">
-                                        <rect key="frame" x="40" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="HXr-Md-weg"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-7v-oz3">
                                 <rect key="frame" x="20" y="384" width="388" height="389"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -324,11 +305,51 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SED-HR-aaa" userLabel="Stack View buy vegies">
-                                <rect key="frame" x="100" y="778" width="228" height="45"/>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zf3-ia-5n3" userLabel="Stack View place available">
+                                <rect key="frame" x="356.66666666666669" y="793" width="61.333333333333314" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-lP-4G3">
-                                        <rect key="frame" x="0.0" y="0.0" width="228" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRk-DI-3wD">
+                                        <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="40"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="homeImage3Blueprint" translatesAutoresizingMaskIntoConstraints="NO" id="pf4-wD-xWz">
+                                        <rect key="frame" x="21.333333333333314" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="6JU-cn-Cd1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fV-a6-zhB" userLabel="Stack View money">
+                                <rect key="frame" x="10" y="793" width="110" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-gq-jwn">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="QDf-PZ-Yz5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage2Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="xrL-SI-zIf">
+                                        <rect key="frame" x="70" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="HXr-Md-weg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SED-HR-aaa" userLabel="Stack View buy vegies">
+                                <rect key="frame" x="129" y="793" width="170" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-lP-4G3">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="A2b-zH-2l5"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
                                         <state key="normal" title="Achat de légumes"/>
                                         <connections>
@@ -336,65 +357,53 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demande moi pour planter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4je-kU-Zgq">
-                                <rect key="frame" x="139" y="226.66666666666663" width="150" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="HOJ-oh-hn2"/>
-                                    <constraint firstAttribute="height" constant="60" id="qrL-vg-2cI"/>
+                                    <constraint firstAttribute="width" constant="170" id="prc-w0-PjQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zf3-ia-5n3" userLabel="Stack View place available">
-                                <rect key="frame" x="343" y="783" width="85" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRk-DI-3wD">
-                                        <rect key="frame" x="0.0" y="0.0" width="35" height="40"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="homeImage3Blueprint" translatesAutoresizingMaskIntoConstraints="NO" id="pf4-wD-xWz">
-                                        <rect key="frame" x="45" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="6JU-cn-Cd1"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XCH-jy-I6B">
+                                <rect key="frame" x="144" y="223" width="140" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="3Yf-hr-Lsc"/>
+                                    <constraint firstAttribute="height" constant="60" id="neq-Cp-NIU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal">
+                                    <string key="title"> demande moi 
+  pour planter</string>
+                                </state>
+                                <connections>
+                                    <action selector="slotButton1Tapped:" destination="lef-pj-WWo" eventType="touchUpInside" id="nO5-xS-LAX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vi-9R-4hx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Oe9-tL-LBE" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="220" id="0C2-4g-Vav"/>
-                            <constraint firstItem="SED-HR-aaa" firstAttribute="leading" secondItem="7fV-a6-zhB" secondAttribute="trailing" constant="10" id="1qZ-Cu-38T"/>
-                            <constraint firstItem="SED-HR-aaa" firstAttribute="bottom" secondItem="7fV-a6-zhB" secondAttribute="bottom" constant="5" id="BTi-Hj-VjJ"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="bottom" secondItem="9Vi-9R-4hx" secondAttribute="bottom" constant="-70" id="DMC-C9-HFP"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="top" secondItem="Oe9-tL-LBE" secondAttribute="bottom" constant="8" id="Dpn-9X-yD0"/>
-                            <constraint firstItem="9Vi-9R-4hx" firstAttribute="trailing" secondItem="zf3-ia-5n3" secondAttribute="trailing" id="Qko-1E-EoG"/>
+                            <constraint firstItem="zf3-ia-5n3" firstAttribute="centerY" secondItem="7fV-a6-zhB" secondAttribute="centerY" id="WSX-It-gw0"/>
                             <constraint firstItem="TZj-Ii-dg2" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="Wwb-f4-Egn"/>
-                            <constraint firstItem="SED-HR-aaa" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="Yhe-iZ-p0D"/>
-                            <constraint firstItem="9Vi-9R-4hx" firstAttribute="bottom" secondItem="SED-HR-aaa" secondAttribute="bottom" constant="20" id="fqW-0F-aSu"/>
+                            <constraint firstItem="9Vi-9R-4hx" firstAttribute="trailing" secondItem="zf3-ia-5n3" secondAttribute="trailing" constant="10" id="XTc-47-lK0"/>
+                            <constraint firstItem="XCH-jy-I6B" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="kH2-BE-Nc6"/>
+                            <constraint firstItem="Oe9-tL-LBE" firstAttribute="top" secondItem="XCH-jy-I6B" secondAttribute="bottom" constant="25" id="kUE-5Z-etH"/>
                             <constraint firstItem="Oe9-tL-LBE" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="kal-Ju-wVy"/>
-                            <constraint firstItem="7fV-a6-zhB" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="10" id="kgG-d7-4bC"/>
-                            <constraint firstItem="SED-HR-aaa" firstAttribute="top" secondItem="7fV-a6-zhB" secondAttribute="top" id="ncr-3D-GFn"/>
-                            <constraint firstItem="4je-kU-Zgq" firstAttribute="centerX" secondItem="Oe9-tL-LBE" secondAttribute="centerX" id="oPX-8I-ccC"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="trailing" secondItem="9Vi-9R-4hx" secondAttribute="trailing" constant="-20" id="q0C-MH-oaN"/>
+                            <constraint firstItem="SED-HR-aaa" firstAttribute="centerX" secondItem="VwJ-IY-4d3" secondAttribute="centerX" id="qoy-oP-r7V"/>
                             <constraint firstItem="ogz-7v-oz3" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="20" id="sUf-HC-daW"/>
+                            <constraint firstItem="7fV-a6-zhB" firstAttribute="leading" secondItem="9Vi-9R-4hx" secondAttribute="leading" constant="10" id="tkR-fc-gYY"/>
                             <constraint firstItem="TZj-Ii-dg2" firstAttribute="top" secondItem="9Vi-9R-4hx" secondAttribute="top" constant="10" id="v7G-4F-lyx"/>
-                            <constraint firstItem="zf3-ia-5n3" firstAttribute="bottom" secondItem="SED-HR-aaa" secondAttribute="bottom" id="yC6-ea-mQe"/>
-                            <constraint firstItem="Oe9-tL-LBE" firstAttribute="top" secondItem="4je-kU-Zgq" secondAttribute="bottom" constant="21.5" id="yXe-OE-0bm"/>
-                            <constraint firstItem="zf3-ia-5n3" firstAttribute="leading" secondItem="SED-HR-aaa" secondAttribute="trailing" constant="15" id="zG8-hp-fxV"/>
+                            <constraint firstItem="9Vi-9R-4hx" firstAttribute="bottom" secondItem="SED-HR-aaa" secondAttribute="bottom" constant="10" id="vNb-3S-J2N"/>
+                            <constraint firstItem="SED-HR-aaa" firstAttribute="centerY" secondItem="7fV-a6-zhB" secondAttribute="centerY" id="wMk-hj-onU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Maison" largeTitleDisplayMode="always" id="5yo-aU-8dK"/>
                     <connections>
+                        <outlet property="askForPlantButtonTapped" destination="XCH-jy-I6B" id="dDG-8M-2G3"/>
                         <outlet property="buyVegiesButtonTapped" destination="2xB-lP-4G3" id="fpj-Oz-gfP"/>
                         <outlet property="collectionView" destination="ogz-7v-oz3" id="ZZg-sW-Xaw"/>
                         <outlet property="moneyNumberLabel" destination="cEi-gq-jwn" id="NwI-8E-iNj"/>
-                        <outlet property="plantLabelTapped" destination="4je-kU-Zgq" id="jRB-8u-gyK"/>
                         <outlet property="potatoeQuantityLabel" destination="NZn-IW-IiW" id="ftc-eP-ffh"/>
                         <outlet property="slotButton1" destination="f4m-u5-lPs" id="9nB-uL-eZN"/>
                         <outlet property="slotButton2" destination="VJG-hG-pwK" id="9kG-U7-YKb"/>
@@ -407,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imo-Qc-qPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521.7391304347827" y="369.64285714285711"/>
+            <point key="canvasLocation" x="1521.0280373831774" y="369.33045356371491"/>
         </scene>
         <!--Modifier le Profil-->
         <scene sceneID="jVx-9T-if2">

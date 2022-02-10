@@ -26,6 +26,7 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var tomatoesQuantityLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var askForPlantButtonTapped: UIButton!
     
     
     // MARK: - Properties
@@ -57,10 +58,12 @@ final class GameViewController: UIViewController {
         buyVegiesButtonTapped.layer.borderColor = UIColor.gray.cgColor
         buyVegiesButtonTapped.layer.cornerRadius = 5
         
-        plantLabelTapped.textColor = Constant.Color.pink
-        plantLabelTapped.layer.borderWidth = 1
-        plantLabelTapped.layer.borderColor = UIColor.gray.cgColor
-        plantLabelTapped.layer.cornerRadius = 5
+        askForPlantButtonTapped.tintColor = Constant.Color.pink
+        askForPlantButtonTapped.layer.borderWidth = 1
+        askForPlantButtonTapped.layer.borderColor = UIColor.gray.cgColor
+        askForPlantButtonTapped.layer.cornerRadius = 5
+        
+        
     }
     
     // MARK: - Load informations

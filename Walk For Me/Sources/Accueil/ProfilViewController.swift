@@ -15,9 +15,11 @@ final class ProfilViewController: UITableViewController {
     
     var coreDataManager: CoreDataManager?
     @IBOutlet weak var experienceLabel: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var levelLabel: UILabel!
     
-    let progress = Progress(totalUnitCount: 20)
+    @IBOutlet weak var progressView: UIProgressView!
+    private var exp = 0
+    private let progress = Progress(totalUnitCount: 1000)
     
     // MARK: - Life cycle
 
@@ -40,6 +42,10 @@ final class ProfilViewController: UITableViewController {
             return
         }
         experienceLabel.text = experience
+        exp = Int(experience) ?? 0
+        progressView.progress = Float(exp) / 1000
+        print(experience)
+
     }
     
     // MARK: - Actions
@@ -49,22 +55,15 @@ final class ProfilViewController: UITableViewController {
     }
     
     @IBAction func collectExperience(_ sender: UIBarButtonItem) {
-        
-        Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { timer in
-            guard self.progress.isFinished == false else {
-                timer.invalidate()
-                print("Finished")
-                return
-            }
-            
-            self.progress.completedUnitCount += 1
-            
-            let progressFloat = Float(self.progress.fractionCompleted)
+        if exp < 100 {
+            let progressFloat = Float(exp) / 1000
             self.progressView.setProgress(progressFloat, animated: true)
+        } else if exp > 100 {
+            guard var levelAmount = Int(levelLabel.text ?? "0") else { return }
+             levelAmount += 1
+            progressView.progress = 0
         }
-        
     }
-    
 }
 
 // MARK: - Mail Compose View Delegate
