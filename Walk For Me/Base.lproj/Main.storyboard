@@ -121,12 +121,25 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Badges" id="dlX-9V-yh7" userLabel="Badges">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Hog-hb-03z">
-                                        <rect key="frame" x="0.0" y="329.33333015441895" width="428" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="82" id="Hog-hb-03z">
+                                        <rect key="frame" x="0.0" y="329.33333015441895" width="428" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hog-hb-03z" id="nMj-nI-WtQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="428" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILT-Br-ex4">
+                                                    <rect key="frame" x="30" y="10" width="50" height="62"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Eqf-rE-sBg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ILT-Br-ex4" secondAttribute="bottom" constant="10" id="12d-Rh-qlh"/>
+                                                <constraint firstItem="ILT-Br-ex4" firstAttribute="top" secondItem="nMj-nI-WtQ" secondAttribute="top" constant="10" id="1tw-Y5-WRT"/>
+                                                <constraint firstItem="ILT-Br-ex4" firstAttribute="leading" secondItem="nMj-nI-WtQ" secondAttribute="leadingMargin" constant="10" id="l4V-Tl-Bve"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -151,7 +164,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="badges" destination="ILT-Br-ex4" id="Pjd-wn-ha2"/>
                         <outlet property="experienceLabel" destination="CoS-4H-5U9" id="1q2-s4-Ove"/>
+                        <outlet property="experienceLabelIsActive" destination="gZH-F8-a7d" id="xID-23-SJM"/>
                         <outlet property="levelLabel" destination="ghO-eB-7lT" id="U9O-9g-hIG"/>
                         <outlet property="progressView" destination="KYl-tx-fdh" id="SVD-l1-pXK"/>
                     </connections>

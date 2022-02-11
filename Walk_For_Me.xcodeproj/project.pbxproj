@@ -103,8 +103,8 @@
 		7B02826725D51D9800D63F5E /* Accueil */ = {
 			isa = PBXGroup;
 			children = (
-				7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */,
 				7B65725625B183E100940F65 /* ProfilViewController.swift */,
+				7B922C5225B2DF3000A5C35D /* UpdateProfilController.swift */,
 			);
 			path = Accueil;
 			sourceTree = "<group>";
