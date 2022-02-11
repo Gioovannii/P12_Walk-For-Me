@@ -15,41 +15,39 @@ final class ProfilViewController: UITableViewController {
     
     var coreDataManager: CoreDataManager?
     @IBOutlet weak var experienceLabel: UILabel!
+    @IBOutlet weak var experienceLabelIsActive: UIBarButtonItem!
     @IBOutlet weak var levelLabel: UILabel!
     
     @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var badges: UIImageView!
+    
     private var exp = 0
     private let progress = Progress(totalUnitCount: 1000)
     
     // MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
+        badges.image = UIImage(named: "love-heart")
     }
     
     /// Each time user switch back here
     /// - Parameter animated: UI Purpose Only
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
-        guard let coreDataManager = coreDataManager else { return }
-        self.coreDataManager = coreDataManager
-        guard let experience = coreDataManager.game?.experience else {
-            experienceLabel.text = "0"
-            return
-        }
-        experienceLabel.text = experience
-        exp = Int(experience) ?? 0
-        progressView.progress = Float(exp) / 1000
-        print(experience)
-
+        setupcoreDataManager()
+        print(exp)
+        if exp == 0 { experienceLabelIsActive.isEnabled = false
+            
+        } else { experienceLabelIsActive.isEnabled = true }
+        
     }
     
     // MARK: - Actions
-
+    
     @IBAction func contactTapButton(_ sender: UIBarButtonItem) {
         sendEmail()
     }
@@ -59,10 +57,27 @@ final class ProfilViewController: UITableViewController {
             let progressFloat = Float(exp) / 1000
             self.progressView.setProgress(progressFloat, animated: true)
         } else if exp > 100 {
-            guard var levelAmount = Int(levelLabel.text ?? "0") else { return }
-             levelAmount += 1
+            guard var levelAmount = Int(levelLabel.text ?? "1") else { return }
+            levelAmount += 1
             progressView.progress = 0
         }
+    }
+    
+    func setupcoreDataManager() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+        guard let coreDataManager = coreDataManager else { return }
+        self.coreDataManager = coreDataManager
+        
+        guard let experience = coreDataManager.game?.experience else {
+            experienceLabel.text = "0"
+            return
+        }
+        
+        experienceLabel.text = experience
+        exp = Int(experience) ?? 0
+        progressView.progress = Float(exp) / 1000
+        print(exp)
     }
 }
 

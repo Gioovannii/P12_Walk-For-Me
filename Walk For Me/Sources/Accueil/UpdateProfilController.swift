@@ -31,7 +31,6 @@ final class UpdateProfilController: UITableViewController {
         }
     }
     
-    
     /// Display an alert to the user
     /// - Parameters:
     ///   - tag: Unique tag
