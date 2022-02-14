@@ -177,7 +177,8 @@ extension TrackHistoryTableViewController {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.textAlignment = .center
-        label.textColor = Constant.Color.pink
+//        label.textColor = Constant.Color.pink
+        label.textColor = .red
         
         return label
     }
