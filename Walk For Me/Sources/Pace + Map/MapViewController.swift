@@ -37,6 +37,7 @@ final class MapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.backBarButtonItem?.tintColor = .red
         produceOverlay()
     }
     
