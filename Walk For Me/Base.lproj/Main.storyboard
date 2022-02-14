@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-AQ-PhK">
-                                                    <rect key="frame" x="350" y="11" width="58" height="28"/>
+                                                    <rect key="frame" x="352.66666666666669" y="11" width="55.333333333333314" height="28"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-3B-tuH">
                                                             <rect key="frame" x="0.0" y="0.0" width="39.666666666666664" height="28"/>
@@ -79,8 +79,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghO-eB-7lT">
-                                                            <rect key="frame" x="47.666666666666686" y="0.0" width="10.333333333333336" height="28"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghO-eB-7lT">
+                                                            <rect key="frame" x="47.666666666666629" y="0.0" width="7.6666666666666643" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -153,20 +153,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Accueil" largeTitleDisplayMode="always" id="VbU-L1-7ne">
                         <barButtonItem key="leftBarButtonItem" title="Nous contacter" id="4bA-T8-orV">
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="contactTapButton:" destination="FXp-vv-gad" id="C3E-v1-iHq"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Utiliser experience" id="gZH-F8-a7d">
-                            <connections>
-                                <action selector="collectExperience:" destination="FXp-vv-gad" id="nY2-eW-f0N"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="badges" destination="ILT-Br-ex4" id="Pjd-wn-ha2"/>
                         <outlet property="experienceLabel" destination="CoS-4H-5U9" id="1q2-s4-Ove"/>
-                        <outlet property="experienceLabelIsActive" destination="gZH-F8-a7d" id="xID-23-SJM"/>
                         <outlet property="levelLabel" destination="ghO-eB-7lT" id="U9O-9g-hIG"/>
                         <outlet property="progressView" destination="KYl-tx-fdh" id="SVD-l1-pXK"/>
                     </connections>
@@ -192,7 +187,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNX-De-FvB">
                                                 <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="45"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage4Wheat" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-Wj-IjB">
@@ -206,7 +201,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-IW-IiW">
                                                 <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="45"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage5Potatoe" translatesAutoresizingMaskIntoConstraints="NO" id="ZyI-jy-XYi">
@@ -220,7 +215,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-gm-1J9">
                                                 <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="45"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage6Tomato" translatesAutoresizingMaskIntoConstraints="NO" id="KxM-JF-CRF">
@@ -332,7 +327,7 @@
                                             <constraint firstAttribute="width" constant="70" id="QDf-PZ-Yz5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage2Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="xrL-SI-zIf">
@@ -446,7 +441,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-o2-xgE">
                                                     <rect key="frame" x="319.33333333333331" y="0.0" width="60" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -478,7 +473,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-j1-6RV">
                                                     <rect key="frame" x="328.33333333333331" y="0.0" width="51" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -554,23 +549,26 @@
                     <navigationItem key="navigationItem" title="Historique" largeTitleDisplayMode="always" id="1Wp-NM-cNw">
                         <leftBarButtonItems>
                             <barButtonItem enabled="NO" image="barButton1Play" id="Ey5-xn-N5c" userLabel="start Button Item">
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="Z5n-34-arc" id="0RS-y4-5Ed"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem enabled="NO" image="barButton2Stop" style="done" id="D8U-xH-Hro" userLabel="Stop Button Item">
+                            <barButtonItem enabled="NO" title="Item" image="barButton2Stop" style="done" id="D8U-xH-Hro" userLabel="Stop Button Item">
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
                                     <action selector="stopButtonPressed:" destination="Z5n-34-arc" id="pJ9-3J-QMJ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="Rip-9x-iBW">
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
                                     <action selector="deleteTracks:" destination="Z5n-34-arc" id="Rwo-CY-NCf"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle Session" id="GoH-yJ-X0y">
-                            <color key="tintColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="newSessionButton:" destination="Z5n-34-arc" id="6sr-6h-xeA"/>
                             </connections>
@@ -680,7 +678,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="UMq-ew-F5D" kind="relationship" relationship="viewControllers" id="XDn-yp-l5k"/>
@@ -712,7 +710,7 @@
             <point key="canvasLocation" x="790" y="371"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+    <color key="tintColor" systemColor="systemRedColor"/>
     <resources>
         <image name="barButton1Play" width="25" height="25"/>
         <image name="barButton2Stop" width="25" height="25"/>
@@ -727,6 +725,9 @@
         <image name="tabBar3Home" width="65" height="65"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
