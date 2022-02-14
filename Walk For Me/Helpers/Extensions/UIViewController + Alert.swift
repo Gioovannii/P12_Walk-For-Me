@@ -13,7 +13,9 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
 
         alert.view.layer.cornerRadius = 70
-        alert.view.tintColor = Constant.Color.pink
+        alert.view.tintColor = .red
+//        alert.view.tintColor = Constant.Color.pink
+
         alert.view.backgroundColor = UIColor(red: 0.290, green: 0.412, blue: 0.714, alpha: 1.0)
 
         present(alert, animated: true)
@@ -31,7 +33,9 @@ extension UIViewController {
             handlerExchangeName(textField[0].text)
         })
         alert.view.layer.cornerRadius = 70
-        alert.view.tintColor = Constant.Color.pink
+        alert.view.tintColor = .red
+//        alert.view.tintColor = Constant.Color.pink
+
         alert.view.backgroundColor = UIColor(red: 0.290, green: 0.412, blue: 0.714, alpha: 1.0)
         
         alert.addAction(action)
