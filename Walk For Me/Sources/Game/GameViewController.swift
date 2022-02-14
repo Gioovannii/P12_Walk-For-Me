@@ -53,12 +53,10 @@ final class GameViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        buyVegiesButtonTapped.tintColor = Constant.Color.pink
         buyVegiesButtonTapped.layer.borderWidth = 1
         buyVegiesButtonTapped.layer.borderColor = UIColor.gray.cgColor
         buyVegiesButtonTapped.layer.cornerRadius = 5
         
-        askForPlantButtonTapped.tintColor = Constant.Color.pink
         askForPlantButtonTapped.layer.borderWidth = 1
         askForPlantButtonTapped.layer.borderColor = UIColor.gray.cgColor
         askForPlantButtonTapped.layer.cornerRadius = 5
