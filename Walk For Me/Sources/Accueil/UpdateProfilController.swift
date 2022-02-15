@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 /// Update controller
 final class UpdateProfilController: UITableViewController {
     
@@ -19,7 +18,6 @@ final class UpdateProfilController: UITableViewController {
     private var sexChoice = ["Homme", "Femme"]
     private var weightChoice = [String]()
     private var currentValue = ""
-    
     
     // MARK: - Life cycle
     
