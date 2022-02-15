@@ -561,14 +561,12 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="Rip-9x-iBW">
-                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
                                     <action selector="deleteTracks:" destination="Z5n-34-arc" id="Rwo-CY-NCf"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Nouvelle Session" id="GoH-yJ-X0y">
-                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="newSessionButton:" destination="Z5n-34-arc" id="6sr-6h-xeA"/>
                             </connections>
@@ -637,7 +635,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jcE-Ue-VZs">
                         <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.68254542350000003" green="0.45276439190000001" blue="0.76865774389999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -657,7 +654,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="M0b-Dv-qG6">
                         <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -677,7 +673,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.68999999999999995" green="0.46899999999999997" blue="0.77700000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
