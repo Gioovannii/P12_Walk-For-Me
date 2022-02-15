@@ -31,7 +31,7 @@ final class ProfilViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
         badges.image = UIImage(named: "love-heart")
-        
+        badges.alpha = 0.2
     }
     
     /// Each time user switch back here
