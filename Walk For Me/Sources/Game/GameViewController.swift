@@ -17,10 +17,8 @@ final class GameViewController: UIViewController {
     @IBOutlet weak private var slotButton4: UIButton!
     
     @IBOutlet weak var buyVegiesButtonTapped: UIButton!
-    @IBOutlet weak var plantLabelTapped: UILabel!
     
     @IBOutlet weak private var moneyNumberLabel: UILabel!
-    @IBOutlet weak private var squareMeterNumberLabel: UILabel!
     @IBOutlet weak private var wheatQuantityLabel: UILabel!
     @IBOutlet weak private var potatoeQuantityLabel: UILabel!
     @IBOutlet weak private var tomatoesQuantityLabel: UILabel!
@@ -43,7 +41,10 @@ final class GameViewController: UIViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
+        
         guard let total = coreDataManager.game else { return }
+        print(coreDataManager)
+        moneyNumberLabel.text = coreDataManager.game?.paceAmount ?? "0"
         updateUI(total: total)
         collectionView.reloadData()
     }
@@ -61,14 +62,12 @@ final class GameViewController: UIViewController {
         askForPlantButtonTapped.layer.borderColor = UIColor.gray.cgColor
         askForPlantButtonTapped.layer.cornerRadius = 5
         
-        
     }
     
     // MARK: - Load informations
     
     func updateUI(total: GameEntity) {
         moneyNumberLabel.text = coreDataManager?.game?.paceAmount ?? "0"
-        squareMeterNumberLabel.text = "0"
         
         wheatQuantityLabel.text = "\(coreDataManager?.game?.wheatAmount ?? "0")"
         potatoeQuantityLabel.text = "\(coreDataManager?.game?.potatoeAmount ?? "0")"
