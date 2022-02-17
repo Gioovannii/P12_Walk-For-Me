@@ -40,8 +40,6 @@ final class ProfilViewController: UITableViewController {
         super.viewDidAppear(animated)
         setupcoreDataManager()
         progressView.setProgress(Float(exp), animated: false)
-        print(exp)
-        
     }
     
     // MARK: - Actions
@@ -56,18 +54,17 @@ final class ProfilViewController: UITableViewController {
         guard let coreDataManager = coreDataManager else { return }
         self.coreDataManager = coreDataManager
         
-//        guard let experience = coreDataManager.game?.experience else {
-//            experienceLabel.text = "0"
-//            return
-//        }
+        guard let experience = coreDataManager.game?.experience else {
+            experienceLabel.text = "0"
+            return
+        }
         
-//        experienceLabel.text = experience
-//        exp = Int(experience) ?? 0
+        experienceLabel.text = experience
+        exp = Int(experience) ?? 0
         
         experienceLabel.text = "\(exp)"
         exp = Int(exp) 
         progressView.progress = Float(exp) / 1000
-        print(exp)
     }
 }
 
