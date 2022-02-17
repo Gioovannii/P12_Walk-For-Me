@@ -20,8 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVX-KE-a1f">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk for me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-b7-Zp9">
-                                        <rect key="frame" x="91" y="389" width="232" height="118"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk for me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-b7-Zp9">
+                                        <rect key="frame" x="10" y="389" width="394" height="118"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
                                         <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.72156862745098038" green="0.9137254901960784" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="pfz-b7-Zp9" firstAttribute="leading" secondItem="DVX-KE-a1f" secondAttribute="leading" constant="91" id="0bD-Y9-SL2"/>
+                                    <constraint firstAttribute="trailing" secondItem="pfz-b7-Zp9" secondAttribute="trailing" constant="10" id="4L5-6x-jHl"/>
                                     <constraint firstItem="lHH-AQ-0Ac" firstAttribute="leading" secondItem="Vgn-gv-dDw" secondAttribute="leading" id="Ahc-N6-Nod"/>
                                     <constraint firstItem="qE9-to-dYP" firstAttribute="leading" secondItem="DVX-KE-a1f" secondAttribute="leading" constant="47" id="CHe-aN-Gq5"/>
                                     <constraint firstItem="lHH-AQ-0Ac" firstAttribute="centerX" secondItem="Vgn-gv-dDw" secondAttribute="centerX" id="GKB-NI-pCa"/>
@@ -61,6 +61,7 @@
                                     <constraint firstItem="qE9-to-dYP" firstAttribute="leading" secondItem="3aa-BW-32a" secondAttribute="leading" id="TNU-nL-NAe"/>
                                     <constraint firstItem="qE9-to-dYP" firstAttribute="top" secondItem="DVX-KE-a1f" secondAttribute="top" constant="100" id="X5B-Ml-1XK"/>
                                     <constraint firstItem="pfz-b7-Zp9" firstAttribute="centerY" secondItem="DVX-KE-a1f" secondAttribute="centerY" id="bCu-xS-zA5"/>
+                                    <constraint firstItem="pfz-b7-Zp9" firstAttribute="leading" secondItem="DVX-KE-a1f" secondAttribute="leading" constant="10" id="bR2-Fg-lXb"/>
                                     <constraint firstItem="pfz-b7-Zp9" firstAttribute="top" secondItem="Vgn-gv-dDw" secondAttribute="bottom" constant="9" id="bx5-4H-2pI"/>
                                     <constraint firstAttribute="trailing" secondItem="lHH-AQ-0Ac" secondAttribute="trailing" constant="40" id="dbR-GD-Qht"/>
                                     <constraint firstItem="lHH-AQ-0Ac" firstAttribute="top" secondItem="3aa-BW-32a" secondAttribute="bottom" constant="11" id="eOe-Gb-FlK"/>
